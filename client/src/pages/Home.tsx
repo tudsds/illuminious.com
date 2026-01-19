@@ -108,7 +108,8 @@ export default function Home() {
             alt="Global Supply Chain"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/95 via-illuminious-navy/80 to-illuminious-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/95 via-illuminious-navy/85 to-illuminious-navy/70" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         {/* Animated particles/grid effect */}
@@ -126,7 +127,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-illuminious-sky/20 text-illuminious-light text-sm font-medium mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-illuminious-navy/80 backdrop-blur-sm text-white text-sm font-medium mb-6 border border-illuminious-sky/30">
                 <Globe className="w-4 h-4" />
                 Global Electronics Supply Chain Partner
               </span>
@@ -136,17 +137,17 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
             >
               From Concept to{" "}
-              <span className="text-illuminious-sky">Global Delivery</span>
+              <span className="text-illuminious-sky drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Global Delivery</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-illuminious-light/90 mb-8 leading-relaxed"
+              className="text-lg md:text-xl text-white mb-8 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
             >
               We bridge the gap between your innovative ideas and world-class
               manufacturing. With facilities across the USA, Southeast Asia, and

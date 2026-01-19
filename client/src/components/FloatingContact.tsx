@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation } from "wouter";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,9 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -16,25 +18,103 @@ export default function FloatingContact() {
     company: "",
     message: "",
   });
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
+  const autoOpenTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const isStartupsPage = location === "/startups";
   const isContactPage = location === "/contact";
+  const isAdminPage = location === "/admin";
+  const isThankYouPage = location === "/thank-you";
 
-  // Don't show on contact page
-  if (isContactPage) return null;
+  const submitContact = trpc.contact.submit.useMutation({
+    onSuccess: () => {
+      // GTM tracking for form submission
+      if (typeof window !== "undefined" && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: "contact_form_submit",
+          form_type: "floating_contact",
+          page: location,
+        });
+      }
+      setFormData({ name: "", email: "", company: "", message: "" });
+      setIsSubmitting(false);
+      setIsOpen(false);
+      navigate("/thank-you");
+    },
+    onError: (error) => {
+      toast.error("Failed to send message. Please try again.");
+      setIsSubmitting(false);
+    },
+  });
+
+  // Auto-open logic: open after 5 seconds or on scroll
+  useEffect(() => {
+    if (isContactPage || isAdminPage || isThankYouPage || hasAutoOpened) return;
+
+    // Check if user has already seen the popup in this session
+    const hasSeenPopup = sessionStorage.getItem("floatingContactSeen");
+    if (hasSeenPopup) {
+      setHasAutoOpened(true);
+      return;
+    }
+
+    // Auto-open after 5 seconds
+    autoOpenTimerRef.current = setTimeout(() => {
+      if (!hasAutoOpened) {
+        setIsOpen(true);
+        setHasAutoOpened(true);
+        sessionStorage.setItem("floatingContactSeen", "true");
+        
+        // Auto-collapse after 5 seconds if user doesn't interact
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 5000);
+      }
+    }, 5000);
+
+    // Open on scroll
+    const handleScroll = () => {
+      if (!hasAutoOpened && window.scrollY > 300) {
+        if (autoOpenTimerRef.current) {
+          clearTimeout(autoOpenTimerRef.current);
+        }
+        setIsOpen(true);
+        setHasAutoOpened(true);
+        sessionStorage.setItem("floatingContactSeen", "true");
+        
+        // Auto-collapse after 5 seconds
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 5000);
+        
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      if (autoOpenTimerRef.current) {
+        clearTimeout(autoOpenTimerRef.current);
+      }
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasAutoOpened, isContactPage, isAdminPage, isThankYouPage]);
+
+  // Don't show on contact, admin, or thank you pages
+  if (isContactPage || isAdminPage || isThankYouPage) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    toast.success("Message sent successfully! We'll get back to you soon.");
-    setFormData({ name: "", email: "", company: "", message: "" });
-    setIsSubmitting(false);
-    setIsOpen(false);
+    
+    submitContact.mutate({
+      name: formData.name,
+      email: formData.email,
+      company: formData.company || undefined,
+      message: formData.message,
+      source: "floating_contact",
+    });
   };
 
   const handleChange = (
@@ -44,6 +124,18 @@ export default function FloatingContact() {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+  };
+
+  const handleEmailClick = () => {
+    // GTM tracking for email click
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "email_click",
+        email: "info@illuminious.com",
+        page: location,
+        source: "floating_contact",
+      });
+    }
   };
 
   return (
@@ -216,6 +308,7 @@ export default function FloatingContact() {
                   Or email us directly at{" "}
                   <a
                     href="mailto:info@illuminious.com"
+                    onClick={handleEmailClick}
                     className={
                       isStartupsPage
                         ? "text-cyber-cyan hover:underline"

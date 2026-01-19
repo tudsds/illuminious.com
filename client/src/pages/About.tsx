@@ -19,27 +19,23 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const locations = [
   {
     name: "United States",
-    city: "Silicon Valley, CA",
     description: "Headquarters & Customer Success",
     flag: "🇺🇸",
   },
   {
+    name: "Hong Kong",
+    description: "R&D Headquarters",
+    flag: "🇭🇰",
+  },
+  {
     name: "Indonesia",
-    city: "Batam Free Trade Zone",
     description: "Manufacturing Hub",
     flag: "🇮🇩",
   },
   {
     name: "China",
-    city: "Shenzhen",
-    description: "R&D & Production Center",
+    description: "Production Center",
     flag: "🇨🇳",
-  },
-  {
-    name: "Canada",
-    city: "Vancouver",
-    description: "Logistics Gateway",
-    flag: "🇨🇦",
   },
 ];
 
@@ -232,10 +228,7 @@ export default function About() {
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">{location.flag}</span>
-                      <div>
-                        <h4 className="font-semibold text-white">{location.name}</h4>
-                        <p className="text-sm text-illuminious-light/70">{location.city}</p>
-                      </div>
+                      <h4 className="font-semibold text-white">{location.name}</h4>
                     </div>
                     <p className="text-sm text-illuminious-sky">{location.description}</p>
                   </div>

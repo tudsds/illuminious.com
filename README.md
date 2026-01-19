@@ -8,12 +8,14 @@ This website is designed to showcase Illuminious's comprehensive manufacturing a
 
 ### Key Features
 
-- **Multi-page Structure**: Home, About Us, Our Services (with 6 sub-pages), News, Blog, Startups Program, and Contact Us
+- **Multi-page Structure**: Home, About Us, Our Services (with 11 sub-pages), News, Blog, Startups Program, and Contact Us
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
-- **Admin CMS**: Hidden admin portal for managing News and Blog content
+- **Admin CMS**: Full-featured admin portal at `/admin` for managing News and Blog content with rich text editor
 - **SEO Optimized**: Comprehensive meta tags, Open Graph, Twitter Cards, and structured data for Google, Meta, and Twitter advertising
-- **Cyberpunk Theme**: Special "Illuminious Startups Program" page with unique visual style
-- **Floating Contact Form**: Context-aware contact widget that adapts to page theme
+- **Google Tag Manager**: Pre-integrated GTM (ID: GTM-5M6CMP6S) for analytics and ad tracking
+- **Cyberpunk Theme**: Special "Illuminious Startups Program" page with unique visual style (co-branded with Future Factory)
+- **Floating Contact Form**: Auto-popup contact widget that adapts to page theme
+- **Thank You Page**: Animated confirmation page with GTM tracking
 
 ## Technology Stack
 
@@ -156,11 +158,18 @@ Edit the following files:
 
 ### Managing News and Blog
 
-1. Access the admin portal at `/admin-login`
-2. Log in with admin credentials
-3. Use the dashboard to create, edit, or delete posts
+1. Access the admin portal at `/admin` (hidden, not linked in navigation)
+2. Log in with admin credentials:
+   - **Username**: `illuminious`
+   - **Password**: `Djpcs17529#`
+3. Use the dashboard to:
+   - Create, edit, and delete News articles and Blog posts
+   - Use the rich text editor with bold, italic, underline, links, images, and YouTube embeds
+   - Save drafts or publish immediately
+   - View all contact form submissions
+   - Add new admin users (super admin only)
 
-**Note**: To make a user an admin, update their `role` field to `'admin'` in the database.
+**Note**: The super admin account can add other admin users through the Admin Management section.
 
 ## Deployment Guide
 

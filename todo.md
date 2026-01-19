@@ -83,3 +83,63 @@
 ## Phase 12: Final Delivery
 - [ ] Final testing and QA
 - [ ] Deliver to user
+
+## Phase 13: User Feedback Modifications (Jan 18, 2026)
+
+### Text Readability Fix
+- [x] Add text shadow/background to hero section text
+- [x] Ensure all text is readable against background images
+- [x] Fix "Global Delivery" gradient text visibility
+
+### Google Tag Manager Integration
+- [x] Add GTM script to index.html head (GTM-5M6CMP6S)
+- [x] Add GTM noscript to body
+- [x] Exclude /admin page from GTM
+
+### Admin CMS System Overhaul
+- [x] Create /admin route (hidden, no nav link)
+- [x] Implement admin authentication (username: illuminious, password: Djpcs17529#)
+- [x] Create super admin role with ability to add other admins
+- [x] Rich text editor with bold, italic, underline
+- [x] Image upload functionality
+- [x] YouTube video embed support
+- [x] Hyperlink insertion
+- [x] Save draft and publish functionality
+- [x] Author name field
+- [x] View all contact form submissions
+- [x] Database schema for posts and admins
+
+### Service Pages Expansion
+- [x] Add Tooling/Mold Making service
+- [x] Add PCB Manufacturing (EMS for PCB)
+- [x] Add IC Packaging service
+- [x] Add Assembly service
+- [x] Add Quality Testing & Certification service
+- [x] Use full name (abbreviation) format for all service titles
+
+### Contact Us Improvements
+- [x] Auto-popup on page load (5 seconds or scroll)
+- [x] Smooth collapse animation
+- [x] Create Thank You page with animation
+- [x] GTM tracking for Thank You page
+- [ ] GTM tracking for info@illuminious.com clicks
+
+### Image Generation
+- [x] Generate unique images for all pages
+- [x] Ensure realistic appearance
+- [x] Generated PCB, Molding, Packaging, Assembly, Testing images
+- [x] Generated About team, News industry, Blog tech, Startup collaboration images
+
+### Global Presence Updates
+- [x] Remove specific city/province descriptions
+- [x] Add Hong Kong as R&D headquarters
+- [x] Remove mainland China R&D headquarters
+
+### Logo Replacement
+- [x] Process uploaded logo to remove background
+- [x] Replace all logo instances with new transparent logo
+
+### GitHub Export
+- [x] Updated README.md with all new features
+- [x] All tests passing
+- [ ] Export project to GitHub as new repository (user action required)

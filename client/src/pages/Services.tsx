@@ -8,6 +8,10 @@ import {
   Package,
   Wrench,
   Truck,
+  CircuitBoard,
+  Box,
+  TestTube,
+  Layers,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -50,12 +54,52 @@ const services = [
     image: "/images/service-prototyping.png",
   },
   {
+    icon: CircuitBoard,
+    title: "PCB Manufacturing & Assembly (PCBA)",
+    description: "Complete PCB fabrication and assembly services from prototype to mass production with precision and reliability.",
+    features: ["Multi-layer PCB", "SMT/THT assembly", "Quick turn prototyping", "AOI & X-ray inspection"],
+    href: "/services/pcb",
+    image: "/images/service-pcb.png",
+  },
+  {
+    icon: Box,
+    title: "Tooling & Injection Molding",
+    description: "Professional tooling design and injection molding services for plastic enclosures and custom components.",
+    features: ["Mold design & engineering", "Precision tooling", "Multi-cavity molds", "Surface finishing"],
+    href: "/services/molding",
+    image: "/images/service-molding.png",
+  },
+  {
+    icon: Layers,
+    title: "IC Packaging & Semiconductor Services",
+    description: "Advanced chip packaging and semiconductor backend services including wire bonding and flip chip technologies.",
+    features: ["Wire bonding", "Flip chip assembly", "System in Package (SiP)", "Module assembly"],
+    href: "/services/packaging",
+    image: "/images/service-packaging.png",
+  },
+  {
+    icon: Wrench,
+    title: "Product Assembly & Box Build",
+    description: "End-to-end product assembly and box build services from sub-assembly to market-ready products.",
+    features: ["Mechanical assembly", "Cable & harness", "Electro-mechanical integration", "Final packaging"],
+    href: "/services/assembly",
+    image: "/images/service-assembly.png",
+  },
+  {
     icon: Wrench,
     title: "Rapid Prototyping",
     description: "Quickly validate your designs with our rapid prototyping services before committing to mass production.",
     features: ["3D printing", "CNC machining", "Functional prototypes", "Design iteration"],
     href: "/services/prototyping",
     image: "/images/service-prototyping.png",
+  },
+  {
+    icon: TestTube,
+    title: "Quality Testing & Certification",
+    description: "Comprehensive testing and certification services to ensure your products meet quality and regulatory standards.",
+    features: ["Functional testing", "Environmental testing", "EMC/EMI testing", "Certification support"],
+    href: "/services/testing",
+    image: "/images/service-testing.png",
   },
   {
     icon: Truck,
@@ -87,8 +131,8 @@ export default function Services() {
     <>
       <SEO
         title="Our Services"
-        description="Explore Illuminious comprehensive manufacturing services including DFM, OEM, ODM, EMS, prototyping, and global logistics solutions."
-        keywords="manufacturing services, DFM, OEM, ODM, EMS, electronics assembly, prototyping, logistics"
+        description="Explore Illuminious comprehensive manufacturing services including DFM, OEM, ODM, EMS, PCB assembly, injection molding, IC packaging, testing, and global logistics solutions."
+        keywords="manufacturing services, DFM, OEM, ODM, EMS, PCB assembly, injection molding, IC packaging, electronics assembly, prototyping, logistics"
         url="/services"
       />
       <Header />

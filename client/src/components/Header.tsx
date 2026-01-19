@@ -11,12 +11,17 @@ const navItems = [
     label: "Our Services",
     href: "/services",
     children: [
-      { label: "DFM", href: "/services/dfm" },
-      { label: "OEM", href: "/services/oem" },
-      { label: "ODM", href: "/services/odm" },
-      { label: "EMS", href: "/services/ems" },
-      { label: "Prototyping", href: "/services/prototyping" },
-      { label: "Logistics", href: "/services/logistics" },
+      { label: "Design for Manufacturing (DFM)", href: "/services/dfm" },
+      { label: "Original Equipment Manufacturing (OEM)", href: "/services/oem" },
+      { label: "Original Design Manufacturing (ODM)", href: "/services/odm" },
+      { label: "Electronics Manufacturing Services (EMS)", href: "/services/ems" },
+      { label: "PCB Manufacturing & Assembly (PCBA)", href: "/services/pcb" },
+      { label: "Tooling & Injection Molding", href: "/services/molding" },
+      { label: "IC Packaging & Semiconductor", href: "/services/packaging" },
+      { label: "Product Assembly & Box Build", href: "/services/assembly" },
+      { label: "Rapid Prototyping", href: "/services/prototyping" },
+      { label: "Quality Testing & Certification", href: "/services/testing" },
+      { label: "Logistics & Overseas Warehouse", href: "/services/logistics" },
     ],
   },
   { label: "News", href: "/news" },
@@ -114,7 +119,7 @@ export default function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className={`absolute top-full left-0 mt-2 w-48 rounded-xl shadow-xl overflow-hidden ${
+                      className={`absolute top-full left-0 mt-2 w-72 rounded-xl shadow-xl overflow-hidden ${
                         isStartupsPage
                           ? "bg-cyber-black border border-cyber-purple/30"
                           : "bg-white border border-illuminious-light"
