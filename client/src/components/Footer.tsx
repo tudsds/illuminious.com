@@ -154,9 +154,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-white" />
                 <span className="text-sm text-white">
-                  <span className="inline-flex items-center gap-1">
-                    <span>🇺🇸</span> Palo Alto, CA
-                  </span>
+                  Palo Alto, CA
                   <br />
                   United States (HQ)
                 </span>

@@ -338,19 +338,24 @@ export default function Startups() {
             <AnimatedSection delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/images/service-ai-glasses.png"
+                  src="/images/ai-smart-glasses.png"
                   alt="AI Smart Glasses"
                   className="rounded-xl border border-cyber-purple/30"
                 />
                 <img
-                  src="/images/service-ai-companion.png"
-                  alt="AI Companion Robot"
+                  src="/images/ai-smart-ring.png"
+                  alt="AI Smart Ring"
                   className="rounded-xl border border-cyber-purple/30 mt-8"
                 />
                 <img
-                  src="/images/service-ai-accessories.png"
-                  alt="AI Accessories"
-                  className="rounded-xl border border-cyber-purple/30 col-span-2"
+                  src="/images/ai-smart-pendant.png"
+                  alt="AI Smart Pendant"
+                  className="rounded-xl border border-cyber-purple/30"
+                />
+                <img
+                  src="/images/ai-wearable-pin.png"
+                  alt="AI Wearable Pin"
+                  className="rounded-xl border border-cyber-purple/30"
                 />
               </div>
             </AnimatedSection>

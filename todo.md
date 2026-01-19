@@ -246,3 +246,31 @@
 - [x] Create detailed Chinese guide for email service integration
 - [x] Document pricing and requirements
 - [x] Created: docs/Admin-Portal-CRM-Email-Integration-Guide-CN.md
+
+## Phase 17: UI Fixes and New Images (Jan 19, 2026)
+
+### Logo Fixes
+- [x] Replace Footer logo with white logo (illuminious-logo-white.png)
+- [x] Replace Startups page logo with white logo (already using correct path)
+
+### About Page
+- [x] Change "Bridging Innovation and Manufacturing" title to Navy (#132843)
+
+### Footer Address
+- [x] Remove "us" before "Palo Alto, CA"
+
+### Global Offices Flags
+- [x] Replace "US" with US flag emoji/icon (already using 🇺🇸)
+- [x] Replace "HK" with Hong Kong flag emoji/icon (already using 🇭🇰)
+- [x] Replace "CN" with China flag emoji/icon (already using 🇨🇳)
+- [x] Replace "ID" with Indonesia flag emoji/icon (already using 🇮🇩)
+
+### Services CTA Text Color
+- [x] Fix "Ready to take the next step?" text to white on Services pages (already text-white)
+- [x] Fix all service subpage CTA sections text to white (already using text-illuminious-light/80)
+
+### Startups Page New Images
+- [x] Generate AI Smart Glasses product image (realistic style based on Ray-Ban Meta)
+- [x] Generate AI Smart Ring product image (realistic style based on Oura Ring)
+- [x] Generate AI Smart Pendant product image (realistic style based on Limitless Pendant)
+- [x] Generate AI Wearable Pin product image (realistic style based on Humane AI Pin)
