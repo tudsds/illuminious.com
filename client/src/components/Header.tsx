@@ -77,8 +77,11 @@ export default function Header() {
 
   // Logo image - use the new transparent logo
   const getLogoSrc = () => {
-    // The new logo has transparent background and works on all backgrounds
-    return "/images/illuminious-logo-full.png";
+    // Use white logo for Startups page (dark background), blue logo for others
+    if (isStartupsPage) {
+      return "/images/illuminious-logo-white.png";
+    }
+    return "/images/illuminious-logo-blue.png";
   };
 
   return (

@@ -198,7 +198,7 @@ export default function AdminDashboard() {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center gap-4">
             <img
-              src="/images/illuminious-logo-icon.png"
+              src="/images/illuminious-logo-blue.png"
               alt="Illuminious"
               className="w-10 h-10"
             />

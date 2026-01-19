@@ -56,7 +56,7 @@ export default function AdminLogin() {
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4">
         <div className="text-center mb-8">
           <img
-            src="/images/illuminious-logo-icon.png"
+            src="/images/illuminious-logo-blue.png"
             alt="Illuminious"
             className="w-16 h-16 mx-auto mb-4"
           />

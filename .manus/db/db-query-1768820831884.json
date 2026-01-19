@@ -1,0 +1,46 @@
+{
+  "query": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'admins';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user UETRPB1G1XNzyUm.d6a500b55308 --database RqgLMt592NJvQG2kfWGy9g --execute SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'admins';",
+  "rows": [
+    {
+      "COLUMN_NAME": "id"
+    },
+    {
+      "COLUMN_NAME": "username"
+    },
+    {
+      "COLUMN_NAME": "passwordHash"
+    },
+    {
+      "COLUMN_NAME": "name"
+    },
+    {
+      "COLUMN_NAME": "email"
+    },
+    {
+      "COLUMN_NAME": "isSuperAdmin"
+    },
+    {
+      "COLUMN_NAME": "createdAt"
+    },
+    {
+      "COLUMN_NAME": "updatedAt"
+    },
+    {
+      "COLUMN_NAME": "lastSignedIn"
+    },
+    {
+      "COLUMN_NAME": "emailVerified"
+    },
+    {
+      "COLUMN_NAME": "resetToken"
+    },
+    {
+      "COLUMN_NAME": "resetTokenExpiry"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\nid\nusername\npasswordHash\nname\nemail\nisSuperAdmin\ncreatedAt\nupdatedAt\nlastSignedIn\nemailVerified\nresetToken\nresetTokenExpiry\n",
+  "stderr": "",
+  "execution_time_ms": 468
+}

@@ -1,0 +1,8 @@
+{
+  "query": "INSERT INTO admins (username, password_hash, name, email, is_super_admin, created_at, updated_at) VALUES ('superadmin', '$2b$10$/fq9.JT5G8wFDQOXj5RP7.U6MrmnX9lxTbMJemBbOcYFIpqFd/532', 'Super Admin', 'admin@illuminious.com', 1, NOW(), NOW());",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user UETRPB1G1XNzyUm.d6a500b55308 --database RqgLMt592NJvQG2kfWGy9g --execute INSERT INTO admins (username, password_hash, name, email, is_super_admin, created_at, updated_at) VALUES ('superadmin', '$2b$10$/fq9.JT5G8wFDQOXj5RP7.U6MrmnX9lxTbMJemBbOcYFIpqFd/532', 'Super Admin', 'admin@illuminious.com', 1, NOW(), NOW());",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'password_hash' in 'field list'"
+  ]
+}

@@ -270,7 +270,7 @@ function LoginForm({ onLogin }: { onLogin: () => void }) {
         <Card>
           <CardHeader className="text-center">
             <img
-              src="/images/illuminious-logo-icon.png"
+              src="/images/illuminious-logo-blue.png"
               alt="Illuminious"
               className="w-16 h-16 mx-auto mb-4"
             />
@@ -868,7 +868,7 @@ export default function Admin() {
         <div className="container py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <img
-              src="/images/illuminious-logo-icon.png"
+              src="/images/illuminious-logo-blue.png"
               alt="Illuminious"
               className="w-10 h-10"
             />

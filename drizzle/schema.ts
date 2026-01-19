@@ -36,11 +36,6 @@ export const admins = mysqlTable("admins", {
   name: text("name"),
   email: varchar("email", { length: 320 }),
   isSuperAdmin: boolean("isSuperAdmin").default(false).notNull(),
-  // First login setup - email binding required
-  emailVerified: boolean("emailVerified").default(false).notNull(),
-  // Password reset token
-  resetToken: varchar("resetToken", { length: 256 }),
-  resetTokenExpiry: timestamp("resetTokenExpiry"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn"),
