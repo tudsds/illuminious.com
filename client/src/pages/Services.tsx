@@ -152,7 +152,7 @@ export default function Services() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-illuminious-navy mb-6">
               End-to-End Manufacturing Solutions
             </h1>
             <p className="text-xl text-illuminious-light/90 leading-relaxed">
