@@ -1,0 +1,245 @@
+import { Link, useLocation } from "wouter";
+import { Mail, MapPin, Phone, Linkedin, Twitter } from "lucide-react";
+
+const footerLinks = {
+  services: [
+    { label: "DFM", href: "/services/dfm" },
+    { label: "OEM", href: "/services/oem" },
+    { label: "ODM", href: "/services/odm" },
+    { label: "EMS", href: "/services/ems" },
+    { label: "Prototyping", href: "/services/prototyping" },
+    { label: "Logistics", href: "/services/logistics" },
+  ],
+  company: [
+    { label: "About Us", href: "/about" },
+    { label: "News", href: "/news" },
+    { label: "Blog", href: "/blog" },
+    { label: "Startups Program", href: "/startups" },
+    { label: "Contact", href: "/contact" },
+  ],
+};
+
+export default function Footer() {
+  const [location] = useLocation();
+  const isStartupsPage = location === "/startups";
+
+  return (
+    <footer
+      className={`${
+        isStartupsPage
+          ? "bg-cyber-black border-t border-cyber-purple/30"
+          : "bg-illuminious-navy"
+      }`}
+    >
+      <div className="container mx-auto px-4 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center gap-3 mb-6">
+              <img
+                src="/images/illuminious-logo-white.png"
+                alt="Illuminious"
+                className="h-10 w-10"
+              />
+              <span
+                className={`text-xl font-bold font-heading ${
+                  isStartupsPage ? "text-cyber-cyan" : "text-white"
+                }`}
+              >
+                illuminious
+              </span>
+            </Link>
+            <p
+              className={`text-sm leading-relaxed mb-6 ${
+                isStartupsPage ? "text-gray-400" : "text-illuminious-light/80"
+              }`}
+            >
+              Your trusted global electronics supply chain partner. From concept to
+              delivery, we bridge the gap between innovation and manufacturing
+              excellence.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-2 rounded-full transition-colors ${
+                  isStartupsPage
+                    ? "bg-cyber-purple/20 text-cyber-cyan hover:bg-cyber-purple/40"
+                    : "bg-illuminious-blue/20 text-illuminious-light hover:bg-illuminious-blue/40"
+                }`}
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-2 rounded-full transition-colors ${
+                  isStartupsPage
+                    ? "bg-cyber-purple/20 text-cyber-cyan hover:bg-cyber-purple/40"
+                    : "bg-illuminious-blue/20 text-illuminious-light hover:bg-illuminious-blue/40"
+                }`}
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services Column */}
+          <div>
+            <h3
+              className={`text-lg font-semibold mb-6 ${
+                isStartupsPage ? "text-cyber-cyan" : "text-white"
+              }`}
+            >
+              Our Services
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className={`text-sm transition-colors ${
+                      isStartupsPage
+                        ? "text-gray-400 hover:text-cyber-cyan"
+                        : "text-illuminious-light/70 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Column */}
+          <div>
+            <h3
+              className={`text-lg font-semibold mb-6 ${
+                isStartupsPage ? "text-cyber-cyan" : "text-white"
+              }`}
+            >
+              Company
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.company.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className={`text-sm transition-colors ${
+                      isStartupsPage
+                        ? "text-gray-400 hover:text-cyber-cyan"
+                        : "text-illuminious-light/70 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Column */}
+          <div>
+            <h3
+              className={`text-lg font-semibold mb-6 ${
+                isStartupsPage ? "text-cyber-cyan" : "text-white"
+              }`}
+            >
+              Contact Us
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <Mail
+                  className={`w-5 h-5 mt-0.5 ${
+                    isStartupsPage ? "text-cyber-cyan" : "text-illuminious-sky"
+                  }`}
+                />
+                <a
+                  href="mailto:info@illuminious.com"
+                  className={`text-sm transition-colors ${
+                    isStartupsPage
+                      ? "text-gray-400 hover:text-cyber-cyan"
+                      : "text-illuminious-light/70 hover:text-white"
+                  }`}
+                >
+                  info@illuminious.com
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone
+                  className={`w-5 h-5 mt-0.5 ${
+                    isStartupsPage ? "text-cyber-cyan" : "text-illuminious-sky"
+                  }`}
+                />
+                <span
+                  className={`text-sm ${
+                    isStartupsPage ? "text-gray-400" : "text-illuminious-light/70"
+                  }`}
+                >
+                  +1 (555) 123-4567
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin
+                  className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
+                    isStartupsPage ? "text-cyber-cyan" : "text-illuminious-sky"
+                  }`}
+                />
+                <span
+                  className={`text-sm ${
+                    isStartupsPage ? "text-gray-400" : "text-illuminious-light/70"
+                  }`}
+                >
+                  Silicon Valley, CA
+                  <br />
+                  United States
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div
+          className={`mt-12 pt-8 border-t ${
+            isStartupsPage ? "border-cyber-purple/30" : "border-illuminious-blue/30"
+          }`}
+        >
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p
+              className={`text-sm ${
+                isStartupsPage ? "text-gray-500" : "text-illuminious-light/50"
+              }`}
+            >
+              © {new Date().getFullYear()} Illuminious LLC. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <Link
+                href="/privacy"
+                className={`text-sm transition-colors ${
+                  isStartupsPage
+                    ? "text-gray-500 hover:text-cyber-cyan"
+                    : "text-illuminious-light/50 hover:text-white"
+                }`}
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className={`text-sm transition-colors ${
+                  isStartupsPage
+                    ? "text-gray-500 hover:text-cyber-cyan"
+                    : "text-illuminious-light/50 hover:text-white"
+                }`}
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
