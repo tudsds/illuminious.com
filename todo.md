@@ -274,3 +274,20 @@
 - [x] Generate AI Smart Ring product image (realistic style based on Oura Ring)
 - [x] Generate AI Smart Pendant product image (realistic style based on Limitless Pendant)
 - [x] Generate AI Wearable Pin product image (realistic style based on Humane AI Pin)
+
+## Phase 18: 营销优化执行计划 (Jan 20, 2026)
+
+### 我可以完成的任务
+- [ ] 创建Privacy Policy页面 (/privacy)
+- [ ] 创建Terms & Conditions页面 (/terms)
+- [ ] 添加WhatsApp悬浮按钮（需要用户提供号码）
+- [ ] 优化所有图片Alt标签
+
+### 需要用户配合的任务
+- [ ] GA4配置（需要用户提供Measurement ID）
+- [ ] Meta Pixel配置（需要用户提供Pixel ID）
+- [ ] 邮件服务集成（需要用户提供Resend API Key）
+- [ ] 在线客服集成（可选，需要用户提供Tawk.to代码）
+
+### 文档
+- [x] 创建营销优化执行计划文档 (docs/Marketing-Optimization-Execution-Plan-CN.md)
