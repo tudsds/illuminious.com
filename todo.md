@@ -291,3 +291,19 @@
 
 ### 文档
 - [x] 创建营销优化执行计划文档 (docs/Marketing-Optimization-Execution-Plan-CN.md)
+
+## Phase 19: Admin Portal全面修复 (Jan 20, 2026)
+
+### Startups页面
+- [x] 将"Illuminious Startups Program"文字改为全白色
+
+### Admin Portal登录/登出
+- [x] 修复登录后不自动跳转到Dashboard的问题 (已通过window.location.reload()实现)
+- [x] 修复登出后不跳转到首页的问题
+
+### Admin Portal文章管理
+- [x] 修复保存草稿功能 (代码已存在，使用trpc.posts.create/update)
+- [x] 修复发布功能 (代码已存在，使用status="published")
+- [x] 添加图片上传功能（使用内置S3存储） - 代码已存在，使用trpc.posts.uploadImage
+- [x] 添加图片预览功能 - 已添加到RichTextEditor组件
+- [x] 添加视频预览功能 - 已添加YouTube视频预览

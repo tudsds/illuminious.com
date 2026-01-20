@@ -72,6 +72,10 @@ function RichTextEditor({
   const [linkText, setLinkText] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [youtubeUrl, setYoutubeUrl] = useState("");
+  const [isUploadingInline, setIsUploadingInline] = useState(false);
+  const [imagePreview, setImagePreview] = useState("");
+  const [videoPreview, setVideoPreview] = useState("");
+  const uploadMutation = trpc.posts.uploadImage.useMutation();
 
   const insertAtCursor = (text: string) => {
     const textarea = document.getElementById("content-editor") as HTMLTextAreaElement;
@@ -114,26 +118,69 @@ function RichTextEditor({
     }
   };
 
+  const handleInlineImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsUploadingInline(true);
+    try {
+      const reader = new FileReader();
+      reader.onload = async () => {
+        const base64 = (reader.result as string).split(",")[1];
+        const result = await uploadMutation.mutateAsync({
+          filename: file.name,
+          contentType: file.type,
+          base64Data: base64,
+        });
+        setImageUrl(result.url);
+        setImagePreview(result.url);
+        toast.success("Image uploaded successfully");
+      };
+      reader.readAsDataURL(file);
+    } catch (error) {
+      toast.error("Failed to upload image");
+    } finally {
+      setIsUploadingInline(false);
+    }
+  };
+
   const handleImage = () => {
     if (imageUrl) {
       insertAtCursor(`![Image](${imageUrl})`);
       setImageUrl("");
+      setImagePreview("");
       setShowImageDialog(false);
+    }
+  };
+
+  // Extract YouTube video ID
+  const extractYoutubeId = (url: string) => {
+    return url.match(
+      /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/
+    )?.[1];
+  };
+
+  // Update video preview when YouTube URL changes
+  const handleYoutubeUrlChange = (url: string) => {
+    setYoutubeUrl(url);
+    const videoId = extractYoutubeId(url);
+    if (videoId) {
+      setVideoPreview(`https://www.youtube.com/embed/${videoId}`);
+    } else {
+      setVideoPreview("");
     }
   };
 
   const handleYoutube = () => {
     if (youtubeUrl) {
-      // Extract video ID from YouTube URL
-      const videoId = youtubeUrl.match(
-        /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/
-      )?.[1];
+      const videoId = extractYoutubeId(youtubeUrl);
       if (videoId) {
         insertAtCursor(
           `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`
         );
       }
       setYoutubeUrl("");
+      setVideoPreview("");
       setShowYoutubeDialog(false);
     }
   };
@@ -183,23 +230,69 @@ function RichTextEditor({
         </Dialog>
 
         {/* Image Dialog */}
-        <Dialog open={showImageDialog} onOpenChange={setShowImageDialog}>
+        <Dialog open={showImageDialog} onOpenChange={(open) => {
+          setShowImageDialog(open);
+          if (!open) {
+            setImagePreview("");
+            setImageUrl("");
+          }
+        }}>
           <DialogTrigger asChild>
             <Button type="button" variant="ghost" size="sm" title="Insert Image">
               <Image className="w-4 h-4" />
             </Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="max-w-md">
             <DialogHeader>
               <DialogTitle>Insert Image</DialogTitle>
             </DialogHeader>
             <div className="space-y-4">
-              <Input
-                placeholder="Image URL"
-                value={imageUrl}
-                onChange={(e) => setImageUrl(e.target.value)}
-              />
-              <Button onClick={handleImage} className="w-full">
+              {/* Upload Option */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Upload Image</label>
+                <Input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleInlineImageUpload}
+                  disabled={isUploadingInline}
+                />
+                {isUploadingInline && (
+                  <p className="text-sm text-muted-foreground mt-1 flex items-center gap-2">
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Uploading...
+                  </p>
+                )}
+              </div>
+              
+              <div className="text-center text-sm text-muted-foreground">or</div>
+              
+              {/* URL Option */}
+              <div>
+                <label className="text-sm font-medium mb-2 block">Image URL</label>
+                <Input
+                  placeholder="https://example.com/image.jpg"
+                  value={imageUrl}
+                  onChange={(e) => {
+                    setImageUrl(e.target.value);
+                    setImagePreview(e.target.value);
+                  }}
+                />
+              </div>
+              
+              {/* Image Preview */}
+              {imagePreview && (
+                <div className="border rounded-lg p-2">
+                  <p className="text-sm font-medium mb-2">Preview:</p>
+                  <img
+                    src={imagePreview}
+                    alt="Preview"
+                    className="max-h-48 w-full object-contain rounded"
+                    onError={() => setImagePreview("")}
+                  />
+                </div>
+              )}
+              
+              <Button onClick={handleImage} className="w-full" disabled={!imageUrl}>
                 Insert Image
               </Button>
             </div>
@@ -207,23 +300,48 @@ function RichTextEditor({
         </Dialog>
 
         {/* YouTube Dialog */}
-        <Dialog open={showYoutubeDialog} onOpenChange={setShowYoutubeDialog}>
+        <Dialog open={showYoutubeDialog} onOpenChange={(open) => {
+          setShowYoutubeDialog(open);
+          if (!open) {
+            setVideoPreview("");
+            setYoutubeUrl("");
+          }
+        }}>
           <DialogTrigger asChild>
             <Button type="button" variant="ghost" size="sm" title="Insert YouTube Video">
               <Youtube className="w-4 h-4" />
             </Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="max-w-lg">
             <DialogHeader>
               <DialogTitle>Insert YouTube Video</DialogTitle>
             </DialogHeader>
             <div className="space-y-4">
-              <Input
-                placeholder="YouTube URL"
-                value={youtubeUrl}
-                onChange={(e) => setYoutubeUrl(e.target.value)}
-              />
-              <Button onClick={handleYoutube} className="w-full">
+              <div>
+                <label className="text-sm font-medium mb-2 block">YouTube URL</label>
+                <Input
+                  placeholder="https://www.youtube.com/watch?v=... or https://youtu.be/..."
+                  value={youtubeUrl}
+                  onChange={(e) => handleYoutubeUrlChange(e.target.value)}
+                />
+              </div>
+              
+              {/* Video Preview */}
+              {videoPreview && (
+                <div className="border rounded-lg p-2">
+                  <p className="text-sm font-medium mb-2">Preview:</p>
+                  <div className="aspect-video">
+                    <iframe
+                      src={videoPreview}
+                      className="w-full h-full rounded"
+                      allowFullScreen
+                      title="YouTube video preview"
+                    />
+                  </div>
+                </div>
+              )}
+              
+              <Button onClick={handleYoutube} className="w-full" disabled={!videoPreview}>
                 Insert Video
               </Button>
             </div>
@@ -855,7 +973,8 @@ export default function Admin() {
 
   const handleLogout = async () => {
     await logoutMutation.mutateAsync();
-    refetch();
+    // Redirect to home page after logout
+    window.location.href = '/';
   };
 
   if (isLoading) {
