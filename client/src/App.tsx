@@ -15,6 +15,10 @@ import ServiceInjection from "./pages/services/Injection";
 import ServiceSupplyChain from "./pages/services/SupplyChain";
 import ServiceDFM from "./pages/services/DFM";
 import ServiceUSFulfillment from "./pages/services/USFulfillment";
+import ServiceODM from "./pages/services/ODM";
+import ServiceEMS from "./pages/services/EMS";
+import ServiceOEM from "./pages/services/OEM";
+import ServiceRapidPrototyping from "./pages/services/RapidPrototyping";
 import FactoryTour from "./pages/FactoryTour";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
@@ -54,6 +58,10 @@ function Router() {
       <Route path="/services/supply-chain" component={ServiceSupplyChain} />
       <Route path="/services/dfm" component={ServiceDFM} />
       <Route path="/services/us-fulfillment" component={ServiceUSFulfillment} />
+      <Route path="/services/odm" component={ServiceODM} />
+      <Route path="/services/ems" component={ServiceEMS} />
+      <Route path="/services/oem" component={ServiceOEM} />
+      <Route path="/services/rapid-prototyping" component={ServiceRapidPrototyping} />
       
       {/* Factory Tour */}
       <Route path="/factory-tour" component={FactoryTour} />

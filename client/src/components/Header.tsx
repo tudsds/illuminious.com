@@ -18,11 +18,15 @@ const navItems = [
         items: [
           { label: "NPI & Engineering", href: "/services/npi-engineering", icon: Cpu },
           { label: "DFM Analysis", href: "/services/dfm", icon: Wrench },
+          { label: "Rapid Prototyping", href: "/services/rapid-prototyping", icon: Cpu },
         ],
       },
       {
         title: "Manufacturing",
         items: [
+          { label: "ODM", href: "/services/odm", icon: Cpu },
+          { label: "OEM", href: "/services/oem", icon: Factory },
+          { label: "EMS", href: "/services/ems", icon: Layers },
           { label: "PCB Assembly", href: "/services/pcb-assembly", icon: Layers },
           { label: "Box Build", href: "/services/box-build", icon: Factory },
           { label: "Injection Molding", href: "/services/injection-molding", icon: Factory },
@@ -54,7 +58,22 @@ const navItems = [
       },
     ],
   },
-  { label: "Capabilities", href: "/capabilities" },
+  {
+    label: "Capabilities",
+    href: "/capabilities",
+    megaMenu: true,
+    columns: [
+      {
+        title: "Core Capabilities",
+        items: [
+          { label: "Quality & Certifications", href: "/capabilities/quality", icon: Award },
+          { label: "IoT Specialization", href: "/capabilities/iot", icon: Wifi },
+          { label: "Rapid Prototyping", href: "/services/rapid-prototyping", icon: Cpu },
+          { label: "EMS Services", href: "/services/ems", icon: Factory },
+        ],
+      },
+    ],
+  },
   { label: "Factory Tour", href: "/factory-tour" },
   {
     label: "Resources",

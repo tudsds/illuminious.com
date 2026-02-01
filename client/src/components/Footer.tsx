@@ -10,20 +10,29 @@ const globalOffices = [
 
 const footerLinks = {
   services: [
-    { label: "DFM", href: "/services/dfm" },
-    { label: "OEM", href: "/services/oem" },
     { label: "ODM", href: "/services/odm" },
+    { label: "OEM", href: "/services/oem" },
     { label: "EMS", href: "/services/ems" },
-    { label: "PCBA", href: "/services/pcb" },
-    { label: "Prototyping", href: "/services/prototyping" },
-    { label: "Logistics", href: "/services/logistics" },
+    { label: "Rapid Prototyping", href: "/services/rapid-prototyping" },
+    { label: "PCB Assembly", href: "/services/pcb-assembly" },
+    { label: "DFM Analysis", href: "/services/dfm" },
+    { label: "Supply Chain", href: "/services/supply-chain" },
   ],
   company: [
     { label: "About Us", href: "/about" },
+    { label: "Factory Tour", href: "/factory-tour" },
+    { label: "Case Studies", href: "/case-studies" },
     { label: "News", href: "/news" },
     { label: "Blog", href: "/blog" },
     { label: "Startups Program", href: "/startups" },
     { label: "Contact", href: "/contact" },
+  ],
+  industries: [
+    { label: "Medical", href: "/industries/medical" },
+    { label: "Automotive", href: "/industries/automotive" },
+    { label: "Consumer", href: "/industries/consumer" },
+    { label: "IoT & Smart Home", href: "/industries/iot" },
+    { label: "Industrial", href: "/industries/industrial" },
   ],
 };
 
@@ -40,7 +49,7 @@ export default function Footer() {
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
@@ -58,9 +67,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed mb-6 text-white">
-              Your trusted global electronics supply chain partner. From concept to
-              delivery, we bridge the gap between innovation and manufacturing
-              excellence.
+              A US-based electronics manufacturing partner with global production capabilities. 
+              From rapid prototyping to high-volume production, we deliver end-to-end 
+              supply chain solutions for innovative companies worldwide.
             </p>
             <div className="flex gap-4">
               <a
@@ -97,6 +106,25 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white hover:text-white/80 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries Column */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-white">
+              Industries
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.industries.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}

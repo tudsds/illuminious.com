@@ -134,7 +134,7 @@ export default function About() {
       <SEO
         title="About Illuminious | US-Managed Global Electronics Manufacturing"
         description="Illuminious is a US-based electronics manufacturing partner with facilities in Indonesia and China. We combine Silicon Valley innovation with Asian manufacturing excellence."
-        keywords="about illuminious, US electronics manufacturing, China Plus Two strategy, supply chain partner, OEM ODM company"
+        keywords="about illuminious, US electronics manufacturing, global manufacturing network, supply chain partner, OEM ODM company"
         url="/about"
       />
       <Header />
@@ -251,20 +251,20 @@ export default function About() {
         </div>
       </section>
 
-      {/* The China+2 Story */}
+      {/* Global Network Section */}
       <section className="py-20 md:py-32 bg-illuminious-light/30">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-illuminious-blue/10 text-illuminious-blue text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
-              Our Story
+              Global Presence
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              The "China Plus Two" Strategy
+              A US Company with Global Reach
             </h2>
             <p className="text-lg text-muted-foreground">
-              We didn't just follow the trend—we anticipated it. Our multi-shore network was designed 
-              for the modern geopolitical landscape before most companies even recognized the need.
+              Headquartered in Palo Alto, California, we've built a strategic manufacturing network 
+              across multiple continents to serve our clients with flexibility, resilience, and competitive advantage.
             </p>
           </AnimatedSection>
 

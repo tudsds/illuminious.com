@@ -467,3 +467,29 @@
 - [ ] 深圳相关显示为"深圳"+"🇨🇳"
 - [ ] 移除Asia Pacific表述，改为具体城市+国旗
 
+
+
+## Phase 26: 网站修改 - About/Services/Header/Footer (Feb 1, 2026)
+
+### About页面修改
+- [x] 删除"China Plus Two"文字描述
+- [x] 强调全球化制造能力
+- [x] 强调美国公司身份
+
+### 新增服务页面
+- [x] /services/odm - ODM服务页面
+- [x] /services/ems - EMS服务页面
+- [x] /services/oem - OEM服务页面
+- [x] /services/rapid-prototyping - Rapid Prototyping页面
+- [x] 为新页面生成独立图片
+
+### Capabilities更新
+- [x] 更新跳转链接到Rapid Prototyping和EMS页面
+
+### Header更新
+- [x] 为Capabilities添加下拉菜单
+
+### Footer更新
+- [x] 更新公司介绍内容
+- [x] 更新链接
+- - [x] 保持配色不变

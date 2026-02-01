@@ -7,7 +7,7 @@ export default function OEM() {
       title="Original Equipment Manufacturing (OEM)"
       subtitle="Your Design, Our Production"
       description="Leverage our world-class manufacturing facilities to produce your products exactly to your specifications, under your brand name."
-      heroImage="/images/about-factory-equipment.jpg"
+      heroImage="/images/service-oem.jpg"
       icon={Factory}
       seoKeywords="OEM manufacturing, original equipment manufacturing, contract manufacturing, private label manufacturing"
       features={[

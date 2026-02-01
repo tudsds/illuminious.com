@@ -7,7 +7,7 @@ export default function EMS() {
       title="Electronics Manufacturing Services (EMS)"
       subtitle="Complete Electronics Assembly"
       description="From PCB assembly to final product integration, our EMS capabilities deliver high-quality electronics manufacturing with precision and reliability."
-      heroImage="/images/service-prototyping.jpg"
+      heroImage="/images/service-ems.jpg"
       icon={Package}
       seoKeywords="EMS, electronics manufacturing services, PCB assembly, SMT assembly, electronics assembly, box build"
       features={[

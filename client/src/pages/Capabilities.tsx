@@ -37,14 +37,14 @@ const capabilities = [
     title: "Advanced Electronics",
     description: "State-of-the-art SMT capabilities for complex electronics including fine-pitch, BGA, and high-density assemblies.",
     features: ["0201 Components", "BGA/CSP/QFN", "HDI PCB", "Multi-Layer Boards"],
-    href: "/services/pcb-assembly",
+    href: "/services/ems",
   },
   {
     icon: Zap,
     title: "Rapid Prototyping",
     description: "72-hour prototype turnaround leveraging Shenzhen's unmatched supply chain ecosystem.",
     features: ["72-Hour Turnaround", "DFM Review", "Small Batch", "Quick Iteration"],
-    href: "/services/npi-engineering",
+    href: "/services/rapid-prototyping",
   },
 ];
 
