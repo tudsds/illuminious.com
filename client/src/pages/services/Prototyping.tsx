@@ -7,7 +7,7 @@ export default function Prototyping() {
       title="Rapid Prototyping"
       subtitle="Validate Your Designs Quickly"
       description="Quickly validate your product designs with our rapid prototyping services before committing to mass production tooling and manufacturing."
-      heroImage="/images/service-prototyping.png"
+      heroImage="/images/service-prototyping.jpg"
       icon={Wrench}
       seoKeywords="rapid prototyping, 3D printing, CNC machining, prototype manufacturing, product validation"
       features={[

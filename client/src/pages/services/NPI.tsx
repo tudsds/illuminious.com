@@ -142,7 +142,7 @@ export default function ServiceNPI() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-prototyping.png"
+                src="/images/service-prototyping.jpg"
                 alt="NPI & Engineering"
                 className="rounded-2xl shadow-xl"
               />
@@ -267,7 +267,7 @@ export default function ServiceNPI() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <img
-                src="/images/service-dfm-design.png"
+                src="/images/service-dfm-design.jpg"
                 alt="Engineering Excellence"
                 className="rounded-2xl shadow-xl"
               />

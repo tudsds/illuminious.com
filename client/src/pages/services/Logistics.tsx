@@ -7,7 +7,7 @@ export default function Logistics() {
       title="Logistics & Overseas Warehouse"
       subtitle="Global Supply Chain Solutions"
       description="Streamline your supply chain with our comprehensive logistics network and US-based fulfillment center for faster delivery to your customers."
-      heroImage="/images/about-overseas-warehouse.png"
+      heroImage="/images/about-overseas-warehouse.jpg"
       icon={Truck}
       seoKeywords="logistics, overseas warehouse, fulfillment, supply chain, inventory management, global shipping"
       features={[

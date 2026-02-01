@@ -24,7 +24,7 @@ const industries = [
     description: "FDA-compliant manufacturing for medical devices, diagnostic equipment, and healthcare technology. Full traceability and documentation support.",
     capabilities: ["ISO 13485 Ready", "FDA 510(k) Support", "Clean Room Assembly", "Full Traceability"],
     href: "/industries/medical",
-    image: "/images/industry-medical.png",
+    image: "/images/industry-medical.jpg",
   },
   {
     icon: Car,
@@ -32,7 +32,7 @@ const industries = [
     description: "IATF 16949 quality systems for automotive electronics. From infotainment to ADAS sensors, we meet the demanding requirements of the automotive industry.",
     capabilities: ["IATF 16949 Quality", "PPAP Documentation", "Extended Temp Range", "Vibration Testing"],
     href: "/industries/automotive",
-    image: "/images/industry-automotive.png",
+    image: "/images/industry-automotive.jpg",
   },
   {
     icon: Factory,
@@ -40,7 +40,7 @@ const industries = [
     description: "Ruggedized electronics for industrial applications. Wide temperature range, IP-rated enclosures, and long product lifecycle support.",
     capabilities: ["IP67/IP68 Enclosures", "-40°C to +85°C", "Long Lifecycle", "Multi-Market Certs"],
     href: "/industries/industrial",
-    image: "/images/industry-industrial.png",
+    image: "/images/industry-industrial.jpg",
   },
   {
     icon: Home,
@@ -48,7 +48,7 @@ const industries = [
     description: "High-volume consumer electronics manufacturing with cost optimization. From smart home devices to wearables, we deliver quality at scale.",
     capabilities: ["High Volume", "Cost Optimized", "Retail Packaging", "FCC/CE Certified"],
     href: "/industries/consumer",
-    image: "/images/service-ai-glasses.png",
+    image: "/images/service-ai-glasses.jpg",
   },
   {
     icon: Wifi,
@@ -56,7 +56,7 @@ const industries = [
     description: "End-to-end IoT device manufacturing including wireless integration, antenna design, and cloud connectivity testing.",
     capabilities: ["RF/Wireless", "Antenna Design", "Low Power", "OTA Testing"],
     href: "/industries/iot",
-    image: "/images/hero-global-supply-chain.png",
+    image: "/images/hero-global-supply-chain.jpg",
   },
   {
     icon: Cpu,
@@ -64,7 +64,7 @@ const industries = [
     description: "Manufacturing for AI hardware including edge computing devices, neural processing units, and AI-enabled cameras.",
     capabilities: ["Thermal Management", "High-Speed PCB", "GPU Integration", "AI Testing"],
     href: "/industries/ai-computing",
-    image: "/images/service-dfm-design.png",
+    image: "/images/service-dfm-design.jpg",
   },
 ];
 

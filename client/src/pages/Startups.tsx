@@ -144,7 +144,7 @@ export default function Startups() {
             >
               <img src="/images/illuminious-logo-white.png" alt="Illuminious" className="h-12 w-12" />
               <span className="text-cyber-cyan text-2xl font-bold">×</span>
-              <img src="/images/future-factory-logo.png" alt="Future Factory" className="h-10" />
+              <img src="/images/future-factory-logo.jpg" alt="Future Factory" className="h-10" />
             </motion.div>
 
             <motion.div
@@ -338,22 +338,22 @@ export default function Startups() {
             <AnimatedSection delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/images/ai-smart-glasses.png"
+                  src="/images/ai-smart-glasses.jpg"
                   alt="AI Smart Glasses"
                   className="rounded-xl border border-cyber-purple/30"
                 />
                 <img
-                  src="/images/ai-smart-ring.png"
+                  src="/images/ai-smart-ring.jpg"
                   alt="AI Smart Ring"
                   className="rounded-xl border border-cyber-purple/30 mt-8"
                 />
                 <img
-                  src="/images/ai-smart-pendant.png"
+                  src="/images/ai-smart-pendant.jpg"
                   alt="AI Smart Pendant"
                   className="rounded-xl border border-cyber-purple/30"
                 />
                 <img
-                  src="/images/ai-wearable-pin.png"
+                  src="/images/ai-wearable-pin.jpg"
                   alt="AI Wearable Pin"
                   className="rounded-xl border border-cyber-purple/30"
                 />

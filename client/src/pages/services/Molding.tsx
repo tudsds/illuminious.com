@@ -7,7 +7,7 @@ export default function ServiceMolding() {
       title="Tooling & Injection Molding"
       subtitle="Custom Mold Design & Manufacturing"
       description="Professional tooling design and injection molding services for plastic enclosures, components, and custom parts. From mold design to mass production, we deliver precision-engineered solutions for your product needs."
-      heroImage="/images/service-molding.png"
+      heroImage="/images/service-molding.jpg"
       icon={Box}
       features={[
         {

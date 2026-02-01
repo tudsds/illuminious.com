@@ -120,7 +120,7 @@ export default function IndustryIoT() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/hero-global-supply-chain.png"
+                src="/images/hero-global-supply-chain.jpg"
                 alt="IoT Manufacturing"
                 className="rounded-2xl shadow-xl"
               />
@@ -183,7 +183,7 @@ export default function IndustryIoT() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <img
-                src="/images/service-ai-glasses.png"
+                src="/images/service-ai-glasses.jpg"
                 alt="IoT Capabilities"
                 className="rounded-2xl shadow-xl"
               />

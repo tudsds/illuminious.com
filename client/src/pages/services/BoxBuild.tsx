@@ -123,7 +123,7 @@ export default function ServiceBoxBuild() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-assembly.png"
+                src="/images/service-assembly.jpg"
                 alt="Box Build Assembly"
                 className="rounded-2xl shadow-xl"
               />

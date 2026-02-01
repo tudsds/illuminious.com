@@ -7,7 +7,7 @@ export default function DFM() {
       title="Design for Manufacturing (DFM)"
       subtitle="Optimize Your Product Design"
       description="Our DFM services help you optimize your product design for efficient manufacturing, reducing costs, improving quality, and accelerating time-to-market."
-      heroImage="/images/service-dfm-design.png"
+      heroImage="/images/service-dfm-design.jpg"
       icon={Lightbulb}
       seoKeywords="DFM, design for manufacturing, product design optimization, manufacturing efficiency, cost reduction"
       features={[

@@ -54,7 +54,7 @@ const locations = [
     description: "Mass Production Center",
     flag: "🇮🇩",
     role: "The Scale",
-    details: "0% tariff, high-volume assembly",
+    details: "Optimized tariffs, high-volume assembly",
   },
 ];
 
@@ -230,7 +230,7 @@ export default function About() {
             <AnimatedSection delay={0.2}>
               <div className="relative">
                 <img
-                  src="/images/about-factory-equipment.png"
+                  src="/images/about-factory-equipment.jpg"
                   alt="US Headquarters"
                   className="rounded-2xl shadow-2xl"
                 />
@@ -338,7 +338,7 @@ export default function About() {
 
             <AnimatedSection delay={0.2}>
               <img
-                src="/images/about-global-network.png"
+                src="/images/about-global-network.jpg"
                 alt="Engineering Team"
                 className="rounded-2xl shadow-2xl"
               />

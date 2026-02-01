@@ -7,7 +7,7 @@ export default function ServicePCB() {
       title="PCB Manufacturing & Assembly (PCBA)"
       subtitle="Electronics Manufacturing Services for PCB"
       description="Complete PCB fabrication and assembly services from prototype to mass production. We deliver high-quality printed circuit boards with precision and reliability for all your electronic product needs."
-      heroImage="/images/service-pcb.png"
+      heroImage="/images/service-pcb.jpg"
       icon={CircuitBoard}
       features={[
         {

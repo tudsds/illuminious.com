@@ -19,7 +19,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const facilities = [
   {
-    flag: "🇭🇰",
+    flag: "🇨🇳",
     name: "Shenzhen Innovation Lab",
     location: "Shenzhen, China",
     role: "NPI & Engineering Center",
@@ -31,14 +31,14 @@ const facilities = [
       "DFM review and optimization team",
       "Small-batch production (50-5000 units)",
     ],
-    image: "/images/factory-tour-hero.png",
+    image: "/images/factory-tour-hero.jpg",
   },
   {
     flag: "🇮🇩",
     name: "Indonesia Mega Factory",
     location: "Batam Free Trade Zone",
     role: "Mass Production Hub",
-    description: "Our Indonesia facility in the Batam Free Trade Zone offers the perfect combination of cost efficiency and quality. Products assembled here qualify for 0% US import tariffs.",
+    description: "Our Indonesia facility in the Batam Free Trade Zone offers the perfect combination of cost efficiency and quality. Products assembled here qualify for optimized US import tariffs.",
     features: [
       "50,000 sq ft production floor",
       "High-volume SMT and assembly lines",
@@ -46,7 +46,7 @@ const facilities = [
       "Box build and system integration",
       "ISO 9001:2015 certified",
     ],
-    image: "/images/about-overseas-warehouse.png",
+    image: "/images/about-overseas-warehouse.jpg",
   },
 ];
 
@@ -148,7 +148,7 @@ export default function FactoryTour() {
           >
             <div className="relative aspect-video rounded-2xl overflow-hidden bg-illuminious-navy/50 border border-white/10">
               <img
-                src="/images/factory-tour-hero.png"
+                src="/images/factory-tour-hero.jpg"
                 alt="Factory Tour Video"
                 className="w-full h-full object-cover opacity-50"
               />

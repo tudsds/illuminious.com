@@ -31,7 +31,7 @@ const advantages = [
   {
     icon: DollarSign,
     title: "Cost Optimized",
-    description: "Indonesia assembly delivers 40-60% labor cost savings with 0% US tariffs.",
+    description: "Indonesia assembly delivers 40-60% labor cost savings with optimized US tariffs.",
   },
   {
     icon: Zap,
@@ -116,7 +116,7 @@ export default function IndustryConsumer() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-ai-glasses.png"
+                src="/images/service-ai-glasses.jpg"
                 alt="Consumer Electronics"
                 className="rounded-2xl shadow-xl"
               />
@@ -175,7 +175,7 @@ export default function IndustryConsumer() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <img
-                src="/images/service-assembly.png"
+                src="/images/service-assembly.jpg"
                 alt="Consumer Products"
                 className="rounded-2xl shadow-xl"
               />

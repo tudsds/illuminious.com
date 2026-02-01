@@ -4,67 +4,16 @@ import {
   ArrowRight,
   ArrowLeft,
   CheckCircle,
-  TrendingUp,
+  Share2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
+import SocialShare from "@/components/SocialShare";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-const caseStudies: Record<string, {
-  title: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: { metric: string; value: string; description: string }[];
-  testimonial: string;
-  image: string;
-  tags: string[];
-  details: string[];
-}> = {
-  "smart-home-device": {
-    title: "Smart Home Device Manufacturer",
-    industry: "Consumer IoT",
-    challenge: "A US-based smart home company needed to scale from 1,000 to 50,000 units/month while reducing landed costs by 30% to compete with established players.",
-    solution: "We implemented our Three-Phase Rocket approach: NPI in Shenzhen for rapid iteration, then transferred production to Indonesia for cost-optimized mass production.",
-    results: [
-      { metric: "Cost Reduction", value: "35%", description: "Landed cost savings vs. China-only production" },
-      { metric: "Time to Market", value: "8 Weeks", description: "From concept to first production batch" },
-      { metric: "Quality Rate", value: "99.7%", description: "First-pass yield rate" },
-    ],
-    testimonial: "Illuminious helped us achieve price parity with competitors while maintaining the quality our customers expect.",
-    image: "/images/service-ai-glasses.png",
-    tags: ["Consumer Electronics", "IoT", "Scale-Up"],
-    details: [
-      "Rapid prototyping in Shenzhen with 72-hour turnaround",
-      "DFM optimization reduced BOM cost by 15%",
-      "Copy Exact process transfer to Indonesia facility",
-      "US warehouse stocking for 3-day domestic delivery",
-    ],
-  },
-  "medical-device": {
-    title: "Medical Device Startup",
-    industry: "Medical/Healthcare",
-    challenge: "A medical device startup needed FDA-compliant manufacturing with full traceability, but couldn't afford the overhead of traditional medical device manufacturers.",
-    solution: "We provided dedicated clean room space, implemented full lot traceability, and supported their FDA 510(k) submission with comprehensive documentation.",
-    results: [
-      { metric: "FDA Approval", value: "First Try", description: "510(k) clearance without additional information requests" },
-      { metric: "Traceability", value: "100%", description: "Component-level lot tracking" },
-      { metric: "Cost Savings", value: "45%", description: "vs. US-based contract manufacturers" },
-    ],
-    testimonial: "Their documentation and quality systems exceeded what we expected from an overseas manufacturer.",
-    image: "/images/industry-medical.png",
-    tags: ["Medical Device", "FDA", "Startup"],
-    details: [
-      "ISO 13485 compliant quality management system",
-      "Dedicated clean room assembly area",
-      "Full component-level traceability",
-      "DHF documentation support for FDA submission",
-    ],
-  },
-};
+import { caseStudies } from "./CaseStudies";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
@@ -84,7 +33,7 @@ function AnimatedSection({ children, className = "", delay = 0 }: { children: Re
 export default function CaseStudyDetail() {
   const params = useParams();
   const slug = params.slug || "";
-  const study = caseStudies[slug];
+  const study = caseStudies.find(s => s.slug === slug);
 
   if (!study) {
     return (
@@ -106,6 +55,8 @@ export default function CaseStudyDetail() {
       </>
     );
   }
+
+  const shareUrl = `https://illuminious.com/case-studies/${slug}`;
 
   return (
     <>
@@ -145,6 +96,15 @@ export default function CaseStudyDetail() {
                 {study.title}
               </h1>
               <p className="text-xl text-illuminious-blue mb-6">{study.industry}</p>
+              
+              {/* Social Share */}
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-muted-foreground flex items-center gap-1">
+                  <Share2 className="w-4 h-4" />
+                  Share:
+                </span>
+                <SocialShare url={shareUrl} title={study.title} />
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -188,20 +148,28 @@ export default function CaseStudyDetail() {
             <AnimatedSection delay={0.1}>
               <h2 className="text-2xl font-bold text-illuminious-navy mb-4">Our Solution</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">{study.solution}</p>
-              <ul className="space-y-3">
-                {study.details.map((detail) => (
-                  <li key={detail} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-illuminious-blue flex-shrink-0 mt-0.5" />
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
+              {study.fullContent && (
+                <div 
+                  className="prose prose-lg max-w-none"
+                  dangerouslySetInnerHTML={{ __html: study.fullContent }}
+                />
+              )}
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <blockquote className="p-8 rounded-2xl bg-illuminious-light/30 border-l-4 border-illuminious-blue">
                 <p className="text-lg italic text-muted-foreground">"{study.testimonial}"</p>
               </blockquote>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Share Section */}
+      <section className="py-12 bg-illuminious-light/30">
+        <div className="container">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <span className="text-muted-foreground">Found this case study helpful? Share it:</span>
+            <SocialShare url={shareUrl} title={study.title} />
           </div>
         </div>
       </section>

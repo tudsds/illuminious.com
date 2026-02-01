@@ -116,7 +116,7 @@ export default function IndustryAutomotive() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/industry-automotive.png"
+                src="/images/industry-automotive.jpg"
                 alt="Automotive Electronics"
                 className="rounded-2xl shadow-xl"
               />
@@ -189,7 +189,7 @@ export default function IndustryAutomotive() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span>0% US tariffs on finished goods</span>
+                    <span>Optimized US tariffs on finished goods</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600" />

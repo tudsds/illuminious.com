@@ -7,7 +7,7 @@ export default function ODM() {
       title="Original Design Manufacturing (ODM)"
       subtitle="From Concept to Completion"
       description="Let our experienced design and engineering team develop your product from concept to finished goods, ready to sell under your brand."
-      heroImage="/images/service-ai-glasses.png"
+      heroImage="/images/service-ai-glasses.jpg"
       icon={Cpu}
       seoKeywords="ODM manufacturing, original design manufacturing, product development, turnkey manufacturing, white label products"
       features={[

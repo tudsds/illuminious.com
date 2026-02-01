@@ -7,7 +7,7 @@ export default function ServiceTesting() {
       title="Quality Testing & Certification"
       subtitle="Comprehensive Testing & Compliance Services"
       description="Full-spectrum testing and certification services to ensure your products meet quality standards and regulatory requirements. From functional testing to environmental qualification, we validate your products for market success."
-      heroImage="/images/service-testing.png"
+      heroImage="/images/service-testing.jpg"
       icon={TestTube}
       features={[
         {
