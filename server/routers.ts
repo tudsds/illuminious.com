@@ -1,16 +1,18 @@
-import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
+import { notifyContactSubmission } from "./_core/notification";
 import { z } from "zod";
 import { TRPCError } from "@trpc/server";
 import * as db from "./db";
-import { storagePut } from "./storage";
 import { SignJWT, jwtVerify } from "jose";
-import { nanoid } from "nanoid";
 
 const ADMIN_COOKIE_NAME = "admin_session";
-const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "illuminious-admin-secret-key");
+
+if (!process.env.JWT_SECRET) {
+  console.error("[Security] JWT_SECRET environment variable is not set! Admin auth will not work.");
+}
+const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "");
 
 // Initialize default admin on server start
 db.initializeDefaultAdmin().catch(console.error);
@@ -35,16 +37,6 @@ async function verifyAdminToken(token: string): Promise<number | null> {
 
 export const appRouter = router({
   system: systemRouter,
-  auth: router({
-    me: publicProcedure.query(opts => opts.ctx.user),
-    logout: publicProcedure.mutation(({ ctx }) => {
-      const cookieOptions = getSessionCookieOptions(ctx.req);
-      ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });
-      return {
-        success: true,
-      } as const;
-    }),
-  }),
 
   // Admin authentication
   admin: router({
@@ -58,14 +50,14 @@ export const appRouter = router({
         if (!admin) {
           throw new TRPCError({ code: "UNAUTHORIZED", message: "Invalid credentials" });
         }
-        
+
         const token = await createAdminToken(admin.id);
         const cookieOptions = getSessionCookieOptions(ctx.req);
         ctx.res.cookie(ADMIN_COOKIE_NAME, token, {
           ...cookieOptions,
           maxAge: 24 * 60 * 60 * 1000, // 24 hours
         });
-        
+
         return {
           success: true,
           admin: {
@@ -86,13 +78,13 @@ export const appRouter = router({
     me: publicProcedure.query(async ({ ctx }) => {
       const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
       if (!token) return null;
-      
+
       const adminId = await verifyAdminToken(token);
       if (!adminId) return null;
-      
+
       const admin = await db.getAdminById(adminId);
       if (!admin) return null;
-      
+
       return {
         id: admin.id,
         username: admin.username,
@@ -101,7 +93,6 @@ export const appRouter = router({
       };
     }),
 
-    // Super admin only: create new admin
     createAdmin: publicProcedure
       .input(z.object({
         username: z.string().min(3),
@@ -112,20 +103,20 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
         if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         const adminId = await verifyAdminToken(token);
         if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         const currentAdmin = await db.getAdminById(adminId);
         if (!currentAdmin?.isSuperAdmin) {
           throw new TRPCError({ code: "FORBIDDEN", message: "Only super admin can create new admins" });
         }
-        
+
         const existing = await db.getAdminByUsername(input.username);
         if (existing) {
           throw new TRPCError({ code: "CONFLICT", message: "Username already exists" });
         }
-        
+
         const newAdmin = await db.createAdmin({
           username: input.username,
           password: input.password,
@@ -133,24 +124,24 @@ export const appRouter = router({
           email: input.email,
           isSuperAdmin: false,
         });
-        
+
         return { success: true, admin: newAdmin };
       }),
 
     listAdmins: publicProcedure.query(async ({ ctx }) => {
       const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
       if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-      
+
       const adminId = await verifyAdminToken(token);
       if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-      
+
       const currentAdmin = await db.getAdminById(adminId);
       if (!currentAdmin?.isSuperAdmin) {
         throw new TRPCError({ code: "FORBIDDEN" });
       }
-      
-      const admins = await db.getAllAdmins();
-      return admins.map(a => ({
+
+      const adminsList = await db.getAllAdmins();
+      return adminsList.map(a => ({
         id: a.id,
         username: a.username,
         name: a.name,
@@ -166,19 +157,19 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
         if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         const adminId = await verifyAdminToken(token);
         if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         const currentAdmin = await db.getAdminById(adminId);
         if (!currentAdmin?.isSuperAdmin) {
           throw new TRPCError({ code: "FORBIDDEN" });
         }
-        
+
         if (input.id === adminId) {
           throw new TRPCError({ code: "BAD_REQUEST", message: "Cannot delete yourself" });
         }
-        
+
         await db.deleteAdmin(input.id);
         return { success: true };
       }),
@@ -221,18 +212,11 @@ export const appRouter = router({
         authorName: z.string().optional(),
       }))
       .mutation(async ({ input, ctx }) => {
-        // TEMPORARY: Bypass auth for testing - remove in production!
-        const bypassAuth = true;
-        let adminId = 1;
+        const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
+        if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
 
-        if (!bypassAuth) {
-          const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
-          if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-
-          const verifiedAdminId = await verifyAdminToken(token);
-          if (!verifiedAdminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-          adminId = verifiedAdminId;
-        }
+        const adminId = await verifyAdminToken(token);
+        if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
 
         const post = await db.createPost({
           ...input,
@@ -253,16 +237,11 @@ export const appRouter = router({
         authorName: z.string().optional(),
       }))
       .mutation(async ({ input, ctx }) => {
-        // TEMPORARY: Bypass auth for testing - remove in production!
-        const bypassAuth = true;
+        const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
+        if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
 
-        if (!bypassAuth) {
-          const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
-          if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-
-          const adminId = await verifyAdminToken(token);
-          if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-        }
+        const adminId = await verifyAdminToken(token);
+        if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
 
         const { id, ...updateData } = input;
         return await db.updatePost(id, updateData);
@@ -271,44 +250,14 @@ export const appRouter = router({
     delete: publicProcedure
       .input(z.object({ id: z.number() }))
       .mutation(async ({ input, ctx }) => {
-        // TEMPORARY: Bypass auth for testing - remove in production!
-        const bypassAuth = true;
+        const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
+        if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
 
-        if (!bypassAuth) {
-          const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
-          if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-
-          const adminId = await verifyAdminToken(token);
-          if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-        }
+        const adminId = await verifyAdminToken(token);
+        if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
 
         await db.deletePost(input.id);
         return { success: true };
-      }),
-
-    uploadImage: publicProcedure
-      .input(z.object({
-        filename: z.string(),
-        contentType: z.string(),
-        base64Data: z.string(),
-      }))
-      .mutation(async ({ input, ctx }) => {
-        // TEMPORARY: Bypass auth for testing - remove in production!
-        const bypassAuth = true;
-
-        if (!bypassAuth) {
-          const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
-          if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-
-          const adminId = await verifyAdminToken(token);
-          if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-        }
-
-        const buffer = Buffer.from(input.base64Data, 'base64');
-        const fileKey = `posts/${nanoid()}-${input.filename}`;
-
-        const result = await storagePut(fileKey, buffer, input.contentType);
-        return { url: result.url };
       }),
   }),
 
@@ -325,16 +274,29 @@ export const appRouter = router({
       }))
       .mutation(async ({ input }) => {
         const submission = await db.createContactSubmission(input);
+
+        // Send email notification via Resend (fire-and-forget, don't block the response)
+        notifyContactSubmission({
+          name: input.name,
+          email: input.email,
+          company: input.company,
+          phone: input.phone,
+          source: input.source,
+          message: input.message,
+        }).catch((err) => {
+          console.warn("[Contact] Failed to send email notification:", err);
+        });
+
         return { success: true, id: submission?.id };
       }),
 
     list: publicProcedure.query(async ({ ctx }) => {
       const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
       if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-      
+
       const adminId = await verifyAdminToken(token);
       if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-      
+
       return await db.getAllContactSubmissions();
     }),
 
@@ -346,10 +308,10 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
         if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         const adminId = await verifyAdminToken(token);
         if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         await db.updateContactSubmissionStatus(input.id, input.status);
         return { success: true };
       }),
@@ -359,10 +321,10 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const token = ctx.req.cookies?.[ADMIN_COOKIE_NAME];
         if (!token) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         const adminId = await verifyAdminToken(token);
         if (!adminId) throw new TRPCError({ code: "UNAUTHORIZED" });
-        
+
         await db.deleteContactSubmission(input.id);
         return { success: true };
       }),

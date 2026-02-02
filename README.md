@@ -23,10 +23,12 @@ This website is designed to showcase Illuminious's comprehensive manufacturing a
 |----------|------------|
 | Frontend | React 19, TypeScript, Tailwind CSS 4 |
 | Backend | Express 4, tRPC 11 |
-| Database | MySQL/TiDB with Drizzle ORM |
+| Database | Turso (LibSQL) with Drizzle ORM |
+| Email | Resend |
 | Animation | Framer Motion |
-| Authentication | Manus OAuth |
+| Authentication | JWT-based admin sessions |
 | Styling | Tailwind CSS with custom brand colors |
+| Hosting | Vercel |
 
 ## Project Structure
 
@@ -83,7 +85,7 @@ The website uses a carefully selected color palette:
 
 - Node.js 18+ installed
 - pnpm package manager
-- MySQL/TiDB database (for full functionality)
+- Turso database account (for full functionality)
 
 ### Installation
 
@@ -98,10 +100,9 @@ The website uses a carefully selected color palette:
    pnpm install
    ```
 
-3. Set up environment variables (create `.env` file):
-   ```env
-   DATABASE_URL=mysql://user:password@host:port/database
-   JWT_SECRET=your-secret-key
+3. Set up environment variables (copy `.env.example` to `.env` and fill in values):
+   ```bash
+   cp .env.example .env
    ```
 
 4. Push database schema:
@@ -159,9 +160,7 @@ Edit the following files:
 ### Managing News and Blog
 
 1. Access the admin portal at `/admin` (hidden, not linked in navigation)
-2. Log in with admin credentials:
-   - **Username**: `illuminious`
-   - **Password**: `Djpcs17529#`
+2. Log in with admin credentials (username: `illuminious`, password set via `ADMIN_DEFAULT_PASSWORD` env var)
 3. Use the dashboard to:
    - Create, edit, and delete News articles and Blog posts
    - Use the rich text editor with bold, italic, underline, links, images, and YouTube embeds
@@ -173,21 +172,14 @@ Edit the following files:
 
 ## Deployment Guide
 
-### Option 1: Deploy via Manus (Recommended)
-
-1. Save a checkpoint in Manus
-2. Click the "Publish" button in the Management UI
-3. Your site will be available at `your-project.manus.space`
-4. Configure custom domain in Settings > Domains
-
-### Option 2: Deploy to Vercel
+### Deploy to Vercel (Recommended)
 
 1. Push code to GitHub
 2. Connect repository to Vercel
-3. Set environment variables in Vercel dashboard
+3. Set environment variables in Vercel dashboard (see `.env.example`)
 4. Deploy
 
-### Option 3: Deploy to Your Own Server
+### Deploy to Your Own Server
 
 1. Build the project:
    ```bash
@@ -207,9 +199,14 @@ Edit the following files:
 
 | Variable | Description |
 |----------|-------------|
-| `DATABASE_URL` | MySQL connection string |
-| `JWT_SECRET` | Secret for session tokens |
+| `TURSO_DATABASE_URL` | Turso LibSQL connection URL |
+| `TURSO_AUTH_TOKEN` | Turso authentication token |
+| `RESEND_API_KEY` | Resend API key for contact form emails |
+| `RESEND_FROM_EMAIL` | Sender email address |
+| `JWT_SECRET` | Secret for admin session tokens |
+| `ADMIN_DEFAULT_PASSWORD` | Initial admin account password |
 | `NODE_ENV` | Set to `production` |
+| `VITE_GOOGLE_MAPS_API_KEY` | Google Maps API key (optional) |
 
 ## SEO and Advertising
 
@@ -251,13 +248,6 @@ I have a React component for my services page. I want to add a new service calle
 [paste code]
 Please add a new service with appropriate icon and description.
 ```
-
-### With Manus
-
-1. Open your project in Manus
-2. Describe the changes you want in natural language
-3. Manus will automatically modify the code
-4. Review changes and save a checkpoint
 
 ### Common Modification Tasks
 

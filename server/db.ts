@@ -1,16 +1,20 @@
 import { eq, desc, and } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, admins, posts, contactSubmissions, InsertAdmin, InsertPost, InsertContactSubmission, Admin, Post, ContactSubmission } from "../drizzle/schema";
-import { ENV } from './_core/env';
+import { drizzle } from "drizzle-orm/libsql";
+import { users, admins, posts, contactSubmissions, type InsertUser, type Admin, type Post, type ContactSubmission } from "../drizzle/schema";
 import * as crypto from 'crypto';
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
 // Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
-  if (!_db && process.env.DATABASE_URL) {
+  if (!_db && process.env.TURSO_DATABASE_URL) {
     try {
-      _db = drizzle(process.env.DATABASE_URL);
+      _db = drizzle({
+        connection: {
+          url: process.env.TURSO_DATABASE_URL,
+          authToken: process.env.TURSO_AUTH_TOKEN,
+        },
+      });
     } catch (error) {
       console.warn("[Database] Failed to connect:", error);
       _db = null;
@@ -44,47 +48,29 @@ export async function upsertUser(user: InsertUser): Promise<void> {
   }
 
   try {
-    const values: InsertUser = {
-      openId: user.openId,
-    };
-    const updateSet: Record<string, unknown> = {};
+    const existing = await db.select().from(users).where(eq(users.openId, user.openId)).limit(1);
 
-    const textFields = ["name", "email", "loginMethod"] as const;
-    type TextField = (typeof textFields)[number];
+    if (existing.length > 0) {
+      const updateSet: Record<string, unknown> = {
+        updatedAt: new Date().toISOString(),
+      };
+      if (user.name !== undefined) updateSet.name = user.name;
+      if (user.email !== undefined) updateSet.email = user.email;
+      if (user.loginMethod !== undefined) updateSet.loginMethod = user.loginMethod;
+      if (user.lastSignedIn !== undefined) updateSet.lastSignedIn = typeof user.lastSignedIn === 'string' ? user.lastSignedIn : new Date().toISOString();
+      if (user.role !== undefined) updateSet.role = user.role;
 
-    const assignNullable = (field: TextField) => {
-      const value = user[field];
-      if (value === undefined) return;
-      const normalized = value ?? null;
-      values[field] = normalized;
-      updateSet[field] = normalized;
-    };
-
-    textFields.forEach(assignNullable);
-
-    if (user.lastSignedIn !== undefined) {
-      values.lastSignedIn = user.lastSignedIn;
-      updateSet.lastSignedIn = user.lastSignedIn;
+      await db.update(users).set(updateSet).where(eq(users.openId, user.openId));
+    } else {
+      await db.insert(users).values({
+        openId: user.openId,
+        name: user.name ?? null,
+        email: user.email ?? null,
+        loginMethod: user.loginMethod ?? null,
+        role: user.role ?? "user",
+        lastSignedIn: typeof user.lastSignedIn === 'string' ? user.lastSignedIn : new Date().toISOString(),
+      });
     }
-    if (user.role !== undefined) {
-      values.role = user.role;
-      updateSet.role = user.role;
-    } else if (user.openId === ENV.ownerOpenId) {
-      values.role = 'admin';
-      updateSet.role = 'admin';
-    }
-
-    if (!values.lastSignedIn) {
-      values.lastSignedIn = new Date();
-    }
-
-    if (Object.keys(updateSet).length === 0) {
-      updateSet.lastSignedIn = new Date();
-    }
-
-    await db.insert(users).values(values).onDuplicateKeyUpdate({
-      set: updateSet,
-    });
   } catch (error) {
     console.error("[Database] Failed to upsert user:", error);
     throw error;
@@ -110,7 +96,7 @@ export async function createAdmin(admin: { username: string; password: string; n
   if (!db) return null;
 
   const passwordHash = hashPassword(admin.password);
-  
+
   try {
     await db.insert(admins).values({
       username: admin.username,
@@ -119,7 +105,7 @@ export async function createAdmin(admin: { username: string; password: string; n
       email: admin.email || null,
       isSuperAdmin: admin.isSuperAdmin || false,
     });
-    
+
     const result = await db.select().from(admins).where(eq(admins.username, admin.username)).limit(1);
     return result[0] || null;
   } catch (error) {
@@ -133,15 +119,15 @@ export async function verifyAdmin(username: string, password: string): Promise<A
   if (!db) return null;
 
   const result = await db.select().from(admins).where(eq(admins.username, username)).limit(1);
-  
+
   if (result.length === 0) return null;
-  
+
   const admin = result[0];
   if (!verifyPassword(password, admin.passwordHash)) return null;
-  
+
   // Update last signed in
-  await db.update(admins).set({ lastSignedIn: new Date() }).where(eq(admins.id, admin.id));
-  
+  await db.update(admins).set({ lastSignedIn: new Date().toISOString(), updatedAt: new Date().toISOString() }).where(eq(admins.id, admin.id));
+
   return admin;
 }
 
@@ -191,7 +177,7 @@ export async function createPost(post: { title: string; content: string; excerpt
   if (!db) return null;
 
   const slug = generateSlug(post.title);
-  
+
   try {
     await db.insert(posts).values({
       title: post.title,
@@ -203,9 +189,9 @@ export async function createPost(post: { title: string; content: string; excerpt
       status: post.status || 'draft',
       authorName: post.authorName || null,
       authorId: post.authorId || null,
-      publishedAt: post.status === 'published' ? new Date() : null,
+      publishedAt: post.status === 'published' ? new Date().toISOString() : null,
     });
-    
+
     const result = await db.select().from(posts).where(eq(posts.slug, slug)).limit(1);
     return result[0] || null;
   } catch (error) {
@@ -218,17 +204,17 @@ export async function updatePost(id: number, post: Partial<{ title: string; cont
   const db = await getDb();
   if (!db) return null;
 
-  const updateData: Record<string, unknown> = { ...post };
-  
+  const updateData: Record<string, unknown> = { ...post, updatedAt: new Date().toISOString() };
+
   if (post.status === 'published') {
     const existing = await db.select().from(posts).where(eq(posts.id, id)).limit(1);
     if (existing[0] && !existing[0].publishedAt) {
-      updateData.publishedAt = new Date();
+      updateData.publishedAt = new Date().toISOString();
     }
   }
-  
+
   await db.update(posts).set(updateData).where(eq(posts.id, id));
-  
+
   const result = await db.select().from(posts).where(eq(posts.id, id)).limit(1);
   return result[0] || null;
 }
@@ -266,7 +252,7 @@ export async function getPostsByType(type: 'news' | 'blog', publishedOnly: boole
       .where(and(eq(posts.type, type), eq(posts.status, 'published')))
       .orderBy(desc(posts.publishedAt));
   }
-  
+
   return await db.select().from(posts)
     .where(eq(posts.type, type))
     .orderBy(desc(posts.createdAt));
@@ -294,7 +280,7 @@ export async function createContactSubmission(submission: { name: string; email:
       message: submission.message,
       source: submission.source || null,
     });
-    
+
     // Get the last inserted submission
     const result = await db.select().from(contactSubmissions).orderBy(desc(contactSubmissions.id)).limit(1);
     return result[0] || null;
@@ -315,7 +301,7 @@ export async function updateContactSubmissionStatus(id: number, status: 'new' | 
   const db = await getDb();
   if (!db) return false;
 
-  await db.update(contactSubmissions).set({ status }).where(eq(contactSubmissions.id, id));
+  await db.update(contactSubmissions).set({ status, updatedAt: new Date().toISOString() }).where(eq(contactSubmissions.id, id));
   return true;
 }
 
@@ -333,11 +319,17 @@ export async function initializeDefaultAdmin(): Promise<void> {
   const db = await getDb();
   if (!db) return;
 
+  const defaultPassword = process.env.ADMIN_DEFAULT_PASSWORD;
+  if (!defaultPassword) {
+    console.warn('[Database] ADMIN_DEFAULT_PASSWORD not set, skipping default admin creation');
+    return;
+  }
+
   const existing = await getAdminByUsername('illuminious');
   if (!existing) {
     await createAdmin({
       username: 'illuminious',
-      password: 'Djpcs17529#',
+      password: defaultPassword,
       name: 'Super Admin',
       email: 'admin@illuminious.com',
       isSuperAdmin: true,
