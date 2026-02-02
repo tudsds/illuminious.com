@@ -128,7 +128,7 @@ export default function ServiceInjection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-molding.png"
+                src="/images/service-molding.jpg"
                 alt="Injection Molding"
                 className="rounded-2xl shadow-xl"
               />

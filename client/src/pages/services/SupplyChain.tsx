@@ -150,7 +150,7 @@ export default function ServiceSupplyChain() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/about-overseas-warehouse.png"
+                src="/images/about-overseas-warehouse.jpg"
                 alt="Supply Chain & Logistics"
                 className="rounded-2xl shadow-xl"
               />

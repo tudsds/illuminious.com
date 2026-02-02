@@ -7,7 +7,7 @@ export default function ServiceAssembly() {
       title="Product Assembly & Box Build"
       subtitle="Complete System Integration Services"
       description="End-to-end product assembly and box build services from sub-assembly to final product. We handle mechanical assembly, cable harness, testing, and packaging to deliver market-ready products."
-      heroImage="/images/service-assembly.png"
+      heroImage="/images/service-assembly.jpg"
       icon={Wrench}
       features={[
         {

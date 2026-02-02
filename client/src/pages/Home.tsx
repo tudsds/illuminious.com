@@ -38,7 +38,7 @@ const advantages = [
   {
     icon: Scale,
     title: "Tariff-Free",
-    description: "0% duty solutions via our Indonesia manufacturing hub.",
+    description: "Optimized duty solutions via our Indonesia manufacturing hub.",
   },
   {
     icon: Zap,
@@ -56,9 +56,9 @@ const locations = [
     description: "Legal security, IP protection, and local support. You deal with a US entity, not an overseas shell company.",
   },
   {
-    flag: "🇭🇰",
-    country: "Hong Kong",
-    city: "Shenzhen Hub",
+    flag: "🇨🇳",
+    country: "China",
+    city: "Shenzhen",
     role: "The Speed",
     description: "Unmatched engineering depth and supply chain speed. NPI in days, not weeks.",
   },
@@ -67,7 +67,7 @@ const locations = [
     country: "Indonesia",
     city: "Batam FTZ",
     role: "The Scale",
-    description: "Unbeatable labor costs for high-volume orders. Your solution for massive scalability with 0% US tariffs.",
+    description: "Unbeatable labor costs for high-volume orders. Your solution for massive scalability with optimized tariffs.",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function Home() {
     <>
       <SEO
         title="US-Managed Electronics Manufacturing | Indonesia & China | Illuminious"
-        description="Mitigate risk and avoid tariffs with our hybrid 'China Plus Two' strategy. US engineering, Shenzhen speed, and Southeast Asian scale. Get a quote today."
+        description="Mitigate risk with our global manufacturing strategy. US engineering, Shenzhen speed, and Southeast Asian scale. Get a quote today."
         keywords="China Plus Two Strategy, Supply Chain Resilience, Vietnam vs China Manufacturing, tariff free assembly, NPI services, electronics manufacturing"
         url="/"
       />
@@ -111,7 +111,7 @@ export default function Home() {
         {/* Background */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-global-supply-chain.png"
+            src="/images/hero-global-supply-chain.jpg"
             alt="Global Supply Chain"
             className="w-full h-full object-cover"
           />
@@ -287,7 +287,7 @@ export default function Home() {
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-center gap-2 text-sm text-foreground">
                       <CheckCircle className="w-4 h-4 text-illuminious-navy" />
-                      0% US Tariff Solutions
+                      Tariff Optimization Solutions
                     </li>
                     <li className="flex items-center gap-2 text-sm text-foreground">
                       <CheckCircle className="w-4 h-4 text-illuminious-navy" />
@@ -455,7 +455,7 @@ export default function Home() {
                     2
                   </div>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">🇭🇰</span>
+                    <span className="text-2xl">🇨🇳</span>
                     <span className="text-sm font-medium text-illuminious-sky">Shenzhen</span>
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">The NPI Accelerator</h3>
@@ -498,7 +498,7 @@ export default function Home() {
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-illuminious-navy" />
-                      0% Tariff Solutions
+                      Tariff Optimization Solutions
                     </li>
                     <li className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-illuminious-navy" />

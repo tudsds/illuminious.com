@@ -7,7 +7,7 @@ export default function ServicePackaging() {
       title="IC Packaging & Semiconductor Services"
       subtitle="Advanced Chip Packaging Solutions"
       description="Comprehensive IC packaging and semiconductor backend services including wire bonding, flip chip, and advanced packaging technologies. We support your chip-level integration needs from prototype to volume production."
-      heroImage="/images/service-packaging.png"
+      heroImage="/images/service-packaging.jpg"
       icon={Package}
       features={[
         {

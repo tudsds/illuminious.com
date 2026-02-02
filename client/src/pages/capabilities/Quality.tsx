@@ -132,7 +132,7 @@ export default function CapabilityQuality() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-testing.png"
+                src="/images/service-testing.jpg"
                 alt="Quality & Certifications"
                 className="rounded-2xl shadow-xl"
               />

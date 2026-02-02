@@ -125,7 +125,7 @@ export default function CapabilityIoT() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/hero-global-supply-chain.png"
+                src="/images/hero-global-supply-chain.jpg"
                 alt="IoT & Wireless"
                 className="rounded-2xl shadow-xl"
               />

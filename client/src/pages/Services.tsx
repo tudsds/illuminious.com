@@ -30,7 +30,7 @@ const services = [
     features: ["72-Hour Rapid Prototyping", "DFM Review & Optimization", "Engineering Validation", "Small-Batch Pilot Runs"],
     href: "/services/npi-engineering",
     phase: "Phase 1 & 2",
-    location: "🇺🇸 USA + 🇭🇰 Shenzhen",
+    location: "🇺🇸 USA + 🇨🇳 Shenzhen",
   },
   {
     icon: Zap,
@@ -50,7 +50,7 @@ const services = [
     features: ["0201 Component Placement", "BGA & Fine Pitch", "Multi-Layer PCB", "AOI & X-Ray Inspection"],
     href: "/services/pcb-assembly",
     phase: "Phase 2",
-    location: "🇭🇰 Shenzhen",
+    location: "🇨🇳 Shenzhen",
   },
   {
     icon: Factory,
@@ -80,7 +80,7 @@ const services = [
     features: ["Mold Design & DFM", "Rapid Tooling", "Multi-Cavity Molds", "Insert & Overmolding"],
     href: "/services/injection-molding",
     phase: "Phase 2 & 3",
-    location: "🇭🇰 Shenzhen + 🇮🇩 Indonesia",
+    location: "🇨🇳 Shenzhen + 🇮🇩 Indonesia",
   },
   {
     icon: Palette,
@@ -137,7 +137,7 @@ const phases = [
     number: 2,
     title: "NPI Accelerator",
     location: "Shenzhen",
-    flag: "🇭🇰",
+    flag: "🇨🇳",
     color: "bg-illuminious-sky",
     description: "Rapid prototyping, engineering validation",
   },

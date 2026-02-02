@@ -123,7 +123,7 @@ export default function IndustryMedical() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/industry-medical.png"
+                src="/images/industry-medical.jpg"
                 alt="Medical Device Manufacturing"
                 className="rounded-2xl shadow-xl"
               />

@@ -118,7 +118,7 @@ export default function ServicePCBA() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-pcb.png"
+                src="/images/service-pcb.jpg"
                 alt="PCB Assembly"
                 className="rounded-2xl shadow-xl"
               />

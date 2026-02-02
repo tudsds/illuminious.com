@@ -15,7 +15,7 @@ export default function SEO({
   title,
   description,
   keywords,
-  image = "/images/illuminious-logo-main.png",
+  image = "/images/illuminious-logo-main.jpg",
   url,
   type = "website",
   publishedTime,
