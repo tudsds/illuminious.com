@@ -147,7 +147,7 @@ export default function ServicePrototyping() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-prototyping.png"
+                src="/images/service-prototyping.jpg"
                 alt="Rapid Prototyping"
                 className="rounded-2xl shadow-xl"
               />

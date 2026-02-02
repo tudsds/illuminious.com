@@ -177,7 +177,7 @@ export default function ServiceLogistics() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/about-overseas-warehouse.png"
+                src="/images/about-overseas-warehouse.jpg"
                 alt="US Fulfillment"
                 className="rounded-2xl shadow-xl"
               />

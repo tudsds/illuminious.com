@@ -152,7 +152,7 @@ export default function ServiceOEM() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/about-factory-equipment.png"
+                src="/images/about-factory-equipment.jpg"
                 alt="OEM Manufacturing"
                 className="rounded-2xl shadow-xl"
               />

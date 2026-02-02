@@ -151,7 +151,7 @@ export default function ServiceEMS() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-pcb.png"
+                src="/images/service-ems.jpg"
                 alt="Electronics Manufacturing Services"
                 className="rounded-2xl shadow-xl"
               />

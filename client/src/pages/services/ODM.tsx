@@ -152,7 +152,7 @@ export default function ServiceODM() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-ai-glasses.png"
+                src="/images/service-odm.jpg"
                 alt="ODM Manufacturing"
                 className="rounded-2xl shadow-xl"
               />

@@ -146,7 +146,7 @@ export default function ServiceUSFulfillment() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-logistics.jpg"
+                src="/images/about-overseas-warehouse.jpg"
                 alt="US Fulfillment"
                 className="rounded-2xl shadow-xl"
               />
@@ -222,7 +222,7 @@ export default function ServiceUSFulfillment() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <img
-                src="/images/global-network-map.jpg"
+                src="/images/hero-global-supply-chain.jpg"
                 alt="US Fulfillment Network"
                 className="rounded-2xl shadow-xl"
               />
