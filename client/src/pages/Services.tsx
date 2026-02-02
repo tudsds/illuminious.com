@@ -10,6 +10,9 @@ import {
   Lightbulb,
   ChevronRight,
   CheckCircle,
+  Zap,
+  Globe,
+  Palette,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -30,6 +33,16 @@ const services = [
     location: "🇺🇸 USA + 🇭🇰 Shenzhen",
   },
   {
+    icon: Zap,
+    title: "Rapid Prototyping",
+    subtitle: "Validate Designs Quickly",
+    description: "From design files to functional prototype in 72 hours. Multiple technologies including 3D printing, CNC machining, and vacuum casting.",
+    features: ["24-72 Hour Turnaround", "3D Printing & CNC", "50+ Material Options", "Functional Prototypes"],
+    href: "/services/rapid-prototyping",
+    phase: "Phase 1 & 2",
+    location: "🇺🇸 USA + 🇭🇰 Shenzhen",
+  },
+  {
     icon: Cpu,
     title: "PCB Assembly (PCBA)",
     subtitle: "Surface Mount Technology",
@@ -38,6 +51,16 @@ const services = [
     href: "/services/pcb-assembly",
     phase: "Phase 2",
     location: "🇭🇰 Shenzhen",
+  },
+  {
+    icon: Factory,
+    title: "EMS",
+    subtitle: "Electronics Manufacturing",
+    description: "From PCB assembly to final product integration. High-quality electronics manufacturing with SMT, THT, and comprehensive testing.",
+    features: ["SMT & THT Assembly", "Box Build Integration", "Complete Testing", "IPC Certified"],
+    href: "/services/ems",
+    phase: "Phase 2 & 3",
+    location: "🇭🇰 Shenzhen + 🇮🇩 Indonesia",
   },
   {
     icon: Package,
@@ -60,6 +83,26 @@ const services = [
     location: "🇭🇰 Shenzhen + 🇮🇩 Indonesia",
   },
   {
+    icon: Palette,
+    title: "ODM",
+    subtitle: "Original Design Manufacturing",
+    description: "From concept to completion. Our experienced design and engineering team develops your product from idea to finished goods under your brand.",
+    features: ["Product Development", "Industrial Design", "Engineering Services", "Turnkey Production"],
+    href: "/services/odm",
+    phase: "All Phases",
+    location: "🇺🇸 USA + 🇭🇰 Shenzhen + 🇮🇩 Indonesia",
+  },
+  {
+    icon: Factory,
+    title: "OEM",
+    subtitle: "Original Equipment Manufacturing",
+    description: "Your design, our production. Leverage our world-class manufacturing facilities to produce your products exactly to your specifications.",
+    features: ["Precision Manufacturing", "Scalable Production", "Quality Assurance", "Brand Packaging"],
+    href: "/services/oem",
+    phase: "All Phases",
+    location: "🇺🇸 USA + 🇭🇰 Shenzhen + 🇮🇩 Indonesia",
+  },
+  {
     icon: Truck,
     title: "Supply Chain & Logistics",
     subtitle: "Global Fulfillment",
@@ -68,6 +111,16 @@ const services = [
     href: "/services/supply-chain",
     phase: "All Phases",
     location: "🌐 Global",
+  },
+  {
+    icon: Globe,
+    title: "US Fulfillment",
+    subtitle: "Warehouse & Distribution",
+    description: "US-based fulfillment center for fast domestic delivery. Reduce shipping times and costs while improving customer satisfaction.",
+    features: ["US Warehouse Storage", "Same-Day Fulfillment", "B2B & D2C Support", "Returns Management"],
+    href: "/services/us-fulfillment",
+    phase: "Phase 4",
+    location: "🇺🇸 USA",
   },
 ];
 
@@ -119,7 +172,7 @@ export default function Services() {
       <SEO
         title="End-to-End Manufacturing Services | NPI to Mass Production | Illuminious"
         description="Complete electronics manufacturing services from NPI and engineering to mass production. PCB assembly, box build, injection molding, and global logistics."
-        keywords="NPI services, PCB assembly, box build, injection molding, supply chain, electronics manufacturing"
+        keywords="NPI services, PCB assembly, box build, injection molding, supply chain, electronics manufacturing, OEM, ODM, EMS"
         url="/services"
       />
       <Header />
@@ -188,7 +241,7 @@ export default function Services() {
 
           <div className="space-y-8">
             {services.map((service, index) => (
-              <AnimatedSection key={service.title} delay={index * 0.1}>
+              <AnimatedSection key={service.title} delay={index * 0.05}>
                 <Link href={service.href}>
                   <div className="group bg-white rounded-2xl border border-illuminious-light hover:border-illuminious-blue hover:shadow-xl transition-all duration-300 overflow-hidden">
                     <div className="grid md:grid-cols-3 gap-6 p-6 md:p-8">
