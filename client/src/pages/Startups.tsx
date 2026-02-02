@@ -144,7 +144,7 @@ export default function Startups() {
             >
               <img src="/images/illuminious-logo-white.png" alt="Illuminious" className="h-12 w-12" />
               <span className="text-cyber-cyan text-2xl font-bold">×</span>
-              <img src="/images/future-factory-logo.jpg" alt="Future Factory" className="h-10" />
+              <img src="/images/future-factory-logo.png" alt="Future Factory" className="h-10" />
             </motion.div>
 
             <motion.div

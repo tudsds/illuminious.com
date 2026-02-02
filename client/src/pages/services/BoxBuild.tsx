@@ -41,7 +41,7 @@ const capabilities = [
 
 const specs = [
   { label: "Labor Cost Savings", value: "40-60%" },
-  { label: "US Tariff", value: "0%" },
+  { label: "Tariff Optimization", value: "Minimal" },
   { label: "Production Capacity", value: "10K+/Month" },
   { label: "Quality Standard", value: "ISO 9001" },
 ];
@@ -77,7 +77,7 @@ export default function ServiceBoxBuild() {
     <>
       <SEO
         title="Box Build & System Integration | Final Assembly | Illuminious"
-        description="Complete box build and system integration services in Indonesia. 0% US tariffs, 40-60% labor cost savings. From sub-assembly to retail-ready products."
+        description="Complete box build and system integration services in Indonesia. Optimized tariff structure with minimal duties, 40-60% labor cost savings. From sub-assembly to retail-ready products."
         keywords="box build, system integration, final assembly, electronics manufacturing, Indonesia manufacturing"
         url="/services/box-build"
       />
@@ -101,7 +101,7 @@ export default function ServiceBoxBuild() {
                 Box Build & System Integration
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Complete product assembly in our Indonesia facility. Leverage 0% US tariffs 
+                Complete product assembly in our Indonesia facility. Leverage optimized tariff structure with minimal duties 
                 and significant labor cost savings without compromising quality.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -209,8 +209,8 @@ export default function ServiceBoxBuild() {
                       <CheckCircle className="w-5 h-5 text-green-600" />
                     </div>
                     <div>
-                      <strong className="text-illuminious-navy">0% US Tariffs</strong>
-                      <p className="text-sm text-muted-foreground">Products assembled in Indonesia qualify for duty-free import to the US.</p>
+                      <strong className="text-illuminious-navy">Tariff Optimization</strong>
+                      <p className="text-sm text-muted-foreground">Strategic manufacturing location minimizes tariff exposure and optimizes landed costs for US market entry.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
