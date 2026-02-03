@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import { createServer } from "http";
 import net from "net";
+import { parse as parseCookies } from "cookie";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 
 import { appRouter } from "../routers";
@@ -33,6 +34,11 @@ async function startServer() {
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
+  // Parse cookies from request headers (needed for admin auth)
+  app.use((req, _res, next) => {
+    req.cookies = parseCookies(req.headers.cookie || "");
+    next();
+  });
   // tRPC API
   app.use(
     "/api/trpc",
