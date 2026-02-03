@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -305,10 +306,10 @@ export default function News() {
               Get the latest news and insights delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
+              <Input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full border-2 border-white/50 bg-transparent text-white placeholder:text-white/80 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/30"
+                className="flex-1 rounded-full border-2 border-white/50 bg-transparent text-white placeholder:text-white/80 focus:border-white focus:ring-2 focus:ring-white/30"
               />
               <Button className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-6">
                 Subscribe
