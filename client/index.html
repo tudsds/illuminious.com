@@ -47,6 +47,28 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://illuminious.com/" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Google Ads Verification (replace YOUR_VERIFICATION_CODE with actual code from Google Search Console) -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
+
+    <!-- Meta/Facebook Domain Verification (replace YOUR_FB_DOMAIN_VERIFICATION with code from Meta Business Settings > Brand Safety > Domains) -->
+    <!-- <meta name="facebook-domain-verification" content="YOUR_FB_DOMAIN_VERIFICATION" /> -->
+
+    <!-- Bing Webmaster Verification (replace YOUR_BING_CODE with code from Bing Webmaster Tools) -->
+    <!-- <meta name="msvalidate.01" content="YOUR_BING_CODE" /> -->
+
+    <!-- GEO targeting meta tags -->
+    <meta name="geo.region" content="US-CA" />
+    <meta name="geo.placename" content="Palo Alto" />
+    <meta name="geo.position" content="37.4419;-122.1430" />
+    <meta name="ICBM" content="37.4419, -122.1430" />
+    <meta name="language" content="English" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="7 days" />
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#132843" />
@@ -142,6 +164,78 @@
             }
           }
         ]
+      }
+    }
+    </script>
+
+    <!-- Structured Data for LocalBusiness (GEO Optimization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Illuminious LLC",
+      "description": "Global electronics supply chain provider offering EMS, OEM, ODM, DFM, PCB assembly, and US fulfillment services.",
+      "url": "https://illuminious.com",
+      "logo": "https://illuminious.com/images/illuminious-logo-main.png",
+      "image": "https://illuminious.com/images/hero-global-supply-chain.jpg",
+      "telephone": "+1-424-626-3312",
+      "email": "info@illuminious.com",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Palo Alto",
+        "addressLocality": "Palo Alto",
+        "addressRegion": "CA",
+        "postalCode": "94301",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "37.4419",
+        "longitude": "-122.1430"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        }
+      ],
+      "knowsAbout": [
+        "Electronics Manufacturing Services",
+        "PCB Assembly",
+        "Original Equipment Manufacturing",
+        "Original Design Manufacturing",
+        "Design for Manufacturing",
+        "Rapid Prototyping",
+        "Injection Molding",
+        "Supply Chain Management",
+        "US Fulfillment",
+        "IoT Hardware Development"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data for WebSite (Search Box / Sitelinks) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Illuminious",
+      "url": "https://illuminious.com",
+      "description": "Global electronics supply chain solutions - EMS, OEM, ODM, DFM, PCB assembly, and overseas warehouse services.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Illuminious LLC"
       }
     }
     </script>

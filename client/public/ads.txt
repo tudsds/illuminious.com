@@ -1,0 +1,26 @@
+# Illuminious LLC - Authorized Digital Sellers (ads.txt)
+# https://illuminious.com
+#
+# This file declares authorized sellers for digital advertising inventory.
+# Required for Google Ads and programmatic advertising compliance.
+#
+# FORMAT: <domain>, <publisher-id>, <relationship>, <certification-authority-id>
+#
+# ============================================================================
+# INSTRUCTIONS: Replace the placeholder values below with your actual IDs.
+# ============================================================================
+#
+# Google Ads / Google AdSense
+# To find your Google Ads publisher ID:
+#   1. Sign in to Google Ads (ads.google.com)
+#   2. Click the tools icon > Setup > Account Information
+#   3. Your Customer ID is the publisher ID (format: pub-XXXXXXXXXXXXXXXX)
+#
+# Uncomment and update the line below with your Google publisher ID:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# ============================================================================
+# Meta (Facebook/Instagram) Ads
+# Meta does not require ads.txt, but uses domain verification instead.
+# See: Meta Business Settings > Brand Safety > Domains
+# ============================================================================
