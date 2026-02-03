@@ -1,4 +1,3 @@
-import "dotenv/config";
 import express from "express";
 import { parse as parseCookies } from "cookie";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
