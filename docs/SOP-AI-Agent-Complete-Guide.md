@@ -33,8 +33,9 @@
 - **Headquarters:** Palo Alto, California
 - **Industry:** Electronics Manufacturing Services (EMS)
 - **Business Model:** "China Plus Two" strategy - US headquarters + Hong Kong/Shenzhen engineering + Indonesia mass production
-- **Repository:** `https://github.com/tudsds/illuminious-web`
+- **Repository:** `https://github.com/tudsds/illuminious.com`
 - **Main Branch:** `main`
+- **Remote Name:** `newrepo`
 - **Official Phone:** +1 424-626-3312
 - **Google Tag Manager ID:** GTM-TV3WNHSZ
 
@@ -610,8 +611,8 @@ All API routes use tRPC. Key routers:
 
 ```
 Step 1: Fetch latest main
-        git fetch origin main
-        git merge origin/main
+        git fetch newrepo main
+        git merge newrepo/main
 
 Step 2: Make changes on feature branch
         Branch name: claude/setup-illuminious-website-BP4Pu
@@ -622,7 +623,7 @@ Step 3: Commit with descriptive message
         git commit -m "Description of changes"
 
 Step 4: Push to feature branch
-        git push -u origin claude/[branch-name]
+        git push -u newrepo claude/[branch-name]
 
 Step 5: User merges to main on their machine
         (see Section 11 for user commands)
@@ -632,7 +633,7 @@ Step 5: User merges to main on their machine
 
 ```
 Step 1: Pull latest
-        git pull origin main
+        git pull newrepo main
 
 Step 2: Make changes
 
@@ -644,7 +645,7 @@ Step 4: Commit
         git commit -m "Description"
 
 Step 5: Push
-        git push origin main
+        git push newrepo main
 ```
 
 ### Commit Message Style
@@ -787,7 +788,7 @@ export GIT_SSH_COMMAND="ssh -i /home/jamesg27/.ssh/id_ed25519"
 # === PULL LATEST ===
 cd /mnt/d/web3/illuminious-web
 git checkout main
-git pull origin main
+git pull newrepo main
 
 # === (make your edits here) ===
 
@@ -799,7 +800,7 @@ npm run dev
 # === COMMIT & PUSH ===
 git add -A
 git commit -m "Your description"
-git push origin main
+git push newrepo main
 ```
 
 ### Merging AI Agent's Feature Branch
@@ -810,16 +811,16 @@ When an AI agent has pushed changes to a feature branch:
 export GIT_SSH_COMMAND="ssh -i /home/jamesg27/.ssh/id_ed25519"
 cd /mnt/d/web3/illuminious-web
 git checkout main
-git pull origin main
-git fetch origin claude/setup-illuminious-website-BP4Pu
-git merge origin/claude/setup-illuminious-website-BP4Pu
-git push origin main
+git pull newrepo main
+git fetch newrepo claude/setup-illuminious-website-BP4Pu
+git merge newrepo/claude/setup-illuminious-website-BP4Pu
+git push newrepo main
 ```
 
 If merge is blocked by local changes:
 ```bash
 git stash
-git merge origin/claude/setup-illuminious-website-BP4Pu
+git merge newrepo/claude/setup-illuminious-website-BP4Pu
 git stash pop
 ```
 

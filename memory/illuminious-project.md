@@ -3,7 +3,7 @@
 ## Project Overview
 **Illuminious LLC** - Global electronics supply chain provider offering EMS, OEM, ODM, DFM, and overseas warehouse services.
 - Website: https://illuminious.com
-- Repository: https://github.com/tudsds/illuminious-web
+- Repository: https://github.com/tudsds/illuminious.com
 - Local Path: /mnt/d/web3/illuminious-web
 
 ## Tech Stack

@@ -5,6 +5,7 @@
 - WSL (Ubuntu) on Windows with Node.js 22 and pnpm installed
 - SSH key configured for GitHub access
 - Repository cloned to `/mnt/d/web3/illuminious-web`
+- **Primary Remote:** `newrepo` → `https://github.com/tudsds/illuminious.com`
 
 ---
 
@@ -48,10 +49,10 @@ cd /mnt/d/web3/illuminious-web
 export GIT_SSH_COMMAND="ssh -i /home/jamesg27/.ssh/id_ed25519"
 
 git checkout main
-git pull origin main
+git pull newrepo main
 ```
 
-This ensures your local copy matches the latest version on GitHub.
+This ensures your local copy matches the latest version on GitHub (from https://github.com/tudsds/illuminious.com).
 
 ---
 
@@ -253,17 +254,17 @@ git commit -m "Description of what you changed"
 ```bash
 export GIT_SSH_COMMAND="ssh -i /home/jamesg27/.ssh/id_ed25519"
 
-git push origin main
+git push newrepo main
 ```
 
 That's it. Since you're working directly on `main`, the push goes straight to the
-main branch on GitHub.
+main branch on GitHub (https://github.com/tudsds/illuminious.com).
 
 ---
 
 ## Step 7: Verify on GitHub
 
-1. Go to https://github.com/tudsds/illuminious-web
+1. Go to https://github.com/tudsds/illuminious.com
 2. Check that your latest commit appears at the top
 3. Click on the commit to review the changes
 
@@ -285,7 +286,7 @@ export GIT_SSH_COMMAND="ssh -i /home/jamesg27/.ssh/id_ed25519"
 # Pull latest
 cd /mnt/d/web3/illuminious-web
 git checkout main
-git pull origin main
+git pull newrepo main
 
 # Make your edits in your code editor...
 
@@ -298,5 +299,5 @@ pnpm dev
 # Commit and push
 git add -A
 git commit -m "Your change description"
-git push origin main
+git push newrepo main
 ```
