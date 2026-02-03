@@ -301,14 +301,14 @@ export default function News() {
             <h2 className="text-2xl font-bold text-white mb-4">
               Subscribe to Our Newsletter
             </h2>
-            <p className="text-illuminious-light/80 mb-6">
+            <p className="text-white mb-6">
               Get the latest news and insights delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full border-0 focus:outline-none focus:ring-2 focus:ring-illuminious-sky"
+                className="flex-1 px-4 py-3 rounded-full border-2 border-white/50 bg-transparent text-white placeholder:text-white/80 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/30"
               />
               <Button className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-6">
                 Subscribe

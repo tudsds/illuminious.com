@@ -202,7 +202,7 @@ export default function Header() {
                         {item.columns?.map((column, colIdx) => (
                           <div key={column.title} className={colIdx > 0 ? "mt-3 pt-3 border-t border-gray-100" : ""}>
                             <h4 className={`text-[10px] font-semibold uppercase tracking-wider mb-2 ${
-                              isStartupsPage ? "text-cyber-cyan/60" : "text-gray-400"
+                              isStartupsPage ? "text-white" : "text-gray-400"
                             }`}>
                               {column.title}
                             </h4>
@@ -305,7 +305,7 @@ export default function Header() {
                               {item.columns?.map((column) => (
                                 <div key={column.title} className="py-1">
                                   <div className={`text-[10px] font-semibold uppercase tracking-wider px-3 mb-1 ${
-                                    isStartupsPage ? "text-cyber-cyan/50" : "text-gray-400"
+                                    isStartupsPage ? "text-white" : "text-gray-400"
                                   }`}>
                                     {column.title}
                                   </div>
