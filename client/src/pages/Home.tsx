@@ -50,21 +50,21 @@ const advantages = [
 const locations = [
   {
     flag: "🇺🇸",
-    country: "USA",
+    country: "US",
     city: "Palo Alto, CA",
     role: "The Brain",
     description: "Legal security, IP protection, and local support. You deal with a US entity, not an overseas shell company.",
   },
   {
     flag: "🇨🇳",
-    country: "China",
+    country: "CN",
     city: "Shenzhen",
     role: "The Speed",
     description: "Unmatched engineering depth and supply chain speed. NPI in days, not weeks.",
   },
   {
     flag: "🇮🇩",
-    country: "Indonesia",
+    country: "ID",
     city: "Batam FTZ",
     role: "The Scale",
     description: "Unbeatable labor costs for high-volume orders. Your solution for massive scalability with optimized tariffs.",
@@ -334,7 +334,7 @@ export default function Home() {
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-illuminious-blue/20 text-illuminious-sky text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
-              The "China Plus Two" Advantage
+              The "U.S. Plus Two" Advantage
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Your Boots on the Ground, Globally
@@ -424,7 +424,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">🇺🇸</span>
-                    <span className="text-sm font-medium text-illuminious-blue">USA</span>
+                    <span className="text-sm font-medium text-illuminious-blue">US</span>
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">Strategy & DFM</h3>
                   <p className="text-muted-foreground mb-4">
@@ -456,7 +456,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">🇨🇳</span>
-                    <span className="text-sm font-medium text-illuminious-sky">Shenzhen</span>
+                    <span className="text-sm font-medium text-illuminious-sky">CN</span>
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">The NPI Accelerator</h3>
                   <p className="text-muted-foreground mb-4">
@@ -488,7 +488,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">🇮🇩</span>
-                    <span className="text-sm font-medium text-illuminious-navy">Indonesia</span>
+                    <span className="text-sm font-medium text-illuminious-navy">ID</span>
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">The Scale Engine</h3>
                   <p className="text-muted-foreground mb-4">
