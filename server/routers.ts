@@ -275,6 +275,14 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         const submission = await db.createContactSubmission(input);
 
+        if (!submission) {
+          console.error("[Contact] Failed to save submission to database");
+          throw new TRPCError({ 
+            code: "INTERNAL_SERVER_ERROR", 
+            message: "Failed to save contact submission. Please check database configuration." 
+          });
+        }
+
         // Send email notification via Resend (fire-and-forget, don't block the response)
         notifyContactSubmission({
           name: input.name,
@@ -287,7 +295,7 @@ export const appRouter = router({
           console.warn("[Contact] Failed to send email notification:", err);
         });
 
-        return { success: true, id: submission?.id };
+        return { success: true, id: submission.id };
       }),
 
     list: publicProcedure.query(async ({ ctx }) => {

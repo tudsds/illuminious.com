@@ -7,7 +7,15 @@ let _db: ReturnType<typeof drizzle> | null = null;
 
 // Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
-  if (!_db && process.env.TURSO_DATABASE_URL) {
+  if (!_db) {
+    if (!process.env.TURSO_DATABASE_URL) {
+      console.error("[Database] TURSO_DATABASE_URL environment variable is not set!");
+      return null;
+    }
+    if (!process.env.TURSO_AUTH_TOKEN) {
+      console.error("[Database] TURSO_AUTH_TOKEN environment variable is not set!");
+      return null;
+    }
     try {
       _db = drizzle({
         connection: {
@@ -15,8 +23,9 @@ export async function getDb() {
           authToken: process.env.TURSO_AUTH_TOKEN,
         },
       });
+      console.log("[Database] Successfully connected to Turso");
     } catch (error) {
-      console.warn("[Database] Failed to connect:", error);
+      console.error("[Database] Failed to connect:", error);
       _db = null;
     }
   }
