@@ -3,6 +3,7 @@ import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { appRouter } from "../../server/routers";
 
 export const config = {
+  runtime: 'nodejs',
   api: {
     bodyParser: false,
   },
