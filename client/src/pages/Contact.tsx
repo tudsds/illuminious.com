@@ -102,8 +102,6 @@ export default function Contact() {
     message: "",
   });
 
-  const submitContactMutation = trpc.contact.submit.useMutation();
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -118,13 +116,24 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      await submitContactMutation.mutateAsync({
-        name: `${formData.firstName} ${formData.lastName}`,
-        email: formData.email,
-        phone: formData.phone || undefined,
-        company: formData.company || undefined,
-        message: formData.message,
+      const response = await fetch('/api/contact-submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone || undefined,
+          company: formData.company || undefined,
+          message: formData.message,
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
 
       // GTM tracking for form submission
       if (typeof window !== 'undefined' && (window as any).dataLayer) {
