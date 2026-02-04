@@ -1,45 +1,37 @@
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { parse as parseCookies } from "cookie";
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { appRouter } from "../../server/routers";
 
 export const config = {
   runtime: 'nodejs',
-  api: {
-    bodyParser: false,
-  },
 };
 
-export default async function handler(req: any, res: any) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Parse cookies from request headers (needed for admin auth)
   const cookies = parseCookies(req.headers.cookie || "");
   
   // Build the full URL
   const protocol = req.headers['x-forwarded-proto'] || 'https';
   const host = req.headers.host || 'localhost';
-  const url = new URL(req.url || "", `${protocol}://${host}`);
+  const path = req.url || '/api/trpc';
+  const url = `${protocol}://${host}${path}`;
   
-  // Read body if present
-  let bodyText: string | undefined;
+  // Get body
+  let body: string | undefined;
   if (req.method !== "GET" && req.method !== "HEAD") {
     if (typeof req.body === 'string') {
-      bodyText = req.body;
+      body = req.body;
     } else if (req.body) {
-      bodyText = JSON.stringify(req.body);
-    } else {
-      // Read from stream
-      const chunks: Buffer[] = [];
-      for await (const chunk of req) {
-        chunks.push(chunk);
-      }
-      bodyText = Buffer.concat(chunks).toString('utf-8');
+      body = JSON.stringify(req.body);
     }
   }
   
   // Create fetch request
   const fetchRequest = new Request(url, {
-    method: req.method,
-    headers: req.headers as HeadersInit,
-    body: bodyText,
+    method: req.method || 'GET',
+    headers: new Headers(req.headers as HeadersInit),
+    body: body,
   });
 
   // Create context with cookies
@@ -64,18 +56,16 @@ export default async function handler(req: any, res: any) {
 
     // Convert Fetch API response to Vercel response
     const responseBody = await response.text();
-    res.statusCode = response.status;
+    res.status(response.status);
     
     // Copy headers
     response.headers.forEach((value, key) => {
       res.setHeader(key, value);
     });
     
-    res.end(responseBody);
+    res.send(responseBody);
   } catch (error) {
     console.error("tRPC handler error:", error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.status(500).json({ error: 'Internal server error', details: error instanceof Error ? error.message : 'Unknown error' });
   }
 }
