@@ -105,7 +105,7 @@ export default function Home() {
         url="/"
       />
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background */}
@@ -114,6 +114,9 @@ export default function Home() {
             src="/images/hero-global-supply-chain.jpg"
             alt="Global Supply Chain"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/95 via-illuminious-navy/85 to-illuminious-navy/70" />
           <div className="absolute inset-0 bg-black/30" />
@@ -165,7 +168,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="text-base sm:text-lg text-white/80 mb-6 md:mb-8 leading-relaxed max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
             >
-              Accelerate NPI in Shenzhen. Scale duty-free in Southeast Asia. 
+              Accelerate NPI in Shenzhen. Scale duty-free in Southeast Asia.
               Managed securely from our Palo Alto HQ.
             </motion.p>
 
@@ -222,7 +225,7 @@ export default function Home() {
               Stop Choosing Between Cost and Safety
             </h2>
             <p className="text-lg text-muted-foreground">
-              We deliver the perfect balance. Whether you're an innovator building your first prototype 
+              We deliver the perfect balance. Whether you're an innovator building your first prototype
               or an enterprise scaling to millions, we have the right solution.
             </p>
           </AnimatedSection>
@@ -242,7 +245,7 @@ export default function Home() {
                     Need Engineering & NPI?
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Leverage our Shenzhen engineering center for rapid iteration. 
+                    Leverage our Shenzhen engineering center for rapid iteration.
                     From concept to "Golden Sample" in days, not weeks.
                   </p>
                   <ul className="space-y-2 mb-6">
@@ -281,7 +284,7 @@ export default function Home() {
                     Need Cost Reduction & Volume?
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Utilize our Southeast Asian facilities for tariff-free mass production 
+                    Utilize our Southeast Asian facilities for tariff-free mass production
                     with unbeatable labor costs.
                   </p>
                   <ul className="space-y-2 mb-6">
@@ -414,7 +417,7 @@ export default function Home() {
           <div className="relative">
             {/* Connection line */}
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-illuminious-blue via-illuminious-sky to-illuminious-navy -translate-y-1/2 z-0" />
-            
+
             <div className="grid lg:grid-cols-3 gap-8 relative z-10">
               {/* Phase 1 */}
               <AnimatedSection delay={0.1}>
@@ -428,7 +431,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">Strategy & DFM</h3>
                   <p className="text-muted-foreground mb-4">
-                    Start right. Our US engineering team reviews your design files before they ever leave the country. 
+                    Start right. Our US engineering team reviews your design files before they ever leave the country.
                     We identify risks, optimize for manufacturability, and lock down supply chain strategies.
                   </p>
                   <ul className="space-y-2">
@@ -460,7 +463,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">The NPI Accelerator</h3>
                   <p className="text-muted-foreground mb-4">
-                    Iterate fast. Leveraging the unmatched speed of the Shenzhen supply chain, 
+                    Iterate fast. Leveraging the unmatched speed of the Shenzhen supply chain,
                     we turn concepts into "Golden Samples" in days, not weeks.
                   </p>
                   <ul className="space-y-2">
@@ -492,7 +495,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">The Scale Engine</h3>
                   <p className="text-muted-foreground mb-4">
-                    Grow big. Once the process is perfected, we transfer it via our "Copy Exact" methodology 
+                    Grow big. Once the process is perfected, we transfer it via our "Copy Exact" methodology
                     to our Southeast Asian facilities for mass production.
                   </p>
                   <ul className="space-y-2">
@@ -536,7 +539,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-illuminious-navy mb-2">Trusted By Industry Leaders</h2>
             <p className="text-muted-foreground">From innovative startups to Fortune 500 companies</p>
           </AnimatedSection>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {trustedLogos.map((logo, index) => (
               <AnimatedSection key={logo.name} delay={index * 0.05}>
@@ -589,7 +592,7 @@ export default function Home() {
               Ready to Start Your Project?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Whether you need rapid prototyping or high-volume production, 
+              Whether you need rapid prototyping or high-volume production,
               our team is ready to help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

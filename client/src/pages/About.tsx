@@ -162,7 +162,7 @@ export default function About() {
               Your Hardware Co-Pilot from Concept to Scale
             </h1>
             <p className="text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-3xl">
-              Illuminious LLC is a Delaware-incorporated company headquartered in Palo Alto, California.
+              Illuminious LLC is a Wyoming-incorporated company headquartered in Palo Alto, California.
               We combine Silicon Valley's innovation mindset with Asia's manufacturing excellence to help
               hardware companies navigate the complexities of global supply chains.
             </p>
@@ -198,12 +198,12 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Unlike offshore shell companies, Illuminious is a real US business with real US accountability. 
-                  When you sign a contract with us, you're protected by US commercial law, US courts, and US 
+                  Unlike offshore shell companies, Illuminious is a real US business with real US accountability.
+                  When you sign a contract with us, you're protected by US commercial law, US courts, and US
                   intellectual property protections.
                 </p>
                 <p>
-                  This isn't just about legal technicalities—it's about trust. Your designs, your innovations, 
+                  This isn't just about legal technicalities—it's about trust. Your designs, your innovations,
                   and your competitive advantages are protected by the strongest IP laws in the world.
                 </p>
               </div>
@@ -263,7 +263,7 @@ export default function About() {
               A US Company with Global Reach
             </h2>
             <p className="text-lg text-muted-foreground">
-              Headquartered in Palo Alto, California, we've built a strategic manufacturing network 
+              Headquartered in Palo Alto, California, we've built a strategic manufacturing network
               across multiple continents to serve our clients with flexibility, resilience, and competitive advantage.
             </p>
           </AnimatedSection>
@@ -306,9 +306,9 @@ export default function About() {
                 Your Hardware Co-Pilots
               </h2>
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
-                Our engineering team doesn't just follow your specifications—we help you optimize them. 
-                With deep expertise in JDM (Joint Design Manufacturing), we act as an extension of your 
-                R&D team, identifying opportunities to improve manufacturability, reduce costs, and 
+                Our engineering team doesn't just follow your specifications—we help you optimize them.
+                With deep expertise in JDM (Joint Design Manufacturing), we act as an extension of your
+                R&D team, identifying opportunities to improve manufacturability, reduce costs, and
                 accelerate time-to-market.
               </p>
               <div className="space-y-4">
@@ -430,7 +430,7 @@ export default function About() {
               Certifications & Standards
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our facilities maintain the highest industry standards and certifications, 
+              Our facilities maintain the highest industry standards and certifications,
               ensuring your products meet global regulatory requirements.
             </p>
           </AnimatedSection>

@@ -29,7 +29,7 @@
 ## 1. Project Identity & Overview
 
 - **Company:** Illuminious LLC
-- **Incorporated:** Delaware, USA
+- **Incorporated:** Wyoming, USA
 - **Headquarters:** Palo Alto, California
 - **Industry:** Electronics Manufacturing Services (EMS)
 - **Business Model:** "China Plus Two" strategy - US headquarters + Hong Kong/Shenzhen engineering + Indonesia mass production

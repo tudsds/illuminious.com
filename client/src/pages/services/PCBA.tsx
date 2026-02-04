@@ -14,6 +14,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
+import Breadcrumb from "@/components/Breadcrumb";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const capabilities = [
@@ -52,6 +53,44 @@ const techSpecs = [
   { category: "Inspection & Testing", items: ["3D AOI Inspection", "X-Ray Inspection", "ICT (In-Circuit Test)", "Flying Probe Test", "Functional Testing"] },
 ];
 
+// FAQ data for structured data and potential FAQ section
+const faqs = [
+  {
+    question: "What is the minimum order quantity for PCB assembly?",
+    answer: "We have no minimum order quantity. We handle everything from single prototype boards to production runs of 100,000+ units."
+  },
+  {
+    question: "What file formats do you accept for PCB assembly?",
+    answer: "We accept Gerber files (RS-274X), ODB++, and IPC-2581. For BOM, we accept Excel, CSV, or PDF formats with part numbers, quantities, and reference designators."
+  },
+  {
+    question: "What is the typical turnaround time for PCBA?",
+    answer: "Prototype orders (1-10 boards) typically ship within 5-7 business days. Production orders depend on volume and component availability, usually 2-4 weeks."
+  },
+  {
+    question: "Do you provide component sourcing?",
+    answer: "Yes, we offer full turnkey service including component sourcing from authorized distributors. We can also work with customer-supplied components (consigned)."
+  },
+  {
+    question: "What quality certifications do you have?",
+    answer: "Our facilities are ISO 9001:2015 certified and we manufacture to IPC-A-610 Class 2 and Class 3 standards. We can also meet automotive (IATF 16949) and medical (ISO 13485) requirements."
+  }
+];
+
+// Generate FAQ structured data
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(faq => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer
+    }
+  }))
+};
+
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   return (
@@ -76,12 +115,25 @@ export default function ServicePCBA() {
         keywords="PCB assembly, PCBA, SMT assembly, surface mount technology, BGA assembly, electronics manufacturing"
         url="/services/pcb-assembly"
       />
+      {/* FAQ Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-illuminious-light/30 to-white" />
         <div className="container relative z-10">
+          {/* Breadcrumb Navigation */}
+          <Breadcrumb
+            items={[
+              { label: "Services", href: "/services" },
+              { label: "PCB Assembly" },
+            ]}
+            className="mb-6"
+          />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -96,7 +148,7 @@ export default function ServicePCBA() {
                 PCB Assembly (PCBA)
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                High-precision SMT assembly with advanced capabilities. From prototype 
+                High-precision SMT assembly with advanced capabilities. From prototype
                 to production, we deliver quality boards with industry-leading turnaround times.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -119,8 +171,10 @@ export default function ServicePCBA() {
             >
               <img
                 src="/images/service-pcb.jpg"
-                alt="PCB Assembly"
+                alt="PCB Assembly line with SMT component placement - Illuminious PCBA services"
                 className="rounded-2xl shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           </div>
@@ -151,7 +205,7 @@ export default function ServicePCBA() {
               Assembly Capabilities
             </h2>
             <p className="text-lg text-muted-foreground">
-              State-of-the-art SMT lines with the precision and capacity to handle 
+              State-of-the-art SMT lines with the precision and capacity to handle
               your most demanding projects.
             </p>
           </AnimatedSection>
