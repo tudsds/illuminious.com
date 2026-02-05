@@ -12,7 +12,7 @@ export default function Privacy() {
         url="/privacy"
       />
       <Header />
-      
+
       <section className="pt-32 pb-20 bg-white">
         <div className="container max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-8">
@@ -25,8 +25,8 @@ export default function Privacy() {
           <div className="prose prose-lg max-w-none">
             <h2 className="text-2xl font-bold text-illuminious-navy mt-8 mb-4">1. Introduction</h2>
             <p className="text-muted-foreground mb-4">
-              Illuminious Inc. ("we," "our," or "us") respects your privacy and is committed to protecting 
-              your personal data. This privacy policy explains how we collect, use, disclose, and safeguard 
+              Illuminious LLC ("we," "our," or "us") respects your privacy and is committed to protecting
+              your personal data. This privacy policy explains how we collect, use, disclose, and safeguard
               your information when you visit our website or use our services.
             </p>
 
@@ -54,7 +54,7 @@ export default function Privacy() {
 
             <h2 className="text-2xl font-bold text-illuminious-navy mt-8 mb-4">4. Information Sharing</h2>
             <p className="text-muted-foreground mb-4">
-              We do not sell, trade, or rent your personal information to third parties. We may share 
+              We do not sell, trade, or rent your personal information to third parties. We may share
               your information with:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
@@ -65,8 +65,8 @@ export default function Privacy() {
 
             <h2 className="text-2xl font-bold text-illuminious-navy mt-8 mb-4">5. Data Security</h2>
             <p className="text-muted-foreground mb-4">
-              We implement appropriate technical and organizational measures to protect your personal 
-              data against unauthorized access, alteration, disclosure, or destruction. However, no 
+              We implement appropriate technical and organizational measures to protect your personal
+              data against unauthorized access, alteration, disclosure, or destruction. However, no
               method of transmission over the Internet is 100% secure.
             </p>
 
@@ -84,7 +84,7 @@ export default function Privacy() {
 
             <h2 className="text-2xl font-bold text-illuminious-navy mt-8 mb-4">7. Cookies Policy</h2>
             <p className="text-muted-foreground mb-4">
-              We use cookies to enhance your experience on our website. You can control cookies through 
+              We use cookies to enhance your experience on our website. You can control cookies through
               your browser settings. Types of cookies we use:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground mb-4 space-y-2">
@@ -95,19 +95,19 @@ export default function Privacy() {
 
             <h2 className="text-2xl font-bold text-illuminious-navy mt-8 mb-4">8. Third-Party Links</h2>
             <p className="text-muted-foreground mb-4">
-              Our website may contain links to third-party websites. We are not responsible for the 
+              Our website may contain links to third-party websites. We are not responsible for the
               privacy practices of these external sites. We encourage you to review their privacy policies.
             </p>
 
             <h2 className="text-2xl font-bold text-illuminious-navy mt-8 mb-4">9. Children's Privacy</h2>
             <p className="text-muted-foreground mb-4">
-              Our services are not directed to individuals under the age of 18. We do not knowingly 
+              Our services are not directed to individuals under the age of 18. We do not knowingly
               collect personal information from children.
             </p>
 
             <h2 className="text-2xl font-bold text-illuminious-navy mt-8 mb-4">10. Changes to This Policy</h2>
             <p className="text-muted-foreground mb-4">
-              We may update this privacy policy from time to time. We will notify you of any changes 
+              We may update this privacy policy from time to time. We will notify you of any changes
               by posting the new policy on this page and updating the "Last updated" date.
             </p>
 
@@ -116,8 +116,8 @@ export default function Privacy() {
               If you have any questions about this privacy policy, please contact us at:
             </p>
             <p className="text-muted-foreground mb-4">
-              <strong>Illuminious Inc.</strong><br />
-              Palo Alto, California, USA<br />
+              <strong>Illuminious LLC</strong><br />
+              30 N Gould St, Ste R, Sheridan, WY 82801, USA<br />
               Email: info@illuminious.com
             </p>
           </div>
