@@ -213,7 +213,7 @@ export default function Footer() {
                 <span className="text-sm text-white">
                   Palo Alto, CA
                   <br />
-                  United States (HQ)
+                  United States
                 </span>
               </li>
             </ul>

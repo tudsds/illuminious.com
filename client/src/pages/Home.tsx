@@ -355,12 +355,9 @@ export default function Home() {
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-4xl">{loc.flag}</span>
                     <div>
-                      <h3 className="text-xl font-bold text-white">{loc.country}</h3>
-                      <p className="text-illuminious-sky text-sm">{loc.city}</p>
+                      <h3 className="text-xl font-bold text-white">{loc.city}</h3>
+                      <p className="text-illuminious-sky text-sm">{loc.role}</p>
                     </div>
-                  </div>
-                  <div className="inline-block px-3 py-1 rounded-full bg-illuminious-sky/20 text-illuminious-sky text-sm font-medium mb-3">
-                    {loc.role}
                   </div>
                   <p className="text-white text-sm leading-relaxed">
                     {loc.description}
@@ -427,7 +424,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">🇺🇸</span>
-                    <span className="text-sm font-medium text-illuminious-blue">US</span>
+                    <span className="text-sm font-medium text-illuminious-blue">Palo Alto</span>
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">Strategy & DFM</h3>
                   <p className="text-muted-foreground mb-4">
@@ -459,7 +456,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">🇨🇳</span>
-                    <span className="text-sm font-medium text-illuminious-sky">CN</span>
+                    <span className="text-sm font-medium text-illuminious-sky">Shenzhen</span>
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">The NPI Accelerator</h3>
                   <p className="text-muted-foreground mb-4">
@@ -491,7 +488,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">🇮🇩</span>
-                    <span className="text-sm font-medium text-illuminious-navy">ID</span>
+                    <span className="text-sm font-medium text-illuminious-navy">Batam</span>
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">The Scale Engine</h3>
                   <p className="text-muted-foreground mb-4">

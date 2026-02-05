@@ -162,7 +162,7 @@ export default function About() {
               Your Hardware Co-Pilot from Concept to Scale
             </h1>
             <p className="text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-3xl">
-              Illuminious LLC is a Wyoming-incorporated company headquartered in Palo Alto, California.
+              Illuminious is a U.S.-incorporated company headquartered in Palo Alto, California.
               We combine Silicon Valley's innovation mindset with Asia's manufacturing excellence to help
               hardware companies navigate the complexities of global supply chains.
             </p>
