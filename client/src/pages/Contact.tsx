@@ -143,6 +143,14 @@ export default function Contact() {
         });
       }
 
+      // Meta Pixel Lead tracking
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead', {
+          content_name: 'Contact Page Form',
+          content_category: 'Contact',
+        });
+      }
+
       // Redirect to thank you page
       setLocation('/thank-you');
     } catch (error) {

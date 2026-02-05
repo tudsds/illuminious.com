@@ -36,6 +36,13 @@ export default function FloatingContact() {
           page: location,
         });
       }
+      // Meta Pixel Lead tracking
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead', {
+          content_name: 'Floating Contact Form',
+          content_category: 'Contact',
+        });
+      }
       setFormData({ name: "", email: "", company: "", message: "" });
       setIsSubmitting(false);
       setIsOpen(false);
@@ -64,7 +71,7 @@ export default function FloatingContact() {
         setIsOpen(true);
         setHasAutoOpened(true);
         sessionStorage.setItem("floatingContactSeen", "true");
-        
+
         // Auto-collapse after 5 seconds if user doesn't interact
         setTimeout(() => {
           setIsOpen(false);
@@ -81,12 +88,12 @@ export default function FloatingContact() {
         setIsOpen(true);
         setHasAutoOpened(true);
         sessionStorage.setItem("floatingContactSeen", "true");
-        
+
         // Auto-collapse after 5 seconds
         setTimeout(() => {
           setIsOpen(false);
         }, 5000);
-        
+
         window.removeEventListener("scroll", handleScroll);
       }
     };
@@ -107,7 +114,7 @@ export default function FloatingContact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     submitContact.mutate({
       name: formData.name,
       email: formData.email,
@@ -150,11 +157,10 @@ export default function FloatingContact() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(true)}
-            className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-2xl transition-colors ${
-              isStartupsPage
+            className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-2xl transition-colors ${isStartupsPage
                 ? "bg-cyber-cyan text-cyber-black hover:bg-cyber-cyan/90 shadow-cyber-cyan/30"
                 : "bg-illuminious-blue text-white hover:bg-illuminious-navy shadow-illuminious-blue/30"
-            }`}
+              }`}
           >
             <MessageCircle className="w-6 h-6" />
           </motion.button>
@@ -180,43 +186,38 @@ export default function FloatingContact() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 100, scale: 0.9 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className={`fixed bottom-6 right-6 z-50 w-[calc(100vw-3rem)] max-w-md rounded-2xl shadow-2xl overflow-hidden ${
-                isStartupsPage
+              className={`fixed bottom-6 right-6 z-50 w-[calc(100vw-3rem)] max-w-md rounded-2xl shadow-2xl overflow-hidden ${isStartupsPage
                   ? "bg-cyber-black border border-cyber-purple/50"
                   : "bg-white border border-illuminious-light"
-              }`}
+                }`}
             >
               {/* Header */}
               <div
-                className={`px-6 py-4 flex items-center justify-between ${
-                  isStartupsPage
+                className={`px-6 py-4 flex items-center justify-between ${isStartupsPage
                     ? "bg-gradient-to-r from-cyber-purple/20 to-cyber-cyan/20 border-b border-cyber-purple/30"
                     : "bg-gradient-to-r from-illuminious-navy to-illuminious-blue"
-                }`}
+                  }`}
               >
                 <div>
                   <h3
-                    className={`font-semibold ${
-                      isStartupsPage ? "text-cyber-cyan" : "text-white"
-                    }`}
+                    className={`font-semibold ${isStartupsPage ? "text-cyber-cyan" : "text-white"
+                      }`}
                   >
                     Quick Contact
                   </h3>
                   <p
-                    className={`text-sm ${
-                      isStartupsPage ? "text-gray-400" : "text-illuminious-light/80"
-                    }`}
+                    className={`text-sm ${isStartupsPage ? "text-gray-400" : "text-illuminious-light/80"
+                      }`}
                   >
                     We'll respond within 24 hours
                   </p>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className={`p-2 rounded-full transition-colors ${
-                    isStartupsPage
+                  className={`p-2 rounded-full transition-colors ${isStartupsPage
                       ? "text-cyber-cyan hover:bg-cyber-purple/30"
                       : "text-white/80 hover:text-white hover:bg-white/10"
-                  }`}
+                    }`}
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -282,11 +283,10 @@ export default function FloatingContact() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full ${
-                    isStartupsPage
+                  className={`w-full ${isStartupsPage
                       ? "bg-cyber-cyan text-cyber-black hover:bg-cyber-cyan/90"
                       : "bg-illuminious-blue text-white hover:bg-illuminious-navy"
-                  }`}
+                    }`}
                 >
                   {isSubmitting ? (
                     <>
@@ -301,9 +301,8 @@ export default function FloatingContact() {
                   )}
                 </Button>
                 <p
-                  className={`text-xs text-center ${
-                    isStartupsPage ? "text-gray-500" : "text-muted-foreground"
-                  }`}
+                  className={`text-xs text-center ${isStartupsPage ? "text-gray-500" : "text-muted-foreground"
+                    }`}
                 >
                   Or email us directly at{" "}
                   <a
