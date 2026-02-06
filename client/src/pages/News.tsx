@@ -688,17 +688,6 @@ export const newsItems = [
         <h3>Partner for Success</h3>
         <p>As the electronics manufacturing landscape continues to evolve, choosing the right manufacturing partner is more important than ever. <strong>Contact Illuminious</strong> to discuss how our global capabilities, technology investments, and commitment to quality can support your success in 2026 and beyond.</p>
       </div>
-    `</li>
-      </ul>
-      
-      <h2>Technology Advances</h2>
-      <p>Manufacturing technology continues to advance with increased automation, AI-powered quality inspection, and advanced materials enabling new product capabilities.</p>
-      
-      <h2>Market Dynamics</h2>
-      <p>Strong demand continues in IoT, wearables, and industrial electronics sectors. Medical devices and automotive electronics also show robust growth as these industries embrace digital transformation.</p>
-      
-      <h2>Looking Ahead</h2>
-      <p>We expect 2026 to bring continued growth opportunities for companies that can navigate the evolving landscape with agility and innovation.</p>
     `,
     publishedAt: new Date("2025-12-15"),
     readTime: 5,
