@@ -1043,6 +1043,44 @@ On the project owner's Windows/WSL setup:
 They each have their own custom, more detailed layouts. Don't accidentally switch
 a custom page to use the template - it would lose content.
 
+### Pitfall 11: Array Syntax Errors in CaseStudies.tsx and News.tsx
+
+**CRITICAL:** The `caseStudies` and `newsArticles` arrays in `CaseStudies.tsx` and 
+`News.tsx` have historically contained syntax errors that break the build.
+
+**Common Error Pattern:**
+```typescript
+// WRONG - Missing comma between objects
+{
+  id: "case-1",
+  // ... content
+}
+{
+  id: "case-2",  // ERROR: Expected "]" but found "{"
+  // ... content
+}
+
+// RIGHT - Comma required between array elements
+{
+  id: "case-1",
+  // ... content
+},
+{
+  id: "case-2",
+  // ... content
+}
+```
+
+**Fix History (2026-02-06):**
+- `CaseStudies.tsx:270` - Added missing comma after industrial-iot case study
+- `CaseStudies.tsx:335` - Added missing comma after automotive-electronics case study  
+- `News.tsx:691` - Removed stray HTML tags (`</li></ul>`) after template literal
+
+**Prevention:**
+- Always add a comma after closing `}` of each array element (except the last)
+- Never place HTML tags after a template literal closing backtick
+- Run `pnpm build` locally before pushing to verify
+
 ---
 
 ## 14. Verification Checklist
