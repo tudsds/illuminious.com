@@ -14,6 +14,101 @@ import { useState } from "react";
 export const blogPosts = [
   {
     id: 1,
+    slug: "sustainable-manufacturing-2026",
+    title: "Sustainable Manufacturing: Building Eco-Friendly Electronics in 2026",
+    excerpt: "Discover how leading electronics manufacturers are reducing environmental impact through green materials, energy-efficient processes, and circular economy principles without compromising quality.",
+    content: `
+      <h2>The Green Manufacturing Revolution</h2>
+      <p>Sustainability is no longer just a marketing buzzword—it's becoming a business imperative. Consumers, investors, and regulators are demanding that electronics manufacturers take responsibility for their environmental impact. In 2026, sustainable manufacturing practices are separating industry leaders from laggards.</p>
+      
+      <h2>Why Sustainability Matters Now</h2>
+      <p>Several factors are driving the shift toward sustainable electronics manufacturing:</p>
+      <ul>
+        <li><strong>Regulatory Pressure:</strong> The EU's Green Deal and similar regulations worldwide are mandating lower carbon footprints and responsible material sourcing</li>
+        <li><strong>Consumer Demand:</strong> Studies show 73% of consumers are willing to pay more for sustainable products</li>
+        <li><strong>Investor Expectations:</strong> ESG criteria are increasingly important for funding and valuations</li>
+        <li><strong>Cost Savings:</strong> Energy efficiency and waste reduction directly impact the bottom line</li>
+      </ul>
+      
+      <h2>Key Sustainable Manufacturing Practices</h2>
+      
+      <h3>1. Green Material Selection</h3>
+      <p>Sustainable manufacturing starts with material choices:</p>
+      <ul>
+        <li>Lead-free solder and halogen-free PCBs</li>
+        <li>Recycled plastics and bio-based materials for enclosures</li>
+        <li>Conflict-free minerals and ethical sourcing</li>
+        <li>Reducing rare earth element dependency</li>
+      </ul>
+      
+      <h3>2. Energy-Efficient Production</h3>
+      <p>Manufacturing facilities are implementing comprehensive energy strategies:</p>
+      <ul>
+        <li>Solar and renewable energy installations</li>
+        <li>Smart HVAC and lighting systems</li>
+        <li>Energy-efficient SMT equipment</li>
+        <li>Waste heat recovery systems</li>
+      </ul>
+      
+      <h3>3. Waste Reduction & Circular Economy</h3>
+      <p>Leading manufacturers are minimizing waste through:</p>
+      <ul>
+        <li>Zero-waste-to-landfill initiatives</li>
+        <li>Component recovery and reuse programs</li>
+        <li>Packaging optimization and recyclable materials</li>
+        <li>End-of-life product take-back programs</li>
+      </ul>
+      
+      <h3>4. Water Conservation</h3>
+      <p>Electronics manufacturing can be water-intensive. Best practices include:</p>
+      <ul>
+        <li>Closed-loop water systems</li>
+        <li>Advanced wastewater treatment</li>
+        <li>Rainwater harvesting</li>
+        <li>Eliminating harmful chemicals from cleaning processes</li>
+      </ul>
+      
+      <h2>Measuring and Reporting Impact</h2>
+      <p>You can't manage what you don't measure. Leading manufacturers track:</p>
+      <ul>
+        <li>Carbon footprint (Scope 1, 2, and 3 emissions)</li>
+        <li>Water usage and recycling rates</li>
+        <li>Waste diversion from landfills</li>
+        <li>Renewable energy percentage</li>
+        <li>Supply chain sustainability scores</li>
+      </ul>
+      
+      <h2>Choosing a Sustainable Manufacturing Partner</h2>
+      <p>When evaluating partners for sustainable manufacturing:</p>
+      <ul>
+        <li>Look for ISO 14001 environmental management certification</li>
+        <li>Request carbon footprint data and reduction targets</li>
+        <li>Ask about renewable energy usage and waste management</li>
+        <li>Verify responsible material sourcing practices</li>
+        <li>Check for sustainability reports and transparency</li>
+      </ul>
+      
+      <h2>The Business Case for Sustainability</h2>
+      <p>Sustainable manufacturing isn't just good for the planet—it's good for business:</p>
+      <ul>
+        <li>Reduced energy and material costs</li>
+        <li>Enhanced brand reputation and customer loyalty</li>
+        <li>Regulatory compliance and risk mitigation</li>
+        <li>Access to green financing and incentives</li>
+        <li>Improved employee recruitment and retention</li>
+      </ul>
+      
+      <h2>Looking Ahead</h2>
+      <p>Sustainability will continue to reshape electronics manufacturing. Companies that invest in green practices today will be better positioned for tomorrow's regulatory environment and consumer expectations. The question is no longer whether to embrace sustainable manufacturing, but how quickly you can make the transition.</p>
+    `,
+    publishedAt: new Date("2026-02-06"),
+    readTime: 9,
+    authorName: "Illuminious Team",
+    featuredImage: "/images/about-factory-equipment.jpg",
+    category: "Industry Insights",
+  },
+  {
+    id: 2,
     slug: "choosing-right-manufacturing-partner",
     title: "How to Choose the Right Manufacturing Partner for Your Hardware Startup",
     excerpt: "Selecting the right manufacturing partner is one of the most critical decisions for hardware startups. Learn the key factors to consider including quality systems, communication, and scalability.",
@@ -53,7 +148,7 @@ export const blogPosts = [
     category: "Startup Guide",
   },
   {
-    id: 2,
+    id: 3,
     slug: "dfm-best-practices",
     title: "Design for Manufacturing: Best Practices for Electronics Products",
     excerpt: "Implementing DFM principles early in your product development can save significant time and money. Here's how to get it right from the start.",
@@ -99,7 +194,7 @@ export const blogPosts = [
     category: "Technical",
   },
   {
-    id: 3,
+    id: 4,
     slug: "ai-hardware-trends-2026",
     title: "AI Hardware Trends to Watch in 2026",
     excerpt: "From smart glasses to companion robots, AI hardware is evolving rapidly. Explore the trends shaping the industry this year.",
@@ -131,7 +226,7 @@ export const blogPosts = [
     category: "Industry Insights",
   },
   {
-    id: 4,
+    id: 5,
     slug: "supply-chain-diversification-strategy",
     title: "Building a Resilient Global Supply Chain Strategy",
     excerpt: "Learn how leading companies are diversifying their manufacturing footprint across multiple regions while maintaining quality and efficiency.",
@@ -177,7 +272,7 @@ export const blogPosts = [
     category: "Supply Chain",
   },
   {
-    id: 5,
+    id: 6,
     slug: "iot-device-manufacturing-guide",
     title: "Complete Guide to IoT Device Manufacturing",
     excerpt: "From RF design considerations to wireless certification, everything you need to know about manufacturing connected devices.",
@@ -230,7 +325,7 @@ export const blogPosts = [
     category: "Technical",
   },
   {
-    id: 6,
+    id: 7,
     slug: "medical-device-manufacturing-fda",
     title: "FDA Compliance in Medical Device Manufacturing",
     excerpt: "Understanding 510(k) requirements, ISO 13485, and what to look for in a medical device manufacturing partner.",
