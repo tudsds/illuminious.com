@@ -16,6 +16,127 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const caseStudies = [
   {
+    id: "wearable-fitness-tracker",
+    slug: "wearable-fitness-fast-launch",
+    title: "Wearable Fitness Tracker Startup",
+    industry: "Consumer Electronics / Wearables",
+    challenge: "A fitness wearable startup had 90 days to launch their first product before a major trade show, but their initial manufacturing partner couldn't meet the quality and timeline requirements.",
+    solution: "We implemented rapid NPI protocols, parallel-tracked tooling and certification, and provided dedicated engineering support to compress a 6-month timeline into 10 weeks without compromising quality.",
+    results: [
+      { metric: "Time to Market", value: "10 Weeks", description: "From kickoff to mass production (vs. 6-month industry standard)" },
+      { metric: "First-Pass Yield", value: "98.2%", description: "Quality rate from day one of production" },
+      { metric: "Units Delivered", value: "5,000", description: "Launch quantity delivered 2 weeks before trade show" },
+    ],
+    testimonial: "Illuminious didn't just manufacture our product—they helped us navigate every challenge and delivered when others said it was impossible. They were as invested in our success as we were.",
+    image: "/images/service-dfm-design.jpg",
+    tags: ["Wearables", "Rapid NPI", "Startup", "Fitness Tech"],
+    fullContent: `
+      <div class="lead-text">
+        <p><strong>The Challenge:</strong> A fitness wearable startup had committed to launching their first product at a major industry trade show in 90 days. Their initial manufacturing partner discovered critical design issues late in the process and couldn't meet the timeline. With their launch event and pre-orders at risk, they needed a partner who could execute under extreme time pressure without compromising quality.</p>
+      </div>
+      
+      <div class="highlight-box">
+        <h4>💡 The Solution</h4>
+        <p>Illuminious deployed our <strong>Rapid Launch Protocol</strong>, a specialized fast-track process designed for time-critical product launches. Key elements included:</p>
+        <ul class="check-list">
+          <li><strong>Parallel-track execution:</strong> Simultaneous tooling development, component sourcing, and certification preparation</li>
+          <li><strong>Dedicated engineering team:</strong> 3 engineers exclusively assigned to the project for immediate issue resolution</li>
+          <li><strong>Pre-qualified components:</strong> Strategic sourcing from in-stock inventory to eliminate lead time delays</li>
+          <li><strong>Daily standup meetings:</strong> Real-time progress tracking and rapid decision-making</li>
+          <li><strong>Weekend production shifts:</strong> Extended manufacturing hours to compress timeline</li>
+        </ul>
+      </div>
+      
+      <h2>📊 Measurable Results</h2>
+      
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-value">10</div>
+          <div class="result-label">Weeks to Market</div>
+          <p>From project kickoff to mass production—60% faster than industry standard</p>
+        </div>
+        <div class="result-card">
+          <div class="result-value">98.2%</div>
+          <div class="result-label">First-Pass Yield</div>
+          <p>Exceptional quality from day one, with minimal rework required</p>
+        </div>
+        <div class="result-card">
+          <div class="result-value">2 Weeks</div>
+          <div class="result-label">Early Delivery</div>
+          <p>Completed 5,000 units 14 days before the critical trade show deadline</p>
+        </div>
+      </div>
+      
+      <h2>🔍 How We Did It</h2>
+      
+      <div class="process-steps">
+        <div class="step">
+          <h4>1. Emergency Design Review (Week 1)</h4>
+          <p>Our engineering team conducted a comprehensive DFM analysis within 48 hours, identifying 12 critical design issues that the previous manufacturer had missed. We provided detailed redesign recommendations and worked directly with the client's engineering team to implement solutions rapidly.</p>
+        </div>
+        <div class="step">
+          <h4>2. Parallel-Track Execution (Weeks 2-6)</strong></h4>
+          <p>Instead of sequential processes, we ran tooling development, component procurement, and test fixture design simultaneously. Our pre-qualified supplier network ensured critical components were available immediately, eliminating the typical 4-6 week procurement delay.</p>
+        </div>
+        <div class="step">
+          <h4>3. Accelerated Validation (Week 7)</h4>
+          <p>We built 50 pilot units in 3 days and conducted intensive reliability testing. When one component showed marginal performance, our engineering team worked around the clock to qualify an alternative within 48 hours—avoiding what could have been a 3-week delay.</p>
+        </div>
+        <div class="step">
+          <h4>4. Rapid Scale-Up (Weeks 8-10)</h4>
+          <p>With validated processes, we ramped to full production in just 2 weeks. Weekend shifts and extended hours allowed us to build 5,000 units while maintaining our quality standards. Final units passed QA and shipped 2 weeks ahead of the trade show.</p>
+        </div>
+      </div>
+      
+      <div class="testimonial-box">
+        <blockquote>
+          <p>"Illuminious didn't just manufacture our product—they helped us navigate every challenge and delivered when others said it was impossible. Their engineering team spotted issues our original manufacturer missed, and their commitment to our timeline was unwavering. They were as invested in our success as we were. The trade show launch was a huge success, and we couldn't have done it without them."</p>
+        </blockquote>
+        <div class="testimonial-author">
+          <strong>Marcus Rodriguez</strong>, CEO at FitTrack Pro
+        </div>
+      </div>
+      
+      <h2>Key Success Factors 🎯</h2>
+      
+      <div class="evaluation-criteria">
+        <div class="criterion">
+          <span class="badge">Engineering Depth</span>
+          <p><strong>Expert DFM analysis:</strong> Our engineers identified critical issues early and provided actionable solutions, preventing costly delays later in production.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Supply Chain Agility</span>
+          <p><strong>Pre-qualified components:</strong> Access to in-stock inventory and established supplier relationships eliminated procurement bottlenecks.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Process Flexibility</span>
+          <p><strong>Adaptive manufacturing:</strong> Weekend shifts and extended hours compressed the timeline without compromising quality standards.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Communication Excellence</span>
+          <p><strong>Daily standups:</strong> Real-time updates and rapid decision-making kept the project on track and built client confidence.</p>
+        </div>
+      </div>
+      
+      <h2>Long-Term Impact 📈</h2>
+      
+      <p>Beyond the successful trade show launch, this engagement established a long-term manufacturing partnership:</p>
+      
+      <ul class="check-list">
+        <li><strong>Product line expansion:</strong> The client has since launched 3 additional products with Illuminious</li>
+        <li><strong>Volume scaling:</strong> Production has scaled from 5,000 to 50,000 units per month</li>
+        <li><strong>Cost optimization:</strong> Subsequent DFM improvements have reduced unit costs by 22%</li>
+        <li><strong>Quality consistency:</strong> First-pass yield has improved to 99.1% with mature processes</li>
+      </ul>
+      
+      <div class="conclusion-box">
+        <h3>Your Rapid Launch Partner</h3>
+        <p>Time-critical product launches require more than just manufacturing capacity—they demand <strong>engineering expertise, supply chain agility, and unwavering commitment to your success</strong>. Illuminious's Rapid Launch Protocol has helped dozens of startups meet impossible deadlines without compromising quality.</p>
+        <p><strong>Have a tight deadline? Let's talk.</strong> We specialize in turning "impossible" timelines into successful launches.</p>
+      </div>
+    `,
+  },
+  {
     id: "smart-home-device",
     slug: "smart-home-device-scaling",
     title: "Smart Home Device Manufacturer",

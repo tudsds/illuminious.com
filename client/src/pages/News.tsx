@@ -12,6 +12,132 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 export const newsItems = [
   {
     id: 1,
+    slug: "illuminious-achieves-iso-14001-certification",
+    title: "Illuminious Achieves ISO 14001 Environmental Management Certification",
+    excerpt: "We are proud to announce that Illuminious has achieved ISO 14001:2015 certification, demonstrating our commitment to sustainable manufacturing practices and environmental responsibility across all our global facilities.",
+    content: `
+      <div class="lead-text">
+        <p><strong>Illuminious is proud to announce that we have achieved ISO 14001:2015 certification</strong> for our Environmental Management System (EMS) across all global manufacturing facilities. This prestigious certification recognizes our commitment to sustainable manufacturing practices, environmental responsibility, and continuous improvement in our operations.</p>
+      </div>
+      
+      <div class="highlight-box">
+        <h4>📋 Key Details</h4>
+        <ul class="check-list">
+          <li><strong>What:</strong> ISO 14001:2015 Environmental Management System certification achieved</li>
+          <li><strong>When:</strong> Certification completed January 2026, effective immediately</li>
+          <li><strong>Where:</strong> All global manufacturing facilities in Indonesia, Vietnam, and Mexico</li>
+          <li><strong>Impact:</strong> Enhanced sustainability credentials for customers and partners</li>
+        </ul>
+      </div>
+      
+      <h2>What This Certification Means 🌱</h2>
+      
+      <p>ISO 14001 is the internationally recognized standard for Environmental Management Systems. Achieving this certification required a comprehensive audit of our environmental practices, including:</p>
+      
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h4>♻️ Waste Reduction Programs</h4>
+          <p><strong>Zero-waste-to-landfill initiatives</strong> at all facilities, with comprehensive recycling and material recovery systems in place.</p>
+        </div>
+        <div class="feature-item">
+          <h4>⚡ Energy Efficiency</h4>
+          <p><strong>30% reduction in energy consumption</strong> through LED lighting, smart HVAC systems, and equipment modernization.</p>
+        </div>
+        <div class="feature-item">
+          <h4>💧 Water Conservation</h4>
+          <p><strong>Closed-loop water systems</strong> and advanced wastewater treatment ensuring responsible water usage.</p>
+        </div>
+        <div class="feature-item">
+          <h4>📊 Continuous Monitoring</h4>
+          <p><strong>Real-time tracking</strong> of environmental metrics with quarterly sustainability reporting to stakeholders.</p>
+        </div>
+      </div>
+      
+      <h2>Benefits for Our Customers 🤝</h2>
+      
+      <p>This certification delivers tangible benefits to our partners and customers:</p>
+      
+      <ul class="check-list">
+        <li><strong>Enhanced ESG credentials:</strong> Partnering with an ISO 14001-certified manufacturer strengthens your sustainability story</li>
+        <li><strong>Regulatory compliance:</strong> Meet growing environmental requirements in EU, California, and other jurisdictions</li>
+        <li><strong>Risk mitigation:</strong> Reduced environmental risk in your supply chain</li>
+        <li><strong>Carbon footprint reduction:</strong> Lower Scope 3 emissions through efficient manufacturing processes</li>
+        <li><strong>Marketing advantage:</strong> "Manufactured in ISO 14001-certified facilities" claim support</li>
+      </ul>
+      
+      <div class="quote-box">
+        <blockquote>
+          <p>"Achieving ISO 14001 certification is a significant milestone that reflects our genuine commitment to environmental stewardship. Our customers can be confident that their products are manufactured with sustainability as a core priority, not an afterthought."</p>
+        </blockquote>
+        <cite>— Sarah Chen, VP of Operations at Illuminious</cite>
+      </div>
+      
+      <h2>Our Sustainability Journey 🚀</h2>
+      
+      <p>This certification represents the culmination of an 18-month journey to transform our environmental practices. Key milestones included:</p>
+      
+      <div class="evaluation-criteria">
+        <div class="criterion">
+          <span class="badge">Phase 1: Assessment</span>
+          <p><strong>Comprehensive environmental audit:</strong> Baseline measurement of energy, water, waste, and emissions across all facilities.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Phase 2: Implementation</span>
+          <p><strong>System upgrades and training:</strong> New equipment, process improvements, and staff training on environmental procedures.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Phase 3: Certification</span>
+          <p><strong>Third-party audit:</strong> Independent certification body verification of our Environmental Management System.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Phase 4: Continuous Improvement</span>
+          <p><strong>Ongoing commitment:</strong> Annual surveillance audits and continuous improvement programs to maintain certification.</p>
+        </div>
+      </div>
+      
+      <h2>Looking Ahead 🌟</h2>
+      
+      <p>ISO 14001 certification is not the end of our sustainability journey—it's a foundation for continued improvement. We have established ambitious goals for 2026-2027:</p>
+      
+      <div class="benefits-grid">
+        <div class="benefit">
+          <h5>🎯 Carbon Neutrality</h5>
+          <p>Achieve carbon-neutral operations by 2027 through renewable energy and offset programs.</p>
+        </div>
+        <div class="benefit">
+          <h5>📈 50% Waste Reduction</h5>
+          <p>Further reduce manufacturing waste intensity by 50% compared to 2024 baseline.</p>
+        </div>
+        <div class="benefit">
+          <h5>☀️ Renewable Energy</h5>
+          <p>Transition to 100% renewable electricity across all facilities by 2026.</p>
+        </div>
+        <div class="benefit">
+          <h5>🌊 Water Positive</h5>
+          <p>Implement water replenishment projects to become water-positive by 2028.</p>
+        </div>
+        <div class="benefit">
+          <h5>♻️ Circular Economy</h5>
+          <p>Expand product take-back and component recovery programs for end-of-life devices.</p>
+        </div>
+        <div class="benefit">
+          <h5>📊 Transparency</h5>
+          <p>Publish annual sustainability reports with detailed environmental metrics.</p>
+        </div>
+      </div>
+      
+      <div class="conclusion-box">
+        <h3>Partner With a Sustainable Manufacturer</h3>
+        <p>As environmental regulations tighten and consumers demand more sustainable products, partnering with an ISO 14001-certified manufacturer gives you a competitive advantage. <strong>Contact us today</strong> to learn how our certified sustainable manufacturing can support your product goals.</p>
+      </div>
+    `,
+    publishedAt: new Date("2026-02-06"),
+    readTime: 5,
+    featuredImage: "/images/about-factory-equipment.jpg",
+    category: "Company News",
+  },
+  {
+    id: 3,
     slug: "illuminious-expands-manufacturing-capacity",
     title: "Illuminious Expands Manufacturing Capacity in Southeast Asia",
     excerpt: "We are excited to announce a significant expansion of our manufacturing capabilities in the Batam Free Trade Zone, Indonesia. This expansion includes a new 50,000 sq ft facility dedicated to high-volume electronics assembly.",
@@ -40,7 +166,7 @@ export const newsItems = [
     category: "Company News",
   },
   {
-    id: 2,
+    id: 4,
     slug: "partnership-with-future-factory",
     title: "Strategic Partnership with Future Factory Announced",
     excerpt: "Illuminious partners with Future Factory to enhance AI hardware manufacturing capabilities and startup support services, creating a comprehensive ecosystem for hardware innovation.",
@@ -69,7 +195,7 @@ export const newsItems = [
     category: "Partnership",
   },
   {
-    id: 3,
+    id: 5,
     slug: "new-us-warehouse-facility",
     title: "New US Warehouse Facility Now Operational",
     excerpt: "Our new state-of-the-art fulfillment center in Los Angeles is now fully operational, enabling faster delivery times and improved inventory management for North American customers.",
