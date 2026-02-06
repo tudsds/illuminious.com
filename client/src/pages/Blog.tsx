@@ -18,93 +18,144 @@ export const blogPosts = [
     title: "Sustainable Manufacturing: Building Eco-Friendly Electronics in 2026",
     excerpt: "Discover how leading electronics manufacturers are reducing environmental impact through green materials, energy-efficient processes, and circular economy principles without compromising quality.",
     content: `
-      <h2>The Green Manufacturing Revolution</h2>
-      <p>Sustainability is no longer just a marketing buzzword—it's becoming a business imperative. Consumers, investors, and regulators are demanding that electronics manufacturers take responsibility for their environmental impact. In 2026, sustainable manufacturing practices are separating industry leaders from laggards.</p>
+      <div class="lead-text">
+        <p>Sustainability is no longer just a marketing buzzword—it's becoming a <strong>business imperative</strong>. Consumers, investors, and regulators are demanding that electronics manufacturers take responsibility for their environmental impact. In 2026, sustainable manufacturing practices are separating industry leaders from laggards.</p>
+      </div>
       
       <h2>Why Sustainability Matters Now</h2>
-      <p>Several factors are driving the shift toward sustainable electronics manufacturing:</p>
-      <ul>
-        <li><strong>Regulatory Pressure:</strong> The EU's Green Deal and similar regulations worldwide are mandating lower carbon footprints and responsible material sourcing</li>
-        <li><strong>Consumer Demand:</strong> Studies show 73% of consumers are willing to pay more for sustainable products</li>
-        <li><strong>Investor Expectations:</strong> ESG criteria are increasingly important for funding and valuations</li>
-        <li><strong>Cost Savings:</strong> Energy efficiency and waste reduction directly impact the bottom line</li>
-      </ul>
+      <p>Several converging factors are driving the accelerated shift toward sustainable electronics manufacturing:</p>
+      
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h4>🌍 Regulatory Pressure</h4>
+          <p>The EU's Green Deal and similar regulations worldwide are mandating lower carbon footprints and responsible material sourcing. Non-compliance is no longer an option.</p>
+        </div>
+        <div class="feature-item">
+          <h4>💚 Consumer Demand</h4>
+          <p>Studies consistently show that <strong>73% of consumers</strong> are willing to pay more for products from sustainable brands. Eco-consciousness drives purchasing decisions.</p>
+        </div>
+        <div class="feature-item">
+          <h4>📈 Investor Expectations</h4>
+          <p>ESG (Environmental, Social, Governance) criteria are increasingly critical for funding, valuations, and access to capital markets.</p>
+        </div>
+        <div class="feature-item">
+          <h4>💰 Cost Savings</h4>
+          <p>Energy efficiency and waste reduction initiatives directly impact the bottom line, often paying for themselves within months.</p>
+        </div>
+      </div>
       
       <h2>Key Sustainable Manufacturing Practices</h2>
       
-      <h3>1. Green Material Selection</h3>
-      <p>Sustainable manufacturing starts with material choices:</p>
-      <ul>
-        <li>Lead-free solder and halogen-free PCBs</li>
-        <li>Recycled plastics and bio-based materials for enclosures</li>
-        <li>Conflict-free minerals and ethical sourcing</li>
-        <li>Reducing rare earth element dependency</li>
+      <h3>1. Green Material Selection 🌱</h3>
+      <p>Sustainable manufacturing begins with conscious material choices. Leading manufacturers are transitioning to:</p>
+      <ul class="check-list">
+        <li><strong>Lead-free solder</strong> and halogen-free PCBs to reduce toxic substances</li>
+        <li><strong>Recycled plastics</strong> and bio-based materials for product enclosures</li>
+        <li><strong>Conflict-free minerals</strong> with verified ethical sourcing practices</li>
+        <li><strong>Reduced rare earth element dependency</strong> through design innovation</li>
       </ul>
       
-      <h3>2. Energy-Efficient Production</h3>
-      <p>Manufacturing facilities are implementing comprehensive energy strategies:</p>
-      <ul>
-        <li>Solar and renewable energy installations</li>
-        <li>Smart HVAC and lighting systems</li>
-        <li>Energy-efficient SMT equipment</li>
-        <li>Waste heat recovery systems</li>
+      <h3>2. Energy-Efficient Production ⚡</h3>
+      <p>Modern manufacturing facilities are implementing comprehensive energy optimization strategies:</p>
+      <ul class="check-list">
+        <li><strong>Solar and renewable energy</strong> installations to power operations</li>
+        <li><strong>Smart HVAC and lighting systems</strong> with automated controls</li>
+        <li><strong>Energy-efficient SMT equipment</strong> with advanced power management</li>
+        <li><strong>Waste heat recovery systems</strong> to capture and reuse thermal energy</li>
       </ul>
       
-      <h3>3. Waste Reduction & Circular Economy</h3>
-      <p>Leading manufacturers are minimizing waste through:</p>
-      <ul>
-        <li>Zero-waste-to-landfill initiatives</li>
-        <li>Component recovery and reuse programs</li>
-        <li>Packaging optimization and recyclable materials</li>
-        <li>End-of-life product take-back programs</li>
+      <h3>3. Waste Reduction & Circular Economy ♻️</h3>
+      <p>Industry leaders are minimizing waste through innovative programs:</p>
+      <ul class="check-list">
+        <li><strong>Zero-waste-to-landfill initiatives</strong> achieving 99%+ diversion rates</li>
+        <li><strong>Component recovery and reuse programs</strong> extending material lifecycles</li>
+        <li><strong>Sustainable packaging</strong> using recyclable and biodegradable materials</li>
+        <li><strong>End-of-life product take-back programs</strong> ensuring proper recycling</li>
       </ul>
       
-      <h3>4. Water Conservation</h3>
-      <p>Electronics manufacturing can be water-intensive. Best practices include:</p>
-      <ul>
-        <li>Closed-loop water systems</li>
-        <li>Advanced wastewater treatment</li>
-        <li>Rainwater harvesting</li>
-        <li>Eliminating harmful chemicals from cleaning processes</li>
+      <h3>4. Water Conservation 💧</h3>
+      <p>Electronics manufacturing can be water-intensive. Best-in-class facilities implement:</p>
+      <ul class="check-list">
+        <li><strong>Closed-loop water systems</strong> minimizing freshwater consumption</li>
+        <li><strong>Advanced wastewater treatment</strong> ensuring clean discharge</li>
+        <li><strong>Rainwater harvesting</strong> for non-critical applications</li>
+        <li><strong>Elimination of harmful chemicals</strong> from cleaning and processing</li>
       </ul>
       
-      <h2>Measuring and Reporting Impact</h2>
-      <p>You can't manage what you don't measure. Leading manufacturers track:</p>
-      <ul>
-        <li>Carbon footprint (Scope 1, 2, and 3 emissions)</li>
-        <li>Water usage and recycling rates</li>
-        <li>Waste diversion from landfills</li>
-        <li>Renewable energy percentage</li>
-        <li>Supply chain sustainability scores</li>
-      </ul>
+      <div class="highlight-box">
+        <h4>📊 Measuring and Reporting Impact</h4>
+        <p>You can't manage what you don't measure. Leading manufacturers rigorously track:</p>
+        <ul>
+          <li>Carbon footprint (Scope 1, 2, and 3 emissions)</li>
+          <li>Water usage intensity and recycling rates</li>
+          <li>Waste diversion from landfills</li>
+          <li>Renewable energy percentage of total consumption</li>
+          <li>Supply chain sustainability scores</li>
+        </ul>
+      </div>
       
       <h2>Choosing a Sustainable Manufacturing Partner</h2>
-      <p>When evaluating partners for sustainable manufacturing:</p>
-      <ul>
-        <li>Look for ISO 14001 environmental management certification</li>
-        <li>Request carbon footprint data and reduction targets</li>
-        <li>Ask about renewable energy usage and waste management</li>
-        <li>Verify responsible material sourcing practices</li>
-        <li>Check for sustainability reports and transparency</li>
-      </ul>
+      <p>When evaluating manufacturing partners for their sustainability credentials, consider these key factors:</p>
+      
+      <div class="evaluation-criteria">
+        <div class="criterion">
+          <span class="badge">Certification</span>
+          <p>Look for <strong>ISO 14001</strong> environmental management certification as a baseline requirement.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Transparency</span>
+          <p>Request carbon footprint data, reduction targets, and regular sustainability reporting.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Operations</span>
+          <p>Ask about renewable energy usage percentages and comprehensive waste management programs.</p>
+        </div>
+        <div class="criterion">
+          <span class="badge">Supply Chain</span>
+          <p>Verify responsible material sourcing practices and supplier sustainability requirements.</p>
+        </div>
+      </div>
       
       <h2>The Business Case for Sustainability</h2>
-      <p>Sustainable manufacturing isn't just good for the planet—it's good for business:</p>
-      <ul>
-        <li>Reduced energy and material costs</li>
-        <li>Enhanced brand reputation and customer loyalty</li>
-        <li>Regulatory compliance and risk mitigation</li>
-        <li>Access to green financing and incentives</li>
-        <li>Improved employee recruitment and retention</li>
-      </ul>
+      <p>Sustainable manufacturing isn't just good for the planet—it's a competitive business advantage:</p>
       
-      <h2>Looking Ahead</h2>
-      <p>Sustainability will continue to reshape electronics manufacturing. Companies that invest in green practices today will be better positioned for tomorrow's regulatory environment and consumer expectations. The question is no longer whether to embrace sustainable manufacturing, but how quickly you can make the transition.</p>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <h5>💵 Cost Reduction</h5>
+          <p>Lower energy and material costs through efficiency improvements</p>
+        </div>
+        <div class="benefit">
+          <h5>🏆 Brand Value</h5>
+          <p>Enhanced reputation and increased customer loyalty</p>
+        </div>
+        <div class="benefit">
+          <h5>🛡️ Risk Mitigation</h5>
+          <p>Regulatory compliance and future-proofing against tightening standards</p>
+        </div>
+        <div class="benefit">
+          <h5>💳 Green Financing</h5>
+          <p>Access to preferential financing rates and sustainability incentives</p>
+        </div>
+        <div class="benefit">
+          <h5>👥 Talent Attraction</h5>
+          <p>Improved employee recruitment and retention rates</p>
+        </div>
+        <div class="benefit">
+          <h5>🌟 Market Access</h5>
+          <p>Entry to eco-conscious markets and premium customer segments</p>
+        </div>
+      </div>
+      
+      <div class="conclusion-box">
+        <h3>Looking Ahead</h3>
+        <p>Sustainability will continue to reshape the landscape of electronics manufacturing. Companies that invest in green practices today will be significantly better positioned for tomorrow's regulatory environment and evolving consumer expectations.</p>
+        <p><strong>The question is no longer whether to embrace sustainable manufacturing—but how quickly you can make the transition.</strong></p>
+      </div>
     `,
     publishedAt: new Date("2026-02-06"),
     readTime: 9,
     authorName: "Illuminious Team",
-    featuredImage: "/images/about-factory-equipment.jpg",
+    featuredImage: "/images/blog-sustainable-manufacturing.jpg",
     category: "Industry Insights",
   },
   {
