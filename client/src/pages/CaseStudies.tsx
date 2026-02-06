@@ -266,7 +266,7 @@ export const caseStudies = [
         <p>This engagement demonstrates that medical device startups don't have to choose between regulatory compliance and cost efficiency. With the right manufacturing partner, they can achieve both.</p>
       </div>
     `,
-  }
+  },
   {
     id: "industrial-iot",
     slug: "industrial-iot-global-certification",
