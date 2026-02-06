@@ -331,7 +331,7 @@ export const caseStudies = [
         <p>This project showcases our ability to handle complex industrial products requiring both technical expertise and regulatory navigation. From enclosure design to multi-market certification, we delivered a complete solution that enabled our client's global expansion.</p>
       </div>
     `,
-  }
+  },
   {
     id: "automotive-electronics",
     slug: "automotive-supply-chain-diversification",
