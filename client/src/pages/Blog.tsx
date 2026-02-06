@@ -613,7 +613,7 @@ export const blogPosts = [
     authorName: "Illuminious Team",
     featuredImage: "/images/about-global-network.jpg",
     category: "Supply Chain",
-  }
+  },
   {
     id: 6,
     slug: "iot-device-manufacturing-guide",
@@ -870,7 +870,7 @@ export const blogPosts = [
         <p>Successfully navigating FDA compliance requires <strong>specialized expertise, meticulous documentation, and unwavering commitment to quality</strong>. The right manufacturing partner doesn't just build your device—they help ensure it meets the rigorous standards that protect patient safety and enable market access.</p>
         <p><strong>Invest in compliance early.</strong> The cost of regulatory shortcuts far exceeds the investment in proper quality systems. Partner with experienced professionals who understand the unique challenges of medical device manufacturing.</p>
       </div>
-    `
+    `,
     publishedAt: new Date("2025-12-15"),
     readTime: 11,
     authorName: "Illuminious Team",
