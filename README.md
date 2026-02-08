@@ -12,8 +12,12 @@ This website is designed to showcase Illuminious's comprehensive manufacturing a
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
 - **Admin CMS**: Full-featured admin portal at `/admin` for managing News and Blog content with rich text editor
 - **SEO Optimized**: Comprehensive meta tags, Open Graph, Twitter Cards, and structured data for Google, Meta, and Twitter advertising
-- **Google Tag Manager**: Pre-integrated GTM (ID: GTM-5M6CMP6S) for analytics and ad tracking
-- **Cyberpunk Theme**: Special "Illuminious Startups Program" page with unique visual style (co-branded with Future Factory)
+- **Google Tag Manager**: Pre-integrated GTM (ID: GTM-TV3WNHSZ) for analytics and ad tracking
+- **Homepage Visuals**: Dynamic hero section with a new SMT placement image, featuring a dark blue filter overlay for enhanced readability of white text.
+- **About Page Enhancement**: Updated Palo Alto office image to better reflect engineering and management activities.
+- **Cyberpunk Theme**: Special "Illuminious Startups Program" page redesigned with a distinct cyberpunk aesthetic, including a new hero image (`DEPLOYED_startup-cyberpunk-hero.jpg`) and integrated Illuminious and Future Factory logos.
+- **Cross-Platform Flag Display**: Replaced all flag emoji characters with lightweight SVG images for consistent rendering across all operating systems, especially Windows Chrome.
+- **Sitemap Management**: Automatically generated and updated `sitemap.xml` to ensure comprehensive indexing of all website routes.
 - **Floating Contact Form**: Auto-popup contact widget that adapts to page theme
 - **Thank You Page**: Animated confirmation page with GTM tracking
 
@@ -37,8 +41,9 @@ illuminious-website/
 ├── client/                 # Frontend React application
 │   ├── public/            # Static assets (images, logos)
 │   │   └── images/        # All website images
+│   │       └── flags/     # SVG flag images
 │   ├── src/
-│   │   ├── components/    # Reusable UI components
+│   │   ├── components/    # Reusable UI components (e.g., FlagIcon.tsx)
 │   │   ├── pages/         # Page components
 │   │   │   └── services/  # Service sub-pages
 │   │   ├── hooks/         # Custom React hooks
@@ -143,9 +148,10 @@ Each service page follows the same template structure. Edit:
 
 ### Changing Images
 
-1. Place new images in `client/public/images/`
-2. Reference them in components using `/images/your-image.png`
-3. Recommended image sizes:
+1. **Image Management**: All website images are now consolidated and managed within `client/public/images/`.
+2. **Image Replacement Policy**: All images referenced in `.tsx` files are dynamically replaced from the `client/public/images/` pool. Each image used for replacement is unique and renamed to `DEPLOYED_original-filename.jpg` to indicate its deployment status. This ensures visual diversity and prevents reuse of the same image across different contexts.
+3. **Flag Images**: Country flag images are now SVG files located in `client/public/images/flags/` and rendered via the `FlagIcon` component for cross-platform compatibility.
+4. Recommended image sizes:
    - Hero images: 1920x1080px
    - Service images: 800x600px
    - Logo: 200x200px (PNG with transparency)
@@ -233,6 +239,13 @@ For best results on social platforms:
 - Save as `client/public/images/og-image.png`
 - Update the URL in `index.html`
 
+### Analytics and Tracking Status
+
+- **Google Tag Manager (GTM)**: `GTM-TV3WNHSZ` - Configured and firing correctly.
+- **Google Analytics 4 (GA4)**: `G-8903WGE2L3` - Configured and sending page view hits.
+- **Meta Pixel**: `1480233550376270` - Configured and sending page view events.
+- **Google Search Console**: Currently uses a placeholder verification code in `client/index.html` and is commented out. Requires a valid verification code to be uncommented and enabled.
+
 ## Using AI Tools for Future Modifications
 
 ### With Claude or ChatGPT
@@ -290,4 +303,3 @@ This project is proprietary to Illuminious LLC. All rights reserved.
 For technical support or questions about this website:
 - Email: info@illuminious.com
 - Website: https://illuminious.com
-# Database connection verified - Tue Feb  3 23:24:47 EST 2026
