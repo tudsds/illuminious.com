@@ -184,14 +184,15 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/DEPLOYED_smtassembly-img-3.jpg"
-            alt="SMT Production Line at Illuminious Factory"
+            src="/images/DEPLOYED_smt-placement-wearable-pcb.jpg"
+            alt="SMT Pick and Place Machine Assembling Wearable PCB"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/95 via-illuminious-navy/80 to-illuminious-navy/60" />
+          <div className="absolute inset-0 bg-[#0d1b2a]/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b2a]/90 via-[#0d1b2a]/60 to-transparent" />
         </div>
 
         <div className="absolute inset-0 opacity-10">

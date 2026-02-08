@@ -25,7 +25,7 @@ const locations = [
     name: "Palo Alto, California",
     role: "US Headquarters",
     description: "Our US headquarters serves as the primary interface for all customer relationships. This is where project management, DFM engineering review, supply chain strategy, and commercial operations are coordinated. All contracts are signed in the United States and governed by US law, providing our clients with the legal protections and business practices they expect from a domestic partner. Our Palo Alto team includes project managers, supply chain strategists, and customer success engineers who serve as your single point of contact throughout the entire manufacturing lifecycle.",
-    image: "/images/DEPLOYED_about-img-3.jpg",
+    image: "/images/DEPLOYED_engineer-dfa-review-palo-alto.jpg",
     flag: "🇺🇸",
     highlights: ["US contracts & IP protection", "Project management hub", "DFM engineering review", "Customer success team"],
   },
