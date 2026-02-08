@@ -139,7 +139,7 @@ export default function IoTSpecialization() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/placeholder-iot-devices-array.jpg"
+                src="/images/DEPLOYED_placeholder-iot-sensor-network.jpg"
                 alt="An array of diverse IoT devices manufactured by Illuminious"
                 className="rounded-2xl shadow-xl"
               />
@@ -206,7 +206,7 @@ export default function IoTSpecialization() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <img
-                src="/images/placeholder-rf-testing-lab.jpg"
+                src="/images/DEPLOYED_backup-quality-burn-in-test-37.jpg"
                 alt="Illuminious engineer working in an RF testing lab with anechoic chamber"
                 className="rounded-2xl shadow-xl"
               />

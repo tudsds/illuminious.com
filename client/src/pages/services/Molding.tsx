@@ -78,7 +78,7 @@ export default function ServiceMolding() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/molding-img-1.jpg"
+            src="/images/DEPLOYED_backup-injection-color-match-48.jpg"
             alt="A large injection molding machine in a clean factory environment"
             className="w-full h-full object-cover opacity-30"
           />
@@ -141,7 +141,7 @@ export default function ServiceMolding() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/molding-img-2.jpg" alt="A robotic arm removing a freshly molded plastic part from an injection molding machine" />
+                  <img src="/images/DEPLOYED_backup-injection-mold-polish-58.jpg" alt="A robotic arm removing a freshly molded plastic part from an injection molding machine" />
                 </div>
               </AnimatedSection>
             </div>
@@ -211,7 +211,7 @@ export default function ServiceMolding() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/molding-img-3.jpg" alt="An engineer inspecting a large, complex injection mold" />
+                  <img src="/images/DEPLOYED_backup-injection-mold-tooling-16.jpg" alt="An engineer inspecting a large, complex injection mold" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

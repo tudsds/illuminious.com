@@ -92,7 +92,7 @@ export default function ServiceUSFulfillment() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/usfulfillment-img-1.jpg"
+            src="/images/DEPLOYED_backup-warehouse-finished-goods-38.jpg"
             alt="A clean and organized warehouse aisle with packages on shelves"
             className="w-full h-full object-cover opacity-30"
           />
@@ -158,7 +158,7 @@ export default function ServiceUSFulfillment() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/usfulfillment-img-2.jpg" alt="Warehouse worker scanning a package for shipment" />
+                  <img src="/images/DEPLOYED_backup-warehouse-inventory-59.jpg" alt="Warehouse worker scanning a package for shipment" />
                 </div>
               </AnimatedSection>
             </div>
@@ -230,7 +230,7 @@ export default function ServiceUSFulfillment() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-ecommerce-logos.jpg" alt="Logos of Shopify, Amazon, WooCommerce, and other e-commerce platforms" />
+                  <img src="/images/DEPLOYED_placeholder-warehouse-shelves.jpg" alt="Logos of Shopify, Amazon, WooCommerce, and other e-commerce platforms" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

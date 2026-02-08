@@ -28,7 +28,7 @@ const industries = [
     description: "We provide FDA-compliant and ISO 13485-ready manufacturing for a wide range of Class I, II, and III medical devices. Our expertise covers everything from patient monitoring systems and diagnostic imaging equipment to surgical tools and wearable health trackers. We understand that medical device manufacturing is a zero-error environment. Our processes are built on a foundation of rigorous quality control, full material traceability from component sourcing to final assembly, and meticulous documentation to support your regulatory submissions, including FDA 510(k) and PMA.",
     capabilities: ["ISO 13485 Certified Facilities", "FDA Registration & Device Listing", "Clean Room Assembly (ISO 7/8)", "Full Traceability & DHR", "Biocompatibility Testing Mgmt.", "Sterilization Cycle Validation"],
     href: "/industries/medical",
-    image: "/images/placeholder-medical-device-assembly.jpg",
+    image: "/images/DEPLOYED_automated-pcb-assembly-line.jpg",
   },
   {
     icon: Car,
@@ -36,7 +36,7 @@ const industries = [
     description: "The automotive industry demands perfection in quality, reliability, and longevity. We operate under a stringent IATF 16949 quality management system to deliver electronics that withstand the harshest vehicle environments. Our experience spans from advanced driver-assistance systems (ADAS) and complex infotainment consoles to powertrain control units and EV battery management systems (BMS). We provide full Production Part Approval Process (PPAP) documentation and conduct rigorous environmental and vibration testing to ensure every component meets the demanding lifecycle and safety requirements of the automotive world.",
     capabilities: ["IATF 16949 Quality System", "AEC-Q100/Q200 Component Sourcing", "PPAP & FMEA Documentation", "Automated Optical Inspection (AOI)", "In-Circuit Testing (ICT)", "Vibration & Thermal Shock Testing"],
     href: "/industries/automotive",
-    image: "/images/placeholder-automotive-dashboard-electronics.jpg",
+    image: "/images/DEPLOYED_placeholder-automotive-pcb-inspection.jpg",
   },
   {
     icon: Factory,
@@ -44,7 +44,7 @@ const industries = [
     description: "We build ruggedized electronics designed for the factory floor, remote field deployments, and critical infrastructure. Our industrial solutions focus on long-term reliability and performance in challenging conditions, including extreme temperatures, high humidity, and heavy vibration. From industrial automation controllers and robotics to smart sensors and asset tracking systems, we provide robust manufacturing with long product lifecycle support, including component obsolescence management and multi-market certifications (UL, ATEX) to ensure your B2B products are dependable and globally compliant.",
     capabilities: ["Ruggedized Enclosures (IP67/IP68)", "Extended Temp Range (-40°C to +85°C)", "Conformal Coating Services", "Long Lifecycle Component Mgmt.", "UL & ATEX Certification Support", "High-Reliability Soldering"],
     href: "/industries/industrial",
-    image: "/images/placeholder-industrial-control-panel.jpg",
+    image: "/images/DEPLOYED_placeholder-rf-testing-lab.jpg",
   },
   {
     icon: Home,
@@ -52,7 +52,7 @@ const industries = [
     description: "In the fast-paced consumer electronics market, speed, cost, and quality are paramount. We specialize in high-volume manufacturing with a focus on design for cost (DFC) and design for assembly (DFA) to ensure your product is competitive. Our expertise covers a vast range of devices, from smart home hubs and wearables to audio equipment and personal gadgets. We manage the entire process, including global certifications (FCC/CE), retail-ready packaging design, and logistics to deliver a shelf-ready product that delights consumers and builds your brand.",
     capabilities: ["High-Volume SMT Lines", "Cost-Optimized DFM/DFC", "Retail Packaging & Kitting", "Global Certifications (FCC, CE, etc.)", "Acoustic & RF Testing", "Cosmetic Quality Control"],
     href: "/industries/consumer",
-    image: "/images/placeholder-smart-home-devices.jpg",
+    image: "/images/DEPLOYED_placeholder-iot-devices-array.jpg",
   },
   {
     icon: Wifi,
@@ -60,7 +60,7 @@ const industries = [
     description: "Bringing an IoT device to market requires a unique blend of hardware, software, and RF expertise. We offer end-to-end manufacturing for connected devices, from initial RF module selection and antenna design validation to final cloud connectivity testing. Our engineers are adept at optimizing for low-power consumption, ensuring long battery life for remote deployments. We conduct comprehensive Over-the-Air (OTA) performance testing in our RF chambers to guarantee reliable connectivity, providing a seamless out-of-the-box experience for your users.",
     capabilities: ["RF & Wireless Integration", "Antenna Tuning & Matching", "Low-Power Design Optimization", "OTA Performance Testing", "Cellular & LPWAN Technologies", "Device Provisioning & Security"],
     href: "/industries/iot",
-    image: "/images/placeholder-iot-sensor-network.jpg",
+    image: "/images/DEPLOYED_placeholder-iot-network-abstract.jpg",
   },
   {
     icon: Cpu,
@@ -68,7 +68,7 @@ const industries = [
     description: "The rise of AI and edge computing presents unique manufacturing challenges, particularly around thermal management and high-speed signal integrity. We specialize in building complex hardware for AI applications, including multi-GPU systems, neural processing units (NPUs), and AI-accelerated cameras. Our expertise in advanced PCB technologies, such as high-density interconnect (HDI) and controlled impedance, ensures optimal performance. We implement sophisticated thermal solutions, from custom heat sinks to liquid cooling integration, to manage the intense heat generated by modern processors.",
     capabilities: ["Advanced Thermal Management", "High-Speed PCB Design (HDI)", "GPU & NPU Integration", "Controlled Impedance Routing", "AI Model Loading & Testing", "High-Bandwidth Memory Assembly"],
     href: "/industries/ai-computing",
-    image: "/images/placeholder-ai-accelerator-card.jpg",
+    image: "/images/DEPLOYED_ai-phone-accessory.jpg",
   },
 ];
 

@@ -89,7 +89,7 @@ export default function ServiceInjection() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-injection-molding-factory-line.jpg"
+            src="/images/DEPLOYED_backup-injection-mold-design-33.jpg"
             alt="A row of injection molding machines in a clean factory environment"
             className="w-full h-full object-cover opacity-30"
           />
@@ -155,7 +155,7 @@ export default function ServiceInjection() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-technician-inspecting-mold.jpg" alt="Engineer technician inspecting a complex injection mold" />
+                  <img src="/images/DEPLOYED_backup-injection-molding-ai-necklace-08.jpg" alt="Engineer technician inspecting a complex injection mold" />
                 </div>
               </AnimatedSection>
             </div>
@@ -268,7 +268,7 @@ export default function ServiceInjection() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
                <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-metrology-lab-cmm.jpg" alt="Quality engineer using a CMM machine in a metrology lab" />
+                  <img src="/images/DEPLOYED_placeholder-technician-inspecting-mold.jpg" alt="Quality engineer using a CMM machine in a metrology lab" />
                 </div>
               </AnimatedSection>
               <AnimatedSection>

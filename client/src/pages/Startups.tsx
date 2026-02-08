@@ -83,7 +83,7 @@ export default function Startups() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white">
          <div className="absolute inset-0">
           <img
-            src="/images/startups-img-1.jpg"
+            src="/images/DEPLOYED_service-prototyping.jpg"
             alt="A diverse startup team collaborating around a table with electronic components and prototypes"
             className="w-full h-full object-cover opacity-20"
           />
@@ -190,7 +190,7 @@ export default function Startups() {
                 </AnimatedSection>
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-3">
-                        <img src="/images/placeholder-engineer-and-founder.jpg" alt="An Illuminious engineer closely collaborating with a startup founder over a product schematic" className="object-cover" />
+                        <img src="/images/DEPLOYED_backup-engineer-dfa-review-40.jpg" alt="An Illuminious engineer closely collaborating with a startup founder over a product schematic" className="object-cover" />
                     </div>
                 </AnimatedSection>
             </div>

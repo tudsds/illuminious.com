@@ -25,7 +25,7 @@ const locations = [
     name: "Palo Alto, California",
     role: "US Headquarters",
     description: "Our US headquarters serves as the primary interface for all customer relationships. This is where project management, DFM engineering review, supply chain strategy, and commercial operations are coordinated. All contracts are signed in the United States and governed by US law, providing our clients with the legal protections and business practices they expect from a domestic partner. Our Palo Alto team includes project managers, supply chain strategists, and customer success engineers who serve as your single point of contact throughout the entire manufacturing lifecycle.",
-    image: "/images/about-img-1.jpg",
+    image: "/images/DEPLOYED_about-img-3.jpg",
     flag: "🇺🇸",
     highlights: ["US contracts & IP protection", "Project management hub", "DFM engineering review", "Customer success team"],
   },
@@ -33,7 +33,7 @@ const locations = [
     name: "Shenzhen, Guangdong",
     role: "NPI & Advanced Manufacturing",
     description: "Our Shenzhen facility is purpose-built for speed and complexity. Located in the heart of the world's largest electronics manufacturing ecosystem, this factory specializes in new product introduction (NPI), rapid prototyping, and complex multi-layer PCB assembly. With direct access to thousands of component suppliers within a 50-kilometer radius, we can source even the most specialized components in hours rather than weeks. Our Shenzhen team delivers first-article prototypes in as little as 72 hours, enabling rapid design iteration cycles that dramatically compress your time-to-market.",
-    image: "/images/placeholder-shenzhen.jpg",
+    image: "/images/DEPLOYED_about-team.jpg",
     flag: "🇨🇳",
     highlights: ["72-hour prototype turnaround", "Complex multi-layer PCBA", "Direct supply chain access", "NPI engineering center"],
   },
@@ -41,7 +41,7 @@ const locations = [
     name: "Batam Island, Free Trade Zone",
     role: "Volume Production & Tariff Optimization",
     description: "Our Batam facility operates within Indonesia's designated Free Trade Zone (FTZ), providing significant tariff advantages for products destined for the US and European markets. This factory mirrors the equipment, processes, and quality systems of our Shenzhen facility, ensuring seamless production transfer from NPI to volume manufacturing. The Batam FTZ designation means that products manufactured here can enter many markets with reduced or eliminated import duties — a critical cost advantage that can save our clients 15-25% on landed costs compared to manufacturing in mainland China.",
-    image: "/images/about-img-3.jpg",
+    image: "/images/DEPLOYED_placeholder-npi-team-planning.jpg",
     flag: "🇮🇩",
     highlights: ["Free Trade Zone benefits", "15-25% tariff savings", "Mirror of Shenzhen quality", "Volume production capacity"],
   },
@@ -117,7 +117,7 @@ export default function About() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-about-hero.jpg"
+            src="/images/DEPLOYED_about-factory-equipment.jpg"
             alt="Illuminious manufacturing facility with engineers and production lines"
             className="w-full h-full object-cover opacity-30"
           />
@@ -179,7 +179,7 @@ export default function About() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-mission.jpg" alt="Quality inspector examining a PCB assembly under magnification" className="w-full h-full object-cover" />
+                  <img src="/images/DEPLOYED_placeholder-global-network.jpg" alt="Quality inspector examining a PCB assembly under magnification" className="w-full h-full object-cover" />
                 </div>
               </AnimatedSection>
             </div>
@@ -292,7 +292,7 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-team.jpg" alt="Illuminious engineering team collaborating on a product design" className="w-full h-full object-cover" />
+                  <img src="/images/DEPLOYED_about-img-1.jpg" alt="Illuminious engineering team collaborating on a product design" className="w-full h-full object-cover" />
                 </div>
               </AnimatedSection>
               <AnimatedSection>

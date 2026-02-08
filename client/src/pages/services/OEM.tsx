@@ -104,7 +104,7 @@ export default function ServiceOEM() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-dedicated-production-line.jpg"
+            src="/images/DEPLOYED_placeholder-factory-floor-overview.jpg"
             alt="A clean, modern factory production line dedicated to a single product"
             className="w-full h-full object-cover opacity-30"
           />
@@ -170,7 +170,7 @@ export default function ServiceOEM() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-oem-partnership-handshake.jpg" alt="A professional handshake in front of a factory floor" />
+                  <img src="/images/DEPLOYED_oem-img-3.jpg" alt="A professional handshake in front of a factory floor" />
                 </div>
               </AnimatedSection>
             </div>
@@ -240,7 +240,7 @@ export default function ServiceOEM() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/oem-img-3.jpg" alt="An inspector using a microscope to check a PCB for quality" />
+                  <img src="/images/DEPLOYED_placeholder-oem-partnership-handshake.jpg" alt="An inspector using a microscope to check a PCB for quality" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

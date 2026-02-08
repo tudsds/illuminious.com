@@ -105,7 +105,7 @@ export default function IndustryIndustrial() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-industrial-automation.jpg"
+            src="/images/DEPLOYED_placeholder-industrial-control-panel.jpg"
             alt="A robotic arm working on a complex industrial automation assembly line"
             className="w-full h-full object-cover opacity-30"
           />
@@ -168,7 +168,7 @@ export default function IndustryIndustrial() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-conformal-coating.jpg" alt="A PCB being treated with conformal coating for protection" />
+                  <img src="/images/DEPLOYED_3d-circuit-board-neon-art.jpg" alt="A PCB being treated with conformal coating for protection" />
                 </div>
               </AnimatedSection>
             </div>
@@ -228,7 +228,7 @@ export default function IndustryIndustrial() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl">
-                        <img src="/images/placeholder-quality-inspection.jpg" alt="A quality control technician inspecting a circuit board under a microscope" />
+                        <img src="/images/DEPLOYED_quality-inspector-magnifying-glass.jpg" alt="A quality control technician inspecting a circuit board under a microscope" />
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>
@@ -266,7 +266,7 @@ export default function IndustryIndustrial() {
                 </AnimatedSection>
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl">
-                        <img src="/images/placeholder-lifecycle-management.jpg" alt="A chart showing component lifecycle analysis" />
+                        <img src="/images/DEPLOYED_placeholder-industrial-automation.jpg" alt="A chart showing component lifecycle analysis" />
                     </div>
                 </AnimatedSection>
             </div>

@@ -12,7 +12,7 @@ const factoryAreas = [
   {
     name: "The Heart of Precision: SMT Production Floor",
     description: "Welcome to the nerve center of our operations. Our Surface-Mount Technology (SMT) floor is where millions of microscopic components are precisely placed and soldered onto printed circuit boards (PCBs). This highly automated environment is designed for speed, accuracy, and repeatability, forming the foundation of every electronic device we manufacture. We handle everything from high-mix, low-volume runs for prototypes to millions of units for mass production, all with the same level of engineering rigor.",
-    image: "/images/placeholder-smt-lines-overview.jpg",
+    image: "/images/DEPLOYED_backup-smt-line-panoramic-21.jpg",
     icon: Cpu,
     features: [
       "State-of-the-Art Siemens® SIPLACE SX Lines: Capable of placing over 150,000 components per hour with extreme accuracy, down to 01005 package sizes, ensuring we can handle the most dense and complex designs.",
@@ -24,7 +24,7 @@ const factoryAreas = [
   {
     name: "Uncompromising Quality: The Testing & Reliability Lab",
     description: "Quality at Illuminious is not just a final inspection; it's a philosophy embedded in every step. Our dedicated testing and reliability lab is where we prove our commitment. Staffed by experienced quality engineers, this area is equipped with advanced diagnostic tools to go beyond simple pass/fail tests. We perform deep failure analysis, environmental stress testing, and functional verification to ensure your product not only works out of the box but continues to perform reliably in the real world.",
-    image: "/images/placeholder-testing-lab-equipment.jpg",
+    image: "/images/DEPLOYED_placeholder-engineer-testing-pcb.jpg",
     icon: Microscope,
     features: [
       "3D Automated Optical & X-Ray Inspection (AOI/AXI): We use Koh Young® 3D AOI and Nordson DAGE® Quadra 7 X-Ray systems to inspect every solder joint, including hidden connections on complex packages like BGAs and QFNs.",
@@ -36,7 +36,7 @@ const factoryAreas = [
   {
     name: "From Resin to Reality: Injection Molding & Tooling",
     description: "A great electronic product needs a great enclosure. Our in-house injection molding department provides a seamless path from digital design to physical part. We manage the entire process, from mold design and fabrication to mass production of plastic components. This integration reduces lead times, improves quality control, and allows for rapid design iterations. Our engineers work with you to select the right materials and design for manufacturability, ensuring a perfect fit and finish for your product.",
-    image: "/images/placeholder-injection-molding-machine.jpg",
+    image: "/images/DEPLOYED_placeholder-injection-molding-factory-line.jpg",
     icon: Factory,
     features: [
       "Wide Range of Press Tonnages (50T - 500T): We can produce everything from small, intricate internal components to large, robust outer housings with our Haitian® and Arburg® injection molding machines.",
@@ -48,7 +48,7 @@ const factoryAreas = [
   {
     name: "The Final Touch: Box Build & Systems Integration",
     description: "This is where it all comes together. The Box Build and Systems Integration area is where our skilled technicians transform individual PCBs and mechanical parts into a finished, market-ready product. Far more than simple assembly, this stage involves complex wiring, software installation, sub-assembly integration, and final testing. Each station is custom-configured for a specific product, with digital work instructions and integrated quality checks to ensure nothing is missed. This is the human touch that perfects the automated process.",
-    image: "/images/factorytour-img-4.jpg",
+    image: "/images/DEPLOYED_factory-tour-hero.jpg",
     icon: PackageCheck,
     features: [
       "Dedicated Assembly Cells: Each product gets its own dedicated assembly line, optimized for its specific workflow to maximize efficiency and minimize the chance of errors.",
@@ -60,7 +60,7 @@ const factoryAreas = [
   {
     name: "Precision & Purity: The ISO 7 Clean Room",
     description: "For products that demand the utmost purity, our certified ISO 7 Clean Room provides a controlled environment free from contaminants. This is essential for manufacturing medical devices, optical sensors, and other sensitive electronics where a single speck of dust can compromise performance. Access is strictly controlled, and the air is continuously filtered to maintain a particle count of less than 10,000 particles per cubic foot. This commitment to purity ensures the highest possible yield and reliability for sensitive applications.",
-    image: "/images/placeholder-clean-room-technician.jpg",
+    image: "/images/DEPLOYED_placeholder-medical-cleanroom-technician.jpg",
     icon: Wind,
     features: [
       "Certified ISO 14644-1 Class 7: Independently audited and certified to meet stringent cleanliness standards required for medical and optical-grade manufacturing.",
@@ -72,7 +72,7 @@ const factoryAreas = [
   {
     name: "Logistics & Control: The Smart Warehouse",
     description: "Our smart warehouse is more than just storage; it's the logistical backbone of our factory. It ensures that the right components are delivered to the right production line at the right time. Every component, from a single resistor to a complex chipset, is barcoded, tracked, and stored in a climate-controlled, ESD-safe environment. Our robust inventory management system (IMS) provides real-time visibility into stock levels, prevents shortages, and ensures full traceability from receiving to final shipment.",
-    image: "/images/placeholder-warehouse-shelves.jpg",
+    image: "/images/DEPLOYED_placeholder-warehouse-aisle.jpg",
     icon: Warehouse,
     features: [
       "Climate-Controlled & ESD-Safe Storage: All components are stored in a temperature and humidity-controlled environment with full ESD protection to preserve component integrity.",
@@ -113,7 +113,7 @@ export default function FactoryTour() {
       <section className="relative pt-48 pb-32 bg-gray-900 text-white">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-factory-floor-overview.jpg"
+            src="/images/DEPLOYED_placeholder-smt-production-line.jpg"
             alt="An expansive, clean, and modern factory floor with multiple production lines"
             className="w-full h-full object-cover opacity-40"
           />

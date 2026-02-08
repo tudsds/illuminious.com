@@ -78,7 +78,7 @@ export default function ServiceSourcing() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-global-network.jpg"
+            src="/images/DEPLOYED_about-global-network.jpg"
             alt="A digital map of the world with interconnected supply chain routes"
             className="w-full h-full object-cover opacity-30"
           />
@@ -141,7 +141,7 @@ export default function ServiceSourcing() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-pcb-capacitors-macro.jpg" alt="Shelves stacked with reels of electronic components in a warehouse" />
+                  <img src="/images/DEPLOYED_backup-pcba-conformal-coating-24.jpg" alt="Shelves stacked with reels of electronic components in a warehouse" />
                 </div>
               </AnimatedSection>
             </div>
@@ -211,7 +211,7 @@ export default function ServiceSourcing() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-supply-chain-manager.jpg" alt="A sourcing manager analyzing data on multiple computer screens" />
+                  <img src="/images/DEPLOYED_supplychain-img-1.jpg" alt="A sourcing manager analyzing data on multiple computer screens" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

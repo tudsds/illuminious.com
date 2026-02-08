@@ -128,7 +128,7 @@ export default function Capabilities() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-capabilities-hero.jpg"
+            src="/images/DEPLOYED_hero-ai-hardware.jpg"
             alt="Illuminious manufacturing facility showcasing advanced equipment and production lines"
             className="w-full h-full object-cover opacity-25"
           />

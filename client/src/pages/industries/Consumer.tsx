@@ -128,7 +128,7 @@ export default function IndustryConsumer() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-consumer-hero-banner.jpg"
+            src="/images/DEPLOYED_backup-box-build-projector-assembly-05.jpg"
             alt="A dynamic collage of sleek consumer electronics"
             className="w-full h-full object-cover opacity-20"
           />
@@ -185,7 +185,7 @@ export default function IndustryConsumer() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-3">
-                  <img src="/images/placeholder-smt-assembly-line.jpg" alt="A pristine, brightly-lit SMT assembly line" className="object-cover" />
+                  <img src="/images/DEPLOYED_smtassembly-img-1.jpg" alt="A pristine, brightly-lit SMT assembly line" className="object-cover" />
                 </div>
               </AnimatedSection>
             </div>
@@ -221,7 +221,7 @@ export default function IndustryConsumer() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-3">
-                        <img src="/images/placeholder-npi-flowchart.jpg" alt="A flowchart of the New Product Introduction process" className="object-cover" />
+                        <img src="/images/DEPLOYED_service-rapid-prototyping.jpg" alt="A flowchart of the New Product Introduction process" className="object-cover" />
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>

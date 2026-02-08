@@ -81,7 +81,7 @@ export default function IndustryTelco() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/telco-img-1.jpg"
+            src="/images/DEPLOYED_placeholder-rf-anechoic-chamber.jpg"
             alt="A modern data center with rows of servers, representing the core of telecommunications"
             className="w-full h-full object-cover opacity-30"
           />
@@ -144,7 +144,7 @@ export default function IndustryTelco() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/telco-img-2.jpg" alt="A technician assembling a 5G base station unit in a factory" />
+                  <img src="/images/DEPLOYED_telco-img-3.jpg" alt="A technician assembling a 5G base station unit in a factory" />
                 </div>
               </AnimatedSection>
             </div>
@@ -182,7 +182,7 @@ export default function IndustryTelco() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl">
-                        <img src="/images/telco-img-3.jpg" alt="A piece of networking equipment inside an environmental testing chamber undergoing temperature and humidity stress tests" />
+                        <img src="/images/DEPLOYED_telco-img-2.jpg" alt="A piece of networking equipment inside an environmental testing chamber undergoing temperature and humidity stress tests" />
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>

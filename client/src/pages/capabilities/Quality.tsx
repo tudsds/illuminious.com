@@ -175,7 +175,7 @@ export default function CapabilityQuality() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/placeholder-quality-inspection.jpg"
+                src="/images/DEPLOYED_backup-quality-documentation-57.jpg"
                 alt="Engineer performing quality inspection on a PCB"
                 className="rounded-2xl shadow-xl"
               />

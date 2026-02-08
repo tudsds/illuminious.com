@@ -79,7 +79,7 @@ export default function ServiceAssembly() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-box-build-assembly-line.jpg"
+            src="/images/DEPLOYED_backup-pcba-assembly-pcb-boards-09.jpg"
             alt="Technicians on a box build assembly line"
             className="w-full h-full object-cover opacity-30"
           />
@@ -145,7 +145,7 @@ export default function ServiceAssembly() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-final-product-assembly.jpg" alt="Technician performing final assembly of an electronic device" />
+                  <img src="/images/DEPLOYED_placeholder-box-build-assembly-line.jpg" alt="Technician performing final assembly of an electronic device" />
                 </div>
               </AnimatedSection>
             </div>
@@ -215,7 +215,7 @@ export default function ServiceAssembly() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-functional-test-fixture.jpg" alt="A custom functional test fixture in use" />
+                  <img src="/images/DEPLOYED_testinginspection-img-1.jpg" alt="A custom functional test fixture in use" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

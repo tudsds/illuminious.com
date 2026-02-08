@@ -78,7 +78,7 @@ export default function ServiceTesting() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/testing-img-1.jpg"
+            src="/images/DEPLOYED_placeholder-functional-test-fixture.jpg"
             alt="A custom functional test fixture with a PCB being tested"
             className="w-full h-full object-cover opacity-30"
           />
@@ -141,7 +141,7 @@ export default function ServiceTesting() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-engineer-testing-pcb.jpg" alt="An engineer monitoring an automated test station in a factory" />
+                  <img src="/images/DEPLOYED_backup-pcba-testing-ai-glasses-10.jpg" alt="An engineer monitoring an automated test station in a factory" />
                 </div>
               </AnimatedSection>
             </div>
@@ -211,7 +211,7 @@ export default function ServiceTesting() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/testing-img-3.jpg" alt="An X-ray image showing the solder balls under a BGA component" />
+                  <img src="/images/DEPLOYED_placeholder-testing-lab-equipment.jpg" alt="An X-ray image showing the solder balls under a BGA component" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

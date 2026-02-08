@@ -90,7 +90,7 @@ export default function ServicePCBA() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-smt-pick-and-place.jpg"
+            src="/images/DEPLOYED_smt-stencil-printer-solder-paste.jpg"
             alt="SMT pick-and-place machine assembling a PCB"
             className="w-full h-full object-cover opacity-30"
           />
@@ -156,7 +156,7 @@ export default function ServicePCBA() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/pcba-img-2.jpg" alt="Overview of a modern PCB assembly line" />
+                  <img src="/images/DEPLOYED_backup-pcba-cleaning-54.jpg" alt="Overview of a modern PCB assembly line" />
                 </div>
               </AnimatedSection>
             </div>
@@ -260,7 +260,7 @@ export default function ServicePCBA() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-xray-inspection.jpg" alt="X-Ray image of a BGA component showing solder joints" />
+                  <img src="/images/DEPLOYED_backup-smt-paste-inspection-56.jpg" alt="X-Ray image of a BGA component showing solder joints" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

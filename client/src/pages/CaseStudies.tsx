@@ -28,7 +28,7 @@ export const caseStudies = [
       { metric: "Market Launch", value: "Successful", description: "Established as a key player in cardiac care" },
     ],
     testimonial: "Partnering with Illuminious was a game-changer for us. Their expertise in both the regulatory and manufacturing aspects of the medical device industry was invaluable.",
-    image: "/images/case-study-illuminious-accelerates-fda-approval-for-medical-device-startup.jpg",
+    image: "/images/DEPLOYED_news-illuminious-partners-with-ai-startup-for-smart-glasses.jpg",
     tags: ["Medical Device", "FDA 510(k)", "Wearable", "Startup"],
     fullContent: `<div class="lead-text"><p>Cardio-Innovate, a visionary startup, had developed a revolutionary wearable diagnostic tool poised to transform cardiac care. Their device, an AI-powered continuous ECG monitor, promised early detection of life-threatening cardiac events. However, the path from a working prototype to a market-ready, FDA-approved medical device was fraught with challenges.</p></div><div class="highlight-box"><h4>The Challenge: From Innovative Concept to Market-Ready Medical Device</h4><p>The startup faced two major hurdles: navigating the intricate and demanding FDA approval process, and establishing a scalable manufacturing process to meet projected demand.</p></div><div class="process-steps"><div class="process-step"><h4>Regulatory Navigation</h4><p>Our team of regulatory experts guided Cardio-Innovate through every stage of the FDA 510(k) submission process. This included a comprehensive review of their device's design, software validation, and clinical data to ensure full compliance with all regulatory requirements.</p></div><div class="process-step"><h4>Manufacturing Scalability</h4><p>We implemented our proprietary Synapse Manufacturing Execution System (MES) to digitize and optimize Cardio-Innovate's production line. This provided real-time visibility and control over the entire manufacturing process, from raw material intake to final product assembly and testing.</p></div></div><div class="stats-row"><div class="stat-item"><h4>6 Months</h4><p>Ahead of schedule for FDA 510(k) clearance</p></div><div class="stat-item"><h4>10,000+</h4><p>Units produced per month within the first year</p></div><div class="stat-item"><h4>Successful</h4><p>Market launch, establishing Cardio-Innovate as a key player</p></div></div><div class="quote-box"><blockquote>Partnering with Illuminious was a game-changer for us. Their expertise in both the regulatory and manufacturing aspects of the medical device industry was invaluable. We couldn't have achieved our goals without them.</blockquote><cite>CEO of Cardio-Innovate</cite></div><div class="comparison-grid"><div class="comparison-card"><h4>Before Illuminious</h4><ul><li>Uncertain FDA submission timeline (est. 18-24 months)</li><li>Production capacity of 10 units/month (prototypes)</li><li>Low market readiness</li></ul></div><div class="comparison-card"><h4>After Illuminious</h4><ul><li>FDA submission in 12 months</li><li>Production capacity of 10,000+ units/month</li><li>High market readiness</li></ul></div></div><div class="benefits-grid"><div class="benefit"><h4>Accelerated Time-to-Market</h4></div><div class="benefit"><h4>Reduced Regulatory Risk</h4></div><div class="benefit"><h4>Scalable & Efficient Manufacturing</h4></div><div class="benefit"><h4>Enhanced Product Quality</h4></div></div>`,
   },
@@ -45,7 +45,7 @@ export const caseStudies = [
       { metric: "Yield Rate", value: "99.5%", description: "Consistent quality at scale" },
     ],
     testimonial: "Illuminious was more than a vendor; they were a true partner in our journey. Their expertise in manufacturing and supply chain management was instrumental in our ability to scale.",
-    image: "/images/case-study-scaling-from-prototype-to-1-million-units.jpg",
+    image: "/images/DEPLOYED_case-study-illuminious-accelerates-fda-approval-for-medical-device-startup.jpg",
     tags: ["Consumer IoT", "Scale-Up", "Smart Home", "Mass Production"],
     fullContent: `<div class="lead-text"><p>A deep dive into the challenges and solutions for rapidly scaling a consumer IoT product from a functional prototype to mass production, achieving a milestone of one million units shipped.</p></div><div class="highlight-box"><h4>The Challenge</h4><p>The Client had developed a groundbreaking smart home device and successfully launched a functional prototype that garnered significant media attention and early adopter interest. However, they faced the daunting task of scaling their production from a few hundred units to a million to meet projected market demand, a challenge that involved navigating complex supply chains, manufacturing processes, and quality control at scale.</p></div><div class="highlight-box"><h4>The Solution</h4><p>Illuminious partnered with the Client to provide a comprehensive, end-to-end manufacturing solution that addressed their key challenges head-on. Our approach was multi-faceted, focusing on Design for Manufacturability (DFM), supply chain optimization, and rigorous quality assurance.</p></div><div class="process-steps"><div class="process-step"><h4>1. DFM and Prototyping</h4><p>Our engineers worked closely with the Client's design team to refine the product's architecture for mass production. This involved material selection, component consolidation, and optimizing the assembly process to reduce costs and improve yield.</p></div><div class="process-step"><h4>2. Supply Chain Development</h4><p>We leveraged our global network of vetted suppliers to establish a resilient and cost-effective supply chain. This included sourcing high-quality components, negotiating favorable terms, and implementing a just-in-time (JIT) inventory management system.</p></div><div class="process-step"><h4>3. Automated Assembly & Testing</h4><p>We designed and deployed a custom automated assembly line equipped with advanced robotics and machine vision systems. This ensured high-speed production while maintaining consistent quality.</p></div><div class="process-step"><h4>4. Quality Assurance & Control</h4><p>A multi-layered quality control process was implemented, from incoming component inspection to in-process monitoring and final product testing.</p></div><div class="process-step"><h4>5. Scalable Logistics & Fulfillment</h4><p>As production ramped up, we managed the global logistics and fulfillment, ensuring that products were delivered to distribution centers and customers on time.</p></div></div><div class="stats-row"><div class="stat-item"><h4>1 Million</h4><p>Units shipped within 18 months</p></div><div class="stat-item"><h4>50%</h4><p>Reduction in COGS</p></div><div class="stat-item"><h4>99.5%</h4><p>Product yield rate</p></div><div class="stat-item"><h4>40%</h4><p>Faster time-to-market</p></div></div><div class="quote-box"><blockquote>Illuminious was more than a vendor; they were a true partner in our journey. Their expertise in manufacturing and supply chain management was instrumental in our ability to scale from a promising prototype to a market-leading product.</blockquote><cite>CEO of the client company</cite></div>`,
   },
@@ -62,7 +62,7 @@ export const caseStudies = [
       { metric: "Units Delivered", value: "5,000", description: "Launch quantity delivered 2 weeks before trade show" },
     ],
     testimonial: "Illuminious didn't just manufacture our product—they helped us navigate every challenge and delivered when others said it was impossible. They were as invested in our success as we were.",
-    image: "/images/casestudies-img-3.jpg",
+    image: "/images/DEPLOYED_case-study-scaling-from-prototype-to-1-million-units.jpg",
     tags: ["Wearables", "Rapid NPI", "Startup", "Fitness Tech"],
     fullContent: `
       <div class="lead-text">
@@ -183,7 +183,7 @@ export const caseStudies = [
       { metric: "Quality Rate", value: "99.7%", description: "First-pass yield rate" },
     ],
     testimonial: "Illuminious helped us achieve price parity with competitors while maintaining the quality our customers expect.",
-    image: "/images/casestudies-img-4.jpg",
+    image: "/images/DEPLOYED_case-study-hero.jpg",
     tags: ["Consumer Electronics", "IoT", "Scale-Up"],
     fullContent: `
       <div class="lead-text">
@@ -249,7 +249,7 @@ export const caseStudies = [
       { metric: "Cost Savings", value: "45%", description: "vs. US-based contract manufacturers" },
     ],
     testimonial: "Their documentation and quality systems exceeded what we expected from an overseas manufacturer.",
-    image: "/images/casestudies-img-5.jpg",
+    image: "/images/DEPLOYED_industry-medical.jpg",
     tags: ["Medical Device", "FDA", "Startup"],
     fullContent: `
       <div class="lead-text">
@@ -314,7 +314,7 @@ export const caseStudies = [
       { metric: "IP Rating", value: "IP67", description: "Dust-tight and waterproof" },
     ],
     testimonial: "They handled everything from PCB design to final certification. True one-stop shop.",
-    image: "/images/casestudies-img-6.jpg",
+    image: "/images/DEPLOYED_industry-industrial.jpg",
     tags: ["Industrial", "IoT", "Certifications"],
     fullContent: `
       <div class="lead-text">
@@ -379,7 +379,7 @@ export const caseStudies = [
       { metric: "Lead Time", value: "Reduced 40%", description: "With US warehouse stocking" },
     ],
     testimonial: "They understood automotive requirements from day one. No learning curve needed.",
-    image: "/images/casestudies-img-7.jpg",
+    image: "/images/DEPLOYED_backup-quality-check-wearable-device-03.jpg",
     tags: ["Automotive", "Quality", "Supply Chain"],
     fullContent: `
       <div class="lead-text">

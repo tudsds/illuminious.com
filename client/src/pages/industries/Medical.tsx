@@ -111,7 +111,7 @@ export default function IndustryMedical() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-medical-cleanroom-technician.jpg"
+            src="/images/DEPLOYED_placeholder-clean-room-technician.jpg"
             alt="A technician in full cleanroom gear assembling a complex medical device"
             className="w-full h-full object-cover opacity-20"
           />
@@ -174,7 +174,7 @@ export default function IndustryMedical() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-handheld-diagnostic-device.jpg" alt="A modern, handheld medical diagnostic device being used by a clinician" className="w-full h-full object-cover" />
+                  <img src="/images/DEPLOYED_ai-smart-glasses.jpg" alt="A modern, handheld medical diagnostic device being used by a clinician" className="w-full h-full object-cover" />
                 </div>
               </AnimatedSection>
             </div>
@@ -212,7 +212,7 @@ export default function IndustryMedical() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl">
-                        <img src="/images/placeholder-quality-manager-documentation.jpg" alt="A quality manager reviewing ISO 13485 compliance documentation in a modern factory setting" />
+                        <img src="/images/DEPLOYED_backup-quality-first-article-42.jpg" alt="A quality manager reviewing ISO 13485 compliance documentation in a modern factory setting" />
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>

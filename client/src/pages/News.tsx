@@ -19,7 +19,7 @@ export const newsItems = [
     publishedAt: new Date(),
     readTime: 8,
     authorName: "Illuminious Team",
-    featuredImage: "/images/news-illuminious-opens-new-smart-factory-in-vietnam.jpg",
+    featuredImage: "/images/DEPLOYED_industry-automotive.jpg",
     category: "Company News",
   },
 {
@@ -31,7 +31,7 @@ export const newsItems = [
     publishedAt: new Date(),
     readTime: 8,
     authorName: "Illuminious Team",
-    featuredImage: "/images/news-illuminious-partners-with-ai-startup-for-smart-glasses.jpg",
+    featuredImage: "/images/DEPLOYED_news-illuminious-opens-new-smart-factory-in-vietnam.jpg",
     category: "Company News",
   },
   {
@@ -157,7 +157,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-02-06"),
     readTime: 5,
-    featuredImage: "/images/news-img-3.jpg",
+    featuredImage: "/images/DEPLOYED_backup-smt-reflow-speaker-pcb-14.jpg",
     category: "Company News",
   },
   {
@@ -252,7 +252,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-01-15"),
     readTime: 3,
-    featuredImage: "/images/news-img-4.jpg",
+    featuredImage: "/images/DEPLOYED_news-img-3.jpg",
     category: "Company News",
   },
   {
@@ -374,7 +374,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-01-10"),
     readTime: 4,
-    featuredImage: "/images/news-img-5.jpg",
+    featuredImage: "/images/DEPLOYED_news-img-4.jpg",
     category: "Partnership",
   },
   {
@@ -496,7 +496,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-01-05"),
     readTime: 2,
-    featuredImage: "/images/news-img-6.jpg",
+    featuredImage: "/images/DEPLOYED_about-overseas-warehouse.jpg",
     category: "Operations",
   },
   {
@@ -589,7 +589,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2025-12-20"),
     readTime: 3,
-    featuredImage: "/images/news-img-7.jpg",
+    featuredImage: "/images/DEPLOYED_placeholder-medical-device-assembly.jpg",
     category: "Certification",
   },
   {
@@ -715,7 +715,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2025-12-15"),
     readTime: 5,
-    featuredImage: "/images/news-img-8.jpg",
+    featuredImage: "/images/DEPLOYED_news-img-5.jpg",
     category: "Industry Insights",
   },
 ];

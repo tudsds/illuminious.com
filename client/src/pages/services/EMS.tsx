@@ -106,7 +106,7 @@ export default function ServiceEMS() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/ems-img-1.jpg"
+            src="/images/DEPLOYED_testinginspection-img-2.jpg"
             alt="A high-speed SMT assembly line in a modern factory"
             className="w-full h-full object-cover opacity-30"
           />
@@ -171,7 +171,7 @@ export default function ServiceEMS() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-quality-control-inspection.jpg" alt="An engineer performing a quality control inspection on a PCB" />
+                  <img src="/images/DEPLOYED_backup-quality-flying-probe-27.jpg" alt="An engineer performing a quality control inspection on a PCB" />
                 </div>
               </AnimatedSection>
             </div>
@@ -294,7 +294,7 @@ export default function ServiceEMS() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/ems-img-3.jpg" alt="The modern exterior of the Illuminious manufacturing facility" />
+                  <img src="/images/DEPLOYED_ems-img-1.jpg" alt="The modern exterior of the Illuminious manufacturing facility" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

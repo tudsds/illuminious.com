@@ -85,7 +85,7 @@ export default function ServiceODM() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/odm-img-1.jpg"
+            src="/images/DEPLOYED_service-odm.jpg"
             alt="A team of engineers collaborating around a table with product prototypes"
             className="w-full h-full object-cover opacity-30"
           />
@@ -151,7 +151,7 @@ export default function ServiceODM() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-sketch-to-prototype.jpg" alt="Progression from a product sketch to a 3D model and a physical prototype" />
+                  <img src="/images/DEPLOYED_placeholder-npi-flowchart.jpg" alt="Progression from a product sketch to a 3D model and a physical prototype" />
                 </div>
               </AnimatedSection>
             </div>
@@ -271,7 +271,7 @@ export default function ServiceODM() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-factory-tour.jpg" alt="A modern, clean factory interior with assembly lines" />
+                  <img src="/images/DEPLOYED_factorytour-img-4.jpg" alt="A modern, clean factory interior with assembly lines" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

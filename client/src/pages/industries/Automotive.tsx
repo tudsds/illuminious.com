@@ -115,7 +115,7 @@ export default function IndustryAutomotive() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-automotive-production-line.jpg"
+            src="/images/DEPLOYED_hero-global-supply-chain.jpg"
             alt="A brightly lit, modern SMT production line with robotic arms assembling automotive electronic components"
             className="w-full h-full object-cover opacity-20"
           />
@@ -169,7 +169,7 @@ export default function IndustryAutomotive() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-automotive-pcb-inspection.jpg" alt="An engineer in a blue anti-static coat meticulously inspecting a complex automotive PCB with multiple connectors" />
+                  <img src="/images/DEPLOYED_placeholder-automotive-dashboard-electronics.jpg" alt="An engineer in a blue anti-static coat meticulously inspecting a complex automotive PCB with multiple connectors" />
                 </div>
               </AnimatedSection>
             </div>
@@ -226,7 +226,7 @@ export default function IndustryAutomotive() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl">
-                        <img src="/images/placeholder-iatf-16949-certificate.jpg" alt="A close-up of an IATF 16949 certificate alongside a diagram of a quality control process" />
+                        <img src="/images/DEPLOYED_placeholder-automotive-production-line.jpg" alt="A close-up of an IATF 16949 certificate alongside a diagram of a quality control process" />
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>

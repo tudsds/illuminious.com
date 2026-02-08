@@ -85,7 +85,7 @@ export default function ServiceDFM() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-cad-design-review.jpg"
+            src="/images/DEPLOYED_placeholder-engineer-and-founder.jpg"
             alt="Engineer reviewing a complex 3D CAD model on a large monitor"
             className="w-full h-full object-cover opacity-20"
           />
@@ -151,7 +151,7 @@ export default function ServiceDFM() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-engineers-collaborating.jpg" alt="Diverse team of engineers collaborating around a table with blueprints and a laptop" className="w-full h-full object-cover" />
+                  <img src="/images/DEPLOYED_placeholder-cad-design-review.jpg" alt="Diverse team of engineers collaborating around a table with blueprints and a laptop" className="w-full h-full object-cover" />
                 </div>
               </AnimatedSection>
             </div>
@@ -272,7 +272,7 @@ export default function ServiceDFM() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-cost-reduction-chart.jpg" alt="Graph showing a significant cost reduction curve after DFM implementation" className="w-full h-full object-cover" />
+                  <img src="/images/DEPLOYED_placeholder-engineers-collaborating.jpg" alt="Graph showing a significant cost reduction curve after DFM implementation" className="w-full h-full object-cover" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

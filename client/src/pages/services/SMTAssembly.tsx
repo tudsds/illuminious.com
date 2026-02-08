@@ -101,7 +101,7 @@ export default function ServiceSMTAssembly() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/smtassembly-img-1.jpg"
+            src="/images/DEPLOYED_backup-smt-placement-wearable-pcb-11.jpg"
             alt="Panoramic view of a modern SMT production line"
             className="w-full h-full object-cover opacity-30"
           />
@@ -148,7 +148,7 @@ export default function ServiceSMTAssembly() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/smtassembly-img-2.jpg" alt="High-speed pick-and-place machine in action" />
+                  <img src="/images/DEPLOYED_placeholder-smt-assembly-line.jpg" alt="High-speed pick-and-place machine in action" />
                 </div>
               </AnimatedSection>
             </div>
@@ -208,7 +208,7 @@ export default function ServiceSMTAssembly() {
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img src="/images/smtassembly-img-3.jpg" alt="Technician operating a 3D AOI machine" />
+                <img src="/images/DEPLOYED_smtassembly-img-2.jpg" alt="Technician operating a 3D AOI machine" />
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>

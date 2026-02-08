@@ -117,7 +117,7 @@ export default function ServiceThroughHole() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-through-hole-assembly-line.jpg"
+            src="/images/DEPLOYED_backup-pcba-selective-solder-29.jpg"
             alt="Automated through-hole assembly line in operation"
             className="w-full h-full object-cover opacity-20"
           />
@@ -181,7 +181,7 @@ export default function ServiceThroughHole() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/throughhole-img-2.jpg" alt="Close-up of robust through-hole capacitors on a PCB" />
+                  <img src="/images/DEPLOYED_backup-pcba-through-hole-17.jpg" alt="Close-up of robust through-hole capacitors on a PCB" />
                 </div>
               </AnimatedSection>
             </div>
@@ -251,7 +251,7 @@ export default function ServiceThroughHole() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/throughhole-img-3.jpg" alt="Inspector examining a PCB solder joint under a microscope" />
+                  <img src="/images/DEPLOYED_backup-pcba-wave-solder-34.jpg" alt="Inspector examining a PCB solder joint under a microscope" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

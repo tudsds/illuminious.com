@@ -84,7 +84,7 @@ export default function ServiceNPI() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-npi-engineer-prototype.jpg"
+            src="/images/DEPLOYED_placeholder-engineer-holding-prototype.jpg"
             alt="Engineer working on a new product prototype at a workbench"
             className="w-full h-full object-cover opacity-30"
           />
@@ -150,7 +150,7 @@ export default function ServiceNPI() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-npi-team-planning.jpg" alt="NPI team in a planning session around a whiteboard" />
+                  <img src="/images/DEPLOYED_placeholder-prototyping-hero.jpg" alt="NPI team in a planning session around a whiteboard" />
                 </div>
               </AnimatedSection>
             </div>
@@ -220,7 +220,7 @@ export default function ServiceNPI() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-successful-product-launch.jpg" alt="Graphic illustrating a successful product launch trajectory" />
+                  <img src="/images/DEPLOYED_placeholder-sketch-to-prototype.jpg" alt="Graphic illustrating a successful product launch trajectory" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

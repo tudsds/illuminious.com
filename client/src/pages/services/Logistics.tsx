@@ -78,7 +78,7 @@ export default function ServiceLogistics() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-warehouse-aisle.jpg"
+            src="/images/DEPLOYED_backup-shipping-logistics-39.jpg"
             alt="A large, modern logistics warehouse with shelves of inventory"
             className="w-full h-full object-cover opacity-30"
           />
@@ -141,7 +141,7 @@ export default function ServiceLogistics() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-worker-scanning-package.jpg" alt="A logistics worker scanning a package in a warehouse" />
+                  <img src="/images/DEPLOYED_backup-box-build-packaging-30.jpg" alt="A logistics worker scanning a package in a warehouse" />
                 </div>
               </AnimatedSection>
             </div>
@@ -211,7 +211,7 @@ export default function ServiceLogistics() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-cargo-ship.jpg" alt="A large cargo ship at a busy port" />
+                  <img src="/images/DEPLOYED_ai-smart-necklace.jpg" alt="A large cargo ship at a busy port" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

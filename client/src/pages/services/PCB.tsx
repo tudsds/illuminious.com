@@ -79,7 +79,7 @@ export default function ServicePCB() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-pcb-assembly-line.jpg"
+            src="/images/DEPLOYED_backup-quality-aoi-projector-pcb-12.jpg"
             alt="A large panel of freshly fabricated printed circuit boards"
             className="w-full h-full object-cover opacity-30"
           />
@@ -142,7 +142,7 @@ export default function ServicePCB() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-inspector-microscope.jpg" alt="An inspector examining a PCB with a magnifying loupe" />
+                  <img src="/images/DEPLOYED_backup-quality-microscope-32.jpg" alt="An inspector examining a PCB with a magnifying loupe" />
                 </div>
               </AnimatedSection>
             </div>
@@ -212,7 +212,7 @@ export default function ServicePCB() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/pcb-img-3.jpg" alt="A flying probe tester in action, testing a bare PCB" />
+                  <img src="/images/DEPLOYED_abstract-circuit-board-blue.jpg" alt="A flying probe tester in action, testing a bare PCB" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

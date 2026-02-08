@@ -106,7 +106,7 @@ export default function ServiceRapidPrototyping() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-prototyping-hero.jpg"
+            src="/images/DEPLOYED_backup-engineer-prototype-testing-61.jpg"
             alt="A 3D printer creating a complex prototype part"
             className="w-full h-full object-cover opacity-30"
           />
@@ -172,7 +172,7 @@ export default function ServiceRapidPrototyping() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-engineer-holding-prototype.jpg" alt="Engineer holding and inspecting a complex product prototype" />
+                  <img src="/images/DEPLOYED_placeholder-npi-engineer-prototype.jpg" alt="Engineer holding and inspecting a complex product prototype" />
                 </div>
               </AnimatedSection>
             </div>

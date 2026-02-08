@@ -113,7 +113,7 @@ export default function IndustryIoT() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-iot-network-abstract.jpg"
+            src="/images/DEPLOYED_placeholder-smart-home-devices.jpg"
             alt="Abstract visualization of a global IoT network with interconnected nodes"
             className="w-full h-full object-cover opacity-20"
           />
@@ -176,7 +176,7 @@ export default function IndustryIoT() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-engineer-iot-board.jpg" alt="An engineer meticulously inspecting a complex IoT motherboard with multiple chips and connectors" />
+                  <img src="/images/DEPLOYED_engineer-oscilloscope-pcb-testing.jpg" alt="An engineer meticulously inspecting a complex IoT motherboard with multiple chips and connectors" />
                 </div>
               </AnimatedSection>
             </div>
@@ -258,7 +258,7 @@ export default function IndustryIoT() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <AnimatedSection delay={0.1}>
                     <div className="rounded-xl overflow-hidden shadow-2xl">
-                        <img src="/images/placeholder-rf-anechoic-chamber.jpg" alt="An IoT gateway inside a large anechoic chamber for precise RF performance and emissions testing" />
+                        <img src="/images/DEPLOYED_telco-img-1.jpg" alt="An IoT gateway inside a large anechoic chamber for precise RF performance and emissions testing" />
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>
