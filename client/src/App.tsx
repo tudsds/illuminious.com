@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
@@ -104,6 +105,35 @@ function Router() {
 }
 
 function App() {
+  const [location] = useLocation();
+
+  // Track virtual pageviews for GTM and GA4
+  useEffect(() => {
+    // GTM dataLayer push for virtual pageview
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "pageview",
+        page: {
+          path: location,
+          url: window.location.href,
+          title: document.title,
+        },
+      });
+    }
+
+    // GA4 pageview tracking
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("config", "G-8903WGE2L3", {
+        page_path: location,
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
+
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
