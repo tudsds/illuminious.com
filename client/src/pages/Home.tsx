@@ -41,28 +41,28 @@ const coreCapabilities = [
     title: "SMT & PCB Assembly",
     description: "8 fully automated SMT lines with 01005 capability, 3D AOI, and X-ray inspection. From prototype to 100K+ boards per month.",
     href: "/services/smt-assembly",
-    image: "/images_deployed/smt-production-line-panoramic.jpg",
+    image: "/images/placeholder-smt-production-line.jpg",
   },
   {
     icon: Microscope,
     title: "Testing & Quality Control",
     description: "In-line 3D AOI, X-ray, ICT, flying probe, and custom functional testing. IPC Class 3 workmanship on every board.",
     href: "/services/testing-inspection",
-    image: "/images_deployed/aoi-inspection-station-technician.jpg",
+    image: "/images/placeholder-aoi-inspection.jpg",
   },
   {
     icon: Box,
     title: "Box Build & System Integration",
     description: "Complete product assembly from PCBA to final packaging. Cable harness, mechanical assembly, firmware flashing, and labeling.",
     href: "/services/box-build",
-    image: "/images_deployed/smt-production-line-worker.jpg",
+    image: "/images/placeholder-smt-assembly-line.jpg",
   },
   {
     icon: Factory,
     title: "Injection Molding",
     description: "In-house tooling and injection molding for plastic enclosures, light guides, and structural components. 80–3,000 ton presses.",
     href: "/services/injection-molding",
-    image: "/images_deployed/pick-and-place-machine-smt.jpg",
+    image: "/images/placeholder-pick-and-place-machine.jpg",
   },
 ];
 
@@ -184,7 +184,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images_deployed/smt-production-line-panoramic.jpg"
+            src="/images/placeholder-smt-production-line.jpg"
             alt="SMT Production Line at Illuminious Factory"
             className="w-full h-full object-cover"
             loading="eager"

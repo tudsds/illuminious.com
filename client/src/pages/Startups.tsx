@@ -1,89 +1,56 @@
-import { Link } from "wouter";
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Zap,
-  Rocket,
-  Shield,
-  Users,
-  Code,
-  Cpu,
-  CheckCircle,
-  Star,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, CheckCircle, Rocket, Shield, Users, Zap, Factory, Microscope, Scale } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const benefits = [
-  {
-    icon: Zap,
-    title: "Preferential Pricing",
-    description: "Access exclusive startup-friendly pricing on all manufacturing services.",
+  { 
+    icon: Rocket, 
+    title: "Accelerated NPI Process", 
+    description: "Our dedicated New Product Introduction (NPI) center in Shenzhen is specifically designed to fast-track your project. We streamline the journey from initial design review to first articles, typically reducing development cycles by 30-40% compared to traditional contract manufacturers. This means you get to market, secure funding, and iterate on your product much faster."
   },
-  {
-    icon: Rocket,
-    title: "Fast-Track Production",
-    description: "Priority scheduling to get your products to market faster.",
+  { 
+    icon: Shield, 
+    title: "No-Strings-Attached MOQs", 
+    description: "We champion a strict no-MOQ (Minimum Order Quantity) policy for initial production runs. We understand that cash flow is critical for startups. Our model allows you to produce what you need, when you need it, eliminating the immense financial pressure of large upfront inventory investments and allowing you to test the market with minimal risk."
   },
-  {
-    icon: Shield,
-    title: "Flexible MOQ",
-    description: "Lower minimum order quantities designed for early-stage companies.",
+  { 
+    icon: Zap, 
+    title: "Transparent, Scalable Pricing", 
+    description: "Our pricing model is built for scalability and transparency. We provide a detailed cost breakdown (Bill of Materials, labor, testing, and overhead) so you understand exactly what you're paying for. As your volume increases, you automatically unlock predefined pricing tiers, ensuring your COGS decrease predictably as you grow."
   },
-  {
-    icon: Users,
-    title: "Dedicated Support",
-    description: "Personal account manager who understands startup needs.",
-  },
-  {
-    icon: Code,
-    title: "DFM Consultation",
-    description: "Free design for manufacturing review to optimize your product.",
-  },
-  {
-    icon: Cpu,
-    title: "Prototype to Scale",
-    description: "Seamless transition from prototype to mass production.",
+  { 
+    icon: Users, 
+    title: "Your On-Demand Engineering Team", 
+    description: "Consider us an extension of your own team. You are assigned a dedicated project manager and have direct access to our mechanical, electrical, and firmware engineers. We act as your hardware co-pilots, providing continuous DFM/DFA feedback, solving complex engineering challenges, and ensuring your product is optimized for quality and cost."
   },
 ];
 
 const journey = [
   {
     phase: "01",
-    title: "Ideation & Design",
-    description: "We help refine your concept and optimize for manufacturing from day one.",
+    title: "Deep-Dive DFM & DFX Analysis",
+    description: "The journey begins with a comprehensive Design for Manufacturability (DFM) and Design for Excellence (DFX) analysis. Our engineers meticulously review your CAD files, schematics, and BOM, identifying potential issues that could impact yield, cost, or reliability. We analyze everything from component selection and PCB layout to enclosure design and assembly tolerances, providing a detailed report with actionable recommendations. This proactive approach prevents costly redesigns and production delays down the line."
   },
   {
     phase: "02",
-    title: "Rapid Prototyping",
-    description: "Quick iterations to validate your design and gather user feedback.",
+    title: "Rapid Prototyping & EVT",
+    description: "At our Shenzhen NPI facility, we move swiftly into the Engineering Validation Test (EVT) phase. We produce a small batch of high-fidelity prototypes (typically 5-20 units) using production-intent processes and materials. These are not just 3D prints; they are fully functional units for you to test, validate your design, share with investors, and gather early user feedback. We can often turn around complex PCBA prototypes in as little as 7 days."
   },
   {
     phase: "03",
-    title: "Pilot Production",
-    description: "Small batch production for market testing and investor demos.",
+    title: "Pilot Run & DVT/PVT",
+    description: "Once the EVT units are approved, we proceed to Design Validation Test (DVT) and Production Validation Test (PVT) pilot runs (typically 50-500 units). This is a critical step where we fine-tune the entire production line, including setting up SMT programming, designing custom test jigs and fixtures, and finalizing quality control checkpoints. This stage is about ironing out every single kink in the process to ensure a smooth, repeatable, and high-yield mass production run."
   },
   {
     phase: "04",
-    title: "Mass Production",
-    description: "Scale up with confidence using our proven manufacturing processes.",
-  },
-];
-
-const testimonials = [
-  {
-    quote: "Illuminious understood our startup constraints and helped us launch our AI wearable on time and on budget.",
-    author: "Sarah Chen",
-    role: "CEO, TechWear AI",
-  },
-  {
-    quote: "The team's expertise in DFM saved us months of development time and significant costs.",
-    author: "Michael Park",
-    role: "Founder, RoboCompanion",
+    title: "Scale to Mass Production",
+    description: "With a fully validated process, we seamlessly transition your project to mass production. For higher volumes, we leverage our larger, highly-automated factory in Batam, Indonesia, to provide cost advantages. Our \"Copy Exact\" methodology ensures that the process, equipment, and quality standards are perfectly replicated from our NPI facility, guaranteeing consistent quality whether you're producing one thousand or one hundred thousand units. Your dedicated project manager oversees this entire transition, providing you with constant updates and production visibility."
   },
 ];
 
@@ -106,154 +73,67 @@ export default function Startups() {
   return (
     <>
       <SEO
-        title="Illuminious Startups Program"
-        description="Join the Illuminious Startups Program for preferential pricing, dedicated support, and a fast-track path from prototype to mass production. Powered by Illuminious x Future Factory."
-        keywords="hardware startup program, startup manufacturing, prototype to production, AI hardware startup, electronics startup support"
+        title="Electronics Manufacturing for Hardware Startups | Illuminious"
+        description="Illuminious is the manufacturing partner for ambitious hardware startups. We offer a complete, de-risked path from prototype to mass production with a dedicated NPI process, no MOQ, transparent pricing, and expert engineering support."
+        keywords="hardware startup manufacturing, electronics contract manufacturer, prototype to mass production, new product introduction, NPI process, DFM for startups, flexible MOQ manufacturing, startup manufacturing partner"
         url="/startups"
       />
       <Header />
 
-      {/* Cyberpunk Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-cyber-black">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyber-black via-cyber-purple/20 to-cyber-black" />
-          {/* Grid pattern */}
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }} />
-          {/* Glowing orbs */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyber-purple/30 rounded-full blur-[100px] animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyber-cyan/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
+      <section className="relative pt-48 pb-32 bg-illuminious-navy text-white">
+         <div className="absolute inset-0">
+          <img
+            src="/images/placeholder-startup-team-collaboration.jpg"
+            alt="A diverse startup team collaborating around a table with electronic components and prototypes"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
         </div>
-
-        {/* Scan lines effect */}
-        <div className="absolute inset-0 pointer-events-none opacity-5" style={{
-          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 255, 0.1) 2px, rgba(0, 255, 255, 0.1) 4px)`
-        }} />
-
-        <div className="container relative z-10 pt-32 pb-20">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Co-branding */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center justify-center gap-6 mb-8"
-            >
-              <img src="/images/illuminious-logo-white.png" alt="Illuminious" className="h-12 w-12" />
-              <span className="text-cyber-cyan text-2xl font-bold">×</span>
-              <img src="/images/future-factory-logo.png" alt="Future Factory" className="h-10" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-cyan/50 bg-cyber-cyan/10 text-cyber-cyan text-sm font-medium mb-6"
-            >
-              <Rocket className="w-4 h-4" />
-              For Hardware Innovators
-            </motion.div>
-
+        <div className="container relative z-10">
+            <Breadcrumb items={[
+              { label: "Home", href: "/" },
+              { label: "For Startups" },
+            ]} />
+          <div className="max-w-4xl mt-8">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-bold mt-2 mb-6 font-heading"
             >
-              <span className="text-white">Illuminious</span>
-              <br />
-              <span className="text-white">
-                Startups Program
-              </span>
+              The Manufacturing Partner for Ambitious Hardware Startups
             </motion.h1>
-
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl md:text-2xl text-white/80 leading-relaxed"
             >
-              We love working with hardware startups. As your experienced partner,
-              we break down information barriers and provide end-to-end support from
-              design to mass production.
+              Stop navigating the manufacturing maze alone. Illuminious provides the expertise, infrastructure, and transparent process to turn your brilliant prototype into a market-ready product, faster and with less risk.
             </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="bg-cyber-cyan text-cyber-black hover:bg-cyber-cyan/90 rounded-full px-8 font-semibold"
-              >
-                <Link href="/contact">
-                  Apply Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-cyber-purple text-cyber-purple hover:bg-cyber-purple/20 rounded-full px-8"
-              >
-                <a href="#benefits">Learn More</a>
-              </Button>
-            </motion.div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-cyber-cyan/50 flex items-start justify-center p-2"
-          >
-            <motion.div className="w-1.5 h-1.5 rounded-full bg-cyber-cyan" />
-          </motion.div>
-        </motion.div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-20 md:py-32 bg-cyber-black">
+      <section id="benefits" className="py-24 bg-white">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-purple/50 bg-cyber-purple/10 text-cyber-purple text-sm font-medium mb-6">
-              <Star className="w-4 h-4" />
-              Exclusive Benefits
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Built for <span className="text-cyber-cyan">Startups</span>
-            </h2>
-            <p className="text-lg text-gray-400">
-              We understand the unique challenges of hardware startups and have
-              designed our program to address them head-on.
+            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4 font-heading">A Program Built for the Startup Grind</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              We've been in the trenches with hundreds of startups. We threw out the traditional contract manufacturing playbook and built a program that addresses the real-world challenges you face: limited cash, tight deadlines, and the need for a true engineering partner.
             </p>
           </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
               <AnimatedSection key={benefit.title} delay={index * 0.1}>
-                <div className="group p-6 rounded-2xl bg-gradient-to-br from-cyber-purple/10 to-transparent border border-cyber-purple/30 hover:border-cyber-cyan/50 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-xl bg-cyber-cyan/10 flex items-center justify-center mb-4 group-hover:bg-cyber-cyan/20 transition-colors">
-                    <benefit.icon className="w-6 h-6 text-cyber-cyan" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-400">{benefit.description}</p>
+                <div className="bg-gray-50 p-8 rounded-lg h-full flex items-start">
+                    <div className="bg-illuminious-light p-3 rounded-full mr-6">
+                        <benefit.icon className="w-8 h-8 text-illuminious-blue" />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-bold text-illuminious-navy mb-2">{benefit.title}</h3>
+                        <p className="text-base text-gray-600 leading-relaxed">{benefit.description}</p>
+                    </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -261,39 +141,27 @@ export default function Startups() {
         </div>
       </section>
 
-      {/* Journey Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-cyber-black to-cyber-purple/20">
+      <section className="py-24 bg-gray-50">
         <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1a1a2e' }}>
-              Your <span className="text-cyber-purple">Journey</span> With Us
-            </h2>
-            <p className="text-lg" style={{ color: '#2d2d44' }}>
-              From initial concept to global scale, we're with you every step of the way.
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Your Path from Prototype to Production</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              We've engineered a four-phase New Product Introduction (NPI) process that provides a clear, structured, and de-risked roadmap to guide your product from a rough concept to a scalable, mass-produced reality.
             </p>
           </AnimatedSection>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyber-cyan via-cyber-purple to-cyber-pink hidden md:block" />
-
+          <div className="relative max-w-5xl mx-auto">
+            <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 top-8 bottom-8 w-0.5 bg-gray-200" />
+            <div className="space-y-16">
               {journey.map((step, index) => (
                 <AnimatedSection key={step.phase} delay={index * 0.15}>
-                  <div className="flex gap-8 mb-12 last:mb-0">
-                    <div className="hidden md:flex flex-col items-center">
-                      <div className="w-16 h-16 rounded-full bg-cyber-black border-2 border-cyber-cyan flex items-center justify-center text-cyber-cyan font-bold text-xl relative z-10">
-                        {step.phase}
-                      </div>
+                  <div className="md:grid md:grid-cols-2 md:gap-12 items-center">
+                    <div className={`flex items-center gap-6 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                        <div className="relative z-10 mx-auto w-16 h-16 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-2xl border-4 border-gray-50 flex-shrink-0">{step.phase}</div>
+                        <h3 className="text-2xl font-bold text-illuminious-navy font-heading md:hidden">{step.title}</h3>
                     </div>
-                    <div className="flex-1 p-6 rounded-2xl bg-cyber-black/50 border border-cyber-purple/30 hover:border-cyber-cyan/50 transition-colors">
-                      <span className="md:hidden text-cyber-cyan font-bold text-sm mb-2 block">
-                        Phase {step.phase}
-                      </span>
-                      <h3 className="text-xl font-semibold mb-2" style={{ color: '#1a1a2e' }}>
-                        {step.title}
-                      </h3>
-                      <p style={{ color: '#3d3d5c' }}>{step.description}</p>
+                    <div className={`relative ${index % 2 === 1 ? 'md:order-1 md:text-right' : ''}`}>
+                      <h3 className="hidden md:block text-2xl font-bold text-illuminious-navy font-heading mb-3">{step.title}</h3>
+                      <p className="text-base text-gray-600 leading-relaxed">{step.description}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -303,133 +171,81 @@ export default function Startups() {
         </div>
       </section>
 
-      {/* Future Factory Partnership */}
-      <section className="py-20 md:py-32 bg-cyber-black">
+      <section className="py-24 bg-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-pink/50 bg-cyber-pink/10 text-cyber-pink text-sm font-medium mb-6">
-                Strategic Partnership
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powered by <span className="text-cyber-cyan">Future Factory</span>
-              </h2>
-              <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                Through our partnership with Future Factory in Shenzhen, we offer
-                unparalleled access to AI hardware manufacturing expertise. Their
-                specialization in AI glasses, companion robots, and wearables
-                complements our global supply chain capabilities.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "AI hardware design expertise",
-                  "Cutting-edge prototyping capabilities",
-                  "Access to Shenzhen's electronics ecosystem",
-                  "Integrated R&D and manufacturing",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyber-cyan flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="/images/ai-smart-glasses.jpg"
-                  alt="AI Smart Glasses"
-                  className="rounded-xl border border-cyber-purple/30"
-                />
-                <img
-                  src="/images/ai-smart-ring.jpg"
-                  alt="AI Smart Ring"
-                  className="rounded-xl border border-cyber-purple/30 mt-8"
-                />
-                <img
-                  src="/images/ai-smart-pendant.jpg"
-                  alt="AI Smart Pendant"
-                  className="rounded-xl border border-cyber-purple/30"
-                />
-                <img
-                  src="/images/ai-wearable-pin.jpg"
-                  alt="AI Wearable Pin"
-                  className="rounded-xl border border-cyber-purple/30"
-                />
-              </div>
-            </AnimatedSection>
-          </div>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <AnimatedSection>
+                    <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-6 font-heading">More Than a Factory, We're Your Partner</h2>
+                    <div className="space-y-6 text-gray-700 leading-relaxed">
+                        <p>
+                           Choosing a contract manufacturer is one of the most critical decisions a hardware startup will make. A bad partner can lead to catastrophic delays, quality nightmares, and wasted capital. A great partner becomes a competitive advantage. At Illuminious, we don't just take your design and run with it; we immerse ourselves in your product and your vision.
+                        </p>
+                        <p>
+                           Our engineering support is proactive, not reactive. We don't wait for you to ask questions. We host weekly sync-ups, provide detailed DFM reports, and suggest alternative components to mitigate supply chain risks. We've helped startups redesign enclosures for better durability, optimize PCB layouts for improved thermal performance, and cut BOM costs by 25% before the first unit ever rolls off the line.
+                        </p>
+                         <p>
+                           This partnership model is the core of our philosophy. Your success is our success. We are invested in helping you navigate the treacherous waters of hardware development, from your first prototype to your millionth unit.
+                        </p>
+                    </div>
+                </AnimatedSection>
+                <AnimatedSection delay={0.1}>
+                    <div className="rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-3">
+                        <img src="/images/placeholder-engineer-and-founder.jpg" alt="An Illuminious engineer closely collaborating with a startup founder over a product schematic" className="object-cover" />
+                    </div>
+                </AnimatedSection>
+            </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-b from-cyber-black to-cyber-purple/10">
+      <section className="py-24 bg-illuminious-navy text-white">
         <div className="container">
-          <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: '#1a1a2e' }}>
-              Trusted by <span className="text-cyber-purple">Innovators</span>
-            </h2>
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading">What We Build With Startups</h2>
+            <p className="text-lg text-white/80 leading-relaxed">
+              Our expertise spans the full spectrum of modern electronics. While we have deep specializations, our flexible factory floors and engineering talent allow us to tackle a diverse range of products.
+            </p>
           </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <div className="p-6 rounded-2xl bg-cyber-black/50 border border-cyber-purple/30">
-                  <p className="text-lg mb-6 italic" style={{ color: '#2d2d44' }}>
-                    "{testimonial.quote}"
-                  </p>
-                  <div>
-                    <p className="font-semibold" style={{ color: '#1a1a2e' }}>{testimonial.author}</p>
-                    <p className="text-cyber-purple text-sm">{testimonial.role}</p>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[ 
+              {icon: Factory, title: "Industrial IoT", desc: "Ruggedized sensors, gateways, and asset trackers for harsh environments. We handle complex certifications and ensure long-term reliability."}, 
+              {icon: Microscope, title: "Medical & Wellness", desc: "From wearable health monitors to diagnostic devices, we operate under strict quality controls (ISO 13485 principles) for safety and accuracy."}, 
+              {icon: Scale, title: "Smart Consumer Devices", desc: "Connected home products, wearables, and high-finish consumer electronics where aesthetics and user experience are paramount."}
+            ].map((item, index) => (
+              <AnimatedSection key={item.title} delay={index * 0.1}>
+                <div className="bg-illuminious-navy-light p-8 rounded-lg h-full">
+                  <item.icon className="w-10 h-10 text-illuminious-blue mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-white/70 leading-relaxed">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
           </div>
+           <AnimatedSection className="text-center mt-16">
+                <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-blue/10 rounded-full px-8 py-3 text-base">
+                    <Link href="/industries">Explore All Industries</Link>
+                </Button>
+            </AnimatedSection>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-cyber-black relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-cyan/10 rounded-full blur-[150px]" />
-        </div>
-        <div className="container relative z-10">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Build the <span className="text-cyber-cyan">Future</span>?
-            </h2>
-            <p className="text-xl text-gray-400 mb-8">
-              Join the Illuminious Startups Program and turn your hardware vision
-              into reality. Apply today for a free consultation.
+      <section className="py-24 bg-white">
+        <div className="container text-center">
+          <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Ready to Build Your Future?</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+              The Illuminious for Startups program is a selective partnership. We look for ambitious teams with innovative products and a collaborative spirit. If you're ready to move beyond the prototype and build a scalable business, we want to hear from you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-cyber-cyan text-cyber-black hover:bg-cyber-cyan/90 rounded-full px-10 font-semibold"
-              >
-                <Link href="/contact">
-                  Apply Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-cyber-purple text-white hover:bg-cyber-purple/20 rounded-full px-10"
-              >
-                <a href="mailto:startups@illuminious.com">Email Us</a>
-              </Button>
-            </div>
+            <Button asChild size="lg" className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-10 py-4 text-lg">
+              <Link href="/contact?program=startup">
+                Apply to the Program
+                <ArrowRight className="w-6 h-6 ml-3" />
+              </Link>
+            </Button>
           </AnimatedSection>
         </div>
       </section>
 
       <Footer />
-      <FloatingContact />
     </>
   );
 }

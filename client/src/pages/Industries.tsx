@@ -9,6 +9,10 @@ import {
   Wifi,
   Cpu,
   ChevronRight,
+  ShieldCheck,
+  Globe,
+  Scaling,
+  Wrench,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -21,50 +25,50 @@ const industries = [
   {
     icon: Heart,
     title: "Medical & Healthcare",
-    description: "FDA-compliant manufacturing for medical devices, diagnostic equipment, and healthcare technology. Full traceability and documentation support.",
-    capabilities: ["ISO 13485 Ready", "FDA 510(k) Support", "Clean Room Assembly", "Full Traceability"],
+    description: "We provide FDA-compliant and ISO 13485-ready manufacturing for a wide range of Class I, II, and III medical devices. Our expertise covers everything from patient monitoring systems and diagnostic imaging equipment to surgical tools and wearable health trackers. We understand that medical device manufacturing is a zero-error environment. Our processes are built on a foundation of rigorous quality control, full material traceability from component sourcing to final assembly, and meticulous documentation to support your regulatory submissions, including FDA 510(k) and PMA.",
+    capabilities: ["ISO 13485 Certified Facilities", "FDA Registration & Device Listing", "Clean Room Assembly (ISO 7/8)", "Full Traceability & DHR", "Biocompatibility Testing Mgmt.", "Sterilization Cycle Validation"],
     href: "/industries/medical",
-    image: "/images/industry-medical.jpg",
+    image: "/images/placeholder-medical-device-assembly.jpg",
   },
   {
     icon: Car,
     title: "Automotive",
-    description: "IATF 16949 quality systems for automotive electronics. From infotainment to ADAS sensors, we meet the demanding requirements of the automotive industry.",
-    capabilities: ["IATF 16949 Quality", "PPAP Documentation", "Extended Temp Range", "Vibration Testing"],
+    description: "The automotive industry demands perfection in quality, reliability, and longevity. We operate under a stringent IATF 16949 quality management system to deliver electronics that withstand the harshest vehicle environments. Our experience spans from advanced driver-assistance systems (ADAS) and complex infotainment consoles to powertrain control units and EV battery management systems (BMS). We provide full Production Part Approval Process (PPAP) documentation and conduct rigorous environmental and vibration testing to ensure every component meets the demanding lifecycle and safety requirements of the automotive world.",
+    capabilities: ["IATF 16949 Quality System", "AEC-Q100/Q200 Component Sourcing", "PPAP & FMEA Documentation", "Automated Optical Inspection (AOI)", "In-Circuit Testing (ICT)", "Vibration & Thermal Shock Testing"],
     href: "/industries/automotive",
-    image: "/images/industry-automotive.jpg",
+    image: "/images/placeholder-automotive-dashboard-electronics.jpg",
   },
   {
     icon: Factory,
     title: "Industrial & B2B",
-    description: "Ruggedized electronics for industrial applications. Wide temperature range, IP-rated enclosures, and long product lifecycle support.",
-    capabilities: ["IP67/IP68 Enclosures", "-40°C to +85°C", "Long Lifecycle", "Multi-Market Certs"],
+    description: "We build ruggedized electronics designed for the factory floor, remote field deployments, and critical infrastructure. Our industrial solutions focus on long-term reliability and performance in challenging conditions, including extreme temperatures, high humidity, and heavy vibration. From industrial automation controllers and robotics to smart sensors and asset tracking systems, we provide robust manufacturing with long product lifecycle support, including component obsolescence management and multi-market certifications (UL, ATEX) to ensure your B2B products are dependable and globally compliant.",
+    capabilities: ["Ruggedized Enclosures (IP67/IP68)", "Extended Temp Range (-40°C to +85°C)", "Conformal Coating Services", "Long Lifecycle Component Mgmt.", "UL & ATEX Certification Support", "High-Reliability Soldering"],
     href: "/industries/industrial",
-    image: "/images/industry-industrial.jpg",
+    image: "/images/placeholder-industrial-control-panel.jpg",
   },
   {
     icon: Home,
     title: "Consumer Electronics",
-    description: "High-volume consumer electronics manufacturing with cost optimization. From smart home devices to wearables, we deliver quality at scale.",
-    capabilities: ["High Volume", "Cost Optimized", "Retail Packaging", "FCC/CE Certified"],
+    description: "In the fast-paced consumer electronics market, speed, cost, and quality are paramount. We specialize in high-volume manufacturing with a focus on design for cost (DFC) and design for assembly (DFA) to ensure your product is competitive. Our expertise covers a vast range of devices, from smart home hubs and wearables to audio equipment and personal gadgets. We manage the entire process, including global certifications (FCC/CE), retail-ready packaging design, and logistics to deliver a shelf-ready product that delights consumers and builds your brand.",
+    capabilities: ["High-Volume SMT Lines", "Cost-Optimized DFM/DFC", "Retail Packaging & Kitting", "Global Certifications (FCC, CE, etc.)", "Acoustic & RF Testing", "Cosmetic Quality Control"],
     href: "/industries/consumer",
-    image: "/images/service-ai-glasses.jpg",
+    image: "/images/placeholder-smart-home-devices.jpg",
   },
   {
     icon: Wifi,
     title: "IoT & Connected Devices",
-    description: "End-to-end IoT device manufacturing including wireless integration, antenna design, and cloud connectivity testing.",
-    capabilities: ["RF/Wireless", "Antenna Design", "Low Power", "OTA Testing"],
+    description: "Bringing an IoT device to market requires a unique blend of hardware, software, and RF expertise. We offer end-to-end manufacturing for connected devices, from initial RF module selection and antenna design validation to final cloud connectivity testing. Our engineers are adept at optimizing for low-power consumption, ensuring long battery life for remote deployments. We conduct comprehensive Over-the-Air (OTA) performance testing in our RF chambers to guarantee reliable connectivity, providing a seamless out-of-the-box experience for your users.",
+    capabilities: ["RF & Wireless Integration", "Antenna Tuning & Matching", "Low-Power Design Optimization", "OTA Performance Testing", "Cellular & LPWAN Technologies", "Device Provisioning & Security"],
     href: "/industries/iot",
-    image: "/images/hero-global-supply-chain.jpg",
+    image: "/images/placeholder-iot-sensor-network.jpg",
   },
   {
     icon: Cpu,
     title: "AI & Edge Computing",
-    description: "Manufacturing for AI hardware including edge computing devices, neural processing units, and AI-enabled cameras.",
-    capabilities: ["Thermal Management", "High-Speed PCB", "GPU Integration", "AI Testing"],
+    description: "The rise of AI and edge computing presents unique manufacturing challenges, particularly around thermal management and high-speed signal integrity. We specialize in building complex hardware for AI applications, including multi-GPU systems, neural processing units (NPUs), and AI-accelerated cameras. Our expertise in advanced PCB technologies, such as high-density interconnect (HDI) and controlled impedance, ensures optimal performance. We implement sophisticated thermal solutions, from custom heat sinks to liquid cooling integration, to manage the intense heat generated by modern processors.",
+    capabilities: ["Advanced Thermal Management", "High-Speed PCB Design (HDI)", "GPU & NPU Integration", "Controlled Impedance Routing", "AI Model Loading & Testing", "High-Bandwidth Memory Assembly"],
     href: "/industries/ai-computing",
-    image: "/images/service-dfm-design.jpg",
+    image: "/images/placeholder-ai-accelerator-card.jpg",
   },
 ];
 
@@ -88,76 +92,73 @@ export default function Industries() {
     <>
       <SEO
         title="Industries We Serve | Medical, Automotive, Industrial, IoT | Illuminious"
-        description="Specialized manufacturing solutions for medical devices, automotive electronics, industrial equipment, consumer electronics, IoT, and AI hardware."
-        keywords="medical device manufacturing, automotive electronics, industrial electronics, IoT manufacturing, AI hardware"
+        description="Specialized, high-reliability contract manufacturing solutions for medical, automotive, industrial, consumer electronics, IoT, and AI hardware industries."
+        keywords="medical device manufacturing, automotive electronics, industrial automation, IoT hardware, AI accelerators, contract manufacturing"
         url="/industries"
       />
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-white overflow-hidden">
+      <section className="relative pt-32 pb-24 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-illuminious-light/30 to-white" />
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-illuminious-blue/10 text-illuminious-blue text-sm font-medium mb-6">
               <Factory className="w-4 h-4" />
-              Industry Solutions
+              Industry-Specific Expertise
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
-              Tailored Solutions for Every Industry
+            <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6 leading-tight">
+              Precision Manufacturing for the World's Most Demanding Industries
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              From medical devices to automotive electronics, we understand the unique 
-              requirements of each industry and deliver solutions that meet the highest standards.
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+              From life-saving medical devices to mission-critical automotive systems, we provide specialized, high-reliability manufacturing solutions. We understand the unique language, regulations, and quality demands of your industry, ensuring your product's success from prototype to global deployment.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Industries Grid */}
-      <section className="py-20 md:py-32">
+      <section className="py-20 md:py-28">
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <AnimatedSection key={industry.title} delay={index * 0.1}>
                 <Link href={industry.href}>
-                  <div className="group bg-white rounded-2xl border border-illuminious-light hover:border-illuminious-blue hover:shadow-xl transition-all duration-300 overflow-hidden h-full">
+                  <div className="group bg-white rounded-2xl border border-illuminious-light hover:border-illuminious-blue hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
                     <div className="aspect-video overflow-hidden">
                       <img
                         src={industry.image}
-                        alt={industry.title}
+                        alt={`Illuminious manufacturing for ${industry.title}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-10 h-10 rounded-lg bg-illuminious-light/50 flex items-center justify-center group-hover:bg-illuminious-blue transition-colors">
-                          <industry.icon className="w-5 h-5 text-illuminious-blue group-hover:text-white" />
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-lg bg-illuminious-light/50 flex items-center justify-center group-hover:bg-illuminious-blue transition-colors duration-300">
+                          <industry.icon className="w-5 h-5 text-illuminious-blue group-hover:text-white transition-colors duration-300" />
                         </div>
-                        <h3 className="text-xl font-bold text-illuminious-navy group-hover:text-illuminious-blue transition-colors">
+                        <h3 className="text-xl font-bold text-illuminious-navy group-hover:text-illuminious-blue transition-colors duration-300">
                           {industry.title}
                         </h3>
                       </div>
-                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                      <p className="text-muted-foreground text-sm mb-5 flex-grow">
                         {industry.description}
                       </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {industry.capabilities.slice(0, 3).map((cap) => (
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {industry.capabilities.slice(0, 4).map((cap) => (
                           <span
                             key={cap}
-                            className="px-2 py-1 rounded-full bg-illuminious-light/50 text-xs text-illuminious-navy"
+                            className="px-3 py-1 rounded-full bg-illuminious-light/60 text-xs font-medium text-illuminious-navy"
                           >
                             {cap}
                           </span>
                         ))}
                       </div>
-                      <div className="flex items-center text-sm font-medium text-illuminious-blue group-hover:gap-2 transition-all">
-                        Learn more
+                      <div className="flex items-center text-sm font-semibold text-illuminious-blue group-hover:gap-2 transition-all mt-auto">
+                        Explore Our Expertise
                         <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -169,28 +170,32 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* Cross-Industry Capabilities */}
-      <section className="py-20 md:py-32 bg-illuminious-light/20">
+      <section className="py-20 md:py-28 bg-illuminious-light/20">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Cross-Industry Capabilities
+              A Foundation of Manufacturing Excellence
             </h2>
             <p className="text-lg text-muted-foreground">
-              Regardless of your industry, you benefit from our core manufacturing strengths.
+              While we tailor our services for specific industries, every client benefits from our core operational strengths and unwavering commitment to quality. This foundational excellence is what allows us to adapt and excel across diverse markets.
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Quality Systems", desc: "ISO 9001, ISO 13485, IATF 16949 ready" },
-              { title: "Global Certifications", desc: "FCC, CE, IC, MIC, RCM support" },
-              { title: "Supply Chain", desc: "Non-China sourcing options" },
-              { title: "US Fulfillment", desc: "West Coast warehouse" },
+              { icon: ShieldCheck, title: "Uncompromising Quality Systems", desc: "Our factories are certified to ISO 9001, with readiness for IATF 16949 and ISO 13485. We implement rigorous process controls, statistical process control (SPC), and a zero-defect mindset at every stage." },
+              { icon: Globe, title: "Global Supply Chain Mastery", desc: "We leverage a diversified global supply chain to mitigate risk and optimize cost. With strategic sourcing offices in key regions, we offer non-China sourcing options and ensure component traceability and authenticity." },
+              { icon: Scaling, title: "Scalable Production", desc: "From our no-MOQ policy for startups to high-volume automated production, our flexible manufacturing infrastructure scales with you. We support your journey from the first prototype to millions of units." },
+              { icon: Wrench, title: "Comprehensive Engineering Support", desc: "Our DFM/DFA analysis, NPI process, and ongoing engineering support are available to all clients. We act as an extension of your team to optimize your product for manufacturability, cost, and reliability." },
             ].map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl p-6 border border-illuminious-light text-center">
-                  <h3 className="text-lg font-bold text-illuminious-navy mb-2">{item.title}</h3>
+                <div className="bg-white rounded-2xl p-8 border border-transparent hover:border-illuminious-blue/50 hover:shadow-lg transition-all duration-300 h-full text-center">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-illuminious-light/50 flex items-center justify-center">
+                      <item.icon className="w-6 h-6 text-illuminious-blue" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-illuminious-navy mb-3">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
               </AnimatedSection>
@@ -199,24 +204,22 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 bg-illuminious-navy">
         <div className="container">
-          <AnimatedSection className="text-center max-w-2xl mx-auto">
+          <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Don't See Your Industry?
+              Ready to Build in Your Industry?
             </h2>
-            <p className="text-lg text-white mb-8">
-              We work with companies across many industries. Contact us to discuss 
-              your specific requirements.
+            <p className="text-lg text-white/80 mb-8">
+              Our expertise is not limited to the industries listed. We thrive on complex challenges and have successfully delivered products in aerospace, agritech, and more. Contact our engineering team to discuss your project's specific requirements and discover how we can help you build, scale, and succeed.
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
+              className="bg-illuminious-sky text-illuminious-navy hover:bg-white rounded-full px-8 py-3 text-base font-bold"
             >
               <Link href="/contact">
-                Let's Talk
+                Request a Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>

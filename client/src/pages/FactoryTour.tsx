@@ -1,75 +1,85 @@
-import { Link } from "wouter";
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Play,
-  CheckCircle,
-  Building2,
-  Cpu,
-  Factory,
-  Users,
-  Video,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, CheckCircle, Video, Users, Factory, Microscope, Warehouse, Cpu, PackageCheck, Wind } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Breadcrumb from "@/components/Breadcrumb";
 
-const facilities = [
+const factoryAreas = [
   {
-    flag: "🇨🇳",
-    name: "Shenzhen Innovation Lab",
-    location: "Shenzhen, China",
-    role: "NPI & Engineering Center",
-    description: "Our Shenzhen facility is the heart of our rapid prototyping and engineering capabilities. Located in the world's electronics manufacturing hub, we have immediate access to the entire supply chain ecosystem.",
+    name: "The Heart of Precision: SMT Production Floor",
+    description: "Welcome to the nerve center of our operations. Our Surface-Mount Technology (SMT) floor is where millions of microscopic components are precisely placed and soldered onto printed circuit boards (PCBs). This highly automated environment is designed for speed, accuracy, and repeatability, forming the foundation of every electronic device we manufacture. We handle everything from high-mix, low-volume runs for prototypes to millions of units for mass production, all with the same level of engineering rigor.",
+    image: "/images/placeholder-smt-lines-overview.jpg",
+    icon: Cpu,
     features: [
-      "Advanced SMT lines with 0201 capability",
-      "Rapid prototyping center (72-hour turnaround)",
-      "Engineering lab with full testing equipment",
-      "DFM review and optimization team",
-      "Small-batch production (50-5000 units)",
+      "State-of-the-Art Siemens® SIPLACE SX Lines: Capable of placing over 150,000 components per hour with extreme accuracy, down to 01005 package sizes, ensuring we can handle the most dense and complex designs.",
+      "DEK® Horizon Screen Printers with 3D SPI: We apply solder paste with unparalleled precision, verified by 100% 3D Solder Paste Inspection (SPI) to eliminate defects before components are even placed.",
+      "Heller® 1913 MKIII Reflow Ovens: Our 13-zone nitrogen-capable ovens create the perfect thermal profile for every unique PCB assembly, maximizing solder joint integrity and long-term product reliability.",
+      "Full Component Traceability: Every reel of components is scanned and tracked, providing a complete history for every single board we produce, a critical requirement for medical and automotive clients.",
     ],
-    image: "/images/factory-tour-hero.jpg",
   },
   {
-    flag: "🇮🇩",
-    name: "Indonesia Mega Factory",
-    location: "Batam Free Trade Zone",
-    role: "Mass Production Hub",
-    description: "Our Indonesia facility in the Batam Free Trade Zone offers the perfect combination of cost efficiency and quality. Products assembled here qualify for optimized US import tariffs.",
+    name: "Uncompromising Quality: The Testing & Reliability Lab",
+    description: "Quality at Illuminious is not just a final inspection; it's a philosophy embedded in every step. Our dedicated testing and reliability lab is where we prove our commitment. Staffed by experienced quality engineers, this area is equipped with advanced diagnostic tools to go beyond simple pass/fail tests. We perform deep failure analysis, environmental stress testing, and functional verification to ensure your product not only works out of the box but continues to perform reliably in the real world.",
+    image: "/images/placeholder-testing-lab-equipment.jpg",
+    icon: Microscope,
     features: [
-      "50,000 sq ft production floor",
-      "High-volume SMT and assembly lines",
-      "Injection molding center",
-      "Box build and system integration",
-      "ISO 9001:2015 certified",
+      "3D Automated Optical & X-Ray Inspection (AOI/AXI): We use Koh Young® 3D AOI and Nordson DAGE® Quadra 7 X-Ray systems to inspect every solder joint, including hidden connections on complex packages like BGAs and QFNs.",
+      "In-Circuit & Functional Testers (ICT/FCT): Custom-built test jigs with Keysight® and National Instruments® hardware verify that every circuit path is correct and the product functions exactly as you designed it.",
+      "Environmental & Reliability Chambers: We simulate years of use in days, subjecting products to extreme temperatures, humidity, vibration, and drop tests to identify potential field failures before they happen.",
+      "Certifications & Compliance: Our processes are certified to ISO 9001, ISO 13485 (Medical Devices), and IATF 16949 (Automotive), ensuring we meet the strictest quality standards of any industry.",
     ],
-    image: "/images/about-overseas-warehouse.jpg",
-  },
-];
-
-const copyExactSteps = [
-  {
-    step: "01",
-    title: "Process Documentation",
-    description: "Every process parameter, tool setting, and quality checkpoint is documented in detail.",
   },
   {
-    step: "02",
-    title: "Equipment Calibration",
-    description: "Identical equipment is calibrated to match Shenzhen specifications exactly.",
+    name: "From Resin to Reality: Injection Molding & Tooling",
+    description: "A great electronic product needs a great enclosure. Our in-house injection molding department provides a seamless path from digital design to physical part. We manage the entire process, from mold design and fabrication to mass production of plastic components. This integration reduces lead times, improves quality control, and allows for rapid design iterations. Our engineers work with you to select the right materials and design for manufacturability, ensuring a perfect fit and finish for your product.",
+    image: "/images/placeholder-injection-molding-machine.jpg",
+    icon: Factory,
+    features: [
+      "Wide Range of Press Tonnages (50T - 500T): We can produce everything from small, intricate internal components to large, robust outer housings with our Haitian® and Arburg® injection molding machines.",
+      "Diverse Material Expertise: We have deep experience with a vast library of polymers, including ABS, PC, TPE, Nylon, and custom-engineered resins to meet any mechanical, thermal, or aesthetic requirement.",
+      "In-House Mold Making & Maintenance: Our on-site tool room allows us to build high-quality steel molds (P20, H13, S7) and perform real-time maintenance and modifications, drastically reducing downtime.",
+      "Advanced Finishing & Assembly: We offer secondary processes including ultrasonic welding, pad printing, heat staking, and EMI shielding to deliver a fully finished and assembled mechanical enclosure.",
+    ],
   },
   {
-    step: "03",
-    title: "Operator Training",
-    description: "Indonesian operators are trained by Shenzhen engineers on exact procedures.",
+    name: "The Final Touch: Box Build & Systems Integration",
+    description: "This is where it all comes together. The Box Build and Systems Integration area is where our skilled technicians transform individual PCBs and mechanical parts into a finished, market-ready product. Far more than simple assembly, this stage involves complex wiring, software installation, sub-assembly integration, and final testing. Each station is custom-configured for a specific product, with digital work instructions and integrated quality checks to ensure nothing is missed. This is the human touch that perfects the automated process.",
+    image: "/images/placeholder-box-build-assembly-line.jpg",
+    icon: PackageCheck,
+    features: [
+      "Dedicated Assembly Cells: Each product gets its own dedicated assembly line, optimized for its specific workflow to maximize efficiency and minimize the chance of errors.",
+      "Complex Harness & Cable Assembly: Our technicians are trained to build and route intricate custom wiring harnesses, ensuring reliable connections and a clean internal layout.",
+      "Software Flashing & Configuration: We load your firmware, configure product settings, and pair wireless devices, ensuring the product is fully functional and ready for the end-user.",
+      "Full System Functional Testing & Calibration: Before packaging, every single unit undergoes a comprehensive final test, simulating real-world use to guarantee 100% functionality.",
+    ],
   },
   {
-    step: "04",
-    title: "Pilot Verification",
-    description: "First production batch is verified against Shenzhen golden samples.",
+    name: "Precision & Purity: The ISO 7 Clean Room",
+    description: "For products that demand the utmost purity, our certified ISO 7 Clean Room provides a controlled environment free from contaminants. This is essential for manufacturing medical devices, optical sensors, and other sensitive electronics where a single speck of dust can compromise performance. Access is strictly controlled, and the air is continuously filtered to maintain a particle count of less than 10,000 particles per cubic foot. This commitment to purity ensures the highest possible yield and reliability for sensitive applications.",
+    image: "/images/placeholder-clean-room-technician.jpg",
+    icon: Wind,
+    features: [
+      "Certified ISO 14644-1 Class 7: Independently audited and certified to meet stringent cleanliness standards required for medical and optical-grade manufacturing.",
+      "Positive Pressure & HEPA Filtration: Maintains a constant positive pressure and utilizes High-Efficiency Particulate Air (HEPA) filters to remove 99.97% of airborne particles.",
+      "Strict Gowning & Entry Protocols: All personnel undergo a rigorous gowning procedure and pass through an air shower to prevent any contaminants from entering the controlled space.",
+      "ESD-Safe & Controlled Environment: The entire clean room is equipped with ESD-safe flooring, benches, and tools, along with strict temperature and humidity controls.",
+    ],
+  },
+  {
+    name: "Logistics & Control: The Smart Warehouse",
+    description: "Our smart warehouse is more than just storage; it's the logistical backbone of our factory. It ensures that the right components are delivered to the right production line at the right time. Every component, from a single resistor to a complex chipset, is barcoded, tracked, and stored in a climate-controlled, ESD-safe environment. Our robust inventory management system (IMS) provides real-time visibility into stock levels, prevents shortages, and ensures full traceability from receiving to final shipment.",
+    image: "/images/placeholder-warehouse-shelves.jpg",
+    icon: Warehouse,
+    features: [
+      "Climate-Controlled & ESD-Safe Storage: All components are stored in a temperature and humidity-controlled environment with full ESD protection to preserve component integrity.",
+      "Moisture Sensitive Device (MSD) Management: We follow strict J-STD-033 protocols for handling MSDs, including dry-baking ovens and vacuum-sealed moisture barrier bags.",
+      "First-In, First-Out (FIFO) System: Our IMS automatically enforces FIFO principles, ensuring that older component stock is used first to prevent expiration and maintain quality.",
+      "Integrated Supply Chain Management: We work directly with your team and our component suppliers to manage buffer stock, long-lead time items, and end-of-life (EOL) transitions, securing your supply chain.",
+    ],
   },
 ];
 
@@ -92,152 +102,74 @@ export default function FactoryTour() {
   return (
     <>
       <SEO
-        title="Factory Tour | Shenzhen & Indonesia Manufacturing Facilities | Illuminious"
-        description="Tour our manufacturing facilities in Shenzhen and Indonesia. See our SMT lines, engineering labs, and mass production capabilities. Book a virtual or in-person tour."
-        keywords="factory tour, manufacturing facility, Shenzhen factory, Indonesia factory, electronics manufacturing"
+        title="A Detailed Tour of Our Advanced Electronics Factory | Illuminious"
+        description="Explore every corner of our state-of-the-art electronics manufacturing facility. See our SMT lines, testing labs, injection molding, clean rooms, and box build assembly areas in detail."
+        keywords="factory tour, electronics factory, manufacturing plant, SMT line, PCBA factory, injection molding, box build, testing lab, clean room, contract manufacturing"
         url="/factory-tour"
       />
       <Header />
-      
-      {/* Hero Section with Video */}
-      <section className="relative pt-32 pb-20 bg-illuminious-navy overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }} />
+
+      {/* Hero Section */}
+      <section className="relative pt-48 pb-32 bg-gray-900 text-white">
+        <div className="absolute inset-0">
+          <img
+            src="/images/placeholder-factory-floor-overview.jpg"
+            alt="An expansive, clean, and modern factory floor with multiple production lines"
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent" />
         </div>
         <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-illuminious-blue/20 text-illuminious-sky text-sm font-medium mb-6">
-              <Video className="w-4 h-4" />
-              Virtual Factory Tour
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              See Where Your Products Come to Life
-            </h1>
-            <p className="text-xl text-white mb-8">
-              Take a virtual tour of our state-of-the-art manufacturing facilities 
-              in Shenzhen and Indonesia.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
-              >
-                <Link href="/contact">
-                  Book a Live Tour
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
-            </div>
-          </motion.div>
-
-          {/* Video Placeholder */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-12 max-w-4xl mx-auto"
-          >
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-illuminious-navy/50 border border-white/10">
-              <img
-                src="/images/factory-tour-hero.jpg"
-                alt="Factory Tour Video"
-                className="w-full h-full object-cover opacity-50"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full bg-illuminious-sky flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                  <Play className="w-8 h-8 text-illuminious-navy ml-1" />
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 text-center">
-                <p className="text-white/80 text-sm">Click to watch our facility overview video</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Facilities */}
-      <section className="py-20 md:py-32">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Our Manufacturing Facilities
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Two strategically located facilities designed to optimize for speed, cost, and quality.
-            </p>
-          </AnimatedSection>
-
-          <div className="space-y-20">
-            {facilities.map((facility, index) => (
-              <AnimatedSection key={facility.name} delay={index * 0.1}>
-                <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? '' : ''}`}>
-                  <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-4xl">{facility.flag}</span>
-                      <div>
-                        <h3 className="text-2xl font-bold text-illuminious-navy">{facility.name}</h3>
-                        <p className="text-illuminious-blue">{facility.location}</p>
-                      </div>
-                    </div>
-                    <span className="inline-block px-3 py-1 rounded-full bg-illuminious-light text-illuminious-navy text-sm font-medium mb-4">
-                      {facility.role}
-                    </span>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {facility.description}
-                    </p>
-                    <ul className="space-y-3">
-                      {facility.features.map((feature) => (
-                        <li key={feature} className="flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-illuminious-blue flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <img
-                      src={facility.image}
-                      alt={facility.name}
-                      className="rounded-2xl shadow-xl"
-                    />
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
+          <Breadcrumb items={[
+              { label: "Home", href: "/" },
+              { label: "Factory Tour" },
+            ]} />
+          <div className="max-w-3xl mt-8">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-bold mt-2 mb-6 font-heading"
+            >
+              Beyond the Spec Sheet
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl md:text-2xl text-white/80 leading-relaxed"
+            >
+              Step inside and see the process, precision, and people that bring your product to life. This is more than a factory; it's where innovation takes physical form. Explore each specialized area of our facility below.
+            </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Copy Exact Promise */}
-      <section className="py-20 md:py-32 bg-illuminious-light/20">
+      {/* Factory Areas Section */}
+      <section className="py-24 bg-white">
         <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              The "Copy Exact" Promise
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              When we transfer production from Shenzhen to Indonesia, we don't just move it—we 
-              replicate it exactly. Every process, every parameter, every quality standard.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {copyExactSteps.map((item, index) => (
-              <AnimatedSection key={item.step} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl p-6 border border-illuminious-light h-full">
-                  <div className="text-4xl font-bold text-illuminious-light mb-3">{item.step}</div>
-                  <h3 className="text-lg font-bold text-illuminious-navy mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+          <div className="space-y-28">
+            {factoryAreas.map((area, index) => (
+              <AnimatedSection key={area.name}>
+                <div className={`grid md:grid-cols-2 gap-x-12 gap-y-8 items-center`}>
+                  <div className={`${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
+                    <div className="flex items-center gap-4 mb-4">
+                      <area.icon className="w-10 h-10 text-illuminious-blue" />
+                      <h2 className="text-3xl font-bold text-illuminious-navy font-heading">{area.name}</h2>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed mb-6 text-lg">{area.description}</p>
+                    <ul className="space-y-4">
+                      {area.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3">
+                          <CheckCircle className="w-6 h-6 text-illuminious-blue flex-shrink-0 mt-1" />
+                          <span className="text-gray-800">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={`rounded-xl overflow-hidden shadow-2xl ${index % 2 !== 0 ? 'md:col-start-1' : ''}`}>
+                    <img src={area.image} alt={`Illuminious facility area: ${area.name}`} className="w-full h-full object-cover" />
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -246,113 +178,36 @@ export default function FactoryTour() {
       </section>
 
       {/* Tour Options */}
-      <section className="py-20 md:py-32">
+      <section className="py-20 bg-gray-50">
         <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Tour Options
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Choose the tour format that works best for you.
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Ready to See for Yourself?</h2>
+            <p className="text-lg text-gray-600">
+              The best way to understand our capabilities is to see them in action. We believe in full transparency and welcome you to tour our facility, either virtually or in person.
             </p>
           </AnimatedSection>
-
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <AnimatedSection delay={0.1}>
-              <div className="bg-white rounded-2xl p-8 border border-illuminious-light h-full">
-                <div className="w-14 h-14 rounded-xl bg-illuminious-light/50 flex items-center justify-center mb-4">
-                  <Video className="w-7 h-7 text-illuminious-blue" />
-                </div>
-                <h3 className="text-xl font-bold text-illuminious-navy mb-2">Virtual Tour</h3>
-                <p className="text-muted-foreground mb-4">
-                  Join a live video tour with one of our engineers. See our facilities in real-time 
-                  and ask questions as we walk through the production floor.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-illuminious-blue" />
-                    45-minute live session
-                  </li>
-                  <li className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-illuminious-blue" />
-                    Q&A with engineers
-                  </li>
-                  <li className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-illuminious-blue" />
-                    No travel required
-                  </li>
-                </ul>
-                <Button
-                  asChild
-                  className="w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full"
-                >
-                  <Link href="/contact">Schedule Virtual Tour</Link>
-                </Button>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <div className="bg-white rounded-2xl p-8 border border-illuminious-light h-full">
-                <div className="w-14 h-14 rounded-xl bg-illuminious-light/50 flex items-center justify-center mb-4">
-                  <Users className="w-7 h-7 text-illuminious-blue" />
-                </div>
-                <h3 className="text-xl font-bold text-illuminious-navy mb-2">In-Person Tour</h3>
-                <p className="text-muted-foreground mb-4">
-                  Visit our facilities in person. We'll arrange everything from airport pickup 
-                  to hotel accommodations for a comprehensive factory visit.
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-illuminious-blue" />
-                    Full-day facility tour
-                  </li>
-                  <li className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-illuminious-blue" />
-                    Meet the team
-                  </li>
-                  <li className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-illuminious-blue" />
-                    Travel assistance provided
-                  </li>
-                </ul>
-                <Button
-                  asChild
-                  className="w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full"
-                >
-                  <Link href="/contact">Plan Your Visit</Link>
-                </Button>
-              </div>
-            </AnimatedSection>
+            <div className="border rounded-lg p-8 flex flex-col items-center text-center bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Video className="w-12 h-12 text-illuminious-blue mb-4" />
+              <h3 className="text-xl font-bold text-illuminious-navy mb-2">Live Virtual Tour</h3>
+              <p className="text-gray-600 mb-6 flex-grow">Join one of our lead engineers for a live, interactive walkthrough of our factory floor via video conference. Ask questions in real-time as we show you our equipment, processes, and people at work. It's the most efficient way to get a firsthand look.</p>
+              <Button asChild className="w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full py-3 text-base font-semibold">
+                <Link href="/contact?tour=virtual">Schedule a Virtual Tour</Link>
+              </Button>
+            </div>
+            <div className="border rounded-lg p-8 flex flex-col items-center text-center bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Users className="w-12 h-12 text-illuminious-blue mb-4" />
+              <h3 className="text-xl font-bold text-illuminious-navy mb-2">In-Person Visit</h3>
+              <p className="text-gray-600 mb-6 flex-grow">For a deeper dive, we welcome you to visit our facilities in person. We can help coordinate your travel to provide a seamless and insightful experience. Meet the team, see your potential production line, and gain complete confidence in your manufacturing partner.</p>
+              <Button asChild className="w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full py-3 text-base font-semibold">
+                <Link href="/contact?tour=in-person">Arrange an In-Person Visit</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-illuminious-navy">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to See Our Capabilities?
-            </h2>
-            <p className="text-lg text-white mb-8">
-              Book a tour today and see firsthand why leading companies trust us 
-              with their manufacturing needs.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
-            >
-              <Link href="/contact">
-                Book a Tour
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </AnimatedSection>
-        </div>
-      </section>
-
       <Footer />
-      <FloatingContact />
     </>
   );
 }

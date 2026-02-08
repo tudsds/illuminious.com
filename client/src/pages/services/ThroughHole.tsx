@@ -1,178 +1,349 @@
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Cog, Layers, Shield, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
-import Breadcrumb from "@/components/Breadcrumb";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, CheckCircle, Factory, Microscope, Layers, Cpu, Shield, Settings, Zap, Gem } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Breadcrumb from "@/components/Breadcrumb";
+
+const pageSections = [
+  { id: "overview", title: "Robust THT Assembly" },
+  { id: "capabilities", title: "Our THT Capabilities" },
+  { id: "process", title: "The THT Assembly Process" },
+  { id: "quality", title: "Quality & Standards" },
+  { id: "tech-specs", title: "Technical Specifications" },
+  { id: "cta", title: "Start Your Project" },
+];
 
 const capabilities = [
   {
-    icon: Cog,
-    title: "Automated Insertion",
-    description: "High-speed axial and radial insertion machines for standard through-hole components, achieving consistent placement at production volumes.",
+    icon: Cpu,
+    title: "Automated Component Insertion",
+    text: "Our facilities are equipped with high-speed Universal Instruments VCD axial inserters and radial sequencers. These machines provide exceptional precision for standard leaded components like resistors and capacitors, ensuring consistent placement accuracy and soldering quality at scale, which is critical for high-volume production runs.",
   },
   {
     icon: Layers,
-    title: "Wave & Selective Soldering",
-    description: "Dual-wave soldering for high-volume runs and selective soldering for mixed-technology boards requiring precision on specific joints.",
+    title: "Advanced Wave & Selective Soldering",
+    text: "We operate multiple ERSA and Pillarhouse selective and dual-wave soldering systems. This allows us to process both high-volume through-hole boards and complex, mixed-technology boards with precision, creating strong, reliable solder joints that meet IPC Class 3 standards for hole-fill and fillet formation.",
+  },
+  {
+    icon: Factory,
+    title: "Skilled Manual & Semi-Automated Assembly",
+    text: "For components that cannot be automated, such as custom connectors, transformers, and unique mechanical parts, our team of IPC-A-610 certified technicians performs meticulous manual assembly. This human element is crucial for ensuring the integrity of complex and high-value assemblies.",
+  },
+  {
+    icon: Microscope,
+    title: "Comprehensive Post-Solder Inspection",
+    text: "Quality is verified through a multi-stage inspection process. This includes high-resolution Automated Optical Inspection (AOI) with Mirtec systems to detect soldering defects, followed by 100% manual visual inspection by certified technicians to ensure perfect component seating, polarity, and solder joint quality.",
   },
   {
     icon: Shield,
-    title: "Manual Assembly & Rework",
-    description: "Skilled technicians handle odd-form components, connectors, transformers, and rework operations under microscope with IPC-certified workmanship.",
+    title: "Conformal Coating & Potting Services",
+    text: "To protect assemblies from moisture, dust, and harsh environmental factors, we offer automated and manual application of various conformal coatings (acrylic, silicone, urethane) and potting compounds. This service is essential for products deployed in industrial, automotive, or outdoor environments.",
+  },
+  {
+    icon: Settings,
+    title: "Press-Fit & Mechanical Integration",
+    text: "Our capabilities extend beyond soldering. We have extensive experience with press-fit (compliant pin) connector installation, which creates a robust, solder-free connection. We also handle complex final mechanical assembly, including housings, heatsinks, and custom hardware integration.",
   },
   {
     icon: Zap,
-    title: "Mixed Technology",
-    description: "Seamless integration of through-hole and SMT processes on the same board, optimizing both component types for reliability and performance.",
-  },
-];
-
-const specs = [
-  { label: "Lead Diameter", value: "0.4–1.2mm" },
-  { label: "Wave Solder Capacity", value: "1,200 joints/min" },
-  { label: "Selective Solder Accuracy", value: "±0.05mm" },
-  { label: "IPC Standard", value: "Class 2 & 3" },
-];
-
-const techSpecs = [
-  { category: "Insertion Equipment", items: ["Universal Axial Inserter", "Radial Lead Inserter", "DIP IC Auto-Inserter", "Odd-Form Component Stations", "Connector Press-Fit Machines"] },
-  { category: "Soldering Processes", items: ["Dual-Wave Soldering (Lead-Free)", "Selective Soldering (ERSA Versaflow)", "Hand Soldering (IPC-A-610 Certified)", "Nitrogen Atmosphere Option", "Conformal Coating Post-Solder"] },
-  { category: "Quality Controls", items: ["AOI Post-Wave Inspection", "X-Ray for Hidden Joints", "Thermal Profiling & Monitoring", "First Article Inspection (FAI)", "IPC-A-610 Class 3 Workmanship"] },
-];
-
-const faqs = [
-  {
-    question: "When should I use through-hole vs. SMT assembly?",
-    answer: "Through-hole assembly is ideal for components requiring strong mechanical bonds (connectors, transformers, power components) or when operating in high-vibration/high-stress environments. SMT is preferred for high-density, miniaturized designs. Many products use mixed technology combining both."
+    title: "In-Circuit & Functional Testing (ICT/FCT)",
+    text: "We develop and execute comprehensive test strategies to validate board performance. Using custom-built fixtures, we perform both In-Circuit Testing to verify component-level integrity and Functional Testing to ensure the final assembly operates exactly as designed.",
   },
   {
-    question: "Can you handle mixed SMT and through-hole boards?",
-    answer: "Yes, our production lines are designed for mixed-technology assembly. We process SMT components first via reflow, then through-hole components via wave or selective soldering, ensuring optimal quality for both component types."
+    icon: Gem,
+    title: "Lead-Free (RoHS) & Leaded Processes",
+    text: "We support both traditional tin-lead and modern lead-free (RoHS compliant) soldering processes, with dedicated equipment for each to prevent cross-contamination. We can advise on the best process for your product based on its end-market and reliability requirements.",
   },
 ];
 
-export default function ThroughHole() {
-  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
-  const { ref: capRef, isVisible: capVisible } = useScrollAnimation();
+const processSteps = [
+  {
+    name: "Step 1: Component Preparation & Kitting",
+    description: "The process begins with a thorough verification of all incoming components against your Bill of Materials (BOM). Component leads are then precisely trimmed and formed to the required specifications using automated equipment like the Hepco 1500-3 lead former. This ensures a perfect fit into the PCB and prepares them for either automated or manual insertion.",
+  },
+  {
+    name: "Step 2: Automated & Manual Insertion",
+    description: "Standard axial and radial components are rapidly placed using our automated insertion machines. For odd-form components, connectors, and other delicate parts, our highly trained technicians manually place each item with care, referencing detailed assembly drawings to ensure correct orientation and seating.",
+  },
+  {
+    name: "Step 3: Soldering (Wave or Selective)",
+    description: "Boards are then moved to our soldering stage. For full through-hole boards, a dual-wave soldering process is used, ensuring complete hole-fill. For mixed-technology boards, our selective soldering systems apply solder with robotic precision only to the required THT joints, protecting nearby SMT components from thermal stress.",
+  },
+  {
+    name: "Step 4: Cleaning & Defluxing",
+    description: "After soldering, boards are passed through an aqueous cleaning system. This critical step removes any harmful flux residues that could otherwise lead to corrosion or electrical failures in the field. We monitor water purity and chemical concentrations to ensure military-grade cleanliness on every board.",
+  },
+  {
+    name: "Step 5: Inspection, Touch-Up & Trimming",
+    description: "Every solder joint is meticulously inspected. Automated Optical Inspection (AOI) first scans for common defects, followed by a comprehensive visual check by IPC-certified inspectors. Any necessary touch-ups are performed by hand, and component leads are trimmed to the required length.",
+  },
+  {
+    name: "Step 6: Final Assembly & Testing",
+    description: "The fully assembled PCB is now ready for the next stage. This may involve integration into a larger mechanical assembly, programming (firmware flashing), or proceeding directly to In-Circuit and Functional Testing to verify that the board performs exactly to your specifications before it is packaged and shipped.",
+  },
+];
 
+function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6, delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export default function ServiceThroughHole() {
   return (
     <>
       <SEO
-        title="Through-Hole Assembly Services | THT Soldering | Illuminious"
-        description="Professional through-hole PCB assembly with wave soldering, selective soldering, and manual insertion. IPC Class 3 certified for high-reliability applications."
-        keywords="through-hole assembly, THT assembly, wave soldering, selective soldering, DIP insertion, PCB assembly, mixed technology"
-        canonical="/services/through-hole"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Through-Hole Assembly Services",
-          "provider": { "@type": "Organization", "name": "Illuminious LLC" },
-          "description": "Through-hole PCB assembly with automated insertion, wave soldering, and selective soldering capabilities.",
-          "areaServed": "Worldwide",
-        }}
-        faqData={faqs}
+        title="Through-Hole Assembly Services | THT PCB Assembly | Illuminious"
+        description="Expert through-hole (THT) PCB assembly services for robust electronics. We offer automated insertion, wave/selective soldering, and IPC Class 3 workmanship for industrial, automotive, and high-power applications."
+        keywords="through-hole assembly, THT assembly, PCB assembly, wave soldering, selective soldering, manual assembly, electronics manufacturing, IPC Class 3, press-fit"
+        url="/services/through-hole"
       />
       <Header />
-      <main>
-        <section className="relative bg-illuminious-navy text-white pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <img src="/images_not_deployed/pcb-board-components-green.jpg" alt="" className="w-full h-full object-cover" />
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <Breadcrumb items={[
+
+      {/* Hero Section */}
+      <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/placeholder-through-hole-assembly-line.jpg"
+            alt="Automated through-hole assembly line in operation"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
+        </div>
+        <div className="container relative z-10">
+          <Breadcrumb
+            items={[
               { label: "Home", href: "/" },
               { label: "Services", href: "/services" },
               { label: "Through-Hole Assembly" },
-            ]} />
-            <motion.div
-              ref={heroRef}
-              initial={{ opacity: 0, y: 20 }}
-              animate={heroVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="max-w-3xl mt-8"
-            >
-              <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">
-                Through-Hole Assembly
+            ]}
+          />
+          <div className="max-w-3xl mt-8">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <h1 className="text-4xl md:text-6xl font-bold mt-2 mb-6 font-heading">
+                Through-Hole Technology (THT) Assembly
               </h1>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Reliable through-hole technology assembly for components demanding superior mechanical strength. Our automated insertion, wave soldering, and selective soldering capabilities ensure consistent quality for connectors, transformers, and power components.
+              <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
+                Engineering strength and reliability into every connection. Our THT assembly services are the gold standard for high-power, high-reliability, and mechanically demanding electronic applications.
               </p>
-              <Button asChild size="lg" className="bg-illuminious-blue hover:bg-illuminious-sky text-white rounded-full">
-                <a href="/contact">Request a Quote <ArrowRight className="ml-2 w-4 h-4" /></a>
-              </Button>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b">
+        <div className="container">
+          <div className="flex justify-center overflow-x-auto">
+            {pageSections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+              >
+                {section.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <main>
+        {/* Overview Section */}
+        <section id="overview" className="py-20 bg-white">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedSection>
+                <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Strength and Reliability in Every Solder Joint</h2>
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    In an industry dominated by miniaturization, Through-Hole Technology (THT) stands as a testament to enduring strength and reliability. While Surface Mount Technology (SMT) is ideal for density, THT is the premier choice for applications where mechanical robustness and high power-handling capabilities are non-negotiable. At Illuminious, we have refined our THT processes over decades, integrating modern automation and stringent quality controls to deliver assemblies that provide unparalleled durability and long-term performance in the most demanding environments.
+                  </p>
+                  <p>
+                    The fundamental principle of THT involves inserting component leads through drilled holes in the printed circuit board (PCB). These leads are then soldered on the opposite side, creating a physical bond that is vastly superior to a surface-level SMT connection. This makes THT indispensable for large, heavy components such as transformers, electrolytic capacitors, and power resistors, as well as for any connector that will face repeated physical stress from mating and de-mating cycles. This robust connection ensures that components remain securely fastened, even when subjected to shock, vibration, or thermal cycling.
+                  </p>
+                  <p>
+                    Our dedicated THT assembly lines in Shenzhen and Batam represent a hybrid manufacturing philosophy. We leverage high-speed automated insertion for standard components to ensure consistency and efficiency, while our IPC-certified technicians perform intricate manual assembly for complex or odd-form parts. This blended approach allows us to optimize for both speed and precision, guaranteeing that your product is built to withstand its operational demands. For critical applications in the industrial, aerospace, automotive, and power electronics sectors, failure is not an option. That is why we rigorously adhere to IPC-A-610 Class 3 standards, the highest benchmark for high-performance electronics.
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <div className="rounded-xl overflow-hidden shadow-2xl">
+                  <img src="/images/placeholder-pcb-capacitors-macro.jpg" alt="Close-up of robust through-hole capacitors on a PCB" />
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
         </section>
 
-        <section className="bg-white py-8 border-b">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {specs.map((spec) => (
-                <div key={spec.label} className="text-center">
-                  <div className="text-2xl font-bold text-illuminious-navy font-heading">{spec.value}</div>
-                  <div className="text-sm text-gray-500 mt-1">{spec.label}</div>
-                </div>
+        {/* Capabilities Section */}
+        <section id="capabilities" className="py-20 bg-gray-50">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our THT Capabilities</h2>
+              <p className="text-lg text-gray-600">
+                We offer a comprehensive suite of through-hole assembly services, from automated insertion to complex manual assembly, all governed by strict process controls and IPC Class 3 standards to ensure maximum product reliability.
+              </p>
+            </AnimatedSection>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {capabilities.map((cap, index) => (
+                <AnimatedSection key={cap.title} delay={index * 0.05}>
+                  <div className="bg-white p-6 rounded-lg shadow-md text-left h-full flex flex-col">
+                    <div className="w-12 h-12 rounded-full bg-illuminious-blue/10 flex items-center justify-center mb-4 flex-shrink-0">
+                      <cap.icon className="w-6 h-6 text-illuminious-blue" />
+                    </div>
+                    <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
+                    <p className="text-sm text-gray-600 flex-grow">{cap.text}</p>
+                  </div>
+                </AnimatedSection>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div ref={capRef} initial={{ opacity: 0, y: 20 }} animate={capVisible ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
-              <h2 className="text-3xl font-bold font-heading text-illuminious-navy mb-12 text-center">Through-Hole Capabilities</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {capabilities.map((cap, idx) => (
-                  <div key={idx} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                    <cap.icon className="w-10 h-10 text-illuminious-blue mb-4" />
-                    <h3 className="text-lg font-semibold text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{cap.description}</p>
+        {/* Process Section */}
+        <section id="process" className="py-20 bg-white">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The THT Assembly Process: A Blend of Automation and Craftsmanship</h2>
+              <p className="text-lg text-gray-600">
+                Our six-step THT process is meticulously designed and controlled, combining the speed of automation with the precision of skilled handwork to deliver consistently high-quality results that you can depend on.
+              </p>
+            </AnimatedSection>
+            <div className="max-w-5xl mx-auto">
+              <div className="relative">
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200" aria-hidden="true" />
+                {processSteps.map((step, index) => (
+                  <div key={step.name} className="relative mb-12">
+                    <div className={`flex items-center ${index % 2 === 0 ? "flex-row-reverse" : ""}`}>
+                      <div className="w-1/2 px-8">
+                        <AnimatedSection delay={index * 0.1}>
+                          <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
+                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                        </AnimatedSection>
+                      </div>
+                      <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                        {index + 1}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-heading text-illuminious-navy mb-12 text-center">Technical Specifications</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {techSpecs.map((spec) => (
-                <div key={spec.category} className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-illuminious-navy mb-4 font-heading">{spec.category}</h3>
-                  <ul className="space-y-2">
-                    {spec.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                        <CheckCircle className="w-4 h-4 text-illuminious-blue shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-illuminious-navy text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-heading mb-4">Need Through-Hole or Mixed-Technology Assembly?</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Our engineering team will help you choose the optimal assembly approach for your product's reliability and cost requirements.
-            </p>
-            <Button asChild size="lg" className="bg-illuminious-blue hover:bg-illuminious-sky text-white rounded-full">
-              <a href="/contact">Get a Free Quote <ArrowRight className="ml-2 w-4 h-4" /></a>
-            </Button>
+        {/* Quality Assurance Section */}
+        <section id="quality" className="py-20 bg-gray-50">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedSection>
+                <div className="rounded-xl overflow-hidden shadow-2xl">
+                  <img src="/images/placeholder-inspector-microscope.jpg" alt="Inspector examining a PCB solder joint under a microscope" />
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Committed to IPC-A-610 Class 3 Workmanship</h2>
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    For high-performance products where reliability is paramount, meeting the IPC-A-610 Class 3 standard is essential. This is the highest level of workmanship for electronics, reserved for applications like aerospace, military, and medical devices where failure can have critical consequences. At Illuminious, Class 3 is our default standard for all THT assembly work, ensuring your product is built for maximum durability and performance from the very start.
+                  </p>
+                  <ul className="space-y-3 mt-4">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span>
+                        <strong>100% Hole-Fill Requirement:</strong> We ensure that solder flows completely through the plated through-hole, creating a strong, continuous connection from the top to the bottom of the board. This is a key differentiator of Class 3 and provides superior mechanical strength.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span>
+                        <strong>Certified Technicians & Process Control:</strong> All our manual assembly and inspection technicians are certified to IPC-A-610 standards. We precisely control all wave and selective soldering parameters—such as pre-heat temperature, conveyor speed, and solder wave height—to ensure perfect, repeatable results.
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span>
+                        <strong>Rigorous Inspection & Validation:</strong> We utilize a combination of AOI and 100% visual inspection by certified technicians to verify every aspect of the assembly, including component polarity, seating, and the formation of perfect solder fillets. This guarantees adherence to the strict Class 3 criteria.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Technical Specifications Section */}
+        <section id="tech-specs" className="py-20 bg-white">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
+              <p className="text-lg text-gray-600">
+                Our THT assembly lines are configured to handle a wide range of components and board specifications with precision and care, adhering to the industry's most stringent standards.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection>
+              <div className="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-lg p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-bold text-illuminious-navy mb-4 text-lg">Soldering & Assembly</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Soldering Process: Wave, Selective, Manual</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Solder Types: Leaded (Sn63Pb37) & Lead-Free (SAC305)</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Max Board Size: 500mm x 450mm</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Min Component Pitch: 0.5mm for connectors</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Component Types: Axial, Radial, DIP, Connectors, Transformers</span></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-illuminious-navy mb-4 text-lg">Quality & Inspection</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Quality Standard: IPC-A-610 Class 2 & Class 3</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Inspection: AOI, X-Ray (for BGA), Visual Inspection</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Testing: ICT, FCT, Burn-in Testing</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Cleaning: Aqueous Defluxing System</span></li>
+                      <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Certifications: ISO 9001:2015, IATF 16949 (Automotive)</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section id="cta" className="py-20 bg-illuminious-navy">
+          <div className="container text-center">
+            <AnimatedSection>
+              <h2 className="text-3xl font-bold text-white mb-4 font-heading">Ready to Build Your Most Demanding Products?</h2>
+              <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+                Whether your project is fully through-hole or a complex mixed-technology design, our team has the expertise and equipment to deliver assemblies with unmatched reliability. Contact us today to discuss your project requirements and receive a detailed quote.
+              </p>
+              <Button asChild size="lg" className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8">
+                <Link href="/contact">
+                  Request a Quote
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+            </AnimatedSection>
           </div>
         </section>
       </main>
+
       <Footer />
-      <FloatingContact />
     </>
   );
 }

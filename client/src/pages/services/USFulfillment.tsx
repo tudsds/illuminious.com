@@ -1,82 +1,65 @@
-import { Link } from "wouter";
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  CheckCircle,
-  Package,
-  Truck,
-  MapPin,
-  Clock,
-  BarChart3,
-  Shield,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, CheckCircle, Factory, MapPin, Package, ShieldCheck, Truck, Zap, BookOpen, HelpCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Breadcrumb from "@/components/Breadcrumb";
 
-const services = [
+const pageSections = [
   {
-    icon: Package,
-    title: "Inventory Management",
-    description: "Real-time inventory tracking with automated reorder alerts and demand forecasting to prevent stockouts.",
+    id: "overview",
+    title: "The Final Mile, Perfected",
   },
   {
-    icon: Truck,
-    title: "Same-Day Shipping",
-    description: "Orders placed before 2 PM PST ship same day. Strategic warehouse location enables 2-3 day ground delivery nationwide.",
+    id: "capabilities",
+    title: "Our Fulfillment Services",
   },
   {
-    icon: MapPin,
-    title: "Strategic Location",
-    description: "Our Los Angeles warehouse provides optimal coverage for both coasts and easy access to major ports.",
+    id: "process",
+    title: "Our Fulfillment Process",
   },
   {
-    icon: BarChart3,
-    title: "Analytics Dashboard",
-    description: "Complete visibility into inventory levels, order status, and shipping performance through our online portal.",
+    id: "integrations",
+    title: "Platform Integrations",
+  },
+  {
+    id: "faq",
+    title: "Frequently Asked Questions",
+  },
+  {
+    id: "cta",
+    title: "Get a Fulfillment Quote",
   },
 ];
 
-const benefits = [
-  "2-3 day ground delivery to 95% of US addresses",
-  "No minimum order quantities",
-  "Custom packaging and labeling options",
-  "Returns processing and management",
-  "Integration with major e-commerce platforms",
-  "Dedicated account manager",
+const capabilities = [
+  { icon: MapPin, title: "Strategic US Warehouse Network", text: "Our primary fulfillment center in Los Angeles, CA, is complemented by partner facilities on the East Coast, providing 2-3 day ground shipping coverage to over 98% of the US population. This bi-coastal strategy significantly reduces transit times and shipping costs for your customers." },
+  { icon: Truck, title: "Same-Day Pick, Pack & Ship", text: "Our Service Level Agreement (SLA) guarantees that all in-stock orders received by 2 PM PST are picked, packed, and shipped on the same business day. We utilize automated routing and batch picking technologies to achieve industry-leading accuracy and speed." },
+  { icon: Package, title: "Advanced Inventory Management", text: "Gain real-time inventory visibility through our secure client portal. We offer comprehensive services including lot tracking, FIFO/FEFO picking, cycle counting, and kitting/bundling. Our WMS ensures 99.9%+ inventory accuracy." },
+  { icon: Factory, title: "Seamless Manufacturing Integration", text: "As a core part of our end-to-end solution, finished goods flow directly from our global factories to our fulfillment centers. This eliminates costly and time-consuming handoffs to a separate 3PL provider, creating a truly unified and efficient supply chain under a single vendor." },
+  { icon: ShieldCheck, title: "Comprehensive Returns Management (Reverse Logistics)", text: "We manage all aspects of customer returns with a detailed, documented process. This includes RMA creation, product inspection and grading (A, B, C stock), and efficient restocking or disposition. This turnkey service simplifies your operations and protects your brand reputation." },
+  { icon: CheckCircle, title: "Multi-Channel Fulfillment Expertise", text: "We possess deep expertise in both direct-to-consumer (D2C) order fulfillment, with an emphasis on brand experience, and complex B2B/retail compliance. We handle EDI, GS1-128 labeling, and routing guide adherence for major retailers like Amazon, Walmart, and Target." },
+  { icon: Zap, title: "Value-Added Services", text: "Beyond standard fulfillment, we offer a range of value-added services such as custom packaging, branded packing slips, gift messaging, light assembly, and product labeling. These services enhance the unboxing experience and support your marketing efforts." },
+  { icon: BookOpen, title: "Subscription Box Fulfillment", text: "We specialize in the unique logistics of subscription box services. Our systems manage recurring orders, customized kitting, and batch fulfillment to ensure your subscribers receive their curated boxes on time, every time." },
 ];
 
-const fulfillmentProcess = [
-  {
-    step: "01",
-    title: "Receive Inventory",
-    description: "Products arrive at our LA warehouse directly from our manufacturing facilities or your existing supply chain.",
-  },
-  {
-    step: "02",
-    title: "Quality Check",
-    description: "Every shipment undergoes inspection to ensure products meet quality standards before stocking.",
-  },
-  {
-    step: "03",
-    title: "Store & Manage",
-    description: "Products are stored in our climate-controlled facility with real-time inventory tracking.",
-  },
-  {
-    step: "04",
-    title: "Pick, Pack & Ship",
-    description: "Orders are processed same-day with custom packaging and carrier optimization for fastest delivery.",
-  },
+const processSteps = [
+  { name: "Step 1: Platform Integration", description: "Our onboarding team assists you in connecting your Shopify, Amazon, WooCommerce, or other e-commerce platform to our Warehouse Management System (WMS). This one-time setup uses pre-built connectors for a secure, seamless integration in minutes, enabling automated order and inventory syncing." },
+  { name: "Step 2: Inbound Freight & Receiving", description: "You ship your products to our designated fulfillment center. Upon arrival, our receiving team inspects the inventory against your Advanced Shipping Notice (ASN), verifies counts and quality, and assigns SKUs and storage locations. Your inventory is typically available for sale within 24-48 hours of receipt." },
+  { name: "Step 3: Automated Order Fulfillment", description: "When a customer places an order on your store, it is automatically and instantly transmitted to our WMS. The order is then assigned to a warehouse associate who uses a mobile scanner to accurately pick the items, pack them according to your specifications, and generate a shipping label from the optimal carrier." },
+  { name: "Step 4: Shipping & Tracking", description: "The packed order is shipped via the selected carrier (e.g., FedEx, UPS, USPS). Tracking information is automatically pushed back to your e-commerce platform, which in turn notifies your customer. You and your customer can track the shipment in real-time from door to door." },
+  { name: "Step 5: Ongoing Management & Reporting", description: "Through our client portal, you have 24/7 access to real-time data on orders, inventory levels, and shipping status. Our account management team is also available to provide support, analyze performance, and help you optimize your fulfillment strategy for cost and speed." },
 ];
 
-const specs = [
-  { label: "Warehouse Location", value: "🇺🇸 Los Angeles" },
-  { label: "Same-Day Cutoff", value: "2 PM PST" },
-  { label: "US Coverage", value: "2-3 Days" },
-  { label: "Order Accuracy", value: "99.8%" },
+const faqs = [
+    { question: "What is a 3PL (Third-Party Logistics)?", answer: "A 3PL, or Third-Party Logistics provider, is a company that offers outsourced logistics services to other businesses. These services can encompass warehousing, transportation, inventory management, order fulfillment, and more. By partnering with a 3PL like Illuminious, you can leverage our infrastructure, technology, and expertise to manage your supply chain more efficiently, allowing you to focus on your core business activities like product development and marketing." },
+    { question: "How does your pricing work?", answer: "Our fulfillment pricing is transparent and typically consists of four main components: 1) Initial Setup/Onboarding Fee, 2) Inbound Receiving Fee (per pallet or per hour), 3) Monthly Storage Fee (per pallet or cubic foot), and 4) Pick & Pack Fee (per order + per item). Shipping costs are passed through directly from the carriers. We provide a detailed, customized quote based on your specific order volume, product size/weight, and storage needs." },
+    { question: "What is a Warehouse Management System (WMS)?", answer: "A Warehouse Management System (WMS) is a software application that provides visibility into a business's entire inventory and manages supply chain fulfillment operations from the distribution center to the store shelf. Our state-of-the-art WMS is the backbone of our operation, enabling real-time inventory tracking, automated order processing, and efficient warehouse workflows to ensure accuracy and speed." },
+    { question: "Do you offer climate-controlled storage?", answer: "Yes, our primary Los Angeles facility offers designated climate-controlled zones for products that are sensitive to temperature and humidity fluctuations. This is ideal for electronics, supplements, cosmetics, and other high-value goods that require a stable environment to maintain product integrity. Please specify this requirement when requesting a quote." },
+    { question: "What is the difference between B2B and D2C fulfillment?", answer: "D2C (Direct-to-Consumer) fulfillment involves shipping individual orders directly to end customers. It prioritizes speed, accuracy, and the unboxing experience. B2B (Business-to-Business) fulfillment involves shipping larger, bulk orders to other companies, often retailers. B2B fulfillment has strict requirements for packaging, labeling (like GS1-128), and delivery appointments, which we are fully equipped to handle." },
 ];
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -98,221 +81,228 @@ export default function ServiceUSFulfillment() {
   return (
     <>
       <SEO
-        title="US Fulfillment & Warehousing | Same-Day Shipping | Illuminious"
-        description="Fast, reliable US fulfillment from our Los Angeles warehouse. Same-day shipping, 2-3 day delivery nationwide, and complete inventory management."
-        keywords="US fulfillment, warehousing, same-day shipping, Los Angeles warehouse, inventory management, e-commerce fulfillment"
+        title="US Fulfillment & 3PL Services | Illuminious Manufacturing"
+        description="End-to-end US-based 3PL fulfillment services from our Los Angeles warehouse. We provide same-day shipping, advanced inventory management, and seamless e-commerce integration for global brands."
+        keywords="US fulfillment, 3PL services, third-party logistics, e-commerce fulfillment, Los Angeles warehouse, D2C fulfillment, B2B fulfillment, reverse logistics"
         url="/services/us-fulfillment"
       />
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-illuminious-light/30 to-white" />
+      <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/placeholder-warehouse-aisle.jpg"
+            alt="A clean and organized warehouse aisle with packages on shelves"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
+        </div>
         <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <Breadcrumb items={[
+              { label: "Home", href: "/" },
+              { label: "Services", href: "/services" },
+              { label: "US Fulfillment & 3PL" },
+            ]} />
+          <div className="max-w-3xl mt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl">🇺🇸</span>
-                <span className="text-sm font-medium text-illuminious-blue">US-Based Fulfillment</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
-                US Fulfillment & Warehousing
+              <h1 className="text-4xl md:text-6xl font-bold mt-2 mb-6 font-heading">
+                US Fulfillment & 3PL Services
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Complete the last mile with our Los Angeles-based fulfillment center. 
-                Same-day shipping, 2-3 day delivery nationwide, and seamless integration 
-                with our global manufacturing network.
+              <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
+                Deliver an exceptional customer experience with fast, reliable, and intelligent US-based fulfillment, seamlessly integrated with your global manufacturing.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full px-8"
-                >
-                  <Link href="/contact">
-                    Get Fulfillment Quote
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <img
-                src="/images/about-overseas-warehouse.jpg"
-                alt="US Fulfillment"
-                className="rounded-2xl shadow-xl"
-              />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="py-12 bg-illuminious-navy">
+      <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {specs.map((spec, index) => (
-              <AnimatedSection key={spec.label} delay={index * 0.1}>
-                <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">{spec.value}</div>
-                  <div className="text-sm text-white">{spec.label}</div>
-                </div>
-              </AnimatedSection>
+          <div className="flex justify-center overflow-x-auto">
+            {pageSections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+              >
+                {section.title}
+              </a>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Services */}
-      <section className="py-20 md:py-32">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Fulfillment Services
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              End-to-end fulfillment solutions designed for growing brands.
-            </p>
-          </AnimatedSection>
+      <main>
+        {/* Overview Section */}
+        <section id="overview" className="py-20 bg-white">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedSection>
+                <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Final Mile: Your Most Critical Touchpoint</h2>
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    You have invested countless hours and significant capital into designing a superior product and manufacturing it to exacting quality standards. However, the customer journey does not conclude at the factory gate; it ends when the product is safely in their hands. The final mile of delivery is often the most memorable and impactful part of the customer experience. Slow shipping, inaccurate orders, or damaged goods can irrevocably tarnish your brand reputation and negate all the hard work that came before.
+                  </p>
+                  <p>
+                    This is where a world-class fulfillment operation becomes a strategic imperative. Our US-based Third-Party Logistics (3PL) service is the final, crucial link in our end-to-end manufacturing solution. By vertically integrating global production with domestic fulfillment, we eliminate the delays, communication gaps, and accountability issues that plague traditional, fragmented supply chains. There are no more coordination headaches between your factory and a separate 3PL.
+                  </p>
+                   <p>
+                    Your finished goods flow seamlessly from our factories in Shenzhen or Batam directly to our Los Angeles fulfillment center. They are received, stored, and ready to be shipped the moment a customer places an order. This unified ecosystem provides unparalleled efficiency, reduces your landed costs, and ensures your customers receive their orders with the speed and accuracy they expect from a modern brand.
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <div className="rounded-xl overflow-hidden shadow-2xl">
+                  <img src="/images/placeholder-worker-scanning-package.jpg" alt="Warehouse worker scanning a package for shipment" />
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <AnimatedSection key={service.title} delay={index * 0.1}>
-                <div className="p-6 rounded-2xl bg-white border border-illuminious-light hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 rounded-xl bg-illuminious-light/50 flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-illuminious-blue" />
+        {/* Capabilities Section */}
+        <section id="capabilities" className="py-20 bg-gray-50">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">A Comprehensive Suite of Fulfillment Services</h2>
+              <p className="text-lg text-gray-600">
+                We offer a complete range of 3PL services, powered by robust technology and industry expertise, designed to help you scale your business and delight your customers.
+              </p>
+            </AnimatedSection>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {capabilities.map((cap, index) => (
+                <AnimatedSection key={cap.title} delay={index * 0.05}>
+                  <div className="bg-white p-6 rounded-lg shadow-md text-left h-full flex flex-col">
+                    <div className="w-12 h-12 rounded-full bg-illuminious-blue/10 flex items-center justify-center mb-4 flex-shrink-0">
+                      <cap.icon className="w-6 h-6 text-illuminious-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
+                      <p className="text-sm text-gray-600">{cap.text}</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-illuminious-navy mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits */}
-      <section className="py-20 md:py-32 bg-illuminious-light/20">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-6">
-                Why Choose Our Fulfillment?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Our US fulfillment center is the final piece of our end-to-end supply chain solution, 
-                ensuring your products reach customers quickly and reliably.
+        {/* Process Section */}
+        <section id="process" className="py-20 bg-white">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our 5-Step Fulfillment Process</h2>
+              <p className="text-lg text-gray-600">
+                We have refined our process to be as simple and transparent as possible, giving you full visibility while we handle the complex logistics.
               </p>
-              <div className="grid grid-cols-1 gap-3">
-                {benefits.map((benefit) => (
-                  <div key={benefit} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-illuminious-blue flex-shrink-0" />
-                    <span className="text-muted-foreground">{benefit}</span>
+            </AnimatedSection>
+            <div className="max-w-5xl mx-auto">
+              <div className="relative">
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200" aria-hidden="true" />
+                {processSteps.map((step, index) => (
+                  <div key={step.name} className="relative mb-12">
+                    <div className={`flex items-center ${index % 2 !== 0 ? "flex-row-reverse" : ""}`}>
+                      <div className="w-1/2 px-8">
+                        <AnimatedSection delay={index * 0.1}>
+                          <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 !== 0 ? "text-left" : "text-right"}`}>{step.name}</h3>
+                          <p className={`text-gray-600 ${index % 2 !== 0 ? "text-left" : "text-right"}`}>{step.description}</p>
+                        </AnimatedSection>
+                      </div>
+                      <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-lg">
+                        {index + 1}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-            </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <img
-                src="/images/hero-global-supply-chain.jpg"
-                alt="US Fulfillment Network"
-                className="rounded-2xl shadow-xl"
-              />
-            </AnimatedSection>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Process */}
-      <section className="py-20 md:py-32">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              How It Works
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              A streamlined fulfillment process from receiving to delivery.
-            </p>
-          </AnimatedSection>
-
-          <div className="space-y-6">
-            {fulfillmentProcess.map((item, index) => (
-              <AnimatedSection key={item.step} delay={index * 0.1}>
-                <div className="flex gap-6 p-6 rounded-2xl bg-white border border-illuminious-light">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-illuminious-blue flex items-center justify-center text-white font-bold text-xl">
-                      {item.step}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-illuminious-navy mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </div>
+        {/* Integrations Section */}
+        <section id="integrations" className="py-20 bg-gray-50">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedSection>
+                <div className="rounded-xl overflow-hidden shadow-2xl">
+                  <img src="/images/placeholder-ecommerce-logos.jpg" alt="Logos of Shopify, Amazon, WooCommerce, and other e-commerce platforms" />
                 </div>
               </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integration */}
-      <section className="py-20 md:py-32 bg-illuminious-light/20">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Seamless Integration
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Our fulfillment center integrates with major e-commerce platforms and marketplaces.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {["Shopify", "Amazon", "WooCommerce", "BigCommerce", "Magento", "Custom API"].map((platform) => (
-                <span
-                  key={platform}
-                  className="px-4 py-2 rounded-full bg-white border border-illuminious-light text-illuminious-navy font-medium"
-                >
-                  {platform}
-                </span>
-              ))}
+              <AnimatedSection delay={0.1}>
+                <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Seamless E-commerce & ERP Integration</h2>
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    Our fulfillment platform is built for connectivity. It connects directly to the most popular e-commerce channels and ERP systems, creating a fully automated, end-to-end workflow from order placement to final delivery.
+                  </p>
+                  <ul className="space-y-3 list-disc list-inside">
+                    <li>
+                      <strong>One-Click E-commerce Integrations:</strong> Connect your Shopify, Amazon Seller Central, WooCommerce, BigCommerce, or Magento store in seconds with our pre-built, secure connectors.
+                    </li>
+                    <li>
+                      <strong>Automated Order & Inventory Syncing:</strong> Orders are automatically imported into our WMS in real-time. As orders are fulfilled, inventory levels are synced back to all your sales channels to prevent overselling and stockouts.
+                    </li>
+                     <li>
+                      <strong>Robust REST API:</strong> For custom platforms, proprietary systems, or enterprise ERPs like NetSuite and SAP, our robust and well-documented REST API allows for deep, custom integration, giving you complete control and flexibility.
+                    </li>
+                  </ul>
+                </div>
+              </AnimatedSection>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-illuminious-navy">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Streamline Your Fulfillment?
-            </h2>
-            <p className="text-lg text-white mb-8">
-              Get a custom quote for your fulfillment needs and see how we can help you deliver faster.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
-            >
-              <Link href="/contact">
-                Get Your Quote
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </AnimatedSection>
-        </div>
-      </section>
+        {/* FAQ Section */}
+        <section id="faq" className="py-20 bg-white">
+            <div className="container">
+                <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
+                    <p className="text-lg text-gray-600">
+                        Clear, straightforward answers to common questions about our 3PL and fulfillment services.
+                    </p>
+                </AnimatedSection>
+                <div className="max-w-4xl mx-auto">
+                    <div className="space-y-6">
+                        {faqs.map((faq, index) => (
+                            <AnimatedSection key={index} delay={index * 0.1}>
+                                <div className="bg-gray-50 p-6 rounded-lg">
+                                    <h3 className="font-bold text-lg text-illuminious-navy mb-2 flex items-center">
+                                        <HelpCircle className="w-5 h-5 mr-3 text-illuminious-blue" />
+                                        {faq.question}
+                                    </h3>
+                                    <p className="text-gray-700 leading-relaxed pl-8">{faq.answer}</p>
+                                </div>
+                            </AnimatedSection>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* CTA Section */}
+        <section id="cta" className="py-20 bg-illuminious-navy">
+          <div className="container text-center">
+            <AnimatedSection>
+              <h2 className="text-3xl font-bold text-white mb-4 font-heading">Unify Your Supply Chain Today</h2>
+              <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+                Stop juggling multiple vendors and worrying about logistics. Let us provide an integrated manufacturing and fulfillment solution so you can focus on what you do best: building a great brand.
+              </p>
+              <Button asChild size="lg" className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8">
+                <Link href="/contact">
+                  Request a Fulfillment Quote
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+            </AnimatedSection>
+          </div>
+        </section>
+      </main>
 
       <Footer />
-      <FloatingContact />
     </>
   );
 }

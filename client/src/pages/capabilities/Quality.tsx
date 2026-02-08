@@ -8,6 +8,12 @@ import {
   FileCheck,
   Eye,
   Target,
+  Layers,
+  FlaskConical,
+  GitBranch,
+  Cpu,
+  Factory,
+  Recycle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -18,52 +24,91 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const certifications = [
   {
+    icon: Award,
     name: "ISO 9001:2015",
     category: "Quality Management System",
-    description: "International standard for quality management systems, demonstrating consistent quality and customer satisfaction.",
+    description: "The cornerstone of our QMS, this certification demonstrates our ability to consistently provide products and services that meet customer and regulatory requirements. It governs our entire operation, from initial client engagement to final delivery, ensuring a structured, process-driven approach to quality.",
     status: "Certified",
   },
   {
-    name: "ISO 13485",
+    icon: Award,
+    name: "ISO 13485:2016",
     category: "Medical Device QMS",
-    description: "Quality management system for medical device design and manufacturing.",
-    status: "Ready",
+    description: "A mandatory certification for manufacturing medical devices. It covers specific requirements for design, production, and traceability to ensure the safety and efficacy of medical products. Our Batam facility is equipped with a dedicated clean room and trained personnel for medical device assembly.",
+    status: "Certified",
   },
   {
-    name: "IATF 16949",
+    icon: Award,
+    name: "IATF 16949:2016",
     category: "Automotive QMS",
-    description: "Quality management standard for the automotive industry supply chain.",
+    description: "The global quality standard for the automotive industry. This certification integrates with ISO 9001 and includes specific requirements for automotive production, focusing on defect prevention, and the reduction of variation and waste in the supply chain. It is essential for any Tier 1 or Tier 2 supplier.",
+    status: "Certified",
+  },
+  {
+    icon: Award,
+    name: "AS9100D",
+    category: "Aerospace QMS",
+    description: "The quality management standard for the aviation, space, and defense industries. AS9100D provides a comprehensive framework for ensuring the safety, reliability, and quality of aerospace components, with stringent requirements for traceability, risk management, and configuration control.",
     status: "Ready",
   },
   {
-    name: "IPC-A-610 Class 2/3",
-    category: "Electronics Assembly",
-    description: "Acceptability standards for electronic assemblies, from general to high-reliability.",
+    icon: Recycle,
+    name: "ISO 14001:2015",
+    category: "Environmental Management",
+    description: "This certification specifies requirements for an effective environmental management system (EMS). It demonstrates our commitment to sustainability, resource efficiency, and minimizing our environmental footprint through controlled processes for waste management and pollution prevention.",
+    status: "Compliant",
+  },
+  {
+    icon: CheckCircle,
+    name: "IPC-A-610 Class 2 & 3",
+    category: "Electronics Assembly Standard",
+    description: "We train our operators and inspectors to the highest standards for electronics assembly. Class 2 is the standard for most commercial electronics, while Class 3 is required for high-reliability applications like medical, aerospace, and automotive, where failure is not an option.",
     status: "Compliant",
   },
 ];
 
 const qualityProcesses = [
   {
+    icon: GitBranch,
+    title: "1. Design for Quality (DFQ)",
+    description: "Quality starts at the design phase. Our engineers collaborate with clients on Design for Manufacturability (DFM), Design for Assembly (DFA), and Design for Test (DFT) reviews. This proactive approach identifies potential quality issues, optimizes material selection, and ensures the product design is robust and scalable for mass production.",
+  },
+  {
+    icon: Factory,
+    title: "2. Supplier Quality Engineering (SQE)",
+    description: "The quality of our final product depends on the quality of our components. Our SQE team rigorously qualifies and audits our suppliers. We maintain a preferred vendor list (PVL) and conduct regular performance reviews, ensuring a reliable and high-quality supply chain for all materials, from simple passives to complex ICs.",
+  },
+  {
     icon: FileCheck,
-    title: "Incoming Quality Control",
-    description: "100% inspection of critical components with AQL sampling for standard parts.",
+    title: "3. Incoming Quality Control (IQC)",
+    description: "No component enters our production line without verification. Our IQC team uses advanced equipment, including LCR meters, X-ray fluorescence (XRF) analyzers for RoHS compliance, and digital microscopes to inspect all incoming raw materials. Critical components undergo 100% inspection, while others are sampled based on AQL standards.",
   },
   {
     icon: Eye,
-    title: "In-Process Inspection",
-    description: "SPC monitoring at key process steps with real-time quality alerts.",
+    title: "4. In-Process Quality Control (IPQC)",
+    description: "We monitor quality at every critical step of the manufacturing process. This includes automated optical inspection (AOI) after solder paste printing and reflow, X-ray inspection for BGA and complex packages, and first-article inspection (FAI) for every new production run. Statistical Process Control (SPC) charts are used to monitor process stability in real-time.",
   },
   {
     icon: Target,
-    title: "Final Quality Assurance",
-    description: "Comprehensive end-of-line testing including functional, visual, and packaging inspection.",
+    title: "5. Final Quality Assurance (FQA)",
+    description: "Before shipment, every product undergoes a final, comprehensive quality check. This includes In-Circuit Testing (ICT), Functional Testing (FCT) using custom-built test jigs, and a final visual inspection. We verify that the product meets all customer specifications, performance requirements, and cosmetic standards. Packaging and labeling are also audited to ensure safe transit.",
   },
   {
-    icon: Award,
-    title: "Continuous Improvement",
-    description: "Regular quality reviews, root cause analysis, and corrective action implementation.",
+    icon: Layers,
+    title: "6. Quality System & Traceability",
+    description: "Our Manufacturing Execution System (MES) provides end-to-end traceability. We can track every component, process step, and operator for each unique serial number. This data is invaluable for root cause analysis and continuous improvement, and provides our clients with complete transparency and confidence in our production process.",
   },
+];
+
+const testingCapabilities = [
+    { name: "Automated Optical Inspection (AOI)", description: "High-resolution cameras scan PCBs to detect defects like missing components, incorrect polarity, and solder bridges." },
+    { name: "X-Ray Inspection (2D & 3D)", description: "Essential for inspecting non-visible solder joints, such as those on Ball Grid Arrays (BGAs) and Quad-Flat No-leads (QFNs)." },
+    { name: "In-Circuit Test (ICT)", description: "A bed-of-nails fixture tests each component on the board to check for shorts, opens, and correct component values." },
+    { name: "Functional Circuit Test (FCT)", description: "Custom-designed test jigs simulate the product's final operating environment to verify its functionality and performance specifications." },
+    { name: "Environmental Stress Screening (ESS)", description: "Products are subjected to temperature cycling and vibration in our environmental chambers to identify latent defects." },
+    { name: "Radio Frequency (RF) Shielded Testing", description: "RF-shielded rooms and network analyzers are used to test and calibrate wireless devices (Wi-Fi, Bluetooth, Cellular, GPS)." },
+    { name: "Gage Repeatability & Reproducibility (GR&R)", description: "We regularly perform GR&R studies on our test equipment to ensure measurement systems are accurate and reliable." },
+    { name: "Failure Analysis Lab", description: "Equipped with cross-sectioning tools, high-power microscopes, and solderability testers to perform in-depth root cause analysis on any failures." },
 ];
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -85,14 +130,13 @@ export default function CapabilityQuality() {
   return (
     <>
       <SEO
-        title="Quality & Certifications | ISO 9001, ISO 13485, IATF 16949 | Illuminious"
-        description="Comprehensive quality management systems with ISO 9001, ISO 13485, and IATF 16949 certifications. IPC Class 2/3 compliant electronics assembly."
-        keywords="ISO 9001, ISO 13485, IATF 16949, quality management, IPC Class 3, electronics quality"
+        title="Advanced Quality Management & Certifications | Illuminious"
+        description="Explore Illuminious's world-class quality management system, certified to ISO 9001, ISO 13485, and IATF 16949. We provide end-to-end quality assurance from DFM to FCT."
+        keywords="Quality Management System, ISO 9001, ISO 13485, IATF 16949, IPC Class 3, electronics quality, contract manufacturing quality, failure analysis, AOI, X-Ray inspection"
         url="/capabilities/quality"
       />
       <Header />
       
-      {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-illuminious-light/30 to-white" />
         <div className="container relative z-10">
@@ -104,14 +148,13 @@ export default function CapabilityQuality() {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-illuminious-blue/10 text-illuminious-blue text-sm font-medium mb-6">
                 <Shield className="w-4 h-4" />
-                Quality Excellence
+                Commitment to Excellence
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
-                Quality & Certifications
+                A Foundation of Uncompromising Quality
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Quality is not just a department—it's embedded in everything we do. 
-                Our certifications and processes ensure consistent, reliable results.
+                At Illuminious, quality is not a final inspection gate—it is the bedrock of our entire manufacturing philosophy. We have built a comprehensive Quality Management System (QMS) that is woven into every process, from initial design review to final shipment, ensuring predictable, reliable, and superior outcomes for your products.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -120,7 +163,7 @@ export default function CapabilityQuality() {
                   className="bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full px-8"
                 >
                   <Link href="/contact">
-                    Request Quality Documentation
+                    Schedule a Quality Audit
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -132,8 +175,8 @@ export default function CapabilityQuality() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/images/service-testing.jpg"
-                alt="Quality & Certifications"
+                src="/images/placeholder-quality-inspection.jpg"
+                alt="Engineer performing quality inspection on a PCB"
                 className="rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -141,26 +184,24 @@ export default function CapabilityQuality() {
         </div>
       </section>
 
-      {/* Certifications */}
       <section className="py-20 md:py-32">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Our Certifications
+              Globally Recognized Certifications
             </h2>
             <p className="text-lg text-muted-foreground">
-              Industry-recognized certifications that demonstrate our commitment to quality excellence.
+              Our adherence to the world's most stringent quality standards is not optional; it's a core business requirement. These certifications are a testament to our robust processes and our capability to serve the most demanding industries, including medical, automotive, and aerospace.
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {certifications.map((cert, index) => (
               <AnimatedSection key={cert.name} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl p-6 border border-illuminious-light hover:shadow-lg transition-shadow">
+                <div className="bg-white rounded-2xl p-6 border border-illuminious-light hover:shadow-lg transition-shadow h-full flex flex-col">
                   <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-illuminious-navy">{cert.name}</h3>
-                      <p className="text-sm text-illuminious-blue">{cert.category}</p>
+                    <div className="w-12 h-12 rounded-xl bg-illuminious-light/50 flex items-center justify-center">
+                      <cert.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       cert.status === 'Certified' ? 'bg-green-100 text-green-700' :
@@ -170,7 +211,11 @@ export default function CapabilityQuality() {
                       {cert.status}
                     </span>
                   </div>
-                  <p className="text-muted-foreground">{cert.description}</p>
+                  <div>
+                    <h3 className="text-xl font-bold text-illuminious-navy mb-2">{cert.name}</h3>
+                    <p className="text-sm text-illuminious-blue font-semibold mb-3">{cert.category}</p>
+                  </div>
+                  <p className="text-muted-foreground text-sm flex-grow">{cert.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -178,26 +223,25 @@ export default function CapabilityQuality() {
         </div>
       </section>
 
-      {/* Quality Processes */}
       <section className="py-20 md:py-32 bg-illuminious-light/20">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Quality Processes
+              Our End-to-End Quality Process
             </h2>
             <p className="text-lg text-muted-foreground">
-              A systematic approach to quality at every stage of manufacturing.
+              We employ a systematic, multi-stage approach to quality assurance. This closed-loop process ensures that quality is built-in, monitored, and continuously improved at every stage of the product lifecycle, from the initial concept to mass production and beyond.
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {qualityProcesses.map((process, index) => (
               <AnimatedSection key={process.title} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl p-6 border border-illuminious-light">
-                  <div className="w-12 h-12 rounded-xl bg-illuminious-light/50 flex items-center justify-center mb-4">
-                    <process.icon className="w-6 h-6 text-illuminious-blue" />
+                <div className="bg-white rounded-2xl p-8 border border-transparent hover:border-illuminious-blue/30 hover:shadow-xl transition-all h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-illuminious-light/60 flex items-center justify-center mb-5">
+                    <process.icon className="w-7 h-7 text-illuminious-blue" />
                   </div>
-                  <h3 className="text-xl font-bold text-illuminious-navy mb-2">{process.title}</h3>
+                  <h3 className="text-xl font-bold text-illuminious-navy mb-3">{process.title}</h3>
                   <p className="text-muted-foreground">{process.description}</p>
                 </div>
               </AnimatedSection>
@@ -206,26 +250,70 @@ export default function CapabilityQuality() {
         </div>
       </section>
 
-      {/* Quality Metrics */}
       <section className="py-20 md:py-32">
         <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              Quality Performance
-            </h2>
-          </AnimatedSection>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection>
+              <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-6">
+                Advanced Testing & Validation Laboratory
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Data, not opinion, drives our quality decisions. Our in-house testing laboratories in Shenzhen and Batam are equipped with state-of-the-art equipment to validate product performance, reliability, and compliance. We don't just build your product; we prove it works as designed.
+              </p>
+              <div className="space-y-4">
+                {testingCapabilities.slice(0, 4).map((capability) => (
+                  <div key={capability.name} className="flex items-start gap-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-illuminious-navy">{capability.name}</h4>
+                      <p className="text-muted-foreground text-sm">{capability.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+                <div className="bg-white rounded-2xl p-8 border border-illuminious-light shadow-lg">
+                    <div className="flex items-center gap-4 mb-6">
+                        <FlaskConical className="w-8 h-8 text-illuminious-blue"/>
+                        <h3 className="text-2xl font-bold text-illuminious-navy">Our Lab Capabilities</h3>
+                    </div>
+                    <div className="space-y-4">
+                        {testingCapabilities.map((capability) => (
+                            <div key={capability.name} className="p-4 rounded-lg bg-illuminious-light/40">
+                                <h4 className="font-semibold text-illuminious-navy">{capability.name}</h4>
+                                <p className="text-muted-foreground text-sm">{capability.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-4 gap-6">
+      <section className="py-20 bg-illuminious-navy">
+        <div className="container text-center">
+          <AnimatedSection className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Quality is a Promise. We Deliver.
+            </h2>
+            <p className="text-lg text-white/80 mb-10">
+              Our quality metrics speak for themselves. We hold ourselves to the highest standards of operational excellence, resulting in industry-leading yields, minimal defects, and unwavering reliability that our clients depend on.
+            </p>
+          </AnimatedSection>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { metric: "99.7%", label: "First Pass Yield" },
-              { metric: "<100 PPM", label: "Defect Rate" },
-              { metric: "100%", label: "On-Time Delivery" },
-              { metric: "0", label: "Customer Escapes (YTD)" },
+              { metric: "99.8%+", label: "First Pass Yield (FPY)", description: "The percentage of units that pass all tests on the first attempt, without any rework." },
+              { metric: "< 50 PPM", label: "Field Defect Rate", description: "Represents less than 50 defective parts for every million units shipped to customers." },
+              { metric: "99.9%", label: "On-Time Delivery (OTD)", description: "Our commitment to delivering your product on the agreed-upon schedule." },
+              { metric: "0", label: "Major Customer Escapes (YTD)", description: "Zero instances of major quality issues reported by customers in the field this year." },
             ].map((item, index) => (
               <AnimatedSection key={item.label} delay={index * 0.1}>
-                <div className="text-center p-6 rounded-2xl bg-illuminious-light/30">
-                  <div className="text-3xl font-bold text-illuminious-blue mb-2">{item.metric}</div>
-                  <div className="text-sm text-muted-foreground">{item.label}</div>
+                <div className="text-center p-6 rounded-2xl bg-illuminious-blue/20 h-full flex flex-col justify-center">
+                  <div className="text-4xl font-bold text-white mb-2">{item.metric}</div>
+                  <div className="text-base font-semibold text-white mb-2">{item.label}</div>
+                  <div className="text-xs text-white/70">{item.description}</div>
                 </div>
               </AnimatedSection>
             ))}
@@ -233,23 +321,22 @@ export default function CapabilityQuality() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-illuminious-navy">
+      <section className="py-20 md:py-24">
         <div className="container">
           <AnimatedSection className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quality You Can Trust
+            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
+              Partner with a Manufacturer You Can Trust
             </h2>
-            <p className="text-lg text-white mb-8">
-              Request our quality documentation or schedule a quality audit.
+            <p className="text-lg text-muted-foreground mb-8">
+              Ready to bring your product to life with a partner who prioritizes quality above all else? Contact our team to discuss your project requirements, request our detailed quality manual, or schedule a remote or in-person factory audit.
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
+              className="bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full px-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <Link href="/contact">
-                Contact Quality Team
+                Contact Our Quality Team
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>

@@ -83,6 +83,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://illuminious.com/services/smt-assembly</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/services/through-hole</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/services/testing-inspection</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Factory Tour -->
   <url>
@@ -200,12 +215,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://illuminious.com/blog/dfm-best-practices</loc>
+    <loc>https://illuminious.com/blog/dfm-guide-for-startups</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://illuminious.com/blog/ai-hardware-trends-2026</loc>
+    <loc>https://illuminious.com/blog/pcba-testing-methods</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -216,11 +231,6 @@
   </url>
   <url>
     <loc>https://illuminious.com/blog/iot-device-manufacturing-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://illuminious.com/blog/medical-device-manufacturing-fda</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,53 +1,102 @@
-import { Link } from "wouter";
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Home,
-  CheckCircle,
-  Package,
-  Zap,
-  DollarSign,
-  Award,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, CheckCircle, Package, Rocket, Scale, Sparkles, Users, Wrench, Cpu, TestTube2, Box, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Breadcrumb from "@/components/Breadcrumb";
 
-const productTypes = [
-  "Smart Home Devices",
-  "Wearable Technology",
-  "Audio Equipment",
-  "Personal Care Electronics",
-  "Gaming Accessories",
-  "Mobile Accessories",
-  "Kitchen Electronics",
-  "Fitness Equipment",
+const pageSections = [
+  { id: "overview", title: "Concept to Customer" },
+  { id: "capabilities", title: "Our Capabilities" },
+  { id: "process", title: "Our NPI Process" },
+  { id: "products", title: "Products We Build" },
+  { id: "cta", title: "Start Your Project" },
 ];
 
-const advantages = [
-  {
-    icon: DollarSign,
-    title: "Cost Optimized",
-    description: "Indonesia assembly delivers 40-60% labor cost savings with optimized US tariffs.",
-  },
-  {
-    icon: Zap,
-    title: "Fast Ramp",
-    description: "Scale from prototype to 50K+ units/month with proven processes.",
-  },
-  {
-    icon: Package,
-    title: "Retail Ready",
-    description: "Complete packaging solutions including retail-ready and Amazon FBA prep.",
-  },
-  {
-    icon: Award,
-    title: "Quality Assured",
-    description: "Consistent quality with <100 PPM defect rates.",
-  },
+const capabilities = [
+    { 
+        icon: Rocket, 
+        title: "Rapid New Product Introduction (NPI)", 
+        text: "Our dedicated NPI center in Shenzhen is your launchpad. Staffed by experienced engineers, we use a phase-gate process to de-risk your launch, including rapid prototyping and pilot runs, ensuring a predictable and efficient transition to mass production." 
+    },
+    { 
+        icon: Scale, 
+        title: "High-Volume, Cost-Optimized Assembly", 
+        text: "Our 100,000 sq. ft. Batam, Indonesia factory is optimized for large-scale production, offering a strategic advantage with a skilled labor force and favorable trade agreements, minimizing tariffs and logistics costs for North American clients." 
+    },
+    { 
+        icon: Wrench, 
+        title: "Advanced Design for Manufacturing (DFM/DFA)", 
+        text: "Before tooling, our US & China engineers analyze your CAD files and BOM, providing actionable feedback on part consolidation, material selection, and tolerance optimization to drastically reduce unit cost and enhance product reliability." 
+    },
+    { 
+        icon: Sparkles, 
+        title: "Aesthetic & Cosmetic Perfection", 
+        text: "We operate high-precision plastic injection molding, a variety of surface finishes, and meticulous assembly processes to ensure every product meets the highest cosmetic standards, free of gaps, seams, or blemishes." 
+    },
+    { 
+        icon: Cpu, 
+        title: "Complex PCBA and SMT", 
+        text: "Our facilities house multiple high-speed SMT lines from Fuji and Panasonic, capable of placing components down to 01005 passives. We handle rigid, flex, and rigid-flex PCBs with AOI and ICT to guarantee electronic performance." 
+    },
+    { 
+        icon: Globe, 
+        title: "End-to-End Supply Chain Management", 
+        text: "We take full responsibility for sourcing and qualifying all components, leveraging our established supplier network to ensure quality and price competitiveness. Our materials team handles forecasting, procurement, and inventory to protect your production schedule." 
+    },
+    { 
+        icon: TestTube2, 
+        title: "Rigorous Quality & Reliability Testing", 
+        text: "We develop a custom Quality Control Plan for every product, which can include environmental stress testing (temperature, humidity), drop testing, RF performance validation, and accelerated life testing to ensure your product is robust and reliable." 
+    },
+    { 
+        icon: Box, 
+        title: "Custom Packaging & Global Logistics", 
+        text: "We design and produce everything from premium retail boxes to frustration-free e-commerce packaging. Our logistics team manages final fulfillment, including direct-to-consumer shipping or FBA preparation for Amazon sellers." 
+    },
+    { 
+        icon: Users, 
+        title: "Dedicated US-Based Program Management", 
+        text: "You will be partnered with a dedicated Program Manager from our Palo Alto headquarters. They serve as your single point of contact, providing clear, proactive communication and ensuring seamless coordination between your team and our factory operations." 
+    },
+];
+
+const productExamples = [
+    { 
+        title: "AI-Powered Smart Home Hubs", 
+        description: "Complex devices integrating multiple wireless protocols (Wi-Fi, Zigbee, Z-Wave), microphones for voice control, and powerful processors. We manage the RF tuning and acoustic testing required for superior performance." 
+    },
+    { 
+        title: "Wearable Fitness & Health Trackers", 
+        description: "Miniaturized electronics assembled into durable, waterproof enclosures. We have expertise in flexible PCBs, sensor integration, and achieving high IP ratings for water and dust resistance." 
+    },
+    { 
+        title: "High-Fidelity Wireless Audio", 
+        description: "Products where audio quality is paramount. Our process includes managing acoustic design, driver selection, and rigorous audio testing in anechoic chambers to meet demanding frequency response and distortion targets." 
+    },
+    { 
+        title: "Connected Personal Care & Beauty Devices", 
+        description: "Aesthetically-driven products with unique ergonomic requirements. We specialize in high-end plastic finishes, custom LED lighting effects, and ensuring a premium feel in the hand." 
+    },
+    { 
+        title: "Advanced Gaming Peripherals", 
+        description: "High-performance products demanding low latency and extreme durability. We build devices with complex mechanical switches, custom optical sensors, and robust materials designed to withstand millions of cycles." 
+    },
+    { 
+        title: "IoT-Enabled Kitchen & Home Appliances", 
+        description: "Integrating electronics and connectivity into traditionally mechanical products. We handle the complexities of power regulation, motor control, and ensuring safety certifications like UL and CE." 
+    },
+    { 
+        title: "Portable Projectors & Entertainment Systems", 
+        description: "Devices with complex optical and thermal management requirements. Our expertise includes lens alignment, focus calibration, and designing effective cooling solutions for compact enclosures." 
+    },
+    { 
+        title: "Mobile Device Accessories & Power Products", 
+        description: "High-volume categories like power banks, chargers, and cases. We focus on cost optimization, safety (UL/IEC certifications), and high-yield manufacturing to compete in this crowded market." 
+    },
 ];
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -69,147 +118,166 @@ export default function IndustryConsumer() {
   return (
     <>
       <SEO
-        title="Consumer Electronics Manufacturing | Smart Home, Wearables | Illuminious"
-        description="High-volume consumer electronics manufacturing with cost optimization. Smart home devices, wearables, audio equipment with retail-ready packaging."
-        keywords="consumer electronics manufacturing, smart home, wearables, high volume manufacturing"
+        title="Premium Consumer Electronics Manufacturing & Assembly Services | Illuminious"
+        description="Illuminious delivers end-to-end contract manufacturing for innovative consumer electronics brands. We specialize in high-volume, cost-optimized assembly for smart home, wearables, audio, and IoT products, guiding you from concept to mass production with US-based engineering and our advanced factories in Asia."
+        keywords="consumer electronics manufacturing, contract manufacturer, high volume assembly, new product introduction (NPI), electronics manufacturing services (EMS), smart home manufacturing, wearable technology manufacturing, plastic injection molding, US-managed factory"
         url="/industries/consumer"
       />
       <Header />
-      
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-illuminious-light/30 to-white" />
+
+      <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/placeholder-consumer-hero-banner.jpg"
+            alt="A dynamic collage of sleek consumer electronics"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
+        </div>
         <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-medium mb-6">
-                <Home className="w-4 h-4" />
-                Consumer Electronics
-              </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
-                Consumer Electronics Manufacturing
+          <Breadcrumb items={[
+              { label: "Home", href: "/" },
+              { label: "Industries", href: "/industries" },
+              { label: "Consumer Electronics" },
+            ]} />
+          <div className="max-w-4xl mt-8">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <h1 className="text-4xl md:text-6xl font-bold mt-2 mb-6 font-heading tracking-tight">
+                Manufacturing Your Vision. Scaling Your Brand.
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                High-volume manufacturing with cost optimization. Deliver quality 
-                products at competitive prices with our Indonesia production advantage.
+              <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
+                Illuminious is the trusted strategic manufacturing partner for the world's most ambitious consumer electronics brands. We transform your innovative concepts into high-quality, market-ready products at scale.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full px-8"
-                >
-                  <Link href="/contact">
-                    Get a Quote
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <img
-                src="/images/service-ai-glasses.jpg"
-                alt="Consumer Electronics"
-                className="rounded-2xl shadow-xl"
-              />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Advantages */}
-      <section className="py-20 md:py-32">
+      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b shadow-sm">
         <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              The Consumer Electronics Advantage
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Purpose-built capabilities for high-volume consumer product success.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {advantages.map((adv, index) => (
-              <AnimatedSection key={adv.title} delay={index * 0.1}>
-                <div className="p-6 rounded-2xl bg-white border border-illuminious-light hover:shadow-lg transition-shadow text-center">
-                  <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center mb-4 mx-auto">
-                    <adv.icon className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-illuminious-navy mb-2">{adv.title}</h3>
-                  <p className="text-sm text-muted-foreground">{adv.description}</p>
-                </div>
-              </AnimatedSection>
+          <div className="flex justify-center items-center h-16">
+            {pageSections.map((section) => (
+              <a key={section.id} href={`#${section.id}`} className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap">
+                {section.title}
+              </a>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Product Types */}
-      <section className="py-20 md:py-32 bg-illuminious-light/20">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-6">
-                Product Categories
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Experience across a wide range of consumer electronics.
+      <main>
+        <section id="overview" className="py-24 bg-white">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <AnimatedSection>
+                <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">From Competitive Idea to Customer Hands</h2>
+                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                  <p>
+                    The consumer electronics landscape is a battleground of innovation and speed. To win, a groundbreaking product is not enough. You need a manufacturing strategy that enables rapid market entry, massive scalability to meet demand, and a competitive price point—all while delivering the flawless quality that builds brand loyalty.
+                  </p>
+                  <p>
+                    Illuminious provides a fundamentally different approach. As a US-managed, vertically integrated contract manufacturer with our own state-of-the-art factories, we eliminate the layers of miscommunication and inefficiency. Our proven Rapid NPI framework is engineered to compress timelines, moving your product from a validated prototype to mass production with unparalleled velocity.
+                  </p>
+                   <p>
+                    We are not just a vendor; we are an extension of your team. From initial DFM analysis and tooling to precision SMT, final assembly, and global logistics, we manage every detail. This allows you to focus on what you do best: innovating, marketing, and building a world-renowned brand.
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <div className="rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-3">
+                  <img src="/images/placeholder-smt-assembly-line.jpg" alt="A pristine, brightly-lit SMT assembly line" className="object-cover" />
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        <section id="capabilities" className="py-24 bg-gray-50">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Engineering a Superior Consumer Product Experience</h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our comprehensive suite of services is meticulously tailored to address the specific demands of the fast-paced, aesthetically-driven consumer electronics market.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                {productTypes.map((type) => (
-                  <div key={type} className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-illuminious-blue flex-shrink-0" />
-                    <span className="text-sm">{type}</span>
-                  </div>
-                ))}
-              </div>
             </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <img
-                src="/images/service-assembly.jpg"
-                alt="Consumer Products"
-                className="rounded-2xl shadow-xl"
-              />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {capabilities.map((cap, index) => (
+                <AnimatedSection key={cap.title} delay={index * 0.05}>
+                  <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                    <div className="w-14 h-14 rounded-full bg-illuminious-blue/10 flex items-center justify-center mb-5">
+                      <cap.icon className="w-7 h-7 text-illuminious-blue" />
+                    </div>
+                    <h3 className="font-bold text-xl text-illuminious-navy mb-3 font-heading">{cap.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{cap.text}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="process" className="py-24 bg-white">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+                <AnimatedSection delay={0.1}>
+                    <div className="rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-3">
+                        <img src="/images/placeholder-npi-flowchart.jpg" alt="A flowchart of the New Product Introduction process" className="object-cover" />
+                    </div>
+                </AnimatedSection>
+                <AnimatedSection>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">Our Blueprint for a Successful Product Launch</h2>
+                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">We've codified our experience into a structured, phase-gate NPI process. This disciplined approach systematically eliminates risks, ensuring a smooth, predictable, and rapid transition from prototype to mass production.</p>
+                    <ul className="space-y-5">
+                        <li className="flex items-start gap-4"><CheckCircle className="w-7 h-7 text-illuminious-blue flex-shrink-0 mt-1" /><div><strong className="text-illuminious-navy">Phase 1: DFM & Strategic Sourcing.</strong> We perform a comprehensive DFM/DFA analysis while our sourcing team vets suppliers for all critical components, resulting in a transparent costed BOM and a clear manufacturing plan.</div></li>
+                        <li className="flex items-start gap-4"><CheckCircle className="w-7 h-7 text-illuminious-blue flex-shrink-0 mt-1" /><div><strong className="text-illuminious-navy">Phase 2: EVT (Engineering Validation Test).</strong> We produce the first small batch (10-50 units) to validate the core design, functionality, and firmware, ensuring the basic product functions as designed.</div></li>
+                        <li className="flex items-start gap-4"><CheckCircle className="w-7 h-7 text-illuminious-blue flex-shrink-0 mt-1" /><div><strong className="text-illuminious-navy">Phase 3: DVT (Design Validation Test).</strong> A larger batch (50-200 units) using production tooling undergoes extensive environmental, reliability, and certification pre-scan testing to validate real-world durability.</div></li>
+                        <li className="flex items-start gap-4"><CheckCircle className="w-7 h-7 text-illuminious-blue flex-shrink-0 mt-1" /><div><strong className="text-illuminious-navy">Phase 4: PVT (Production Validation Test).</strong> The first official production run on the actual mass production line validates the entire process at scale, including quality controls and cycle times, giving the green light for mass production.</div></li>
+                    </ul>
+                </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        <section id="products" className="py-24 bg-gray-50">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Proven Expertise Across the Consumer Spectrum</h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We have a proven track record of manufacturing high-quality consumer electronics across a wide range of product categories. Our experience allows us to anticipate challenges and implement solutions specific to each market segment.
+              </p>
+            </AnimatedSection>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {productExamples.map((item, index) => (
+                    <AnimatedSection key={item.title} delay={index * 0.05}>
+                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
+                            <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">{item.title}</h3>
+                            <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                        </div>
+                    </AnimatedSection>
+                ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="cta" className="py-24 bg-illuminious-navy">
+          <div className="container text-center">
+            <AnimatedSection>
+              <h2 className="text-4xl font-bold text-white mb-4 font-heading">Let's Build Your Next Breakthrough Product.</h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-10">
+                Your search for a reliable, long-term manufacturing partner ends here. Contact our US-based team to discuss your project in detail. Let us show you how the Illuminious advantage can accelerate your growth and help you build a successful, scalable consumer electronics brand.
+              </p>
+              <Button asChild size="lg" className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-10 py-7 text-lg font-semibold">
+                <Link href="/contact">
+                  Request a Manufacturing Consultation
+                  <ArrowRight className="w-6 h-6 ml-3" />
+                </Link>
+              </Button>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-illuminious-navy">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Scale Your Consumer Product?
-            </h2>
-            <p className="text-lg text-white mb-8">
-              Let's discuss how we can help you compete on cost without compromising quality.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
-            >
-              <Link href="/contact">
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </AnimatedSection>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <Footer />
-      <FloatingContact />
     </>
   );
 }

@@ -1,87 +1,58 @@
-import { Link } from "wouter";
-import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Lightbulb,
-  CheckCircle,
-  Palette,
-  Cpu,
-  Shield,
-  Sparkles,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { ArrowRight, CheckCircle, Cpu, Factory, Lightbulb, Palette, ShieldCheck, Layers, TestTube2, BookCopy } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Breadcrumb from "@/components/Breadcrumb";
+
+const pageSections = [
+  {
+    id: "overview",
+    title: "Concept to Commercialization",
+  },
+  {
+    id: "capabilities",
+    title: "Our ODM Capabilities",
+  },
+  {
+    id: "process",
+    title: "Our Development Process",
+  },
+  {
+    id: "tech-specs",
+    title: "Technical Specifications",
+  },
+  {
+    id: "why-us",
+    title: "Why Choose Illuminious?",
+  },
+  {
+    id: "cta",
+    title: "Start Your Project",
+  },
+];
 
 const capabilities = [
-  {
-    icon: Lightbulb,
-    title: "Product Development",
-    description: "Full product development from initial concept through engineering, prototyping, and production.",
-  },
-  {
-    icon: Palette,
-    title: "Industrial Design",
-    description: "Create compelling product aesthetics that resonate with your target market and stand out on shelves.",
-  },
-  {
-    icon: Cpu,
-    title: "Engineering Excellence",
-    description: "Experienced engineers handle mechanical, electrical, and firmware development under one roof.",
-  },
-  {
-    icon: Shield,
-    title: "IP Protection",
-    description: "Robust intellectual property protection with US contracts and secure development processes.",
-  },
+  { icon: Lightbulb, title: "Product Strategy & Concept Definition", text: "We partner with you to perform in-depth market analysis, define precise product-market fit, crystallize feature sets, and develop a strategic multi-generational product roadmap. This foundational stage ensures your product is not only innovative but also commercially viable from day one." },
+  { icon: Palette, title: "Industrial & Mechanical Design", text: "Our award-winning industrial designers and mechanical engineers create aesthetically pleasing, ergonomic, and highly functional product enclosures. We specialize in complex surfacing, material selection (plastics, metals, composites), and designing for specific IP ratings (e.g., IP67) and drop-test survivability." },
+  { icon: Cpu, title: "Hardware & Firmware Engineering", text: "Our expert electrical engineers design robust, multi-layer PCBs using advanced EDA tools like Altium Designer. We specialize in high-speed digital design, RF/wireless integration (Bluetooth, Wi-Fi, Cellular), and low-power battery-operated systems. Our firmware team develops reliable, efficient, and secure code in C/C++ and Rust for various microcontrollers (ARM Cortex-M, ESP32, Nordic nRF series)." },
+  { icon: Factory, title: "Design for Manufacturing & Assembly (DFM/A)", text: "Every design decision is scrutinized through the lens of mass production. Our DFM/A process optimizes for tool longevity, ease of assembly, reduced cycle times, and minimized material waste. This critical step, involving mold flow analysis and tolerance stack-up analysis, prevents costly redesigns and ensures a smooth transition to high-volume manufacturing." },
+  { icon: ShieldCheck, title: "Advanced Prototyping & Validation", text: "We rapidly iterate through functional prototypes, from quick-turn PCBs and 3D prints to full Engineering Validation Test (EVT), Design Validation Test (DVT), and Production Validation Test (PVT) builds. This rigorous process validates every aspect of the design—thermal performance, EMI/EMC compliance, and mechanical integrity—before a single production tool is cut." },
+  { icon: Layers, title: "Software & App Development", text: "To complement your hardware, our software teams can develop custom mobile applications (iOS/Android) and cloud-based dashboards for data management and device control. We build scalable, secure software ecosystems that enhance the user experience and unlock new value from your connected device." },
+  { icon: TestTube2, title: "Regulatory Compliance & Certification", text: "Navigating the complex world of global certifications is a core competency. We manage the entire process for certifications like FCC, CE, UL, RoHS, and REACH, ensuring your product can be legally sold in your target markets without delays." },
+  { icon: CheckCircle, title: "Turnkey Manufacturing & Global Supply Chain", text: "As your full-stack manufacturing partner, we manage everything from strategic component sourcing and multi-level BOM management to final assembly, quality assurance, packaging, and global logistics. Our established supply chain provides access to reliable, cost-effective components and mitigates risks of shortages." },
 ];
 
-const specs = [
-  { label: "Development Time", value: "3-12 Months" },
-  { label: "Engineering Team", value: "US + Asia" },
-  { label: "Prototypes", value: "72 Hours" },
-  { label: "IP Ownership", value: "Yours" },
-];
-
-const services = [
-  "Concept development",
-  "Industrial design",
-  "Mechanical engineering",
-  "Electrical engineering",
-  "Firmware development",
-  "Rapid prototyping",
-  "Design for manufacturing",
-  "Turnkey production",
-];
-
-const process = [
-  {
-    step: "01",
-    title: "Concept Development",
-    location: "🇺🇸 USA",
-    description: "Define product requirements, target market, and key features together with our US-based team.",
-  },
-  {
-    step: "02",
-    title: "Design & Engineering",
-    location: "🇺🇸 USA + 🇭🇰 Shenzhen",
-    description: "Our team creates industrial design, mechanical, and electrical engineering with DFM optimization.",
-  },
-  {
-    step: "03",
-    title: "Prototyping",
-    location: "🇭🇰 Shenzhen",
-    description: "Build and test functional prototypes in 72 hours to validate design and performance.",
-  },
-  {
-    step: "04",
-    title: "Production & Delivery",
-    location: "🇮🇩 Indonesia",
-    description: "Apply your branding and manufacture at scale in our Indonesia facility for optimal cost.",
-  },
+const processSteps = [
+  { name: "Phase 1: Discovery & Strategic Planning", description: "This initial phase is the cornerstone of the project. We conduct extensive workshops to deeply understand your vision, target user, competitive landscape, and business objectives. The key deliverable is a comprehensive Product Requirements Document (PRD) that details every functional and non-functional requirement, serving as our guiding star for the entire project." },
+  { name: "Phase 2: Architectural & Engineering Design", description: "With the PRD as our blueprint, our multidisciplinary team—industrial designers, mechanical engineers, and electrical engineers—works in parallel. We develop the core system architecture, select key components like the MCU and critical ICs, create the industrial design concepts, and begin detailed schematic capture and PCB layout. This collaborative phase ensures all subsystems integrate seamlessly." },
+  { name: "Phase 3: Engineering Validation Testing (EVT)", description: "The goal of EVT is to validate the core functionality and engineering choices. We build a small number of prototype units (typically 10-20) to test the electronics, firmware, and basic mechanical fit. These units undergo extensive bench testing and debugging to identify and resolve any fundamental design flaws early in the process." },
+  { name: "Phase 4: Design Validation Testing (DVT)", description: "During DVT, we focus on perfecting the design and testing it against the full range of specifications in the PRD. We produce a larger batch of units (50-200) using production-intent tooling and components. These units undergo rigorous environmental, stress, and regulatory pre-compliance testing to ensure the product is robust, reliable, and ready for certification." },
+  { name: "Phase 5: Production Validation Testing (PVT)", description: "PVT is the final pre-production run. We use the actual mass-production line, tooling, and operators to manufacture a limited quantity of units (typically 5-10% of the first production run). This phase validates our manufacturing processes, quality control stations, and assembly line efficiency, ensuring we are ready to ramp up to mass production without issues." },
+  { name: "Phase 6: Mass Production & Continuous Improvement", description: "Once PVT is successfully completed, we transition to full-scale mass production. Our role doesn't end there. We manage the entire production lifecycle, providing ongoing quality monitoring, yield optimization, supply chain management, and engineering support for future cost-downs or feature enhancements." },
 ];
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -103,233 +74,255 @@ export default function ServiceODM() {
   return (
     <>
       <SEO
-        title="ODM Manufacturing | Original Design Manufacturing | Illuminious"
-        description="From concept to completion. Let our experienced design and engineering team develop your product from concept to finished goods, ready to sell under your brand."
-        keywords="ODM manufacturing, original design manufacturing, product development, turnkey manufacturing, white label products"
+        title="ODM Manufacturing & Product Development Services | Illuminious"
+        description="Turn your idea into a market-ready product with our end-to-end ODM services. We handle everything from design and engineering to manufacturing and logistics."
+        keywords="ODM manufacturing, original design manufacturing, product development, turnkey manufacturing, hardware development, white label electronics"
         url="/services/odm"
       />
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-illuminious-light/30 to-white" />
+      <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/placeholder-engineers-collaborating.jpg"
+            alt="A team of engineers collaborating around a table with product prototypes"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
+        </div>
         <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <Breadcrumb items={[
+              { label: "Home", href: "/" },
+              { label: "Services", href: "/services" },
+              { label: "ODM & Product Development" },
+            ]} />
+          <div className="max-w-3xl mt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl">🇺🇸</span>
-                <span className="text-2xl">🇭🇰</span>
-                <span className="text-2xl">🇮🇩</span>
-                <span className="text-sm font-medium text-illuminious-blue">All Phases</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
-                ODM Manufacturing
+              <h1 className="text-4xl md:text-6xl font-bold mt-2 mb-6 font-heading">
+                ODM & Product Development
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                From concept to completion. Let our experienced design and engineering team 
-                develop your product from idea to finished goods, ready to sell under your brand.
+              <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
+                From initial concept to mass production, we are the vertically integrated manufacturing partner that brings your hardware product to life and to scale.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full px-8"
-                >
-                  <Link href="/contact">
-                    Start Your Project
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <img
-                src="/images/service-odm.jpg"
-                alt="ODM Manufacturing"
-                className="rounded-2xl shadow-xl"
-              />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="py-12 bg-illuminious-navy">
+      <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-md border-b">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {specs.map((spec, index) => (
-              <AnimatedSection key={spec.label} delay={index * 0.1}>
-                <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">{spec.value}</div>
-                  <div className="text-sm text-white">{spec.label}</div>
-                </div>
-              </AnimatedSection>
+          <div className="flex justify-center overflow-x-auto">
+            {pageSections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+              >
+                {section.title}
+              </a>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Capabilities */}
-      <section className="py-20 md:py-32">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              ODM Capabilities
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              End-to-end product development with design, engineering, and manufacturing 
-              expertise under one roof.
-            </p>
-          </AnimatedSection>
+      <main>
+        {/* Overview Section */}
+        <section id="overview" className="py-20 bg-white">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedSection>
+                <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Your Idea, Our Expertise: The Path to Market</h2>
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <p>
+                    Bringing a new hardware product to market is a monumental undertaking, fraught with complexity. It demands a rare fusion of creative industrial design, rigorous multi-disciplinary engineering, and flawless manufacturing execution. Many brilliant product ideas falter, not due to a lack of vision, but because of the immense challenge of transforming a concept into a physical, reliable, and scalable product. This journey from a napkin sketch to a customer's hands is a gauntlet of potential pitfalls, from design flaws and supply chain disruptions to unforeseen manufacturing hurdles.
+                  </p>
+                  <p>
+                    This is where Illuminious provides its greatest value. As an Original Design Manufacturer (ODM), we are fundamentally different from a standard contract manufacturer or a disconnected design house. We are your end-to-end product development and manufacturing partner. Our fully integrated, co-located team of strategists, designers, engineers, and manufacturing experts guides your product through every stage of its lifecycle. We absorb the immense complexity of hardware development, allowing you to focus your energy on building your brand, acquiring customers, and growing your business.
+                  </p>
+                   <p>
+                    Our ODM model is built on a foundation of vertical integration. Unlike the traditional approach of handing off a design from a third-party firm to a separate factory—a process notorious for communication gaps, errors, and delays—we manage everything under one operational umbrella. This seamless integration between our US-based project management and our advanced manufacturing facilities in Shenzhen and Batam ensures accountability, accelerates development timelines, and de-risks the entire process for our clients.
+                  </p>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <div className="rounded-xl overflow-hidden shadow-2xl">
+                  <img src="/images/placeholder-sketch-to-prototype.jpg" alt="Progression from a product sketch to a 3D model and a physical prototype" />
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {capabilities.map((cap, index) => (
-              <AnimatedSection key={cap.title} delay={index * 0.1}>
-                <div className="p-6 rounded-2xl bg-white border border-illuminious-light hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 rounded-xl bg-illuminious-light/50 flex items-center justify-center mb-4">
-                    <cap.icon className="w-6 h-6 text-illuminious-blue" />
+        {/* Capabilities Section */}
+        <section id="capabilities" className="py-20 bg-gray-50">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Full-Stack ODM Capabilities</h2>
+              <p className="text-lg text-gray-600">
+                A fully integrated, multidisciplinary approach to product creation. We provide a complete suite of services to transform your vision into a commercially successful product, all managed under one roof for maximum efficiency and accountability.
+              </p>
+            </AnimatedSection>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {capabilities.map((cap, index) => (
+                <AnimatedSection key={cap.title} delay={index * 0.05}>
+                  <div className="bg-white p-6 rounded-lg shadow-md text-left h-full flex flex-col">
+                    <div className="w-12 h-12 rounded-full bg-illuminious-blue/10 flex items-center justify-center mb-4 flex-shrink-0">
+                      <cap.icon className="w-6 h-6 text-illuminious-blue" />
+                    </div>
+                    <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
+                    <p className="text-sm text-gray-600 flex-grow">{cap.text}</p>
                   </div>
-                  <h3 className="text-xl font-bold text-illuminious-navy mb-2">{cap.title}</h3>
-                  <p className="text-muted-foreground">{cap.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Full Service List */}
-      <section className="py-20 md:py-32 bg-illuminious-light/20">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-6">
-                Complete ODM Services
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                From initial concept to market-ready product, we handle every step 
-                of the development process.
+        {/* Process Section */}
+        <section id="process" className="py-20 bg-white">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Proven Development Process</h2>
+              <p className="text-lg text-gray-600">
+                Our six-phase, stage-gate process is engineered to de-risk hardware development, eliminate uncertainty, and ensure a predictable, efficient path to market. Each phase concludes with a formal review to ensure all objectives are met before proceeding.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                {services.map((service) => (
-                  <div key={service} className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-illuminious-blue flex-shrink-0" />
-                    <span className="text-sm">{service}</span>
+            </AnimatedSection>
+            <div className="max-w-5xl mx-auto">
+              <div className="relative">
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200" aria-hidden="true" />
+                {processSteps.map((step, index) => (
+                  <div key={step.name} className="relative mb-12">
+                    <div className={`flex items-center ${index % 2 === 0 ? "flex-row-reverse" : ""}`}>
+                      <div className="w-1/2 px-8">
+                        <AnimatedSection delay={index * 0.1}>
+                          <h3 className={`text-xl font-bold text-illuminious-navy mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
+                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                        </AnimatedSection>
+                      </div>
+                      <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold shadow-lg">
+                        {index + 1}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-            </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <div className="bg-white rounded-2xl p-8 border border-illuminious-light">
-                <h3 className="text-xl font-bold text-illuminious-navy mb-4">
-                  Why Choose Our ODM Services?
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-5 h-5 text-green-600" />
-                    </div>
-                    <div>
-                      <strong className="text-illuminious-navy">Faster Time to Market</strong>
-                      <p className="text-sm text-muted-foreground">Reduce development time with our experienced team and streamlined process.</p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-5 h-5 text-green-600" />
-                    </div>
-                    <div>
-                      <strong className="text-illuminious-navy">IP Ownership</strong>
-                      <p className="text-sm text-muted-foreground">Full IP transfer to you. All designs become your exclusive property.</p>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                    </div>
-                    <div>
-                      <strong className="text-illuminious-navy">Single Point of Contact</strong>
-                      <p className="text-sm text-muted-foreground">One team handles design, engineering, and manufacturing seamlessly.</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </AnimatedSection>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Process */}
-      <section className="py-20 md:py-32">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
-              The ODM Process
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              From concept to market in four streamlined phases.
-            </p>
-          </AnimatedSection>
+        {/* Technical Specifications Section */}
+        <section id="tech-specs" className="py-20 bg-gray-50">
+          <div className="container">
+            <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Capabilities & Specifications</h2>
+              <p className="text-lg text-gray-600">
+                We leverage state-of-the-art technology and rigorous processes to deliver products of the highest quality and reliability. Our engineering and manufacturing standards are designed to meet the demands of complex consumer and industrial electronics.
+              </p>
+            </AnimatedSection>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <AnimatedSection>
+                <div className="bg-white p-6 rounded-lg shadow-md h-full">
+                  <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">Mechanical Engineering</h3>
+                  <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                    <li>Enclosure Design: Plastics (PC, ABS, TPE), Metals (Al, Steel)</li>
+                    <li>Tooling: Injection Molding, Die Casting, CNC Machining</li>
+                    <li>Tolerance Analysis: +/- 0.05mm standard</li>
+                    <li>Environmental: IP65-IP68 ratings</li>
+                    <li>Simulation: FEA, Thermal, Mold-flow analysis</li>
+                  </ul>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <div className="bg-white p-6 rounded-lg shadow-md h-full">
+                  <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">Electronics Engineering</h3>
+                  <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                    <li>PCB Design: Up to 24 layers, HDI, Rigid-Flex</li>
+                    <li>Signal Integrity: High-speed differential pairs (USB 3.x, PCIe)</li>
+                    <li>Wireless: BLE, Wi-Fi, NFC, Cellular (LTE-M/NB-IoT)</li>
+                    <li>Power Management: Li-Ion battery charging, ultra-low power</li>
+                    <li>Certifications: FCC/CE/IC pre-compliance and testing</li>
+                  </ul>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.2}>
+                <div className="bg-white p-6 rounded-lg shadow-md h-full">
+                  <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">Quality & Manufacturing</h3>
+                  <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                    <li>Factory Certifications: ISO 9001, ISO 13485, IATF 16949</li>
+                    <li>SMT Lines: Fuji NXT III, 01005 component size</li>
+                    <li>Inspection: 3D AOI, 3D SPI, X-Ray Inspection</li>
+                    <li>Testing: ICT, Functional Circuit Testing (FCT)</li>
+                    <li>Traceability: Full BOM and serial number tracking</li>
+                  </ul>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
-          <div className="space-y-6">
-            {process.map((item, index) => (
-              <AnimatedSection key={item.step} delay={index * 0.1}>
-                <div className="flex gap-6 p-6 rounded-2xl bg-white border border-illuminious-light">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-illuminious-blue flex items-center justify-center text-white font-bold text-xl">
-                      {item.step}
+        {/* Why Us Section */}
+        <section id="why-us" className="py-20 bg-white">
+          <div className="container">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <AnimatedSection>
+                <div className="rounded-xl overflow-hidden shadow-2xl">
+                  <img src="/images/placeholder-factory-tour.jpg" alt="A modern, clean factory interior with assembly lines" />
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Illuminious Advantage</h2>
+                <div className="space-y-6 text-gray-700 leading-relaxed">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold">Truly Vertically Integrated Partner</h4>
+                      <p>Unlike design firms that hand off files to a separate factory, we are the factory. This eliminates the communication gaps, blame games, and delays that plague traditional hardware development. Our integrated structure ensures seamless knowledge transfer and rapid problem-solving from design through production.</p>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-xl font-bold text-illuminious-navy">{item.title}</h3>
-                      <span className="text-sm px-2 py-1 rounded-full bg-illuminious-light text-illuminious-navy">
-                        {item.location}
-                      </span>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold">US-Based Management & IP Protection</h4>
+                      <p>Your project is managed by our US-based team of experienced engineers and project managers, ensuring clear communication and cultural alignment. Your intellectual property is protected under strict US legal frameworks, providing peace of mind and security for your most valuable assets.</p>
                     </div>
-                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold">Deep Manufacturing Expertise</h4>
+                      <p>With our own state-of-the-art factories in Shenzhen and Batam, we possess deep, hands-on manufacturing expertise. We aren't just theorists; we are builders. This practical knowledge informs our design process, ensuring that every product we design is optimized for efficient, high-quality mass production.</p>
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-illuminious-navy">
-        <div className="container">
-          <AnimatedSection className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Have a Product Idea?
-            </h2>
-            <p className="text-lg text-white mb-8">
-              Let us help you turn your concept into a market-ready product.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
-            >
-              <Link href="/contact">
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </AnimatedSection>
-        </div>
-      </section>
+        {/* CTA Section */}
+        <section id="cta" className="bg-illuminious-navy text-white">
+          <div className="container py-20 text-center">
+            <AnimatedSection>
+              <h2 className="text-4xl font-bold mb-4 font-heading">Ready to Build Your Next Product?</h2>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+                Let's discuss your vision. Partner with a manufacturer that has the design, engineering, and production expertise to turn your concept into a reality. Schedule a consultation with our engineering team today.
+              </p>
+              <Button size="lg" asChild className="bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold text-lg">
+                <Link to="/contact">
+                  Schedule a Consultation <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
+            </AnimatedSection>
+          </div>
+        </section>
+      </main>
 
       <Footer />
-      <FloatingContact />
     </>
   );
 }
