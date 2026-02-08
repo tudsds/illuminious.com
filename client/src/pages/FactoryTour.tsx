@@ -48,7 +48,7 @@ const factoryAreas = [
   {
     name: "The Final Touch: Box Build & Systems Integration",
     description: "This is where it all comes together. The Box Build and Systems Integration area is where our skilled technicians transform individual PCBs and mechanical parts into a finished, market-ready product. Far more than simple assembly, this stage involves complex wiring, software installation, sub-assembly integration, and final testing. Each station is custom-configured for a specific product, with digital work instructions and integrated quality checks to ensure nothing is missed. This is the human touch that perfects the automated process.",
-    image: "/images/placeholder-box-build-assembly-line.jpg",
+    image: "/images/factorytour-img-4.jpg",
     icon: PackageCheck,
     features: [
       "Dedicated Assembly Cells: Each product gets its own dedicated assembly line, optimized for its specific workflow to maximize efficiency and minimize the chance of errors.",

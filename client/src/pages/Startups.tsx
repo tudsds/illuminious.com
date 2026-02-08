@@ -83,7 +83,7 @@ export default function Startups() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white">
          <div className="absolute inset-0">
           <img
-            src="/images/placeholder-startup-team-collaboration.jpg"
+            src="/images/startups-img-1.jpg"
             alt="A diverse startup team collaborating around a table with electronic components and prototypes"
             className="w-full h-full object-cover opacity-20"
           />

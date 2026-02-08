@@ -78,7 +78,7 @@ export default function ServiceQuality() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-quality-control-inspection.jpg"
+            src="/images/quality-img-1.jpg"
             alt="A quality engineer inspecting a printed circuit board under a microscope"
             className="w-full h-full object-cover opacity-30"
           />
@@ -141,7 +141,7 @@ export default function ServiceQuality() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-aoi-inspection.jpg" alt="An automated optical inspection (AOI) machine scanning a PCB" />
+                  <img src="/images/quality-img-2.jpg" alt="An automated optical inspection (AOI) machine scanning a PCB" />
                 </div>
               </AnimatedSection>
             </div>
@@ -211,7 +211,7 @@ export default function ServiceQuality() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-metrology-lab-cmm.jpg" alt="A coordinate measuring machine (CMM) inspecting a precision part" />
+                  <img src="/images/quality-img-3.jpg" alt="A coordinate measuring machine (CMM) inspecting a precision part" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

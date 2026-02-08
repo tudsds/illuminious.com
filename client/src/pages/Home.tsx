@@ -55,7 +55,7 @@ const coreCapabilities = [
     title: "Box Build & System Integration",
     description: "Complete product assembly from PCBA to final packaging. Cable harness, mechanical assembly, firmware flashing, and labeling.",
     href: "/services/box-build",
-    image: "/images/placeholder-smt-assembly-line.jpg",
+    image: "/images/home-img-3.jpg",
   },
   {
     icon: Factory,
@@ -184,7 +184,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-smt-production-line.jpg"
+            src="/images/home-img-5.jpg"
             alt="SMT Production Line at Illuminious Factory"
             className="w-full h-full object-cover"
             loading="eager"

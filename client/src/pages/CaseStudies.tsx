@@ -62,7 +62,7 @@ export const caseStudies = [
       { metric: "Units Delivered", value: "5,000", description: "Launch quantity delivered 2 weeks before trade show" },
     ],
     testimonial: "Illuminious didn't just manufacture our product—they helped us navigate every challenge and delivered when others said it was impossible. They were as invested in our success as we were.",
-    image: "/images/service-dfm-design.jpg",
+    image: "/images/casestudies-img-3.jpg",
     tags: ["Wearables", "Rapid NPI", "Startup", "Fitness Tech"],
     fullContent: `
       <div class="lead-text">
@@ -183,7 +183,7 @@ export const caseStudies = [
       { metric: "Quality Rate", value: "99.7%", description: "First-pass yield rate" },
     ],
     testimonial: "Illuminious helped us achieve price parity with competitors while maintaining the quality our customers expect.",
-    image: "/images/case-study-hero.jpg",
+    image: "/images/casestudies-img-4.jpg",
     tags: ["Consumer Electronics", "IoT", "Scale-Up"],
     fullContent: `
       <div class="lead-text">
@@ -249,7 +249,7 @@ export const caseStudies = [
       { metric: "Cost Savings", value: "45%", description: "vs. US-based contract manufacturers" },
     ],
     testimonial: "Their documentation and quality systems exceeded what we expected from an overseas manufacturer.",
-    image: "/images/industry-medical.jpg",
+    image: "/images/casestudies-img-5.jpg",
     tags: ["Medical Device", "FDA", "Startup"],
     fullContent: `
       <div class="lead-text">
@@ -314,7 +314,7 @@ export const caseStudies = [
       { metric: "IP Rating", value: "IP67", description: "Dust-tight and waterproof" },
     ],
     testimonial: "They handled everything from PCB design to final certification. True one-stop shop.",
-    image: "/images/industry-industrial.jpg",
+    image: "/images/casestudies-img-6.jpg",
     tags: ["Industrial", "IoT", "Certifications"],
     fullContent: `
       <div class="lead-text">
@@ -379,7 +379,7 @@ export const caseStudies = [
       { metric: "Lead Time", value: "Reduced 40%", description: "With US warehouse stocking" },
     ],
     testimonial: "They understood automotive requirements from day one. No learning curve needed.",
-    image: "/images/industry-automotive.jpg",
+    image: "/images/casestudies-img-7.jpg",
     tags: ["Automotive", "Quality", "Supply Chain"],
     fullContent: `
       <div class="lead-text">

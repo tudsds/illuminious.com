@@ -181,7 +181,7 @@ export default function ServiceThroughHole() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-pcb-capacitors-macro.jpg" alt="Close-up of robust through-hole capacitors on a PCB" />
+                  <img src="/images/throughhole-img-2.jpg" alt="Close-up of robust through-hole capacitors on a PCB" />
                 </div>
               </AnimatedSection>
             </div>
@@ -251,7 +251,7 @@ export default function ServiceThroughHole() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-inspector-microscope.jpg" alt="Inspector examining a PCB solder joint under a microscope" />
+                  <img src="/images/throughhole-img-3.jpg" alt="Inspector examining a PCB solder joint under a microscope" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

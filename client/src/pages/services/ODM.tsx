@@ -85,7 +85,7 @@ export default function ServiceODM() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-engineers-collaborating.jpg"
+            src="/images/odm-img-1.jpg"
             alt="A team of engineers collaborating around a table with product prototypes"
             className="w-full h-full object-cover opacity-30"
           />

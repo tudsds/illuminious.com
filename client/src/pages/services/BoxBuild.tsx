@@ -160,7 +160,7 @@ export default function ServiceBoxBuild() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-box-build-assembly-line.jpg"
+            src="/images/boxbuild-img-1.jpg"
             alt="Technicians on a modern box build assembly line"
             className="w-full h-full object-cover opacity-30"
           />
@@ -226,7 +226,7 @@ export default function ServiceBoxBuild() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-final-product-assembly.jpg" alt="Technician performing final assembly of a complex electronic device" />
+                  <img src="/images/boxbuild-img-2.jpg" alt="Technician performing final assembly of a complex electronic device" />
                 </div>
               </AnimatedSection>
             </div>
@@ -298,7 +298,7 @@ export default function ServiceBoxBuild() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-functional-test-fixture.jpg" alt="A custom functional test fixture in use for quality control" />
+                  <img src="/images/boxbuild-img-3.jpg" alt="A custom functional test fixture in use for quality control" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

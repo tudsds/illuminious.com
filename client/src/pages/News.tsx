@@ -157,7 +157,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-02-06"),
     readTime: 5,
-    featuredImage: "/images/about-factory-equipment.jpg",
+    featuredImage: "/images/news-img-3.jpg",
     category: "Company News",
   },
   {
@@ -252,7 +252,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-01-15"),
     readTime: 3,
-    featuredImage: "/images/about-factory-equipment.jpg",
+    featuredImage: "/images/news-img-4.jpg",
     category: "Company News",
   },
   {
@@ -374,7 +374,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-01-10"),
     readTime: 4,
-    featuredImage: "/images/about-global-network.jpg",
+    featuredImage: "/images/news-img-5.jpg",
     category: "Partnership",
   },
   {
@@ -496,7 +496,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2026-01-05"),
     readTime: 2,
-    featuredImage: "/images/about-overseas-warehouse.jpg",
+    featuredImage: "/images/news-img-6.jpg",
     category: "Operations",
   },
   {
@@ -589,7 +589,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2025-12-20"),
     readTime: 3,
-    featuredImage: "/images/industry-medical.jpg",
+    featuredImage: "/images/news-img-7.jpg",
     category: "Certification",
   },
   {
@@ -715,7 +715,7 @@ export const newsItems = [
     `,
     publishedAt: new Date("2025-12-15"),
     readTime: 5,
-    featuredImage: "/images/news-industry.jpg",
+    featuredImage: "/images/news-img-8.jpg",
     category: "Industry Insights",
   },
 ];

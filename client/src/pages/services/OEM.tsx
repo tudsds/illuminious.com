@@ -240,7 +240,7 @@ export default function ServiceOEM() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-quality-control-inspection.jpg" alt="An inspector using a microscope to check a PCB for quality" />
+                  <img src="/images/oem-img-3.jpg" alt="An inspector using a microscope to check a PCB for quality" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

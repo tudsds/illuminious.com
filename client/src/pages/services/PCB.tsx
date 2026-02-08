@@ -212,7 +212,7 @@ export default function ServicePCB() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-functional-test-fixture.jpg" alt="A flying probe tester in action, testing a bare PCB" />
+                  <img src="/images/pcb-img-3.jpg" alt="A flying probe tester in action, testing a bare PCB" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

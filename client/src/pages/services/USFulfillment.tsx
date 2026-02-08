@@ -92,7 +92,7 @@ export default function ServiceUSFulfillment() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-warehouse-aisle.jpg"
+            src="/images/usfulfillment-img-1.jpg"
             alt="A clean and organized warehouse aisle with packages on shelves"
             className="w-full h-full object-cover opacity-30"
           />
@@ -158,7 +158,7 @@ export default function ServiceUSFulfillment() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-worker-scanning-package.jpg" alt="Warehouse worker scanning a package for shipment" />
+                  <img src="/images/usfulfillment-img-2.jpg" alt="Warehouse worker scanning a package for shipment" />
                 </div>
               </AnimatedSection>
             </div>

@@ -85,7 +85,7 @@ export default function ServiceSupplyChain() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-global-network.jpg"
+            src="/images/supplychain-img-1.jpg"
             alt="A digital map showing a global logistics network"
             className="w-full h-full object-cover opacity-30"
           />
@@ -151,7 +151,7 @@ export default function ServiceSupplyChain() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-supply-chain-manager.jpg" alt="Supply chain manager working at a computer with logistics data" />
+                  <img src="/images/supplychain-img-2.jpg" alt="Supply chain manager working at a computer with logistics data" />
                 </div>
               </AnimatedSection>
             </div>
@@ -221,7 +221,7 @@ export default function ServiceSupplyChain() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-cargo-ship.jpg" alt="Cargo ship and airplane representing global logistics" />
+                  <img src="/images/supplychain-img-3.jpg" alt="Cargo ship and airplane representing global logistics" />
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>

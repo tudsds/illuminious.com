@@ -21,7 +21,7 @@ export const blogPosts = [
     publishedAt: new Date("2026-02-06"),
     readTime: 9,
     authorName: "Illuminious Team",
-    featuredImage: "/images/blog-sustainable-manufacturing.jpg",
+    featuredImage: "/images/blog-img-1.jpg",
     category: "Industry Insights",
   },
   {
@@ -111,7 +111,7 @@ export const blogPosts = [
     publishedAt: new Date("2026-01-12"),
     readTime: 8,
     authorName: "Illuminious Team",
-    featuredImage: "/images/about-factory-equipment.jpg",
+    featuredImage: "/images/blog-img-2.jpg",
     category: "Startup Guide",
   },
   {
@@ -123,7 +123,7 @@ export const blogPosts = [
     publishedAt: new Date("2026-01-08"),
     readTime: 10,
     authorName: "Illuminious Team",
-    featuredImage: "/images/service-dfm-design.jpg",
+    featuredImage: "/images/blog-img-3.jpg",
     category: "Technical",
   },
   {
@@ -251,7 +251,7 @@ export const blogPosts = [
     publishedAt: new Date("2026-01-03"),
     readTime: 6,
     authorName: "Illuminious Team",
-    featuredImage: "/images/service-ai-glasses.jpg",
+    featuredImage: "/images/blog-img-4.jpg",
     category: "Industry Insights",
   },
   {
@@ -329,7 +329,7 @@ export const blogPosts = [
     publishedAt: new Date("2025-12-28"),
     readTime: 9,
     authorName: "Illuminious Team",
-    featuredImage: "/images/about-global-network.jpg",
+    featuredImage: "/images/blog-img-5.jpg",
     category: "Supply Chain",
   },
   {
@@ -341,7 +341,7 @@ export const blogPosts = [
     publishedAt: new Date("2025-12-20"),
     readTime: 12,
     authorName: "Illuminious Team",
-    featuredImage: "/images/hero-global-supply-chain.jpg",
+    featuredImage: "/images/blog-img-6.jpg",
     category: "Technical",
   },
   {
@@ -474,7 +474,7 @@ export const blogPosts = [
     publishedAt: new Date("2025-12-15"),
     readTime: 11,
     authorName: "Illuminious Team",
-    featuredImage: "/images/industry-medical.jpg",
+    featuredImage: "/images/blog-img-7.jpg",
     category: "Regulated Industries",
   },
 ];

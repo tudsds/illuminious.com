@@ -156,7 +156,7 @@ export default function ServicePCBA() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-pcb-assembly-line.jpg" alt="Overview of a modern PCB assembly line" />
+                  <img src="/images/pcba-img-2.jpg" alt="Overview of a modern PCB assembly line" />
                 </div>
               </AnimatedSection>
             </div>

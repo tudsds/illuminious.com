@@ -71,7 +71,7 @@ export default function ServiceTestingInspection() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/placeholder-aoi-inspection.jpg"
+            src="/images/testinginspection-img-1.jpg"
             alt="Technician operating an advanced 3D AOI machine"
             className="w-full h-full object-cover opacity-30"
           />
@@ -137,7 +137,7 @@ export default function ServiceTestingInspection() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/placeholder-engineer-testing-pcb.jpg" alt="Illuminious engineer performing a detailed functional test on a complex PCB assembly" />
+                  <img src="/images/testinginspection-img-2.jpg" alt="Illuminious engineer performing a detailed functional test on a complex PCB assembly" />
                 </div>
               </AnimatedSection>
             </div>
