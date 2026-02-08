@@ -98,6 +98,33 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Case Study Detail Pages -->
+  <url>
+    <loc>https://illuminious.com/case-studies/wearable-fitness-fast-launch</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/case-studies/smart-home-device-scaling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/case-studies/medical-device-fda-approval</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/case-studies/industrial-iot-global-certification</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/case-studies/automotive-supply-chain-diversification</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Industries Overview -->
   <url>
     <loc>https://illuminious.com/industries</loc>
@@ -159,6 +186,43 @@
     <loc>https://illuminious.com/news</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post Detail Pages -->
+  <url>
+    <loc>https://illuminious.com/blog/sustainable-manufacturing-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/blog/choosing-right-manufacturing-partner</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/blog/dfm-best-practices</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/blog/ai-hardware-trends-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/blog/supply-chain-diversification-strategy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/blog/iot-device-manufacturing-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://illuminious.com/blog/medical-device-manufacturing-fda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Startups Program -->
