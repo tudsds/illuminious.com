@@ -11,6 +11,9 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import ServiceNPI from "./pages/services/NPI";
 import ServicePCBA from "./pages/services/PCBA";
+import ServiceSMTAssembly from "./pages/services/SMTAssembly";
+import ServiceThroughHole from "./pages/services/ThroughHole";
+import ServiceTestingInspection from "./pages/services/TestingInspection";
 import ServiceBoxBuild from "./pages/services/BoxBuild";
 import ServiceInjection from "./pages/services/Injection";
 import ServiceSupplyChain from "./pages/services/SupplyChain";
@@ -54,6 +57,9 @@ function Router() {
       <Route path="/services" component={Services} />
       <Route path="/services/npi-engineering" component={ServiceNPI} />
       <Route path="/services/pcb-assembly" component={ServicePCBA} />
+      <Route path="/services/smt-assembly" component={ServiceSMTAssembly} />
+      <Route path="/services/through-hole" component={ServiceThroughHole} />
+      <Route path="/services/testing-inspection" component={ServiceTestingInspection} />
       <Route path="/services/box-build" component={ServiceBoxBuild} />
       <Route path="/services/injection-molding" component={ServiceInjection} />
       <Route path="/services/supply-chain" component={ServiceSupplyChain} />
@@ -107,31 +113,41 @@ function Router() {
 function App() {
   const [location] = useLocation();
 
-  // Track virtual pageviews for GTM and GA4
+  // Track virtual pageviews for GTM and GA4 on every route change
   useEffect(() => {
-    // GTM dataLayer push for virtual pageview
-    if (typeof window !== "undefined" && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
-        event: "pageview",
-        page: {
-          path: location,
-          url: window.location.href,
-          title: document.title,
-        },
-      });
-    }
+    // Small delay to ensure document.title is updated by SEO component
+    const timer = setTimeout(() => {
+      // GTM dataLayer push for virtual pageview
+      if (typeof window !== "undefined" && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: "virtual_page_view",
+          page: {
+            path: location,
+            url: window.location.href,
+            title: document.title,
+          },
+        });
+      }
 
-    // GA4 pageview tracking
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("config", "G-8903WGE2L3", {
-        page_path: location,
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-    }
+      // GA4 pageview tracking
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "page_view", {
+          page_path: location,
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
+
+      // Meta Pixel pageview tracking
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq("track", "PageView");
+      }
+    }, 100);
 
     // Scroll to top on route change
     window.scrollTo(0, 0);
+
+    return () => clearTimeout(timer);
   }, [location]);
 
   return (

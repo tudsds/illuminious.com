@@ -11,9 +11,9 @@
 }
 
 @font-face {
-  font-family: "Space Grotesk";
-  src: url("https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2") format("woff2");
-  font-weight: 300 700;
+  font-family: "Open Sans";
+  src: url("https://fonts.gstatic.com/s/opensans/v40/memSYaGs76AUhyKEDSRmYCUYaaIKEstOEls.woff2") format("woff2");
+  font-weight: 300 800;
   font-display: swap;
 }
 
@@ -35,8 +35,8 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
