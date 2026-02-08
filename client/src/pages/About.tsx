@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle, Factory, Globe, HardHat, ShieldCheck, Users, A
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import Breadcrumb from "@/components/Breadcrumb";
+import FlagIcon from "@/components/FlagIcon";
 
 const pageSections = [
   { id: "mission", title: "Our Mission" },
@@ -26,7 +27,7 @@ const locations = [
     role: "US Headquarters",
     description: "Our US headquarters serves as the primary interface for all customer relationships. This is where project management, DFM engineering review, supply chain strategy, and commercial operations are coordinated. All contracts are signed in the United States and governed by US law, providing our clients with the legal protections and business practices they expect from a domestic partner. Our Palo Alto team includes project managers, supply chain strategists, and customer success engineers who serve as your single point of contact throughout the entire manufacturing lifecycle.",
     image: "/images/DEPLOYED_engineer-dfa-review-palo-alto.jpg",
-    flag: "🇺🇸",
+    flag: "US" as const,
     highlights: ["US contracts & IP protection", "Project management hub", "DFM engineering review", "Customer success team"],
   },
   {
@@ -34,7 +35,7 @@ const locations = [
     role: "NPI & Advanced Manufacturing",
     description: "Our Shenzhen facility is purpose-built for speed and complexity. Located in the heart of the world's largest electronics manufacturing ecosystem, this factory specializes in new product introduction (NPI), rapid prototyping, and complex multi-layer PCB assembly. With direct access to thousands of component suppliers within a 50-kilometer radius, we can source even the most specialized components in hours rather than weeks. Our Shenzhen team delivers first-article prototypes in as little as 72 hours, enabling rapid design iteration cycles that dramatically compress your time-to-market.",
     image: "/images/DEPLOYED_about-team.jpg",
-    flag: "🇨🇳",
+    flag: "CN" as const,
     highlights: ["72-hour prototype turnaround", "Complex multi-layer PCBA", "Direct supply chain access", "NPI engineering center"],
   },
   {
@@ -42,7 +43,7 @@ const locations = [
     role: "Volume Production & Tariff Optimization",
     description: "Our Batam facility operates within Indonesia's designated Free Trade Zone (FTZ), providing significant tariff advantages for products destined for the US and European markets. This factory mirrors the equipment, processes, and quality systems of our Shenzhen facility, ensuring seamless production transfer from NPI to volume manufacturing. The Batam FTZ designation means that products manufactured here can enter many markets with reduced or eliminated import duties — a critical cost advantage that can save our clients 15-25% on landed costs compared to manufacturing in mainland China.",
     image: "/images/DEPLOYED_placeholder-npi-team-planning.jpg",
-    flag: "🇮🇩",
+    flag: "ID" as const,
     highlights: ["Free Trade Zone benefits", "15-25% tariff savings", "Mirror of Shenzhen quality", "Volume production capacity"],
   },
 ];
@@ -226,7 +227,7 @@ export default function About() {
                     </div>
                     <div className={index % 2 === 1 ? 'md:order-1' : ''}>
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="text-3xl">{loc.flag}</span>
+                        <FlagIcon code={loc.flag} className="w-10 h-7" />
                         <div>
                           <h3 className="font-bold text-2xl text-illuminious-navy font-heading">{loc.name}</h3>
                           <p className="text-sm font-semibold text-illuminious-blue">{loc.role}</p>

@@ -20,6 +20,7 @@ import SEO from "@/components/SEO";
 import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { trpc } from "@/lib/trpc";
+import FlagIcon from "@/components/FlagIcon";
 
 const contactInfo = [
   {
@@ -53,25 +54,25 @@ const offices = [
     location: "United States",
     city: "Palo Alto, CA",
     type: "Headquarters",
-    flag: "🇺🇸",
+    flag: "US" as const,
   },
   {
     location: "Hong Kong",
     city: "Hong Kong SAR",
     type: "R&D Center",
-    flag: "🇭🇰",
+    flag: "HK" as const,
   },
   {
     location: "China",
     city: "Shenzhen, GD",
     type: "Production Center",
-    flag: "🇨🇳",
+    flag: "CN" as const,
   },
   {
     location: "Indonesia",
     city: "Batam Island FTZ",
     type: "Production Center",
-    flag: "🇮🇩",
+    flag: "ID" as const,
   },
 ];
 
@@ -371,7 +372,7 @@ export default function Contact() {
                         key={office.location}
                         className="flex items-start gap-3 p-3 rounded-lg bg-illuminious-light/30"
                       >
-                        <span className="text-2xl text-illuminious-navy">{office.flag}</span>
+                        <FlagIcon code={office.flag} className="w-8 h-5.5" />
                         <div>
                           <p className="font-medium text-illuminious-navy">
                             {office.location}

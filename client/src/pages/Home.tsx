@@ -27,6 +27,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import FlagIcon from "@/components/FlagIcon";
 
 const stats = [
   { value: "8", label: "SMT Production Lines" },
@@ -86,21 +87,21 @@ const advantages = [
 
 const locations = [
   {
-    flag: "🇺🇸",
+    flag: "US" as const,
     country: "US",
     city: "Palo Alto, CA",
     role: "Engineering & Management",
     description: "Our US headquarters handles project management, DFM review, supply chain strategy, and client communication. Your single point of contact.",
   },
   {
-    flag: "🇨🇳",
+    flag: "CN" as const,
     country: "CN",
     city: "Shenzhen",
     role: "NPI & Advanced Manufacturing",
     description: "Our Shenzhen factory specializes in rapid prototyping, complex multi-layer PCBA, and new product introduction. 72-hour turnaround on prototypes.",
   },
   {
-    flag: "🇮🇩",
+    flag: "ID" as const,
     country: "ID",
     city: "Batam FTZ",
     role: "Volume Production",
@@ -440,7 +441,7 @@ export default function Home() {
               <AnimatedSection key={loc.country} delay={index * 0.1}>
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-illuminious-sky/50 transition-colors h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">{loc.flag}</span>
+                    <FlagIcon code={loc.flag} className="w-12 h-8" />
                     <div>
                       <h3 className="text-xl font-bold text-white font-heading">{loc.city}</h3>
                       <p className="text-illuminious-sky text-sm">{loc.role}</p>

@@ -23,6 +23,7 @@ import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import FlagIcon from "@/components/FlagIcon";
 
 const services = [
   {
@@ -39,7 +40,8 @@ const services = [
     ],
     href: "/services/npi-engineering",
     phase: "Phase 1 & 2",
-    location: "🇺🇸 USA + 🇨🇳 Shenzhen",
+    location: "USA + Shenzhen",
+    locationFlags: ["US", "CN"] as const,
   },
   {
     icon: Zap,
@@ -55,7 +57,8 @@ const services = [
     ],
     href: "/services/rapid-prototyping",
     phase: "Phase 1 & 2",
-    location: "🇨🇳 Shenzhen",
+    location: "Shenzhen",
+    locationFlags: ["CN"] as const,
   },
   {
     icon: Cpu,
@@ -71,7 +74,8 @@ const services = [
     ],
     href: "/services/pcb-assembly",
     phase: "Phase 2 & 3",
-    location: "🇨🇳 Shenzhen & 🇮🇩 Batam",
+    location: "Shenzhen & Batam",
+    locationFlags: ["CN", "ID"] as const,
   },
   {
     icon: Wrench,
@@ -87,7 +91,8 @@ const services = [
     ],
     href: "/services/injection-molding",
     phase: "Phase 2 & 3",
-    location: "🇨🇳 Shenzhen & 🇮🇩 Batam",
+    location: "Shenzhen & Batam",
+    locationFlags: ["CN", "ID"] as const,
   },
   {
     icon: Package,
@@ -103,7 +108,8 @@ const services = [
     ],
     href: "/services/box-build",
     phase: "Phase 3",
-    location: "🇮🇩 Batam",
+    location: "Batam",
+    locationFlags: ["ID"] as const,
   },
   {
     icon: TestTube2,
@@ -119,7 +125,8 @@ const services = [
     ],
     href: "/quality",
     phase: "All Phases",
-    location: "🌐 All Facilities",
+    location: "All Facilities",
+    locationFlags: [] as const,
   },
   {
     icon: Truck,
@@ -135,7 +142,8 @@ const services = [
     ],
     href: "/services/supply-chain",
     phase: "All Phases",
-    location: "🌐 Global",
+    location: "Global",
+    locationFlags: [] as const,
   },
   {
     icon: Globe,
@@ -151,7 +159,8 @@ const services = [
     ],
     href: "/services/us-fulfillment",
     phase: "Phase 4",
-    location: "🇺🇸 USA",
+    location: "USA",
+    locationFlags: ["US"] as const,
   },
 ];
 
@@ -160,7 +169,7 @@ const phases = [
     number: 1,
     title: "Strategy & DFM",
     location: "USA",
-    flag: "🇺🇸",
+    flag: "US" as const,
     color: "bg-illuminious-blue",
     description: "US-based engineering, contracts, and IP protection strategy.",
   },
@@ -168,7 +177,7 @@ const phases = [
     number: 2,
     title: "NPI Accelerator",
     location: "Shenzhen",
-    flag: "🇨🇳",
+    flag: "CN" as const,
     color: "bg-illuminious-sky",
     description: "Rapid prototyping, tooling, and engineering validation builds.",
   },
@@ -176,7 +185,7 @@ const phases = [
     number: 3,
     title: "Scale Engine",
     location: "Indonesia",
-    flag: "🇮🇩",
+    flag: "ID" as const,
     color: "bg-illuminious-navy",
     description: "Tariff-free mass production, assembly, and system integration.",
   },
@@ -184,7 +193,7 @@ const phases = [
     number: 4,
     title: "Market Delivery",
     location: "USA",
-    flag: "🇺🇸",
+    flag: "US" as const,
     color: "bg-green-500",
     description: "Domestic warehousing, B2B/D2C fulfillment, and support.",
   },
@@ -250,7 +259,7 @@ export default function Services() {
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-xl">{phase.flag}</span>
+                      <FlagIcon code={phase.flag} className="w-7 h-5" />
                       <span className="text-white font-semibold">{phase.title}</span>
                     </div>
                     <p className="text-white/80 text-sm">{phase.description}</p>
@@ -310,7 +319,12 @@ export default function Services() {
                         <span className="text-xs px-2 py-1 rounded-full bg-gray-200 text-illuminious-navy font-medium">
                           {service.phase}
                         </span>
-                        <span className="text-xs text-muted-foreground font-medium">{service.location}</span>
+                        <span className="text-xs text-muted-foreground font-medium inline-flex items-center gap-1">
+                          {service.locationFlags && service.locationFlags.length > 0 && service.locationFlags.map((code: "US" | "CN" | "ID" | "HK", i: number) => (
+                            <FlagIcon key={i} code={code} className="w-4 h-3 inline-block" />
+                          ))}
+                          {service.location}
+                        </span>
                       </div>
                       <span className="inline-flex items-center text-sm font-semibold text-illuminious-blue group-hover:gap-2 transition-all">
                         Learn more

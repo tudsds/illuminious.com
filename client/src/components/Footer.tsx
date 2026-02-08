@@ -1,11 +1,12 @@
 import { Link, useLocation } from "wouter";
 import { Mail, MapPin, Phone, Linkedin, Twitter, Globe, Factory, Shield } from "lucide-react";
+import FlagIcon from "./FlagIcon";
 
 const globalOffices = [
-  { location: "United States", city: "Palo Alto, CA", type: "Headquarters", flag: "🇺🇸" },
-  { location: "Hong Kong", city: "Hong Kong SAR", type: "R&D Center", flag: "🇭🇰" },
-  { location: "China", city: "Shenzhen, GD", type: "Manufacturing", flag: "🇨🇳" },
-  { location: "Indonesia", city: "Batam Island FTZ", type: "Manufacturing", flag: "🇮🇩" },
+  { location: "United States", city: "Palo Alto, CA", type: "Headquarters", flag: "US" as const },
+  { location: "Hong Kong", city: "Hong Kong SAR", type: "R&D Center", flag: "HK" as const },
+  { location: "China", city: "Shenzhen, GD", type: "Manufacturing", flag: "CN" as const },
+  { location: "Indonesia", city: "Batam Island FTZ", type: "Manufacturing", flag: "ID" as const },
 ];
 
 const certifications = [
@@ -211,7 +212,7 @@ export default function Footer() {
                   isStartupsPage ? "bg-cyber-purple/10" : "bg-white/5"
                 }`}>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-base">{office.flag}</span>
+                    <FlagIcon code={office.flag} className="w-5 h-3.5" />
                     <span className="text-sm font-medium text-white">{office.location}</span>
                   </div>
                   <p className="text-xs text-gray-400">{office.city}</p>
