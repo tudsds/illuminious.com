@@ -121,7 +121,7 @@ export default function About() {
           <img
             src="/images/DEPLOYED_about-factory-equipment.jpg"
             alt="Illuminious manufacturing facility with engineers and production lines"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
         </div>
@@ -428,5 +428,6 @@ export default function About() {
     </>
   );
 }
+
 
 

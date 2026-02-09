@@ -88,7 +88,7 @@ export default function Startups() {
           <img
             src="/images/DEPLOYED_startup-cyberpunk-hero.jpg"
             alt="Cyberpunk-themed startup bridge between human innovation and robotic manufacturing"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-50"
             loading="eager"
             fetchPriority="high"
           />
@@ -396,4 +396,5 @@ export default function Startups() {
     </>
   );
 }
+
 

@@ -116,7 +116,7 @@ export default function FactoryTour() {
           <img
             src="/images/DEPLOYED_placeholder-smt-production-line.jpg"
             alt="An expansive, clean, and modern factory floor with multiple production lines"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent" />
         </div>
@@ -213,4 +213,5 @@ export default function FactoryTour() {
     </>
   );
 }
+
 

@@ -130,7 +130,7 @@ export default function Capabilities() {
           <img
             src="/images/DEPLOYED_hero-ai-hardware.jpg"
             alt="Illuminious manufacturing facility showcasing advanced equipment and production lines"
-            className="w-full h-full object-cover opacity-25"
+            className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
         </div>
@@ -335,4 +335,5 @@ export default function Capabilities() {
     </>
   );
 }
+
 
