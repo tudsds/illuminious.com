@@ -480,6 +480,74 @@ Learn how a US smart home company scaled from 1,000 to 50,000 units/month with 3
 }
 ```
 
+### 7.4 Results 区域响应式设计规范
+
+**颜色规范（严格遵循）**:
+- 背景色：必须使用 `bg-illuminious-light` (Light #D6DEEE)
+- 文字颜色：必须使用 `text-illuminious-navy` (Navy #132843)
+- 辅助文字：使用 `text-illuminious-navy/70` (70%透明度)
+- **禁止**使用其他颜色（如blue、sky等），确保视觉统一
+
+**HTML结构模板**：
+
+```html
+<!-- 移动端优先的响应式Results网格 -->
+<div class="results-grid grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <div class="result-card bg-illuminious-light p-4 sm:p-6 rounded-lg text-center">
+    <div class="result-value text-2xl sm:text-3xl font-bold text-illuminious-navy mb-1">
+      35%
+    </div>
+    <div class="result-label text-sm text-illuminious-navy/70 mb-2">
+      Cost Reduction
+    </div>
+    <p class="text-sm text-illuminious-navy/70">
+      Landed cost savings through global manufacturing
+    </p>
+  </div>
+  <!-- 重复2次，共3个指标 -->
+</div>
+```
+
+**响应式断点说明**：
+
+| 设备类型 | 断点 | 网格列数 | 内边距 | 字号 |
+|---------|------|---------|--------|------|
+| **移动端** | < 640px | 1列 (grid-cols-1) | p-4 | value: text-2xl, label: text-sm |
+| **平板** | 640px - 1024px | 3列 (grid-cols-3) | p-4 | value: text-2xl, label: text-sm |
+| **桌面端** | > 1024px | 3列 (grid-cols-3) | p-6 | value: text-3xl, label: text-sm |
+
+**移动端优化要点**：
+1. **单列布局**：手机端使用单列显示，避免内容拥挤
+2. **垂直堆叠**：3个指标卡片垂直排列，便于滚动浏览
+3. **触摸友好**：卡片间距适中（gap-4），易于点击
+4. **文字大小**：保持可读性，value文字不小于text-2xl
+5. **避免换行**：数字和标签保持单行显示
+
+**预览卡片样式（CaseStudies.tsx列表页）**：
+
+```tsx
+// 响应式Results预览 - 手机端单列，平板/桌面端3列
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
+  {study.results.map((result) => (
+    <div key={result.metric} className="text-center p-3 rounded-lg bg-illuminious-light">
+      <div className="text-lg sm:text-sm font-bold text-illuminious-navy">
+        {result.value}
+      </div>
+      <div className="text-sm sm:text-xs text-illuminious-navy/70">
+        {result.metric}
+      </div>
+    </div>
+  ))}
+</div>
+```
+
+**重要提醒**：
+- ✅ 只能使用 `bg-illuminious-light` 作为背景色
+- ✅ 只能使用 `text-illuminious-navy` 作为主要文字色
+- ❌ 禁止使用 `text-illuminious-blue` 或其他颜色
+- ❌ 禁止使用 `bg-illuminious-blue/20` 等变体背景色
+- ✅ 使用 `sm:` 前缀实现响应式断点切换
+
 ---
 
 ## 八、客户证言指南

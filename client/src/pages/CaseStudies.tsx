@@ -45,20 +45,20 @@ export const caseStudies = [
 </div>
 
 <h2>📊 Quantifiable Results</h2>
-<div class="results-grid">
-  <div class="result-card">
-    <div class="result-value">10</div>
-    <div class="result-label">Weeks to Scale</div>
+<div class="results-grid grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <div class="result-card bg-illuminious-light p-4 sm:p-6 rounded-lg text-center">
+    <div class="result-value text-2xl sm:text-3xl font-bold text-illuminious-navy mb-1">10</div>
+    <div class="result-label text-sm text-illuminious-navy/70 mb-2">Weeks to Scale</div>
     <p>Slashed standard production lead times by over 50% using parallel-track engineering.</p>
   </div>
-  <div class="result-card">
-    <div class="result-value">$1.2M</div>
-    <div class="result-label">Tariff Savings</div>
+  <div class="result-card bg-illuminious-light p-4 sm:p-6 rounded-lg text-center">
+    <div class="result-value text-2xl sm:text-3xl font-bold text-illuminious-navy mb-1">$1.2M</div>
+    <div class="result-label text-sm text-illuminious-navy/70 mb-2">Tariff Savings</div>
     <p>Estimated direct duty savings in the first six months of production.</p>
   </div>
-  <div class="result-card">
-    <div class="result-value">99.5%</div>
-    <div class="result-label">First-Pass Yield</div>
+  <div class="result-card bg-illuminious-light p-4 sm:p-6 rounded-lg text-center">
+    <div class="result-value text-2xl sm:text-3xl font-bold text-illuminious-navy mb-1">99.5%</div>
+    <div class="result-label text-sm text-illuminious-navy/70 mb-2">First-Pass Yield</div>
     <p>Zero-defect mindset enabled by custom automated testing fixtures.</p>
   </div>
 </div>
@@ -140,20 +140,20 @@ export const caseStudies = [
       
       <h2>📊 Measurable Results</h2>
       
-      <div class="results-grid">
-        <div class="result-card">
-          <div class="result-value">10</div>
-          <div class="result-label">Weeks to Market</div>
+      <div class="results-grid grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="result-card bg-illuminious-light p-4 sm:p-6 rounded-lg text-center">
+          <div class="result-value text-2xl sm:text-3xl font-bold text-illuminious-navy mb-1">10</div>
+          <div class="result-label text-sm text-illuminious-navy/70 mb-2">Weeks to Market</div>
           <p>From project kickoff to mass production—60% faster than industry standard</p>
         </div>
-        <div class="result-card">
-          <div class="result-value">98.2%</div>
-          <div class="result-label">First-Pass Yield</div>
+        <div class="result-card bg-illuminious-light p-4 sm:p-6 rounded-lg text-center">
+          <div class="result-value text-2xl sm:text-3xl font-bold text-illuminious-navy mb-1">98.2%</div>
+          <div class="result-label text-sm text-illuminious-navy/70 mb-2">First-Pass Yield</div>
           <p>Exceptional quality from day one, with minimal rework required</p>
         </div>
-        <div class="result-card">
-          <div class="result-value">2 Weeks</div>
-          <div class="result-label">Early Delivery</div>
+        <div class="result-card bg-illuminious-light p-4 sm:p-6 rounded-lg text-center">
+          <div class="result-value text-2xl sm:text-3xl font-bold text-illuminious-navy mb-1">2 Weeks</div>
+          <div class="result-label text-sm text-illuminious-navy/70 mb-2">Early Delivery</div>
           <p>Completed 5,000 units 14 days before the critical trade show deadline</p>
         </div>
       </div>
@@ -594,12 +594,12 @@ export default function CaseStudies() {
                       <p className="text-sm text-illuminious-blue font-medium mb-3">{study.industry}</p>
                       <p className="text-illuminious-navy/70 text-sm line-clamp-2 mb-4">{study.challenge}</p>
                       
-                      {/* Results Preview */}
-                      <div className="grid grid-cols-3 gap-2 mb-4">
+                      {/* Results Preview - Mobile Optimized */}
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
                         {study.results.map((result) => (
-                          <div key={result.metric} className="text-center p-2 rounded-lg bg-illuminious-light/30">
-                            <div className="text-sm font-bold text-illuminious-blue">{result.value}</div>
-                            <div className="text-xs text-illuminious-navy/70">{result.metric}</div>
+                          <div key={result.metric} className="text-center p-3 rounded-lg bg-illuminious-light">
+                            <div className="text-lg sm:text-sm font-bold text-illuminious-navy">{result.value}</div>
+                            <div className="text-sm sm:text-xs text-illuminious-navy/70">{result.metric}</div>
                           </div>
                         ))}
                       </div>
@@ -656,5 +656,6 @@ export default function CaseStudies() {
     </>
   );
 }
+
 
 
