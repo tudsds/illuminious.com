@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -423,7 +424,9 @@ export default function About() {
       </main>
 
       <Footer />
+      <FloatingContact />
     </>
   );
 }
+
 

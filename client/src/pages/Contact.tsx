@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 import SEO from "@/components/SEO";
 import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -410,6 +411,7 @@ export default function Contact() {
       </section>
 
       <Footer />
+      <FloatingContact />
     </>
   );
 }

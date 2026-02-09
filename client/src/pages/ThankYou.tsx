@@ -5,6 +5,7 @@ import { CheckCircle, ArrowRight, Home, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 
 export default function ThankYou() {
   // GTM event tracking
@@ -187,6 +188,7 @@ export default function ThankYou() {
       </main>
 
       <Footer />
+      <FloatingContact />
     </div>
   );
 }
