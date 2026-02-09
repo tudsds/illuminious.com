@@ -16,6 +16,63 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const caseStudies = [
 {
+    id: "ai-wearable-rapid-scale",
+    slug: "scaling-silicon-valley-ai-wearable-necklace",
+    title: "Scaling a Silicon Valley AI Wearable: From Prototype to 50,000 Units in 6 Months",
+    industry: "AI Hardware / Wearables",
+    challenge: "A Palo Alto-based startup faced a critical bottleneck: their AI-powered fitness necklace went viral on social media, but their local prototype shop couldn't scale. They needed 50,000 units delivered in 6 months while avoiding the 25% Section 301 tariffs on Chinese imports.",
+    solution: "Illuminious deployed the 'China Plus Two' playbook. We transitioned their DFM-ready design to our Shenzhen NPI center for 72-hour prototyping, then rapidly transferred the validated process to our Batam, Indonesia facility for high-volume, tariff-optimized production.",
+    results: [
+      { metric: "Time to Market", value: "10 Weeks", description: "From design handover to mass production launch" },
+      { metric: "Tariff Savings", value: "25%", description: "Direct savings via Indonesia-to-US shipping" },
+      { metric: "Yield Rate", value: "99.5%", description: "Achieved through rigorous automated optical inspection (AOI)" }
+    ],
+    testimonial: "Illuminious turned what could have been a supply chain disaster into our biggest competitive advantage. Their ability to prototype in Shenzhen and mass-produce in Indonesia is a game-changer.",
+    image: "/images/case-study-ai-pendant-scaling.jpg",
+    tags: ["AI Hardware", "Rapid NPI", "Tariff Optimization", "Startup"],
+    fullContent: `<div class="lead-text">
+  <p><strong>The Challenge:</strong> Viral success is every startup's dream and every operations manager's nightmare. For 'Aura AI', a 10x surge in holiday pre-orders meant they needed to move from producing hundreds of units in a California lab to tens of thousands on a professional line—without sacrificing quality or losing their entire margin to import tariffs.</p>
+</div>
+
+<div class="highlight-box">
+  <h4>💡 The Hybrid Solution</h4>
+  <p>We implemented our <strong>Tri-Node Scaling Protocol</strong>:</p>
+  <ul class="check-list">
+    <li><strong>Palo Alto (US):</strong> Real-time DFM (Design for Manufacturing) collaboration to optimize the pendant's internal chassis for high-speed assembly.</li>
+    <li><strong>Shenzhen (China):</strong> Sourced high-performance components and completed three iterations of tooling and pilot builds in record time.</li>
+    <li><strong>Batam (Indonesia):</strong> Final assembly and fulfillment. By establishing the primary line here, Aura AI bypassed Section 301 tariffs entirely.</li>
+  </ul>
+</div>
+
+<h2>📊 Quantifiable Results</h2>
+<div class="results-grid">
+  <div class="result-card">
+    <div class="result-value">10</div>
+    <div class="result-label">Weeks to Scale</div>
+    <p>Slashed standard production lead times by over 50% using parallel-track engineering.</p>
+  </div>
+  <div class="result-card">
+    <div class="result-value">$1.2M</div>
+    <div class="result-label">Tariff Savings</div>
+    <p>Estimated direct duty savings in the first six months of production.</p>
+  </div>
+  <div class="result-card">
+    <div class="result-value">99.5%</div>
+    <div class="result-label">First-Pass Yield</div>
+    <p>Zero-defect mindset enabled by custom automated testing fixtures.</p>
+  </div>
+</div>
+
+<div class="testimonial-box">
+  <blockquote>
+    <p>"Partnering with Illuminious was the best decision we made. They don't just manufacture; they think like engineers and founders. They navigated the geopolitical complexity for us, allowing us to focus on our software and customers."</p>
+  </blockquote>
+  <div class="testimonial-author">
+    <strong>James Wu</strong>, Founder at Aura AI
+  </div>
+</div>`
+  },
+{
     id: "fda-wearable-diagnostic",
     slug: "illuminious-accelerates-fda-approval-for-medical-device-startup",
     title: "How Illuminious Accelerated FDA Approval for a Wearable Diagnostic Tool",

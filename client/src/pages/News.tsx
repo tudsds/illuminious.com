@@ -11,6 +11,53 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const newsItems = [
 {
+    id: 3,
+    slug: "illuminious-expands-indonesia-ai-wearable-lines",
+    title: "Illuminious Expands High-Tech Production Lines in Indonesia to Support Global AI Wearable Surge",
+    excerpt: "Illuminious announces the addition of four new ISO 7 cleanroom assembly lines in its Indonesia facility, specifically designed for high-precision AI hardware and smart wearables.",
+    content: `<div class="lead-text">
+  <p><strong>Batam, Indonesia — Illuminious LLC is proud to announce a major expansion of its Southeast Asian manufacturing footprint</strong> with the commissioning of four additional state-of-the-art cleanroom assembly lines. This development directly addresses the skyrocketing global demand for high-precision AI hardware and smart wearable devices.</p>
+</div>
+
+<div class="highlight-box">
+  <h4>📋 Key Expansion Details</h4>
+  <ul class="check-list">
+    <li><strong>What:</strong> 15,000 sq ft addition of ISO 7 (Class 10,000) cleanroom space</li>
+    <li><strong>When:</strong> Operations commenced February 2026</li>
+    <li><strong>Capabilities:</strong> Advanced SMT, micro-assembly, and acoustic testing for AI pendants and glasses</li>
+    <li><strong>Impact:</strong> 40% increase in regional production capacity</li>
+  </ul>
+</div>
+
+<div class="quote-box">
+  <blockquote>
+    <p>"Our Indonesia facility is a cornerstone of our 'China Plus Two' strategy. This expansion allows our US and European partners to scale their AI hardware innovations rapidly while benefiting from significant tariff optimizations and a robust local supply chain."</p>
+  </blockquote>
+  <cite>— Sarah Chen, VP of Operations at Illuminious</cite>
+</div>
+
+<div class="feature-grid">
+  <div class="feature-item">
+    <h4>🛡️ Advanced IP Silos</h4>
+    <p>Enhanced physical and digital security protocols implemented for secure multi-client manufacturing environments.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🌱 Sustainable Energy</h4>
+    <p>The expansion is powered by a new rooftop solar array, aligning with our 2026 carbon neutrality goals.</p>
+  </div>
+</div>
+
+<div class="conclusion-box">
+  <h3>Scaling into the Future</h3>
+  <p>As the AI hardware revolution accelerates, Illuminious remains committed to providing the agile, secure, and cost-effective manufacturing infrastructure our clients need to lead the market. <strong>Contact us for a facility tour today.</strong></p>
+</div>`,
+    publishedAt: new Date("2026-02-09"),
+    readTime: 8,
+    authorName: "Illuminious Team",
+    featuredImage: "/images/news-indonesia-facility-expansion.jpg",
+    category: "Operations",
+  },
+{
     id: 1,
     slug: "illuminious-opens-new-smart-factory-in-vietnam",
     title: "Illuminious Opens New Smart Factory in Vietnam to Expand Global Capacity",

@@ -117,6 +117,12 @@
 
   <!-- Case Study Detail Pages -->
   <url>
+    <loc>https://illuminious.com/case-studies/scaling-silicon-valley-ai-wearable-necklace</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://illuminious.com/case-studies/wearable-fitness-fast-launch</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -205,7 +211,21 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- News Detail Pages -->
+  <url>
+    <loc>https://illuminious.com/news/illuminious-expands-indonesia-ai-wearable-lines</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog Post Detail Pages -->
+  <url>
+    <loc>https://illuminious.com/blog/illuminious-expands-indonesia-ai-wearable-lines</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://illuminious.com/blog/china-plus-two-manufacturing-strategy-2026</loc>
     <lastmod>2026-02-08</lastmod>
