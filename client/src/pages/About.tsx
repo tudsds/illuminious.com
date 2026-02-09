@@ -150,7 +150,7 @@ export default function About() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -166,7 +166,7 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Our Mission: To Be the World's Most Trusted Electronics Manufacturing Partner</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     In a world of abstract supply chains and faceless vendors, we believe in partnership. Our mission is to provide a manufacturing experience built on trust, transparency, and technical excellence. We don't see ourselves as a service provider — we see ourselves as an extension of your engineering team, your dedicated co-pilots on the journey from concept to mass production.
                   </p>
@@ -188,11 +188,11 @@ export default function About() {
         </section>
 
         {/* Our Story Section */}
-        <section id="story" className="py-20 bg-gray-50">
+        <section id="story" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading text-center">Our Story</h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+              <div className="space-y-4 text-illuminious-navy leading-relaxed text-lg">
                 <p>
                   Illuminious was founded on a simple observation: hardware companies — especially startups and mid-size OEMs — deserve better manufacturing partners. Too many companies struggle with opaque supply chains, unreliable quality, communication barriers, and the constant fear that their intellectual property is not being protected. We set out to solve these problems by building a manufacturing company from the ground up with transparency, quality, and partnership as its core principles.
                 </p>
@@ -212,7 +212,7 @@ export default function About() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Global Manufacturing Footprint</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A strategic network of our own facilities, designed for resilience, speed, and cost optimization. Every facility operates under the same quality management system, uses compatible equipment, and follows identical manufacturing procedures.
               </p>
             </AnimatedSection>
@@ -233,10 +233,10 @@ export default function About() {
                           <p className="text-sm font-semibold text-illuminious-blue">{loc.role}</p>
                         </div>
                       </div>
-                      <p className="text-gray-700 leading-relaxed mb-4">{loc.description}</p>
+                      <p className="text-illuminious-navy leading-relaxed mb-4">{loc.description}</p>
                       <div className="grid grid-cols-2 gap-2">
                         {loc.highlights.map((h) => (
-                          <div key={h} className="flex items-center gap-2 text-sm text-gray-600">
+                          <div key={h} className="flex items-center gap-2 text-sm text-illuminious-sky">
                             <CheckCircle className="w-4 h-4 text-illuminious-blue flex-shrink-0" />
                             <span>{h}</span>
                           </div>
@@ -255,7 +255,7 @@ export default function About() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-white mb-4 font-heading">Vertically Integrated Manufacturing Capabilities</h2>
-              <p className="text-lg text-gray-300">
+              <p className="text-lg text-white">
                 Every process needed to take your electronics product from bare PCB to finished, packaged product — all under one roof, all managed by our own engineers.
               </p>
             </AnimatedSection>
@@ -265,7 +265,7 @@ export default function About() {
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-illuminious-sky/50 transition-colors h-full">
                     <cap.icon className="w-8 h-8 text-illuminious-sky mb-4" />
                     <h3 className="text-lg font-bold text-white mb-2 font-heading">{cap.name}</h3>
-                    <p className="text-sm text-gray-300 leading-relaxed">{cap.desc}</p>
+                    <p className="text-sm text-white leading-relaxed">{cap.desc}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -286,7 +286,7 @@ export default function About() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The People Behind the Products</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our team is our greatest asset. We are a collective of over 100 passionate engineers, technicians, and manufacturing professionals with deep expertise in electronics production.
               </p>
             </AnimatedSection>
@@ -304,7 +304,7 @@ export default function About() {
                         <h3 className="font-bold text-illuminious-navy">{t.name}</h3>
                         <span className="text-xs bg-illuminious-blue/10 text-illuminious-blue px-2 py-0.5 rounded-full font-semibold">{t.count}</span>
                       </div>
-                      <p className="text-sm text-gray-600 leading-relaxed">{t.description}</p>
+                      <p className="text-sm text-illuminious-sky leading-relaxed">{t.description}</p>
                     </div>
                   ))}
                 </div>
@@ -314,18 +314,18 @@ export default function About() {
         </section>
 
         {/* Quality & Certifications Section */}
-        <section id="quality" className="py-20 bg-gray-50">
+        <section id="quality" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">An Uncompromising Commitment to Quality</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Quality is not a department at Illuminious — it is the foundation of our entire operation. Our facilities are certified to the highest international standards, and our quality management system is audited annually by independent third-party registrars.
               </p>
             </AnimatedSection>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {certifications.map((cert, index) => (
                 <AnimatedSection key={cert.name} delay={index * 0.05}>
-                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-full">
+                  <div className="bg-white rounded-xl p-6 shadow-sm border border-illuminious-light h-full">
                     <div className="flex items-center gap-3 mb-3">
                       <Award className="w-8 h-8 text-illuminious-blue" />
                       <div>
@@ -333,7 +333,7 @@ export default function About() {
                         <p className="text-xs text-illuminious-blue font-medium">{cert.scope}</p>
                       </div>
                     </div>
-                    <p className="text-sm text-gray-600 leading-relaxed">{cert.desc}</p>
+                    <p className="text-sm text-illuminious-sky leading-relaxed">{cert.desc}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -354,7 +354,7 @@ export default function About() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The Values That Drive Us</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Every decision we make — from equipment investment to hiring to process design — is guided by four core values that define who we are as a manufacturer.
               </p>
             </AnimatedSection>
@@ -367,7 +367,7 @@ export default function About() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-illuminious-navy mb-2 font-heading">{v.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{v.desc}</p>
+                      <p className="text-illuminious-sky leading-relaxed">{v.desc}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -377,20 +377,20 @@ export default function About() {
         </section>
 
         {/* Why Illuminious Section */}
-        <section id="differentiators" className="py-20 bg-gray-50">
+        <section id="differentiators" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Why Companies Choose Illuminious</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 In a crowded landscape of contract manufacturers, sourcing agents, and trading companies, Illuminious stands apart through a combination of capabilities that no other single provider offers.
               </p>
             </AnimatedSection>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {differentiators.map((d, index) => (
                 <AnimatedSection key={d.title} delay={index * 0.1}>
-                  <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 h-full">
+                  <div className="bg-white rounded-xl p-8 shadow-sm border border-illuminious-light h-full">
                     <h3 className="text-xl font-bold text-illuminious-navy mb-3 font-heading">{d.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{d.desc}</p>
+                    <p className="text-illuminious-sky leading-relaxed">{d.desc}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -426,3 +426,4 @@ export default function About() {
     </>
   );
 }
+

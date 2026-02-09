@@ -126,7 +126,7 @@ export default function ServicePCBA() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -142,7 +142,7 @@ export default function ServicePCBA() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Your End-to-End PCBA Partner</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     Printed Circuit Board Assembly (PCBA) is the intricate process of soldering or assembling electronic components onto a bare circuit board, transforming a simple board into the functioning brain of an electronic device. At Illuminious, this process is the heart of our manufacturing expertise. We provide a seamless, vertically integrated PCBA service that takes your design from a digital file to a fully assembled, tested, and reliable product ready for the market. Our state-of-the-art facilities in Shenzhen and Batam, managed by our US-based leadership, are equipped with the latest technology and operated by an experienced engineering team dedicated to precision and quality.
                   </p>
@@ -164,11 +164,11 @@ export default function ServicePCBA() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our PCBA Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We have invested heavily in the technology, processes, and expertise required to handle the most complex and demanding PCBA projects. Our facilities are equipped to manage a wide array of technologies and scale from single prototypes to millions of units.
               </p>
             </AnimatedSection>
@@ -180,7 +180,7 @@ export default function ServicePCBA() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600 flex-grow">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky flex-grow">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -193,7 +193,7 @@ export default function ServicePCBA() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The PCBA Process: Precision at Every Step</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our manufacturing process is a meticulously engineered workflow designed for maximum quality, efficiency, and traceability. With multiple inspection and verification points, we ensure that every assembly meets our rigorous standards and your exact specifications.
               </p>
             </AnimatedSection>
@@ -206,7 +206,7 @@ export default function ServicePCBA() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold shadow-lg">
@@ -221,18 +221,18 @@ export default function ServicePCBA() {
         </section>
 
         {/* Technical Specifications Section */}
-        <section id="tech-specs" className="py-20 bg-gray-50">
+        <section id="tech-specs" className="py-20 bg-illuminious-light/30">
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         We adhere to strict process controls and industry standards to deliver consistent, high-quality assemblies. Below are some of our key manufacturing specifications.
                     </p>
                 </AnimatedSection>
                 <AnimatedSection>
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                        <table className="w-full text-sm text-left text-gray-700">
-                            <thead className="bg-gray-100 text-gray-800 uppercase font-heading">
+                        <table className="w-full text-sm text-left text-illuminious-navy">
+                            <thead className="bg-illuminious-light/50 text-gray-800 uppercase font-heading">
                                 <tr>
                                     <th scope="col" className="px-6 py-3 w-1/3">Capability</th>
                                     <th scope="col" className="px-6 py-3 w-2/3">Specification</th>
@@ -240,13 +240,13 @@ export default function ServicePCBA() {
                             </thead>
                             <tbody>
                                 <tr className="border-b"><td className="px-6 py-4 font-medium">Assembly Types</td><td className="px-6 py-4">SMT, Through-Hole, Mixed Technology, Single & Double-Sided</td></tr>
-                                <tr className="border-b bg-gray-50"><td className="px-6 py-4 font-medium">SMT Component Size</td><td className="px-6 py-4">Passive components down to 01005; Fine-pitch to 0.3mm</td></tr>
+                                <tr className="border-b bg-illuminious-light/30"><td className="px-6 py-4 font-medium">SMT Component Size</td><td className="px-6 py-4">Passive components down to 01005; Fine-pitch to 0.3mm</td></tr>
                                 <tr className="border-b"><td className="px-6 py-4 font-medium">BGA/CSP Support</td><td className="px-6 py-4">Pitch down to 0.3mm, X-Ray inspection for voiding & shorts</td></tr>
-                                <tr className="border-b bg-gray-50"><td className="px-6 py-4 font-medium">Board Dimensions</td><td className="px-6 py-4">Min: 50x50mm; Max: 510x460mm</td></tr>
+                                <tr className="border-b bg-illuminious-light/30"><td className="px-6 py-4 font-medium">Board Dimensions</td><td className="px-6 py-4">Min: 50x50mm; Max: 510x460mm</td></tr>
                                 <tr className="border-b"><td className="px-6 py-4 font-medium">Board Thickness</td><td className="px-6 py-4">0.4mm to 6.0mm</td></tr>
-                                <tr className="border-b bg-gray-50"><td className="px-6 py-4 font-medium">Soldering</td><td className="px-6 py-4">RoHS compliant Lead-Free (SAC305); Leaded (Sn63Pb37) available upon request</td></tr>
+                                <tr className="border-b bg-illuminious-light/30"><td className="px-6 py-4 font-medium">Soldering</td><td className="px-6 py-4">RoHS compliant Lead-Free (SAC305); Leaded (Sn63Pb37) available upon request</td></tr>
                                 <tr className="border-b"><td className="px-6 py-4 font-medium">Inspection</td><td className="px-6 py-4">3D SPI, 3D AOI, 2D/3D AXI (X-Ray), ICT, FCT</td></tr>
-                                <tr className="bg-gray-50"><td className="px-6 py-4 font-medium">Certifications</td><td className="px-6 py-4">ISO 9001:2015, IATF 16949 (Automotive), ISO 13485 (Medical)</td></tr>
+                                <tr className="bg-illuminious-light/30"><td className="px-6 py-4 font-medium">Certifications</td><td className="px-6 py-4">ISO 9001:2015, IATF 16949 (Automotive), ISO 13485 (Medical)</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -265,7 +265,7 @@ export default function ServicePCBA() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Uncompromising Quality, Guaranteed</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     Quality is not just a department at Illuminious; it is the foundation of our entire operation. We are certified to ISO 9001, and our processes are designed to meet the rigorous standards of the automotive (IATF 16949) and medical (ISO 13485) industries. This commitment to quality is embedded in every step, from component sourcing to final inspection, ensuring that every product we ship is reliable and built to last.
                   </p>
@@ -274,21 +274,21 @@ export default function ServicePCBA() {
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-bold text-illuminious-navy">IPC-A-610 Class 2 & 3 Standards</h4>
-                        <p className="text-gray-600">All our assembly and inspection operators are trained and certified to IPC-A-610 standards, the most widely recognized acceptability criteria for electronic assemblies. We build to Class 2 by default and can meet the more stringent Class 3 requirements for high-reliability products in aerospace, medical, and military applications.</p>
+                        <p className="text-illuminious-sky">All our assembly and inspection operators are trained and certified to IPC-A-610 standards, the most widely recognized acceptability criteria for electronic assemblies. We build to Class 2 by default and can meet the more stringent Class 3 requirements for high-reliability products in aerospace, medical, and military applications.</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-bold text-illuminious-navy">Full Traceability & MES</h4>
-                        <p className="text-gray-600">Our Manufacturing Execution System (MES) provides complete, real-time traceability from the individual component reel to the final assembled product. This allows us to monitor process yields, track materials, and maintain a detailed history for every unit, giving you complete visibility and peace of mind.</p>
+                        <p className="text-illuminious-sky">Our Manufacturing Execution System (MES) provides complete, real-time traceability from the individual component reel to the final assembled product. This allows us to monitor process yields, track materials, and maintain a detailed history for every unit, giving you complete visibility and peace of mind.</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-bold text-illuminious-navy">Data-Driven Process Control</h4>
-                        <p className="text-gray-600">We use Statistical Process Control (SPC) to monitor key metrics from our SMT lines, such as solder paste volume and component placement accuracy. This data-driven approach allows us to identify and correct potential process deviations in real-time, preventing defects before they occur and ensuring consistent quality across production runs.</p>
+                        <p className="text-illuminious-sky">We use Statistical Process Control (SPC) to monitor key metrics from our SMT lines, such as solder paste volume and component placement accuracy. This data-driven approach allows us to identify and correct potential process deviations in real-time, preventing defects before they occur and ensuring consistent quality across production runs.</p>
                       </div>
                     </li>
                   </ul>
@@ -299,35 +299,35 @@ export default function ServicePCBA() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-20 bg-gray-50">
+        <section id="faq" className="py-20 bg-illuminious-light/30">
             <div className="container max-w-4xl mx-auto">
                 <AnimatedSection className="text-center mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
-                    <p className="text-lg text-gray-600">Answers to common questions about our PCBA services.</p>
+                    <p className="text-lg text-illuminious-sky">Answers to common questions about our PCBA services.</p>
                 </AnimatedSection>
                 <div className="space-y-8">
                     <AnimatedSection>
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h4 className="font-bold text-lg text-illuminious-navy mb-2">What do you need for a PCBA quote?</h4>
-                            <p className="text-gray-700">To provide an accurate quote, we need your Gerber files (RS-274X format), a complete Bill of Materials (BOM) with manufacturer part numbers, and the desired quantity. Any assembly drawings or special instructions are also helpful.</p>
+                            <p className="text-illuminious-navy">To provide an accurate quote, we need your Gerber files (RS-274X format), a complete Bill of Materials (BOM) with manufacturer part numbers, and the desired quantity. Any assembly drawings or special instructions are also helpful.</p>
                         </div>
                     </AnimatedSection>
                     <AnimatedSection delay={0.1}>
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h4 className="font-bold text-lg text-illuminious-navy mb-2">What is your typical lead time for prototype and production?</h4>
-                            <p className="text-gray-700">Lead times vary based on complexity and component availability. For turnkey prototypes, our standard lead time is 2-3 weeks. Production lead times are typically 4-6 weeks. We also offer expedited options for urgent projects.</p>
+                            <p className="text-illuminious-navy">Lead times vary based on complexity and component availability. For turnkey prototypes, our standard lead time is 2-3 weeks. Production lead times are typically 4-6 weeks. We also offer expedited options for urgent projects.</p>
                         </div>
                     </AnimatedSection>
                     <AnimatedSection delay={0.2}>
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h4 className="font-bold text-lg text-illuminious-navy mb-2">Do you handle component sourcing?</h4>
-                            <p className="text-gray-700">Yes, our full turnkey service includes all component procurement. We source from major authorized distributors like Digi-Key, Mouser, and Arrow to ensure authentic, high-quality parts. We can also work with customer-supplied (consigned) components.</p>
+                            <p className="text-illuminious-navy">Yes, our full turnkey service includes all component procurement. We source from major authorized distributors like Digi-Key, Mouser, and Arrow to ensure authentic, high-quality parts. We can also work with customer-supplied (consigned) components.</p>
                         </div>
                     </AnimatedSection>
                     <AnimatedSection delay={0.3}>
                         <div className="bg-white p-6 rounded-lg shadow-md">
                             <h4 className="font-bold text-lg text-illuminious-navy mb-2">What testing do you perform on the assemblies?</h4>
-                            <p className="text-gray-700">Our standard process includes visual inspection, AOI, and X-Ray (for BGAs). We strongly recommend and can perform In-Circuit Testing (ICT) and Functional Testing (FCT) to ensure your boards are 100% functional before shipment. We work with you to develop a test plan and fixture.</p>
+                            <p className="text-illuminious-navy">Our standard process includes visual inspection, AOI, and X-Ray (for BGAs). We strongly recommend and can perform In-Circuit Testing (ICT) and Functional Testing (FCT) to ensure your boards are 100% functional before shipment. We work with you to develop a test plan and fixture.</p>
                         </div>
                     </AnimatedSection>
                 </div>
@@ -357,3 +357,4 @@ export default function ServicePCBA() {
     </>
   );
 }
+

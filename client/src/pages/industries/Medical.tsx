@@ -147,7 +147,7 @@ export default function IndustryMedical() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -163,7 +163,7 @@ export default function IndustryMedical() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">A Profound Responsibility: Manufacturing for a Healthier World</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     In the field of medical device manufacturing, there is absolutely no margin for error. The products assembled in our facilities are not mere electronics; they are instruments of healing, diagnostics, and life support. They have a direct and profound impact on patient outcomes, clinical decisions, and the overall quality of life for people around the globe. This immense responsibility is the bedrock of our manufacturing philosophy. It informs every decision we make, from component sourcing and process validation to the final quality inspection of every single unit.
                   </p>
@@ -182,11 +182,11 @@ export default function IndustryMedical() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-24 bg-gray-50">
+        <section id="capabilities" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Specialized, End-to-End MedTech Manufacturing Capabilities</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 An integrated suite of services designed to de-risk your supply chain and accelerate your time-to-market for complex medical devices.
               </p>
             </AnimatedSection>
@@ -198,7 +198,7 @@ export default function IndustryMedical() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky leading-relaxed">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -217,7 +217,7 @@ export default function IndustryMedical() {
                 </AnimatedSection>
                 <AnimatedSection>
                     <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">A Culture of Uncompromising Quality & Regulatory Excellence</h2>
-                    <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                    <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                         <p>
                            In the medical device industry, compliance is not a department or a checklist; it is the fundamental basis of trust between a manufacturer, a medical professional, and a patient. Our culture is built upon this principle. Our quality system is not only designed to be fully compliant with the US FDA's 21 CFR Part 820 regulations but is also independently audited and certified to the ISO 13485:2016 global standard for medical device quality management.
                         </p>
@@ -229,39 +229,39 @@ export default function IndustryMedical() {
             </div>
             <div className="mt-20 grid lg:grid-cols-2 gap-8">
                 <AnimatedSection delay={0.2}>
-                    <div className="bg-gray-50 p-8 rounded-lg h-full">
+                    <div className="bg-illuminious-light/30 p-8 rounded-lg h-full">
                         <div className="flex items-center gap-4 mb-4">
                             <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0" />
                             <h3 className="text-2xl font-bold text-illuminious-navy font-heading">Proactive Risk Management (ISO 14971)</h3>
                         </div>
-                        <p className="text-gray-700 leading-relaxed">We embed risk management into the entire product lifecycle. Using tools like Failure Mode and Effects Analysis (FMEA), we proactively identify potential hazards in both the product design and the manufacturing process. This analysis informs the development of robust controls to mitigate risks to an acceptable level, all documented in a comprehensive Risk Management File.</p>
+                        <p className="text-illuminious-navy leading-relaxed">We embed risk management into the entire product lifecycle. Using tools like Failure Mode and Effects Analysis (FMEA), we proactively identify potential hazards in both the product design and the manufacturing process. This analysis informs the development of robust controls to mitigate risks to an acceptable level, all documented in a comprehensive Risk Management File.</p>
                     </div>
                 </AnimatedSection>
                 <AnimatedSection delay={0.3}>
-                    <div className="bg-gray-50 p-8 rounded-lg h-full">
+                    <div className="bg-illuminious-light/30 p-8 rounded-lg h-full">
                         <div className="flex items-center gap-4 mb-4">
                             <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0" />
                             <h3 className="text-2xl font-bold text-illuminious-navy font-heading">Rigorous Change Control & Validation</h3>
                         </div>
-                        <p className="text-gray-700 leading-relaxed">No change, however small, is made without a formal evaluation. Our rigorous change control process ensures that any proposed modification to a component, process, or piece of equipment is formally documented, reviewed for its impact on safety and efficacy, validated to prove it meets requirements, and approved by all stakeholders before implementation.</p>
+                        <p className="text-illuminious-navy leading-relaxed">No change, however small, is made without a formal evaluation. Our rigorous change control process ensures that any proposed modification to a component, process, or piece of equipment is formally documented, reviewed for its impact on safety and efficacy, validated to prove it meets requirements, and approved by all stakeholders before implementation.</p>
                     </div>
                 </AnimatedSection>
                  <AnimatedSection delay={0.4}>
-                    <div className="bg-gray-50 p-8 rounded-lg h-full">
+                    <div className="bg-illuminious-light/30 p-8 rounded-lg h-full">
                         <div className="flex items-center gap-4 mb-4">
                             <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0" />
                             <h3 className="text-2xl font-bold text-illuminious-navy font-heading">Total Traceability & DHR</h3>
                         </div>
-                        <p className="text-gray-700 leading-relaxed">We provide a complete genealogy for every device. Our MES ensures that the Device History Record (DHR) for each serialized unit contains a detailed record of its journey, including all sub-assemblies, component lot numbers, software versions, operator IDs, cycle times, and parametric test data. This allows for surgical precision in the event of a field inquiry or recall.</p>
+                        <p className="text-illuminious-navy leading-relaxed">We provide a complete genealogy for every device. Our MES ensures that the Device History Record (DHR) for each serialized unit contains a detailed record of its journey, including all sub-assemblies, component lot numbers, software versions, operator IDs, cycle times, and parametric test data. This allows for surgical precision in the event of a field inquiry or recall.</p>
                     </div>
                 </AnimatedSection>
                  <AnimatedSection delay={0.5}>
-                    <div className="bg-gray-50 p-8 rounded-lg h-full">
+                    <div className="bg-illuminious-light/30 p-8 rounded-lg h-full">
                         <div className="flex items-center gap-4 mb-4">
                             <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0" />
                             <h3 className="text-2xl font-bold text-illuminious-navy font-heading">Corrective and Preventive Action (CAPA)</h3>
                         </div>
-                        <p className="text-gray-700 leading-relaxed">Our CAPA system is the engine of our continuous improvement. When a non-conformance is identified—whether from an internal audit, a production line issue, or customer feedback—a formal CAPA process is initiated. We use structured problem-solving methodologies to determine the root cause, implement effective corrective actions, and verify that the solution prevents recurrence.</p>
+                        <p className="text-illuminious-navy leading-relaxed">Our CAPA system is the engine of our continuous improvement. When a non-conformance is identified—whether from an internal audit, a production line issue, or customer feedback—a formal CAPA process is initiated. We use structured problem-solving methodologies to determine the root cause, implement effective corrective actions, and verify that the solution prevents recurrence.</p>
                     </div>
                 </AnimatedSection>
             </div>
@@ -269,11 +269,11 @@ export default function IndustryMedical() {
         </section>
 
         {/* Why Us Section */}
-        <section id="advantage" className="py-24 bg-gray-50">
+        <section id="advantage" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">The Manufacturing Partner for Medical Innovators</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 We combine the stringent quality systems of a world-class medical manufacturer with the agility and dedicated support required by innovative startups and growth-stage companies.
               </p>
             </AnimatedSection>
@@ -282,7 +282,7 @@ export default function IndustryMedical() {
                     <AnimatedSection key={item.title} delay={index * 0.1}>
                         <div className="bg-white rounded-lg shadow-lg p-6 h-full">
                             <h3 className="text-xl font-bold text-illuminious-blue mb-3 font-heading">{item.title}</h3>
-                            <p className="text-gray-600">{item.description}</p>
+                            <p className="text-illuminious-sky">{item.description}</p>
                         </div>
                     </AnimatedSection>
                 ))}
@@ -292,15 +292,15 @@ export default function IndustryMedical() {
                 <AnimatedSection delay={0.2}>
                     <div className="space-y-6">
                         <h3 className="text-3xl font-bold text-illuminious-navy font-heading">From Prototype to Production Under One Roof</h3>
-                        <p className="text-gray-700 leading-relaxed">We specialize in guiding MedTech innovators through the entire New Product Introduction (NPI) process. Our US-based engineering team works with you on Design for Manufacturability (DFM) and Design for Test (DFT) early in the cycle, ensuring your design is optimized for scalable, cost-effective production. We then manage the seamless transition from low-volume prototype runs in our NPI lines to high-volume mass production in our dedicated facilities.</p>
+                        <p className="text-illuminious-navy leading-relaxed">We specialize in guiding MedTech innovators through the entire New Product Introduction (NPI) process. Our US-based engineering team works with you on Design for Manufacturability (DFM) and Design for Test (DFT) early in the cycle, ensuring your design is optimized for scalable, cost-effective production. We then manage the seamless transition from low-volume prototype runs in our NPI lines to high-volume mass production in our dedicated facilities.</p>
                         <h4 className="text-xl font-bold text-illuminious-navy font-heading pt-4">Case Study: Wearable Diagnostic Device</h4>
-                        <p className="text-gray-700 leading-relaxed border-l-4 border-illuminious-blue pl-6">A Silicon Valley startup approached us with a functional prototype for a wearable cardiac monitor. It worked, but it was not manufacturable at scale. Our engineers collaborated with their team to redesign the PCB layout, select more reliable components, and develop a custom enclosure for biocompatibility. We produced 500 units for their clinical trials and, following successful FDA clearance, scaled production to 20,000 units per month.</p>
+                        <p className="text-illuminious-navy leading-relaxed border-l-4 border-illuminious-blue pl-6">A Silicon Valley startup approached us with a functional prototype for a wearable cardiac monitor. It worked, but it was not manufacturable at scale. Our engineers collaborated with their team to redesign the PCB layout, select more reliable components, and develop a custom enclosure for biocompatibility. We produced 500 units for their clinical trials and, following successful FDA clearance, scaled production to 20,000 units per month.</p>
                     </div>
                 </AnimatedSection>
                 <AnimatedSection delay={0.3}>
                     <div className="space-y-6">
                          <h3 className="text-3xl font-bold text-illuminious-navy font-heading">Unwavering Commitment to IP Protection</h3>
-                        <p className="text-gray-700 leading-relaxed">We understand that your intellectual property is your most valuable asset. As a US-managed company, all contracts and NDAs are under US law. Our factories are wholly owned and operated by Illuminious—we do not use subcontractors. Access to sensitive project data is strictly controlled through our secure, segregated network infrastructure, providing peace of mind that is impossible to achieve with brokers or third-party factory models.</p>
+                        <p className="text-illuminious-navy leading-relaxed">We understand that your intellectual property is your most valuable asset. As a US-managed company, all contracts and NDAs are under US law. Our factories are wholly owned and operated by Illuminious—we do not use subcontractors. Access to sensitive project data is strictly controlled through our secure, segregated network infrastructure, providing peace of mind that is impossible to achieve with brokers or third-party factory models.</p>
                     </div>
                 </AnimatedSection>
             </div>
@@ -330,3 +330,4 @@ export default function IndustryMedical() {
     </>
   );
 }
+

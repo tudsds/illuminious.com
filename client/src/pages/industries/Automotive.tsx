@@ -144,7 +144,7 @@ export default function IndustryAutomotive() {
         <div className="container">
           <div className="flex justify-center overflow-x-auto -mx-4">
             {pageSections.map((section) => (
-              <a key={section.id} href={`#${section.id}`} className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap">
+              <a key={section.id} href={`#${section.id}`} className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap">
                 {section.title}
               </a>
             ))}
@@ -158,7 +158,7 @@ export default function IndustryAutomotive() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Manufacturing for the Software-Defined Vehicle</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     The automotive industry is experiencing its most significant transformation in a century. The convergence of electrification, autonomous driving, and seamless connectivity has turned the modern vehicle into a powerful, software-defined electronic system on wheels. This paradigm shift places immense pressure on the underlying hardware, demanding unprecedented levels of quality, reliability, and computational performance that consumer electronics standards simply cannot meet.
                   </p>
@@ -176,11 +176,11 @@ export default function IndustryAutomotive() {
           </div>
         </section>
 
-        <section id="capabilities" className="py-24 bg-gray-50">
+        <section id="capabilities" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">Automotive-Grade Manufacturing Capabilities</h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-illuminious-sky leading-relaxed">
                 An integrated suite of services designed to meet the stringent quality, reliability, and documentation requirements of Tier 1 suppliers and innovative automotive startups.
               </p>
             </AnimatedSection>
@@ -192,7 +192,7 @@ export default function IndustryAutomotive() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600 flex-grow">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky flex-grow">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -204,16 +204,16 @@ export default function IndustryAutomotive() {
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">Automotive Systems We Build</h2>
-                    <p className="text-xl text-gray-600 leading-relaxed">
+                    <p className="text-xl text-illuminious-sky leading-relaxed">
                         We have extensive experience manufacturing a wide range of critical electronic systems that form the backbone of modern vehicles.
                     </p>
                 </AnimatedSection>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {productExamples.map((item, index) => (
                         <AnimatedSection key={item.name} delay={index * 0.1}>
-                            <div className="bg-gray-50/70 p-6 rounded-lg h-full border border-gray-200/80">
+                            <div className="bg-illuminious-light/30/70 p-6 rounded-lg h-full border border-gray-200/80">
                                 <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">{item.name}</h3>
-                                <p className="text-sm text-gray-600">{item.desc}</p>
+                                <p className="text-sm text-illuminious-sky">{item.desc}</p>
                             </div>
                         </AnimatedSection>
                     ))}
@@ -221,7 +221,7 @@ export default function IndustryAutomotive() {
             </div>
         </section>
 
-        <section id="quality" className="py-24 bg-gray-50">
+        <section id="quality" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <AnimatedSection delay={0.1}>
@@ -231,7 +231,7 @@ export default function IndustryAutomotive() {
                 </AnimatedSection>
                 <AnimatedSection>
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">A Culture of Zero-Defect Quality</h2>
-                    <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                    <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                         <p>
                             For our automotive partners, quality is non-negotiable, and our entire operation reflects this. Our IATF 16949 certification is the foundation, but our commitment goes deeper. We foster a culture of proactive risk mitigation and continuous improvement, where every team member is empowered to ensure the highest standards are met.
                         </p>
@@ -268,3 +268,4 @@ export default function IndustryAutomotive() {
     </>
   );
 }
+

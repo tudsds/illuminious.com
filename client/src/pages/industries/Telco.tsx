@@ -117,7 +117,7 @@ export default function IndustryTelco() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -133,7 +133,7 @@ export default function IndustryTelco() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Manufacturing for a Connected Planet</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     The telecommunications industry is the circulatory system of the global economy. It demands a level of reliability, performance, and longevity that is unparalleled. For network operators and equipment providers, product failure is not an option. This requires a manufacturing partner who understands the extreme demands of carrier-grade hardware.
                   </p>
@@ -152,11 +152,11 @@ export default function IndustryTelco() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Core Telecom & Networking Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 An integrated suite of services to build and scale the hardware that connects the world.
               </p>
             </AnimatedSection>
@@ -168,7 +168,7 @@ export default function IndustryTelco() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -187,7 +187,7 @@ export default function IndustryTelco() {
                 </AnimatedSection>
                 <AnimatedSection>
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Commitment to Carrier-Grade Quality</h2>
-                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <div className="space-y-4 text-illuminious-navy leading-relaxed">
                         <p>
                             We build products designed for decades of uninterrupted service in the most demanding environments. Our quality system is built to support these requirements.
                         </p>
@@ -204,11 +204,11 @@ export default function IndustryTelco() {
         </section>
 
         {/* Why Us Section */}
-        <section id="why-us" className="py-20 bg-gray-50">
+        <section id="why-us" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Building the Infrastructure of Tomorrow</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We have the scale and expertise to manufacture the next generation of communication and networking hardware.
               </p>
             </AnimatedSection>
@@ -216,7 +216,7 @@ export default function IndustryTelco() {
                 {productExamples.map((item) => (
                     <div key={item} className="flex items-center gap-3 p-3 bg-white rounded-md shadow-sm">
                         <CheckCircle className="w-5 h-5 text-illuminious-blue flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{item}</span>
+                        <span className="text-sm text-illuminious-navy">{item}</span>
                     </div>
                 ))}
             </div>
@@ -246,3 +246,4 @@ export default function IndustryTelco() {
     </>
   );
 }
+

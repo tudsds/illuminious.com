@@ -759,7 +759,7 @@ export default function News() {
             <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-4">
               News & Updates
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-illuminious-navy/70">
               Stay informed about the latest developments, announcements, and industry insights from Illuminious.
             </p>
           </motion.div>
@@ -786,10 +786,10 @@ export default function News() {
                   <h2 className="text-2xl md:text-3xl font-bold text-illuminious-navy mb-4 group-hover:text-illuminious-blue transition-colors">
                     {newsItems[0].title}
                   </h2>
-                  <p className="text-muted-foreground mb-6 line-clamp-3">
+                  <p className="text-illuminious-navy/70 mb-6 line-clamp-3">
                     {newsItems[0].excerpt}
                   </p>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                  <div className="flex items-center gap-4 text-sm text-illuminious-navy/70 mb-4">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {new Date(newsItems[0].publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
@@ -832,10 +832,10 @@ export default function News() {
                       <h2 className="text-xl font-semibold text-illuminious-navy mb-3 group-hover:text-illuminious-blue transition-colors line-clamp-2">
                         {item.title}
                       </h2>
-                      <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
+                      <p className="text-illuminious-navy/70 mb-4 line-clamp-2 flex-1">
                         {item.excerpt}
                       </p>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-4 text-sm text-illuminious-navy/70">
                         <span className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           {new Date(item.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
@@ -883,3 +883,4 @@ export default function News() {
     </>
   );
 }
+

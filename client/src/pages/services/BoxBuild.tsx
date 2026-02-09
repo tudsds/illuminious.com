@@ -196,7 +196,7 @@ export default function ServiceBoxBuild() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -212,7 +212,7 @@ export default function ServiceBoxBuild() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">From Board to Finished Product</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed">
                   <p>
                     Box build assembly, often called systems integration, represents the final, critical phase in the electronics manufacturing lifecycle. It is the comprehensive process of enclosing a product's core electronics—the Printed Circuit Board Assembly (PCBA)—within its housing and integrating all other components to create a complete, functional device. This includes everything from mechanical parts like brackets and fasteners to user interfaces, power supplies, custom cabling, and thermal management systems. It is the step where a collection of individual parts becomes a cohesive, market-ready product.
                   </p>
@@ -234,11 +234,11 @@ export default function ServiceBoxBuild() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Box Build Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We offer a comprehensive suite of services to manage every aspect of your product's final assembly, testing, and fulfillment, ensuring a seamless transition from prototype to mass production.
               </p>
             </AnimatedSection>
@@ -251,7 +251,7 @@ export default function ServiceBoxBuild() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                      <p className="text-sm text-gray-600">{cap.text}</p>
+                      <p className="text-sm text-illuminious-sky">{cap.text}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -265,7 +265,7 @@ export default function ServiceBoxBuild() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The Box Build Assembly Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our systematic, eight-step process ensures that every unit is built and tested to your exact specifications, with rigorous quality gates at every stage for maximum reliability.
               </p>
             </AnimatedSection>
@@ -278,7 +278,7 @@ export default function ServiceBoxBuild() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold shadow-lg">
@@ -293,7 +293,7 @@ export default function ServiceBoxBuild() {
         </section>
 
         {/* Quality Assurance Section */}
-        <section id="quality" className="py-20 bg-gray-50">
+        <section id="quality" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
@@ -303,7 +303,7 @@ export default function ServiceBoxBuild() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Uncompromising Quality Control</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     In box build assembly, quality is holistic. It extends far beyond the PCBA to encompass every component, every connection, and every step of the integration process. Our ISO 9001-certified quality management system is designed to ensure that the final product not only functions perfectly but also meets all cosmetic, packaging, and reliability requirements. We view quality not as a final inspection, but as a principle embedded throughout the entire assembly workflow.
                   </p>
@@ -335,17 +335,17 @@ export default function ServiceBoxBuild() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our facilities are equipped to handle a wide range of technical requirements, ensuring precision, reliability, and scalability for your product.
               </p>
             </AnimatedSection>
             <AnimatedSection>
-              <div className="max-w-4xl mx-auto bg-gray-50 rounded-xl p-8 shadow-inner-lg">
+              <div className="max-w-4xl mx-auto bg-illuminious-light/30 rounded-xl p-8 shadow-inner-lg">
                 <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
                   {techSpecs.map((spec) => (
                     <div key={spec.category} className="border-b border-gray-200 py-3 flex items-baseline">
                       <h4 className="font-semibold text-illuminious-navy w-1/3 flex-shrink-0">{spec.category}</h4>
-                      <p className="text-gray-700">{spec.spec}</p>
+                      <p className="text-illuminious-navy">{spec.spec}</p>
                     </div>
                   ))}
                 </div>
@@ -355,11 +355,11 @@ export default function ServiceBoxBuild() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-20 bg-gray-50">
+        <section id="faq" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Answers to common questions about our box build assembly process, capabilities, and how to get started.
               </p>
             </AnimatedSection>
@@ -369,7 +369,7 @@ export default function ServiceBoxBuild() {
                   {faqData.map((item, index) => (
                     <AccordionItem value={`item-${index + 1}`} key={index}>
                       <AccordionTrigger className="text-left font-semibold text-lg">{item.question}</AccordionTrigger>
-                      <AccordionContent className="text-base leading-relaxed text-gray-700">
+                      <AccordionContent className="text-base leading-relaxed text-illuminious-navy">
                         {item.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -402,3 +402,4 @@ export default function ServiceBoxBuild() {
     </>
   );
 }
+

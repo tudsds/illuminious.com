@@ -126,7 +126,7 @@ export default function ServiceSMTAssembly() {
         <div className="container">
           <div className="flex justify-center overflow-x-auto">
             {pageSections.map((section) => (
-              <a key={section.id} href={`#${section.id}`} className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap">
+              <a key={section.id} href={`#${section.id}`} className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap">
                 {section.title}
               </a>
             ))}
@@ -140,7 +140,7 @@ export default function ServiceSMTAssembly() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Precision and Scale in Every Placement</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>Surface Mount Technology (SMT) is the foundational process for modern electronics manufacturing, enabling the creation of smaller, faster, and more powerful devices. At Illuminious, our SMT assembly services are engineered to provide the highest levels of precision, speed, and reliability. We have made significant investments in state-of-the-art automated production lines across our Shenzhen and Batam facilities. This dual-factory footprint allows us to offer robust supply chain resilience and scalable capacity, handling everything from rapid NPI prototypes to high-volume production runs of millions of units per month.</p>
                   <p>Our process is built on a philosophy of proactive quality control and engineering excellence. From the moment your design enters our system, it undergoes a rigorous Design for Manufacturability (DFM) and Design for Assembly (DFA) analysis. Our engineering team collaborates with you to identify and resolve potential production challenges before they impact your timeline or budget. This critical upfront work ensures a smooth transition to our fully automated SMT lines, where every step—from solder paste printing to final inspection—is monitored, controlled, and optimized for maximum yield and long-term product performance.</p>
                   <p>Whether you are developing a dense, complex board with fine-pitch BGAs and 01005 components for a medical device, or a cost-sensitive consumer product requiring massive scale, our team and technology are equipped to meet your requirements. We don't just place components; we build the foundation of your product's reliability. Our 8 SMT lines run 24/7, giving us the capacity to place over 50 million components per month, ensuring we can scale with your success and meet the most demanding market timelines.</p>
@@ -155,11 +155,11 @@ export default function ServiceSMTAssembly() {
           </div>
         </section>
 
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our SMT Capabilities</h2>
-              <p className="text-lg text-gray-600">We have the technology and expertise to handle the most demanding SMT assembly projects. Our capabilities are continuously updated to support the latest advancements in component technology and product design.</p>
+              <p className="text-lg text-illuminious-sky">We have the technology and expertise to handle the most demanding SMT assembly projects. Our capabilities are continuously updated to support the latest advancements in component technology and product design.</p>
             </AnimatedSection>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {capabilities.map((cap, index) => (
@@ -167,7 +167,7 @@ export default function ServiceSMTAssembly() {
                   <div className="bg-white p-6 rounded-lg shadow-md text-left h-full">
                     <div className="w-12 h-12 rounded-full bg-illuminious-blue/10 flex items-center justify-center mb-4"><cap.icon className="w-6 h-6 text-illuminious-blue" /></div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -179,7 +179,7 @@ export default function ServiceSMTAssembly() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The SMT Assembly Process: A Symphony of Precision</h2>
-              <p className="text-lg text-gray-600">Our SMT process is a meticulously choreographed sequence of automated steps, each governed by strict quality controls and full traceability through our Manufacturing Execution System (MES).</p>
+              <p className="text-lg text-illuminious-sky">Our SMT process is a meticulously choreographed sequence of automated steps, each governed by strict quality controls and full traceability through our Manufacturing Execution System (MES).</p>
             </AnimatedSection>
             <div className="max-w-5xl mx-auto">
               <div className="relative">
@@ -190,7 +190,7 @@ export default function ServiceSMTAssembly() {
                       <div className="w-full md:w-1/2 px-4 md:px-8 py-4">
                         <AnimatedSection delay={step.delay}>
                           <h3 className={`text-xl font-bold mb-2 font-heading text-center ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 text-center ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky text-center ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white items-center justify-center font-bold shadow-lg">
@@ -204,7 +204,7 @@ export default function ServiceSMTAssembly() {
           </div>
         </section>
 
-        <section id="quality" className="py-20 bg-gray-50">
+        <section id="quality" className="py-20 bg-illuminious-light/30">
           <div className="container grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div className="rounded-xl overflow-hidden shadow-2xl">
@@ -213,7 +213,7 @@ export default function ServiceSMTAssembly() {
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
               <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Uncompromising Quality at Every Stage</h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-illuminious-navy leading-relaxed">
                 <p>Quality is not an afterthought; it's integrated into every step of our SMT process. Our philosophy is to prevent defects, not just find them. This starts with our multi-stage inspection strategy, creating a closed-loop feedback system for continuous process improvement:</p>
                 <ul className="space-y-3 list-disc list-inside">
                   <li><strong>3D Solder Paste Inspection (SPI):</strong> Before a single component is placed, we verify the solder paste deposit. This catches over 70% of potential SMT defects at the source, preventing costly rework and improving overall yield.</li>
@@ -230,7 +230,7 @@ export default function ServiceSMTAssembly() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-              <p className="text-lg text-gray-600">Our SMT lines are configured to handle a wide range of technologies and board specifications. Below are the key parameters we support.</p>
+              <p className="text-lg text-illuminious-sky">Our SMT lines are configured to handle a wide range of technologies and board specifications. Below are the key parameters we support.</p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
               <div className="max-w-4xl mx-auto overflow-x-auto">
@@ -242,16 +242,16 @@ export default function ServiceSMTAssembly() {
                     </tr>
                   </thead>
                   <tbody className="bg-white">
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Assembly Types</td><td className="p-4 border-b">Single and double-sided SMT</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Board Types</td><td className="p-4 border-b">Rigid FR-4, Rogers, CEM-1, CEM-3, Metal Core, Flex, Rigid-Flex</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Maximum Board Size</td><td className="p-4 border-b">500mm x 500mm (20\" x 20\")</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Minimum Board Size</td><td className="p-4 border-b">50mm x 50mm (2\" x 2\")</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Board Thickness</td><td className="p-4 border-b">0.4mm to 6.0mm</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Smallest Component</td><td className="p-4 border-b">01005 (0.4mm x 0.2mm)</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Fine Pitch Placement</td><td className="p-4 border-b">Down to 0.35mm for BGA/CSP</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">BGA/uBGA Placement</td><td className="p-4 border-b">Placement and X-Ray inspection for pitches down to 0.35mm</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Placement Accuracy</td><td className="p-4 border-b">±25μm @ 3 sigma</td></tr>
-                    <tr className="hover:bg-gray-50"><td className="p-4 border-b">Solder Types</td><td className="p-4 border-b">Leaded (Sn63/Pb37) and Lead-Free (SAC305, SAC405)</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Assembly Types</td><td className="p-4 border-b">Single and double-sided SMT</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Board Types</td><td className="p-4 border-b">Rigid FR-4, Rogers, CEM-1, CEM-3, Metal Core, Flex, Rigid-Flex</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Maximum Board Size</td><td className="p-4 border-b">500mm x 500mm (20\" x 20\")</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Minimum Board Size</td><td className="p-4 border-b">50mm x 50mm (2\" x 2\")</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Board Thickness</td><td className="p-4 border-b">0.4mm to 6.0mm</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Smallest Component</td><td className="p-4 border-b">01005 (0.4mm x 0.2mm)</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Fine Pitch Placement</td><td className="p-4 border-b">Down to 0.35mm for BGA/CSP</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">BGA/uBGA Placement</td><td className="p-4 border-b">Placement and X-Ray inspection for pitches down to 0.35mm</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Placement Accuracy</td><td className="p-4 border-b">±25μm @ 3 sigma</td></tr>
+                    <tr className="hover:bg-illuminious-light/30"><td className="p-4 border-b">Solder Types</td><td className="p-4 border-b">Leaded (Sn63/Pb37) and Lead-Free (SAC305, SAC405)</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -259,7 +259,7 @@ export default function ServiceSMTAssembly() {
           </div>
         </section>
 
-        <section id="faq" className="py-20 bg-gray-50">
+        <section id="faq" className="py-20 bg-illuminious-light/30">
           <div className="container max-w-4xl mx-auto">
             <AnimatedSection className="text-center mb-12">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
@@ -268,19 +268,19 @@ export default function ServiceSMTAssembly() {
               <AnimatedSection delay={0.1}>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-2">What is the difference between SMT and THT?</h3>
-                  <p className="text-gray-600">Surface Mount Technology (SMT) involves placing components directly onto the surface of a PCB, while Through-Hole Technology (THT) involves inserting component leads into drilled holes. SMT allows for much higher component density, miniaturization, and automation, making it the standard for most modern electronics. We specialize in SMT but also offer mixed-technology assembly.</p>
+                  <p className="text-illuminious-sky">Surface Mount Technology (SMT) involves placing components directly onto the surface of a PCB, while Through-Hole Technology (THT) involves inserting component leads into drilled holes. SMT allows for much higher component density, miniaturization, and automation, making it the standard for most modern electronics. We specialize in SMT but also offer mixed-technology assembly.</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.2}>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-2">What DFM information do you need to start a project?</h3>
-                  <p className="text-gray-600">To perform a comprehensive DFM analysis, we require your Gerber files, a Bill of Materials (BOM) with manufacturer part numbers, and your XY placement data (also known as centroid or pick-and-place data). Any specific assembly instructions or testing requirements are also helpful.</p>
+                  <p className="text-illuminious-sky">To perform a comprehensive DFM analysis, we require your Gerber files, a Bill of Materials (BOM) with manufacturer part numbers, and your XY placement data (also known as centroid or pick-and-place data). Any specific assembly instructions or testing requirements are also helpful.</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.3}>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-2">How do you handle moisture-sensitive components?</h3>
-                  <p className="text-gray-600">We strictly adhere to the J-STD-033 standard for handling Moisture Sensitive Devices (MSD). Components are stored in humidity-controlled dry cabinets. If a component's floor life has been exceeded, it is baked in a calibrated oven according to the manufacturer's specifications before being placed on the SMT line.</p>
+                  <p className="text-illuminious-sky">We strictly adhere to the J-STD-033 standard for handling Moisture Sensitive Devices (MSD). Components are stored in humidity-controlled dry cabinets. If a component's floor life has been exceeded, it is baked in a calibrated oven according to the manufacturer's specifications before being placed on the SMT line.</p>
                 </div>
               </AnimatedSection>
             </div>
@@ -304,3 +304,4 @@ export default function ServiceSMTAssembly() {
     </>
   );
 }
+

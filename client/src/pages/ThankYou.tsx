@@ -87,7 +87,7 @@ export default function ThankYou() {
             <p className="text-xl text-illuminious-blue mb-2">
               Your message has been received.
             </p>
-            <p className="text-gray-600 mb-8 max-w-md mx-auto">
+            <p className="text-illuminious-sky mb-8 max-w-md mx-auto">
               We appreciate you reaching out to us. Our team will review your inquiry 
               and get back to you within 24-48 business hours.
             </p>
@@ -110,7 +110,7 @@ export default function ThankYou() {
                 </div>
                 <div>
                   <h3 className="font-medium text-illuminious-navy">Review</h3>
-                  <p className="text-sm text-gray-600">Our team reviews your inquiry</p>
+                  <p className="text-sm text-illuminious-sky">Our team reviews your inquiry</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -119,7 +119,7 @@ export default function ThankYou() {
                 </div>
                 <div>
                   <h3 className="font-medium text-illuminious-navy">Connect</h3>
-                  <p className="text-sm text-gray-600">A specialist will reach out</p>
+                  <p className="text-sm text-illuminious-sky">A specialist will reach out</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -128,7 +128,7 @@ export default function ThankYou() {
                 </div>
                 <div>
                   <h3 className="font-medium text-illuminious-navy">Solution</h3>
-                  <p className="text-sm text-gray-600">We'll discuss your needs</p>
+                  <p className="text-sm text-illuminious-sky">We'll discuss your needs</p>
                 </div>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function ThankYou() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            className="mt-8 text-sm text-gray-500"
+            className="mt-8 text-sm text-illuminious-sky"
           >
             Need immediate assistance?{" "}
             <a
@@ -190,3 +190,4 @@ export default function ThankYou() {
     </div>
   );
 }
+

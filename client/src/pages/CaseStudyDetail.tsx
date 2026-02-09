@@ -50,7 +50,7 @@ export default function CaseStudyDetail() {
         <section className="pt-32 pb-20">
           <div className="container text-center">
             <h1 className="text-3xl font-bold text-illuminious-navy mb-4">Case Study Not Found</h1>
-            <p className="text-muted-foreground mb-8">The case study you're looking for doesn't exist.</p>
+            <p className="text-illuminious-navy/70 mb-8">The case study you're looking for doesn't exist.</p>
             <Button asChild><Link href="/case-studies"><ArrowLeft className="w-4 h-4 mr-2" />Back to Case Studies</Link></Button>
           </div>
         </section>
@@ -73,7 +73,7 @@ export default function CaseStudyDetail() {
       {/* Breadcrumb */}
       <section className="pt-24 pb-2 bg-illuminious-light/30">
         <div className="container">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+          <nav className="flex items-center gap-2 text-sm text-illuminious-navy/70">
             <Link href="/" className="hover:text-illuminious-blue transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <Link href="/case-studies" className="hover:text-illuminious-blue transition-colors">Case Studies</Link>
@@ -96,9 +96,9 @@ export default function CaseStudyDetail() {
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-illuminious-navy mb-4 leading-tight">{study.title}</h1>
               <p className="text-xl text-illuminious-blue mb-6">{study.industry}</p>
-              <p className="text-lg text-muted-foreground mb-6">{study.challenge.substring(0, 150)}...</p>
+              <p className="text-lg text-illuminious-navy/70 mb-6">{study.challenge.substring(0, 150)}...</p>
               <div className="flex items-center gap-3">
-                <span className="text-sm text-muted-foreground flex items-center gap-1"><Share2 className="w-4 h-4" />Share:</span>
+                <span className="text-sm text-illuminious-navy/70 flex items-center gap-1"><Share2 className="w-4 h-4" />Share:</span>
                 <SocialShare url={shareUrl} title={study.title} />
               </div>
             </motion.div>
@@ -138,7 +138,7 @@ export default function CaseStudyDetail() {
                   <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center"><Target className="w-5 h-5 text-red-500" /></div>
                   <h2 className="text-2xl font-bold text-illuminious-navy">The Challenge</h2>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed">{study.challenge}</p>
+                <p className="text-lg text-illuminious-navy/70 leading-relaxed">{study.challenge}</p>
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>
@@ -146,7 +146,7 @@ export default function CaseStudyDetail() {
                   <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center"><Lightbulb className="w-5 h-5 text-illuminious-blue" /></div>
                   <h2 className="text-2xl font-bold text-illuminious-navy">Our Solution</h2>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">{study.solution}</p>
+                <p className="text-lg text-illuminious-navy/70 leading-relaxed mb-6">{study.solution}</p>
                 {study.fullContent && (
                   <div className="prose prose-lg max-w-none prose-headings:text-illuminious-navy prose-a:text-illuminious-blue prose-li:marker:text-illuminious-blue" dangerouslySetInnerHTML={{ __html: study.fullContent }} />
                 )}
@@ -154,7 +154,7 @@ export default function CaseStudyDetail() {
 
               <AnimatedSection delay={0.2}>
                 <blockquote className="p-8 rounded-2xl bg-illuminious-light/30 border-l-4 border-illuminious-blue">
-                  <p className="text-lg italic text-muted-foreground mb-2">"{study.testimonial}"</p>
+                  <p className="text-lg italic text-illuminious-navy/70 mb-2">"{study.testimonial}"</p>
                 </blockquote>
               </AnimatedSection>
             </div>
@@ -165,8 +165,8 @@ export default function CaseStudyDetail() {
                 <div className="bg-white rounded-xl border border-illuminious-light p-5">
                   <h4 className="font-semibold text-illuminious-navy text-sm mb-3">Project Details</h4>
                   <div className="space-y-3 text-sm">
-                    <div><span className="text-muted-foreground">Industry:</span><p className="font-medium text-illuminious-navy">{study.industry}</p></div>
-                    <div><span className="text-muted-foreground">Tags:</span>
+                    <div><span className="text-illuminious-navy/70">Industry:</span><p className="font-medium text-illuminious-navy">{study.industry}</p></div>
+                    <div><span className="text-illuminious-navy/70">Tags:</span>
                       <div className="flex flex-wrap gap-1 mt-1">{study.tags.map(tag => (<span key={tag} className="text-xs bg-illuminious-light px-2 py-0.5 rounded-full text-illuminious-navy">{tag}</span>))}</div>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function CaseStudyDetail() {
       <section className="py-12 bg-illuminious-light/30">
         <div className="container">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <span className="text-muted-foreground flex items-center gap-2"><BookOpen className="w-4 h-4" />Found this case study helpful? Share it:</span>
+            <span className="text-illuminious-navy/70 flex items-center gap-2"><BookOpen className="w-4 h-4" />Found this case study helpful? Share it:</span>
             <SocialShare url={shareUrl} title={study.title} />
           </div>
         </div>
@@ -214,7 +214,7 @@ export default function CaseStudyDetail() {
                       <span className="text-xs font-medium text-illuminious-blue">{related.industry}</span>
                       <h3 className="text-lg font-semibold text-illuminious-navy mt-1 line-clamp-2 group-hover:text-illuminious-blue transition-colors">{related.title}</h3>
                       <div className="flex flex-wrap gap-1 mt-2">
-                        {related.tags.slice(0, 3).map(tag => (<span key={tag} className="text-xs bg-illuminious-light px-2 py-0.5 rounded-full text-muted-foreground">{tag}</span>))}
+                        {related.tags.slice(0, 3).map(tag => (<span key={tag} className="text-xs bg-illuminious-light px-2 py-0.5 rounded-full text-illuminious-navy/70">{tag}</span>))}
                       </div>
                     </div>
                   </article>
@@ -243,3 +243,4 @@ export default function CaseStudyDetail() {
     </>
   );
 }
+

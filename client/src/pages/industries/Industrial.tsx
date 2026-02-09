@@ -141,7 +141,7 @@ export default function IndustryIndustrial() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -157,7 +157,7 @@ export default function IndustryIndustrial() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Forged in Fire: Electronics for the Industrial Frontier</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     Industrial electronics are the unsung heroes of our modern world, the silent, tireless engines driving everything from automated factories to critical energy grids. These are not delicate consumer gadgets; they are hardened systems engineered to withstand the most punishing conditions imaginable. They operate flawlessly amidst the intense heat of a steel mill, the corrosive salt spray of an offshore oil rig, the constant vibration of a mining operation, and the electrical noise of a high-power factory floor.
                   </p>
@@ -176,11 +176,11 @@ export default function IndustryIndustrial() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Specialized Industrial Manufacturing Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 An integrated suite of services designed to build robust and reliable electronics for mission-critical applications.
               </p>
             </AnimatedSection>
@@ -192,7 +192,7 @@ export default function IndustryIndustrial() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -205,16 +205,16 @@ export default function IndustryIndustrial() {
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Real-World Industrial Applications</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         We have a proven track record of manufacturing a wide range of complex industrial products.
                     </p>
                 </AnimatedSection>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {productExamples.map((prod, index) => (
                         <AnimatedSection key={prod.name} delay={index * 0.05}>
-                            <div className="bg-gray-50 p-6 rounded-lg shadow-md text-left h-full">
+                            <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-md text-left h-full">
                                 <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{prod.name}</h3>
-                                <p className="text-sm text-gray-600">{prod.description}</p>
+                                <p className="text-sm text-illuminious-sky">{prod.description}</p>
                             </div>
                         </AnimatedSection>
                     ))}
@@ -223,7 +223,7 @@ export default function IndustryIndustrial() {
         </section>
 
         {/* Quality & Reliability Section */}
-        <section id="quality" className="py-20 bg-gray-50">
+        <section id="quality" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection delay={0.1}>
@@ -233,7 +233,7 @@ export default function IndustryIndustrial() {
                 </AnimatedSection>
                 <AnimatedSection>
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Uncompromising Quality: The Bedrock of Industrial Reliability</h2>
-                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <div className="space-y-4 text-illuminious-navy leading-relaxed">
                         <p>
                             For industrial applications, quality isn't a feature; it's the foundation upon which reliability is built. Our entire operation is governed by a robust Quality Management System, certified to the ISO 9001:2015 standard. This ensures every process, from quoting to shipping, is defined, controlled, and continuously improved.
                         </p>
@@ -255,7 +255,7 @@ export default function IndustryIndustrial() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection>
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">A Partnership for the Decades: Manufacturing for the Long Haul</h2>
-                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <div className="space-y-4 text-illuminious-navy leading-relaxed">
                         <p>
                             Industrial equipment is a long-term investment, not a disposable commodity. Products are expected to operate reliably for a decade, two decades, or even longer. This demands a manufacturing partner who thinks in terms of total product lifecycle, not just the initial production run. Illuminious is that partner.
                         </p>
@@ -295,3 +295,4 @@ export default function IndustryIndustrial() {
     </>
   );
 }
+

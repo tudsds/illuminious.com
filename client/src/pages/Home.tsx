@@ -300,7 +300,7 @@ export default function Home() {
                   <div className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-1 font-heading">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-500">{stat.label}</div>
+                  <div className="text-sm text-illuminious-sky">{stat.label}</div>
                 </div>
               </AnimatedSection>
             ))}
@@ -315,7 +315,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4 font-heading">
               What We Manufacture
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-illuminious-sky">
               Our vertically integrated facilities house every process needed to take your electronics product from bare PCB to boxed, tested, and shipped — without leaving our factory floor.
             </p>
           </AnimatedSection>
@@ -324,7 +324,7 @@ export default function Home() {
             {coreCapabilities.map((cap, index) => (
               <AnimatedSection key={cap.title} delay={index * 0.1}>
                 <Link href={cap.href}>
-                  <div className="group relative rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="group relative rounded-2xl overflow-hidden border border-illuminious-light hover:shadow-xl transition-all duration-300 h-full">
                     <div className="aspect-[16/9] overflow-hidden">
                       <img
                         src={cap.image}
@@ -340,7 +340,7 @@ export default function Home() {
                         </div>
                         <h3 className="text-xl font-bold text-illuminious-navy font-heading">{cap.title}</h3>
                       </div>
-                      <p className="text-gray-600 mb-4 leading-relaxed">{cap.description}</p>
+                      <p className="text-illuminious-sky mb-4 leading-relaxed">{cap.description}</p>
                       <span className="inline-flex items-center text-illuminious-blue font-medium text-sm group-hover:gap-2 transition-all">
                         Learn More
                         <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -369,7 +369,7 @@ export default function Home() {
       </section>
 
       {/* Three Advantages */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-illuminious-light/30">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {advantages.map((item, index) => (
@@ -379,7 +379,7 @@ export default function Home() {
                     <item.icon className="w-8 h-8 text-illuminious-blue" />
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-2 font-heading">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <p className="text-illuminious-sky">{item.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -394,7 +394,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4 font-heading">
               How We Build Your Product
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-illuminious-sky">
               A proven 5-step manufacturing process that takes your design from engineering review to delivered product — with full traceability at every stage.
             </p>
           </AnimatedSection>
@@ -406,12 +406,12 @@ export default function Home() {
                   <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-illuminious-navy flex items-center justify-center">
                     <phase.icon className="w-7 h-7 text-illuminious-sky" />
                   </div>
-                  <div className="flex-1 pb-6 border-b border-gray-100 group-last:border-0">
+                  <div className="flex-1 pb-6 border-b border-illuminious-light group-last:border-0">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-xs font-bold text-illuminious-blue uppercase tracking-wider">Step {phase.step}</span>
                     </div>
                     <h3 className="text-xl font-bold text-illuminious-navy mb-2 font-heading">{phase.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{phase.desc}</p>
+                    <p className="text-illuminious-sky leading-relaxed">{phase.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -431,7 +431,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">
               Global Manufacturing Footprint
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-white">
               We own and operate production facilities across three strategic locations, giving you the flexibility to optimize for speed, cost, or tariff avoidance.
             </p>
           </AnimatedSection>
@@ -447,7 +447,7 @@ export default function Home() {
                       <p className="text-illuminious-sky text-sm">{loc.role}</p>
                     </div>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-white text-sm leading-relaxed">
                     {loc.description}
                   </p>
                 </div>
@@ -474,7 +474,7 @@ export default function Home() {
         <div className="container">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Industries We Manufacture For</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-illuminious-sky max-w-2xl mx-auto">
               From FDA-regulated medical devices to high-reliability automotive electronics, our quality systems and certifications support the most demanding industry requirements.
             </p>
           </AnimatedSection>
@@ -483,7 +483,7 @@ export default function Home() {
             {industries.map((ind, index) => (
               <AnimatedSection key={ind.name} delay={index * 0.05}>
                 <Link href={ind.href}>
-                  <div className="group p-6 rounded-xl border border-gray-100 hover:border-illuminious-blue hover:shadow-lg transition-all text-center">
+                  <div className="group p-6 rounded-xl border border-illuminious-light hover:border-illuminious-blue hover:shadow-lg transition-all text-center">
                     <ind.icon className="w-8 h-8 text-illuminious-blue mx-auto mb-3 group-hover:scale-110 transition-transform" />
                     <span className="text-sm font-medium text-illuminious-navy">{ind.name}</span>
                   </div>
@@ -531,7 +531,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4 font-heading">
               Ready to Manufacture?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-illuminious-sky mb-8">
               Send us your Gerber files and BOM. Our engineers will provide a detailed DFM review and manufacturing quote within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -563,3 +563,4 @@ export default function Home() {
     </>
   );
 }
+

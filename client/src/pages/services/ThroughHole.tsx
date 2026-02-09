@@ -151,7 +151,7 @@ export default function ServiceThroughHole() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -167,7 +167,7 @@ export default function ServiceThroughHole() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Strength and Reliability in Every Solder Joint</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     In an industry dominated by miniaturization, Through-Hole Technology (THT) stands as a testament to enduring strength and reliability. While Surface Mount Technology (SMT) is ideal for density, THT is the premier choice for applications where mechanical robustness and high power-handling capabilities are non-negotiable. At Illuminious, we have refined our THT processes over decades, integrating modern automation and stringent quality controls to deliver assemblies that provide unparalleled durability and long-term performance in the most demanding environments.
                   </p>
@@ -189,11 +189,11 @@ export default function ServiceThroughHole() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our THT Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We offer a comprehensive suite of through-hole assembly services, from automated insertion to complex manual assembly, all governed by strict process controls and IPC Class 3 standards to ensure maximum product reliability.
               </p>
             </AnimatedSection>
@@ -205,7 +205,7 @@ export default function ServiceThroughHole() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600 flex-grow">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky flex-grow">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -218,7 +218,7 @@ export default function ServiceThroughHole() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The THT Assembly Process: A Blend of Automation and Craftsmanship</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our six-step THT process is meticulously designed and controlled, combining the speed of automation with the precision of skilled handwork to deliver consistently high-quality results that you can depend on.
               </p>
             </AnimatedSection>
@@ -231,7 +231,7 @@ export default function ServiceThroughHole() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-lg shadow-lg">
@@ -246,7 +246,7 @@ export default function ServiceThroughHole() {
         </section>
 
         {/* Quality Assurance Section */}
-        <section id="quality" className="py-20 bg-gray-50">
+        <section id="quality" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
@@ -256,7 +256,7 @@ export default function ServiceThroughHole() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Committed to IPC-A-610 Class 3 Workmanship</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     For high-performance products where reliability is paramount, meeting the IPC-A-610 Class 3 standard is essential. This is the highest level of workmanship for electronics, reserved for applications like aerospace, military, and medical devices where failure can have critical consequences. At Illuminious, Class 3 is our default standard for all THT assembly work, ensuring your product is built for maximum durability and performance from the very start.
                   </p>
@@ -291,16 +291,16 @@ export default function ServiceThroughHole() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our THT assembly lines are configured to handle a wide range of components and board specifications with precision and care, adhering to the industry's most stringent standards.
               </p>
             </AnimatedSection>
             <AnimatedSection>
-              <div className="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-lg p-8">
+              <div className="max-w-4xl mx-auto bg-illuminious-light/30 rounded-xl shadow-lg p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="font-bold text-illuminious-navy mb-4 text-lg">Soldering & Assembly</h4>
-                    <ul className="space-y-3 text-gray-700">
+                    <ul className="space-y-3 text-illuminious-navy">
                       <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Soldering Process: Wave, Selective, Manual</span></li>
                       <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Solder Types: Leaded (Sn63Pb37) & Lead-Free (SAC305)</span></li>
                       <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Max Board Size: 500mm x 450mm</span></li>
@@ -310,7 +310,7 @@ export default function ServiceThroughHole() {
                   </div>
                   <div>
                     <h4 className="font-bold text-illuminious-navy mb-4 text-lg">Quality & Inspection</h4>
-                    <ul className="space-y-3 text-gray-700">
+                    <ul className="space-y-3 text-illuminious-navy">
                       <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Quality Standard: IPC-A-610 Class 2 & Class 3</span></li>
                       <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Inspection: AOI, X-Ray (for BGA), Visual Inspection</span></li>
                       <li className="flex items-center"><CheckCircle className="w-5 h-5 text-illuminious-blue mr-2" /><span>Testing: ICT, FCT, Burn-in Testing</span></li>
@@ -347,3 +347,4 @@ export default function ServiceThroughHole() {
     </>
   );
 }
+

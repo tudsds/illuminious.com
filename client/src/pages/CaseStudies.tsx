@@ -476,7 +476,7 @@ export default function CaseStudies() {
             <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
               Real Results from Real Partnerships
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-illuminious-navy/70 mb-8">
               See how companies across industries have leveraged our global manufacturing 
               network to achieve their goals.
             </p>
@@ -535,14 +535,14 @@ export default function CaseStudies() {
                         {study.title}
                       </h3>
                       <p className="text-sm text-illuminious-blue font-medium mb-3">{study.industry}</p>
-                      <p className="text-muted-foreground text-sm line-clamp-2 mb-4">{study.challenge}</p>
+                      <p className="text-illuminious-navy/70 text-sm line-clamp-2 mb-4">{study.challenge}</p>
                       
                       {/* Results Preview */}
                       <div className="grid grid-cols-3 gap-2 mb-4">
                         {study.results.map((result) => (
                           <div key={result.metric} className="text-center p-2 rounded-lg bg-illuminious-light/30">
                             <div className="text-sm font-bold text-illuminious-blue">{result.value}</div>
-                            <div className="text-xs text-muted-foreground">{result.metric}</div>
+                            <div className="text-xs text-illuminious-navy/70">{result.metric}</div>
                           </div>
                         ))}
                       </div>
@@ -599,3 +599,4 @@ export default function CaseStudies() {
     </>
   );
 }
+

@@ -157,7 +157,7 @@ export default function FactoryTour() {
                       <area.icon className="w-10 h-10 text-illuminious-blue" />
                       <h2 className="text-3xl font-bold text-illuminious-navy font-heading">{area.name}</h2>
                     </div>
-                    <p className="text-gray-700 leading-relaxed mb-6 text-lg">{area.description}</p>
+                    <p className="text-illuminious-navy leading-relaxed mb-6 text-lg">{area.description}</p>
                     <ul className="space-y-4">
                       {area.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
@@ -178,11 +178,11 @@ export default function FactoryTour() {
       </section>
 
       {/* Tour Options */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-illuminious-light/30">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Ready to See for Yourself?</h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-illuminious-sky">
               The best way to understand our capabilities is to see them in action. We believe in full transparency and welcome you to tour our facility, either virtually or in person.
             </p>
           </AnimatedSection>
@@ -190,7 +190,7 @@ export default function FactoryTour() {
             <div className="border rounded-lg p-8 flex flex-col items-center text-center bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Video className="w-12 h-12 text-illuminious-blue mb-4" />
               <h3 className="text-xl font-bold text-illuminious-navy mb-2">Live Virtual Tour</h3>
-              <p className="text-gray-600 mb-6 flex-grow">Join one of our lead engineers for a live, interactive walkthrough of our factory floor via video conference. Ask questions in real-time as we show you our equipment, processes, and people at work. It's the most efficient way to get a firsthand look.</p>
+              <p className="text-illuminious-sky mb-6 flex-grow">Join one of our lead engineers for a live, interactive walkthrough of our factory floor via video conference. Ask questions in real-time as we show you our equipment, processes, and people at work. It's the most efficient way to get a firsthand look.</p>
               <Button asChild className="w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full py-3 text-base font-semibold">
                 <Link href="/contact?tour=virtual">Schedule a Virtual Tour</Link>
               </Button>
@@ -198,7 +198,7 @@ export default function FactoryTour() {
             <div className="border rounded-lg p-8 flex flex-col items-center text-center bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Users className="w-12 h-12 text-illuminious-blue mb-4" />
               <h3 className="text-xl font-bold text-illuminious-navy mb-2">In-Person Visit</h3>
-              <p className="text-gray-600 mb-6 flex-grow">For a deeper dive, we welcome you to visit our facilities in person. We can help coordinate your travel to provide a seamless and insightful experience. Meet the team, see your potential production line, and gain complete confidence in your manufacturing partner.</p>
+              <p className="text-illuminious-sky mb-6 flex-grow">For a deeper dive, we welcome you to visit our facilities in person. We can help coordinate your travel to provide a seamless and insightful experience. Meet the team, see your potential production line, and gain complete confidence in your manufacturing partner.</p>
               <Button asChild className="w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full py-3 text-base font-semibold">
                 <Link href="/contact?tour=in-person">Arrange an In-Person Visit</Link>
               </Button>
@@ -211,3 +211,4 @@ export default function FactoryTour() {
     </>
   );
 }
+

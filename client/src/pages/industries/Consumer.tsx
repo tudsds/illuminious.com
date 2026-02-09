@@ -157,7 +157,7 @@ export default function IndustryConsumer() {
         <div className="container">
           <div className="flex justify-center items-center h-16">
             {pageSections.map((section) => (
-              <a key={section.id} href={`#${section.id}`} className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap">
+              <a key={section.id} href={`#${section.id}`} className="px-4 py-2 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap">
                 {section.title}
               </a>
             ))}
@@ -171,7 +171,7 @@ export default function IndustryConsumer() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">From Competitive Idea to Customer Hands</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     The consumer electronics landscape is a battleground of innovation and speed. To win, a groundbreaking product is not enough. You need a manufacturing strategy that enables rapid market entry, massive scalability to meet demand, and a competitive price point—all while delivering the flawless quality that builds brand loyalty.
                   </p>
@@ -192,11 +192,11 @@ export default function IndustryConsumer() {
           </div>
         </section>
 
-        <section id="capabilities" className="py-24 bg-gray-50">
+        <section id="capabilities" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Engineering a Superior Consumer Product Experience</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-illuminious-sky leading-relaxed">
                 Our comprehensive suite of services is meticulously tailored to address the specific demands of the fast-paced, aesthetically-driven consumer electronics market.
               </p>
             </AnimatedSection>
@@ -208,7 +208,7 @@ export default function IndustryConsumer() {
                       <cap.icon className="w-7 h-7 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-xl text-illuminious-navy mb-3 font-heading">{cap.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{cap.text}</p>
+                    <p className="text-illuminious-sky leading-relaxed">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -226,7 +226,7 @@ export default function IndustryConsumer() {
                 </AnimatedSection>
                 <AnimatedSection>
                     <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">Our Blueprint for a Successful Product Launch</h2>
-                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">We've codified our experience into a structured, phase-gate NPI process. This disciplined approach systematically eliminates risks, ensuring a smooth, predictable, and rapid transition from prototype to mass production.</p>
+                    <p className="text-lg text-illuminious-sky mb-8 leading-relaxed">We've codified our experience into a structured, phase-gate NPI process. This disciplined approach systematically eliminates risks, ensuring a smooth, predictable, and rapid transition from prototype to mass production.</p>
                     <ul className="space-y-5">
                         <li className="flex items-start gap-4"><CheckCircle className="w-7 h-7 text-illuminious-blue flex-shrink-0 mt-1" /><div><strong className="text-illuminious-navy">Phase 1: DFM & Strategic Sourcing.</strong> We perform a comprehensive DFM/DFA analysis while our sourcing team vets suppliers for all critical components, resulting in a transparent costed BOM and a clear manufacturing plan.</div></li>
                         <li className="flex items-start gap-4"><CheckCircle className="w-7 h-7 text-illuminious-blue flex-shrink-0 mt-1" /><div><strong className="text-illuminious-navy">Phase 2: EVT (Engineering Validation Test).</strong> We produce the first small batch (10-50 units) to validate the core design, functionality, and firmware, ensuring the basic product functions as designed.</div></li>
@@ -238,11 +238,11 @@ export default function IndustryConsumer() {
           </div>
         </section>
 
-        <section id="products" className="py-24 bg-gray-50">
+        <section id="products" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Proven Expertise Across the Consumer Spectrum</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-illuminious-sky leading-relaxed">
                 We have a proven track record of manufacturing high-quality consumer electronics across a wide range of product categories. Our experience allows us to anticipate challenges and implement solutions specific to each market segment.
               </p>
             </AnimatedSection>
@@ -251,7 +251,7 @@ export default function IndustryConsumer() {
                     <AnimatedSection key={item.title} delay={index * 0.05}>
                         <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
                             <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">{item.title}</h3>
-                            <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                            <p className="text-sm text-illuminious-sky leading-relaxed">{item.description}</p>
                         </div>
                     </AnimatedSection>
                 ))}
@@ -281,3 +281,4 @@ export default function IndustryConsumer() {
     </>
   );
 }
+

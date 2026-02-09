@@ -160,7 +160,7 @@ export default function Capabilities() {
               <AnimatedSection key={stat.metric} delay={index * 0.05}>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-illuminious-navy font-heading">{stat.value}</div>
-                  <div className="text-xs text-gray-500">{stat.metric}</div>
+                  <div className="text-xs text-illuminious-sky">{stat.metric}</div>
                   <div className="text-xs text-illuminious-blue font-medium">{stat.unit}</div>
                 </div>
               </AnimatedSection>
@@ -174,7 +174,7 @@ export default function Capabilities() {
         <div className="container">
           <AnimatedSection className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading text-center">Vertically Integrated Manufacturing Under One Roof</h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+            <div className="space-y-4 text-illuminious-navy leading-relaxed text-lg">
               <p>
                 Vertical integration is the foundation of our manufacturing philosophy. Unlike contract manufacturers who outsource critical processes to third-party vendors, we own and operate every capability needed to take your electronic product from bare PCB to finished, packaged, and shipped product. This means SMT assembly, through-hole soldering, automated optical inspection, X-ray inspection, in-circuit testing, functional testing, injection molding, box build assembly, firmware flashing, labeling, packaging, and US fulfillment — all happen within our own facilities, managed by our own engineers.
               </p>
@@ -190,11 +190,11 @@ export default function Capabilities() {
       </section>
 
       {/* Capabilities Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-illuminious-light/30">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Core Manufacturing Capabilities</h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-illuminious-sky">
               Each capability is supported by dedicated equipment, trained personnel, and documented procedures that are audited annually as part of our ISO certification program.
             </p>
           </AnimatedSection>
@@ -202,7 +202,7 @@ export default function Capabilities() {
             {capabilities.map((cap, index) => (
               <AnimatedSection key={cap.title} delay={index * 0.1}>
                 <Link href={cap.href}>
-                  <div className="group bg-white rounded-2xl border border-gray-100 hover:border-illuminious-blue hover:shadow-xl transition-all duration-300 p-6 h-full">
+                  <div className="group bg-white rounded-2xl border border-illuminious-light hover:border-illuminious-blue hover:shadow-xl transition-all duration-300 p-6 h-full">
                     <div className="flex items-start gap-4">
                       <div className="w-14 h-14 rounded-xl bg-illuminious-blue/10 flex items-center justify-center group-hover:bg-illuminious-blue transition-colors flex-shrink-0">
                         <cap.icon className="w-7 h-7 text-illuminious-blue group-hover:text-white" />
@@ -211,7 +211,7 @@ export default function Capabilities() {
                         <h3 className="text-xl font-bold text-illuminious-navy group-hover:text-illuminious-blue transition-colors mb-2 font-heading">
                           {cap.title}
                         </h3>
-                        <p className="text-gray-600 mb-4 leading-relaxed">
+                        <p className="text-illuminious-sky mb-4 leading-relaxed">
                           {cap.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -242,7 +242,7 @@ export default function Capabilities() {
             <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">
               Certifications & Compliance
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-illuminious-sky">
               Industry-recognized certifications that demonstrate our commitment to quality, safety, and environmental responsibility. Our certifications are maintained through annual third-party audits and continuous internal improvement programs.
             </p>
           </AnimatedSection>
@@ -250,20 +250,20 @@ export default function Capabilities() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
               <AnimatedSection key={cert.name} delay={index * 0.05}>
-                <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full">
+                <div className="bg-white rounded-xl p-6 border border-illuminious-light shadow-sm h-full">
                   <div className="flex items-center justify-between mb-3">
                     <Award className="w-6 h-6 text-illuminious-blue" />
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       cert.status === 'Certified' ? 'bg-green-100 text-green-700' :
                       cert.status === 'Compliant' ? 'bg-blue-100 text-blue-700' :
-                      'bg-gray-100 text-gray-700'
+                      'bg-illuminious-light/50 text-illuminious-navy'
                     }`}>
                       {cert.status}
                     </span>
                   </div>
                   <h3 className="font-bold text-illuminious-navy mb-1">{cert.name}</h3>
                   <p className="text-xs text-illuminious-blue font-medium mb-2">{cert.category}</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{cert.desc}</p>
+                  <p className="text-sm text-illuminious-sky leading-relaxed">{cert.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -272,13 +272,13 @@ export default function Capabilities() {
       </section>
 
       {/* Equipment */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-illuminious-light/30">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">
               Equipment & Technology
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-illuminious-sky">
               We invest in industry-leading equipment from manufacturers like Fuji, Panasonic, Koh Young, Nordson, and Haitian. Our equipment is standardized across facilities and maintained under rigorous preventive maintenance schedules to ensure consistent performance and uptime.
             </p>
           </AnimatedSection>
@@ -286,13 +286,13 @@ export default function Capabilities() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {equipment.map((eq, index) => (
               <AnimatedSection key={eq.category} delay={index * 0.1}>
-                <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm h-full">
-                  <h3 className="font-bold text-illuminious-navy mb-4 pb-4 border-b border-gray-100 font-heading">
+                <div className="bg-white rounded-xl p-6 border border-illuminious-light shadow-sm h-full">
+                  <h3 className="font-bold text-illuminious-navy mb-4 pb-4 border-b border-illuminious-light font-heading">
                     {eq.category}
                   </h3>
                   <ul className="space-y-2">
                     {eq.items.map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
+                      <li key={item} className="flex items-center gap-2 text-sm text-illuminious-sky">
                         <CheckCircle className="w-4 h-4 text-illuminious-blue flex-shrink-0" />
                         <span>{item}</span>
                       </li>
@@ -335,3 +335,4 @@ export default function Capabilities() {
     </>
   );
 }
+

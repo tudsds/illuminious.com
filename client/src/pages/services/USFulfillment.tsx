@@ -128,7 +128,7 @@ export default function ServiceUSFulfillment() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -144,7 +144,7 @@ export default function ServiceUSFulfillment() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Final Mile: Your Most Critical Touchpoint</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     You have invested countless hours and significant capital into designing a superior product and manufacturing it to exacting quality standards. However, the customer journey does not conclude at the factory gate; it ends when the product is safely in their hands. The final mile of delivery is often the most memorable and impactful part of the customer experience. Slow shipping, inaccurate orders, or damaged goods can irrevocably tarnish your brand reputation and negate all the hard work that came before.
                   </p>
@@ -166,11 +166,11 @@ export default function ServiceUSFulfillment() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">A Comprehensive Suite of Fulfillment Services</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We offer a complete range of 3PL services, powered by robust technology and industry expertise, designed to help you scale your business and delight your customers.
               </p>
             </AnimatedSection>
@@ -183,7 +183,7 @@ export default function ServiceUSFulfillment() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                      <p className="text-sm text-gray-600">{cap.text}</p>
+                      <p className="text-sm text-illuminious-sky">{cap.text}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -197,7 +197,7 @@ export default function ServiceUSFulfillment() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our 5-Step Fulfillment Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We have refined our process to be as simple and transparent as possible, giving you full visibility while we handle the complex logistics.
               </p>
             </AnimatedSection>
@@ -210,7 +210,7 @@ export default function ServiceUSFulfillment() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 !== 0 ? "text-left" : "text-right"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 !== 0 ? "text-left" : "text-right"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 !== 0 ? "text-left" : "text-right"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-lg">
@@ -225,7 +225,7 @@ export default function ServiceUSFulfillment() {
         </section>
 
         {/* Integrations Section */}
-        <section id="integrations" className="py-20 bg-gray-50">
+        <section id="integrations" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
@@ -235,7 +235,7 @@ export default function ServiceUSFulfillment() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Seamless E-commerce & ERP Integration</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     Our fulfillment platform is built for connectivity. It connects directly to the most popular e-commerce channels and ERP systems, creating a fully automated, end-to-end workflow from order placement to final delivery.
                   </p>
@@ -261,7 +261,7 @@ export default function ServiceUSFulfillment() {
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         Clear, straightforward answers to common questions about our 3PL and fulfillment services.
                     </p>
                 </AnimatedSection>
@@ -269,12 +269,12 @@ export default function ServiceUSFulfillment() {
                     <div className="space-y-6">
                         {faqs.map((faq, index) => (
                             <AnimatedSection key={index} delay={index * 0.1}>
-                                <div className="bg-gray-50 p-6 rounded-lg">
+                                <div className="bg-illuminious-light/30 p-6 rounded-lg">
                                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 flex items-center">
                                         <HelpCircle className="w-5 h-5 mr-3 text-illuminious-blue" />
                                         {faq.question}
                                     </h3>
-                                    <p className="text-gray-700 leading-relaxed pl-8">{faq.answer}</p>
+                                    <p className="text-illuminious-navy leading-relaxed pl-8">{faq.answer}</p>
                                 </div>
                             </AnimatedSection>
                         ))}
@@ -306,3 +306,4 @@ export default function ServiceUSFulfillment() {
     </>
   );
 }
+

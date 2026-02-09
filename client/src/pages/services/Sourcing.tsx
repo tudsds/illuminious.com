@@ -114,7 +114,7 @@ export default function ServiceSourcing() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -130,7 +130,7 @@ export default function ServiceSourcing() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Your Product is Only as Good as its Parts</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     In electronics manufacturing, the final product quality, cost, and production schedule are all dictated by the components that go into it. Managing a global supply chain of hundreds or thousands of unique parts is a monumental task, fraught with risks of counterfeit components, price volatility, and unexpected shortages.
                   </p>
@@ -149,11 +149,11 @@ export default function ServiceSourcing() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Sourcing & Procurement Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A comprehensive service to build and manage a world-class supply chain for your electronic product.
               </p>
             </AnimatedSection>
@@ -165,7 +165,7 @@ export default function ServiceSourcing() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -178,7 +178,7 @@ export default function ServiceSourcing() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Strategic Sourcing Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A data-driven, five-step process to ensure your supply chain is optimized for cost, quality, and resilience.
               </p>
             </AnimatedSection>
@@ -191,7 +191,7 @@ export default function ServiceSourcing() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold">
@@ -206,7 +206,7 @@ export default function ServiceSourcing() {
         </section>
 
         {/* Why Us Section */}
-        <section id="why-us" className="py-20 bg-gray-50">
+        <section id="why-us" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
@@ -216,7 +216,7 @@ export default function ServiceSourcing() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Illuminious Advantage</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0 mt-1" />
                     <div>
@@ -267,3 +267,4 @@ export default function ServiceSourcing() {
     </>
   );
 }
+

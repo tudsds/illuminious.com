@@ -121,7 +121,7 @@ export default function ServiceODM() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -137,7 +137,7 @@ export default function ServiceODM() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Your Idea, Our Expertise: The Path to Market</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed">
                   <p>
                     Bringing a new hardware product to market is a monumental undertaking, fraught with complexity. It demands a rare fusion of creative industrial design, rigorous multi-disciplinary engineering, and flawless manufacturing execution. Many brilliant product ideas falter, not due to a lack of vision, but because of the immense challenge of transforming a concept into a physical, reliable, and scalable product. This journey from a napkin sketch to a customer's hands is a gauntlet of potential pitfalls, from design flaws and supply chain disruptions to unforeseen manufacturing hurdles.
                   </p>
@@ -159,11 +159,11 @@ export default function ServiceODM() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Full-Stack ODM Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A fully integrated, multidisciplinary approach to product creation. We provide a complete suite of services to transform your vision into a commercially successful product, all managed under one roof for maximum efficiency and accountability.
               </p>
             </AnimatedSection>
@@ -175,7 +175,7 @@ export default function ServiceODM() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600 flex-grow">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky flex-grow">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -188,7 +188,7 @@ export default function ServiceODM() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Proven Development Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our six-phase, stage-gate process is engineered to de-risk hardware development, eliminate uncertainty, and ensure a predictable, efficient path to market. Each phase concludes with a formal review to ensure all objectives are met before proceeding.
               </p>
             </AnimatedSection>
@@ -201,7 +201,7 @@ export default function ServiceODM() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold text-illuminious-navy mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold shadow-lg">
@@ -216,11 +216,11 @@ export default function ServiceODM() {
         </section>
 
         {/* Technical Specifications Section */}
-        <section id="tech-specs" className="py-20 bg-gray-50">
+        <section id="tech-specs" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Capabilities & Specifications</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We leverage state-of-the-art technology and rigorous processes to deliver products of the highest quality and reliability. Our engineering and manufacturing standards are designed to meet the demands of complex consumer and industrial electronics.
               </p>
             </AnimatedSection>
@@ -228,7 +228,7 @@ export default function ServiceODM() {
               <AnimatedSection>
                 <div className="bg-white p-6 rounded-lg shadow-md h-full">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">Mechanical Engineering</h3>
-                  <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                  <ul className="space-y-2 text-sm text-illuminious-sky list-disc list-inside">
                     <li>Enclosure Design: Plastics (PC, ABS, TPE), Metals (Al, Steel)</li>
                     <li>Tooling: Injection Molding, Die Casting, CNC Machining</li>
                     <li>Tolerance Analysis: +/- 0.05mm standard</li>
@@ -240,7 +240,7 @@ export default function ServiceODM() {
               <AnimatedSection delay={0.1}>
                 <div className="bg-white p-6 rounded-lg shadow-md h-full">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">Electronics Engineering</h3>
-                  <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                  <ul className="space-y-2 text-sm text-illuminious-sky list-disc list-inside">
                     <li>PCB Design: Up to 24 layers, HDI, Rigid-Flex</li>
                     <li>Signal Integrity: High-speed differential pairs (USB 3.x, PCIe)</li>
                     <li>Wireless: BLE, Wi-Fi, NFC, Cellular (LTE-M/NB-IoT)</li>
@@ -252,7 +252,7 @@ export default function ServiceODM() {
               <AnimatedSection delay={0.2}>
                 <div className="bg-white p-6 rounded-lg shadow-md h-full">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">Quality & Manufacturing</h3>
-                  <ul className="space-y-2 text-sm text-gray-600 list-disc list-inside">
+                  <ul className="space-y-2 text-sm text-illuminious-sky list-disc list-inside">
                     <li>Factory Certifications: ISO 9001, ISO 13485, IATF 16949</li>
                     <li>SMT Lines: Fuji NXT III, 01005 component size</li>
                     <li>Inspection: 3D AOI, 3D SPI, X-Ray Inspection</li>
@@ -276,7 +276,7 @@ export default function ServiceODM() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Illuminious Advantage</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0 mt-1" />
                     <div>
@@ -326,3 +326,4 @@ export default function ServiceODM() {
     </>
   );
 }
+

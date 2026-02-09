@@ -544,14 +544,14 @@ export default function Blog() {
             <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-4">
               Manufacturing Knowledge Hub
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-illuminious-navy/70 mb-8">
               Expert guides, industry insights, and practical knowledge for hardware entrepreneurs 
               and manufacturing professionals.
             </p>
             
             {/* Search */}
             <div className="relative max-w-md">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-illuminious-navy/70" />
               <Input
                 type="text"
                 placeholder="Search articles..."
@@ -607,8 +607,8 @@ export default function Blog() {
                     <h2 className="text-2xl md:text-3xl font-bold text-illuminious-navy mb-4 group-hover:text-illuminious-blue transition-colors">
                       {featuredPost.title}
                     </h2>
-                    <p className="text-muted-foreground mb-6 line-clamp-3">{featuredPost.excerpt}</p>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                    <p className="text-illuminious-navy/70 mb-6 line-clamp-3">{featuredPost.excerpt}</p>
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-illuminious-navy/70">
                       <span className="flex items-center gap-1">
                         <User className="w-4 h-4" />
                         {featuredPost.authorName}
@@ -653,10 +653,10 @@ export default function Blog() {
                         <h2 className="text-xl font-semibold text-illuminious-navy mb-3 group-hover:text-illuminious-blue transition-colors line-clamp-2">
                           {post.title}
                         </h2>
-                        <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
+                        <p className="text-illuminious-navy/70 mb-4 line-clamp-2 flex-1">
                           {post.excerpt}
                         </p>
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-4 text-sm text-illuminious-navy/70">
                           <span className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
                             {new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
@@ -677,7 +677,7 @@ export default function Blog() {
       )}
 
       {filteredPosts.length === 0 && (
-        <div className="text-center py-20 text-muted-foreground">
+        <div className="text-center py-20 text-illuminious-navy/70">
           No articles found matching your criteria.
         </div>
       )}
@@ -711,3 +711,4 @@ export default function Blog() {
     </>
   );
 }
+

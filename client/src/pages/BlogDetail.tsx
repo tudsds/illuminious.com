@@ -40,7 +40,7 @@ export default function BlogDetail() {
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-illuminious-navy mb-4">Article Not Found</h1>
-            <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist.</p>
+            <p className="text-illuminious-navy/70 mb-8">The article you're looking for doesn't exist.</p>
             <Button asChild className="bg-illuminious-blue text-white rounded-full">
               <Link href="/blog">Back to Blog</Link>
             </Button>
@@ -64,7 +64,7 @@ export default function BlogDetail() {
 
       <section className="pt-24 pb-2 bg-illuminious-light/30">
         <div className="container">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+          <nav className="flex items-center gap-2 text-sm text-illuminious-navy/70">
             <Link href="/" className="hover:text-illuminious-blue transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <Link href="/blog" className="hover:text-illuminious-blue transition-colors">Blog</Link>
@@ -79,14 +79,14 @@ export default function BlogDetail() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-4xl">
             <span className="inline-block text-sm font-medium text-illuminious-blue bg-illuminious-light px-3 py-1 rounded-full mb-4">{post.category}</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-illuminious-navy mb-6 leading-tight">{post.title}</h1>
-            <p className="text-lg text-muted-foreground mb-6 max-w-3xl">{post.excerpt}</p>
-            <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-6">
+            <p className="text-lg text-illuminious-navy/70 mb-6 max-w-3xl">{post.excerpt}</p>
+            <div className="flex flex-wrap items-center gap-6 text-illuminious-navy/70 mb-6">
               <span className="flex items-center gap-2"><User className="w-4 h-4" />{post.authorName}</span>
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
               <span className="flex items-center gap-2"><Clock className="w-4 h-4" />{post.readTime} min read</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-sm text-muted-foreground flex items-center gap-1"><Share2 className="w-4 h-4" />Share:</span>
+              <span className="text-sm text-illuminious-navy/70 flex items-center gap-1"><Share2 className="w-4 h-4" />Share:</span>
               <SocialShare url={shareUrl} title={post.title} />
             </div>
           </motion.div>
@@ -112,7 +112,7 @@ export default function BlogDetail() {
                     <div className="w-10 h-10 rounded-full bg-illuminious-blue flex items-center justify-center text-white font-bold text-sm">{post.authorName.split(' ').map(n => n[0]).join('')}</div>
                     <div>
                       <p className="font-semibold text-illuminious-navy text-sm">{post.authorName}</p>
-                      <p className="text-xs text-muted-foreground">Illuminious Team</p>
+                      <p className="text-xs text-illuminious-navy/70">Illuminious Team</p>
                     </div>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export default function BlogDetail() {
       <section className="py-12 bg-illuminious-light/30">
         <div className="container">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <span className="text-muted-foreground flex items-center gap-2"><BookOpen className="w-4 h-4" />Found this article helpful? Share it:</span>
+            <span className="text-illuminious-navy/70 flex items-center gap-2"><BookOpen className="w-4 h-4" />Found this article helpful? Share it:</span>
             <SocialShare url={shareUrl} title={post.title} />
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function BlogDetail() {
                     <div className="p-4">
                       <span className="text-xs font-medium text-illuminious-blue">{relatedPost.category}</span>
                       <h3 className="text-lg font-semibold text-illuminious-navy mt-1 line-clamp-2 group-hover:text-illuminious-blue transition-colors">{relatedPost.title}</h3>
-                      <div className="flex items-center gap-3 mt-2 text-xs text-muted-foreground">
+                      <div className="flex items-center gap-3 mt-2 text-xs text-illuminious-navy/70">
                         <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{new Date(relatedPost.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
                         <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{relatedPost.readTime} min</span>
                       </div>
@@ -174,3 +174,4 @@ export default function BlogDetail() {
     </>
   );
 }
+

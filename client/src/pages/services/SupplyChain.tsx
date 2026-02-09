@@ -121,7 +121,7 @@ export default function ServiceSupplyChain() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -137,7 +137,7 @@ export default function ServiceSupplyChain() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Strategic Core of Modern Electronics</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     In today's volatile global market, a product is only as strong as its supply chain. Managing hundreds of suppliers, navigating complex logistics, and mitigating unforeseen risks can divert critical resources from your core focus: innovation and growth. An optimized supply chain is not a cost center; it is a strategic weapon that determines your speed to market, product cost, and ability to respond to unexpected challenges. Without a robust strategy, even the most innovative product can fail due to a single missing component.
                   </p>
@@ -159,11 +159,11 @@ export default function ServiceSupplyChain() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Core Supply Chain Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A full suite of services to manage your supply chain from end to end, ensuring quality, cost-effectiveness, and on-time delivery.
               </p>
             </AnimatedSection>
@@ -175,7 +175,7 @@ export default function ServiceSupplyChain() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -188,7 +188,7 @@ export default function ServiceSupplyChain() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Supply Chain Management Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A structured, data-driven approach to managing every facet of your supply chain.
               </p>
             </AnimatedSection>
@@ -201,7 +201,7 @@ export default function ServiceSupplyChain() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold">
@@ -216,7 +216,7 @@ export default function ServiceSupplyChain() {
         </section>
 
         {/* Logistics Section */}
-        <section id="logistics" className="py-20 bg-gray-50">
+        <section id="logistics" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
@@ -226,7 +226,7 @@ export default function ServiceSupplyChain() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Global Logistics & Fulfillment</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     Getting your product to market is the final, critical step. We provide flexible and reliable logistics solutions to meet your budget and timeline. Our expertise in international trade and our strategic locations in Shenzhen and Batam allow us to navigate the complexities of global freight with ease.
                   </p>
@@ -255,7 +255,7 @@ export default function ServiceSupplyChain() {
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         Answering your key questions about our supply chain management services.
                     </p>
                 </AnimatedSection>
@@ -263,9 +263,9 @@ export default function ServiceSupplyChain() {
                     <div className="space-y-6">
                         {faqs.map((faq, index) => (
                             <AnimatedSection key={index} delay={index * 0.1}>
-                                <div className="bg-gray-50 p-6 rounded-lg">
+                                <div className="bg-illuminious-light/30 p-6 rounded-lg">
                                     <h3 className="font-bold text-lg text-illuminious-navy mb-2">{faq.question}</h3>
-                                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                                    <p className="text-illuminious-navy leading-relaxed">{faq.answer}</p>
                                 </div>
                             </AnimatedSection>
                         ))}
@@ -296,3 +296,4 @@ export default function ServiceSupplyChain() {
     </>
   );
 }
+

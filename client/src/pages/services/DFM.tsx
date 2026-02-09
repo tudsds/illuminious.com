@@ -121,7 +121,7 @@ export default function ServiceDFM() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -137,7 +137,7 @@ export default function ServiceDFM() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Why DFM is the Foundation of Successful Hardware</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     Design for Manufacturing (DFM) and Design for Assembly (DFA) are not merely process steps; they are a foundational philosophy that separates successful, scalable products from those that fail to leave the prototype stage. This proactive engineering discipline focuses on designing products to be manufactured and assembled in the most efficient, reliable, and cost-effective manner possible. A brilliant design concept can quickly become a manufacturing nightmare—plagued by low yields, high failure rates, and spiraling costs—without a rigorous DFM analysis integrated early in the development cycle.
                   </p>
@@ -159,11 +159,11 @@ export default function ServiceDFM() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-24 bg-gray-50">
+        <section id="capabilities" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">Our Comprehensive DFM & DFA Services</h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-illuminious-sky leading-relaxed">
                 We offer a holistic, end-to-end analysis of your product, covering every critical aspect from the component level to the final packaged unit, ensuring a seamless transition to mass production.
               </p>
             </AnimatedSection>
@@ -175,7 +175,7 @@ export default function ServiceDFM() {
                       <cap.icon className="w-7 h-7 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">{cap.title}</h3>
-                    <p className="text-gray-600 text-base leading-relaxed">{cap.text}</p>
+                    <p className="text-illuminious-sky text-base leading-relaxed">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -188,7 +188,7 @@ export default function ServiceDFM() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">The Illuminious DFM Workflow</h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-illuminious-sky leading-relaxed">
                 Our transparent and structured process is designed to deliver actionable insights quickly, fostering a partnership that turns design potential into manufacturing reality.
               </p>
             </AnimatedSection>
@@ -201,7 +201,7 @@ export default function ServiceDFM() {
                       <AnimatedSection delay={index * 0.1}>
                         <div className={`text-left ${index % 2 === 0 ? "md:text-right" : ""}`}>
                           <h3 className="text-2xl font-bold mb-3 font-heading text-illuminious-navy">{step.name}</h3>
-                          <p className="text-gray-600 text-lg leading-relaxed">{step.description}</p>
+                          <p className="text-illuminious-sky text-lg leading-relaxed">{step.description}</p>
                         </div>
                       </AnimatedSection>
                     </div>
@@ -216,11 +216,11 @@ export default function ServiceDFM() {
         </section>
 
         {/* Technical Specifications Section */}
-        <section id="tech-specs" className="py-24 bg-gray-50">
+        <section id="tech-specs" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">Technical DFM Guidelines & Capabilities</h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-illuminious-sky leading-relaxed">
                 We adhere to stringent internal and external standards to ensure the highest quality. Below are some of the key technical parameters our DFM process addresses.
               </p>
             </AnimatedSection>
@@ -229,7 +229,7 @@ export default function ServiceDFM() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
                   <div className="tech-spec-item">
                     <h4 className="text-lg font-bold text-illuminious-navy mb-2">PCB Fabrication</h4>
-                    <ul className="space-y-1.5 text-gray-600 list-disc list-inside">
+                    <ul className="space-y-1.5 text-illuminious-sky list-disc list-inside">
                       <li>Min. Trace/Space: 3/3 mil (0.0762mm)</li>
                       <li>Min. Drill Size: 0.15mm (6 mil)</li>
                       <li>Aspect Ratio: 12:1</li>
@@ -240,7 +240,7 @@ export default function ServiceDFM() {
                   </div>
                   <div className="tech-spec-item">
                     <h4 className="text-lg font-bold text-illuminious-navy mb-2">Component & Assembly</h4>
-                    <ul className="space-y-1.5 text-gray-600 list-disc list-inside">
+                    <ul className="space-y-1.5 text-illuminious-sky list-disc list-inside">
                       <li>Smallest Passive: 01005 package</li>
                       <li>Fine Pitch BGA: 0.35mm</li>
                       <li>BGA Placement Accuracy: ±25µm</li>
@@ -251,7 +251,7 @@ export default function ServiceDFM() {
                   </div>
                   <div className="tech-spec-item">
                     <h4 className="text-lg font-bold text-illuminious-navy mb-2">Mechanical & Enclosure</h4>
-                    <ul className="space-y-1.5 text-gray-600 list-disc list-inside">
+                    <ul className="space-y-1.5 text-illuminious-sky list-disc list-inside">
                       <li>Plastic Injection Molding Tolerances: ±0.05mm</li>
                       <li>CNC Machining Tolerances: ±0.02mm</li>
                       <li>Sheet Metal Bend Radius: 1T minimum</li>
@@ -277,7 +277,7 @@ export default function ServiceDFM() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-4xl font-bold text-illuminious-navy mb-6 font-heading">The Tangible ROI of DFM</h2>
-                <div className="space-y-5 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-5 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     A thorough DFM/A process is not a cost center; it is a high-return investment that pays dividends across the entire product lifecycle. By partnering with Illuminious, you unlock measurable improvements in cost, quality, and speed.
                   </p>
@@ -332,3 +332,4 @@ export default function ServiceDFM() {
     </>
   );
 }
+

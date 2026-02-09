@@ -149,7 +149,7 @@ export default function IndustryIoT() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -165,7 +165,7 @@ export default function IndustryIoT() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">Engineering the Foundation of Your Connected Business</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     The Internet of Things (IoT) represents a fundamental shift in business, turning inert products into intelligent, data-generating assets. However, the journey from a brilliant concept to a mass-produced, globally certified, and secure connected device is fraught with complexity. It demands a sophisticated fusion of hardware engineering, embedded systems development, wireless expertise, and world-class manufacturing—a combination that few can master.
                   </p>
@@ -184,11 +184,11 @@ export default function IndustryIoT() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-24 bg-gray-50">
+        <section id="capabilities" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Core IoT Competencies for End-to-End Product Success</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-illuminious-sky leading-relaxed">
                 We have cultivated a comprehensive suite of in-house capabilities specifically for the unique demands of IoT device production. This integrated approach ensures quality, accelerates timelines, and provides a single point of accountability from prototype to mass production.
               </p>
             </AnimatedSection>
@@ -200,7 +200,7 @@ export default function IndustryIoT() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed flex-grow">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky leading-relaxed flex-grow">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -213,7 +213,7 @@ export default function IndustryIoT() {
             <div className="container">
                 <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
                     <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Solving the Toughest IoT Manufacturing Hurdles</h2>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <p className="text-lg text-illuminious-sky leading-relaxed">
                         Building reliable IoT hardware is about proactively solving challenges before they impact production. Our engineering-led approach identifies and mitigates the most common and critical failure points in IoT device manufacturing.
                     </p>
                 </AnimatedSection>
@@ -227,7 +227,7 @@ export default function IndustryIoT() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-xl text-illuminious-navy mb-2 font-heading">{challenge.title}</h3>
-                                        <p className="text-gray-600 leading-relaxed">{challenge.text}</p>
+                                        <p className="text-illuminious-sky leading-relaxed">{challenge.text}</p>
                                     </div>
                                 </div>
                             </AnimatedSection>
@@ -242,7 +242,7 @@ export default function IndustryIoT() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-xl text-illuminious-navy mb-2 font-heading">{challenge.title}</h3>
-                                        <p className="text-gray-600 leading-relaxed">{challenge.text}</p>
+                                        <p className="text-illuminious-sky leading-relaxed">{challenge.text}</p>
                                     </div>
                                 </div>
                             </AnimatedSection>
@@ -253,7 +253,7 @@ export default function IndustryIoT() {
         </section>
 
         {/* Process Section */}
-        <section id="process" className="py-24 bg-gray-50">
+        <section id="process" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-16 items-center">
                 <AnimatedSection delay={0.1}>
@@ -263,7 +263,7 @@ export default function IndustryIoT() {
                 </AnimatedSection>
                 <AnimatedSection>
                     <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">Our Structured IoT Product Launch Process</h2>
-                    <div className="space-y-5 text-gray-700 leading-relaxed">
+                    <div className="space-y-5 text-illuminious-navy leading-relaxed">
                         <p className="text-lg">
                             We de-risk your path to market with a phased New Product Introduction (NPI) process that emphasizes collaboration, validation, and preparation for scale.
                         </p>
@@ -284,33 +284,33 @@ export default function IndustryIoT() {
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Proven Expertise Across Diverse IoT Verticals</h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-illuminious-sky leading-relaxed">
                 Our robust manufacturing infrastructure and engineering expertise are applied across a wide spectrum of demanding industries, each with its own unique challenges and requirements.
               </p>
             </AnimatedSection>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-gray-50 p-6 rounded-lg shadow-md"> 
+                <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-md"> 
                     <h3 className="font-bold text-xl text-illuminious-navy mb-3 font-heading">Industrial & Smart Factory (IIoT)</h3>
-                    <p className="text-gray-600 mb-4">Manufacturing rugged devices for condition monitoring, predictive maintenance, and asset tracking in harsh factory environments. Key challenges include high-reliability components, vibration resistance, and robust enclosure design.</p>
-                    <ul className="text-sm text-gray-600 space-y-2"> 
+                    <p className="text-illuminious-sky mb-4">Manufacturing rugged devices for condition monitoring, predictive maintenance, and asset tracking in harsh factory environments. Key challenges include high-reliability components, vibration resistance, and robust enclosure design.</p>
+                    <ul className="text-sm text-illuminious-sky space-y-2"> 
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>Vibration sensors for machinery</span></li>
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>LoRaWAN-based asset trackers</span></li>
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>Environmental monitoring gateways</span></li>
                     </ul>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg shadow-md"> 
+                <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-md"> 
                     <h3 className="font-bold text-xl text-illuminious-navy mb-3 font-heading">Smart Home & Building Automation</h3>
-                    <p className="text-gray-600 mb-4">High-volume manufacturing of aesthetically pleasing and cost-sensitive consumer devices. Focus on RF performance in crowded wireless environments, interoperability (Matter), and user-friendly design.</p>
-                    <ul className="text-sm text-gray-600 space-y-2"> 
+                    <p className="text-illuminious-sky mb-4">High-volume manufacturing of aesthetically pleasing and cost-sensitive consumer devices. Focus on RF performance in crowded wireless environments, interoperability (Matter), and user-friendly design.</p>
+                    <ul className="text-sm text-illuminious-sky space-y-2"> 
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>BLE/Thread motion and contact sensors</span></li>
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>Smart thermostats and lighting controls</span></li>
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>Water leak and smoke detectors</span></li>
                     </ul>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg shadow-md"> 
+                <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-md"> 
                     <h3 className="font-bold text-xl text-illuminious-navy mb-3 font-heading">Smart Agriculture & Environmental</h3>
-                    <p className="text-gray-600 mb-4">Building ultra-low-power, long-range devices for outdoor deployment. Requires expertise in IP-rated waterproof enclosures, UV-resistant materials, and optimizing battery life for years of unattended operation.</p>
-                    <ul className="text-sm text-gray-600 space-y-2"> 
+                    <p className="text-illuminious-sky mb-4">Building ultra-low-power, long-range devices for outdoor deployment. Requires expertise in IP-rated waterproof enclosures, UV-resistant materials, and optimizing battery life for years of unattended operation.</p>
+                    <ul className="text-sm text-illuminious-sky space-y-2"> 
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>Soil moisture and nutrient sensors</span></li>
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>Livestock tracking and health monitors</span></li>
                         <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-illuminious-blue" /><span>Weather stations and water level sensors</span></li>
@@ -343,3 +343,4 @@ export default function IndustryIoT() {
     </>
   );
 }
+

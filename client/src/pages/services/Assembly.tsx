@@ -115,7 +115,7 @@ export default function ServiceAssembly() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -131,7 +131,7 @@ export default function ServiceAssembly() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">From Board to Final Product</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     Final assembly, also known as box build or systems integration, is the crucial step in bringing an electronic product to market. It's the process of taking your assembled printed circuit board (PCBA) and integrating it with all the other necessary components—such as enclosures, cables, power supplies, and user interfaces—to create a finished, functional product.
                   </p>
@@ -153,11 +153,11 @@ export default function ServiceAssembly() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Assembly Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We provide a full range of services to take your product from a bare PCBA to a fully packaged, customer-ready unit.
               </p>
             </AnimatedSection>
@@ -169,7 +169,7 @@ export default function ServiceAssembly() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -182,7 +182,7 @@ export default function ServiceAssembly() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">The System Assembly Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our systematic approach ensures that every unit is built and tested to your exact specifications, with quality checks at every stage.
               </p>
             </AnimatedSection>
@@ -195,7 +195,7 @@ export default function ServiceAssembly() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold">
@@ -210,7 +210,7 @@ export default function ServiceAssembly() {
         </section>
 
         {/* Quality Assurance Section */}
-        <section id="quality" className="py-20 bg-gray-50">
+        <section id="quality" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
@@ -220,7 +220,7 @@ export default function ServiceAssembly() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">End-to-End Quality Control</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     Quality control in final assembly extends far beyond the PCBA. It encompasses every component and every step of the integration process. Our quality system is designed to ensure that the final product not only works perfectly but also meets all cosmetic and packaging requirements.
                   </p>
@@ -267,3 +267,4 @@ export default function ServiceAssembly() {
     </>
   );
 }
+

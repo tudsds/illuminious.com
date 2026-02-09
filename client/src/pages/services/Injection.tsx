@@ -125,7 +125,7 @@ export default function ServiceInjection() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -141,7 +141,7 @@ export default function ServiceInjection() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Precision Plastic Manufacturing at Scale</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     Plastic injection molding is the core manufacturing process for producing vast quantities of identical plastic parts with exceptional precision and speed. The process involves injecting molten plastic resin under high pressure into a custom-made mold, or 'tool'. The quality, performance, and cost of your final product are directly tied to the expertise invested in the mold's design and the scientific precision of the molding process. A robust, well-engineered mold is a critical asset, capable of producing millions of flawless parts over its lifetime.
                   </p>
@@ -163,11 +163,11 @@ export default function ServiceInjection() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-24 bg-gray-50">
+        <section id="capabilities" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">End-to-End Molding & Tooling Capabilities</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 From complex micro-molding to large-format components, our vertically integrated services provide a complete solution for your plastic manufacturing needs.
               </p>
             </AnimatedSection>
@@ -179,7 +179,7 @@ export default function ServiceInjection() {
                       <cap.icon className="w-8 h-8 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-xl text-illuminious-navy mb-3 font-heading">{cap.title}</h3>
-                    <p className="text-base text-gray-600 leading-relaxed">{cap.text}</p>
+                    <p className="text-base text-illuminious-sky leading-relaxed">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -192,7 +192,7 @@ export default function ServiceInjection() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">Our Integrated Tooling & Molding Process</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 A transparent, collaborative, and engineering-driven process that guarantees quality and efficiency from initial design to final production.
               </p>
             </AnimatedSection>
@@ -205,7 +205,7 @@ export default function ServiceInjection() {
                     </div>
                     <AnimatedSection delay={index * 0.1}>
                       <h3 className="text-2xl font-bold mb-3 font-heading text-illuminious-navy">{step.name}</h3>
-                      <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>
+                      <p className="text-illuminious-sky leading-relaxed text-lg">{step.description}</p>
                     </AnimatedSection>
                   </div>
                 ))}
@@ -215,18 +215,18 @@ export default function ServiceInjection() {
         </section>
 
         {/* Materials & Finishes Section */}
-        <section id="materials" className="py-24 bg-gray-50">
+        <section id="materials" className="py-24 bg-illuminious-light/30">
           <div className="container">
              <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">Material Selection & Surface Finishing</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 The right combination of resin and finish is critical for product performance and aesthetics. Our experts guide you through the vast landscape of available options.
               </p>
             </AnimatedSection>
             <div className="grid md:grid-cols-2 gap-16 items-start">
               <AnimatedSection>
                 <h3 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Engineering & Commodity Resins</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg">We mold hundreds of different thermoplastic resins. Our materials engineers help you select the optimal material based on factors like mechanical strength, chemical resistance, temperature exposure, UV stability, and cost. We have extensive experience with both common and highly specialized polymers.</p>
+                <p className="text-illuminious-navy mb-6 leading-relaxed text-lg">We mold hundreds of different thermoplastic resins. Our materials engineers help you select the optimal material based on factors like mechanical strength, chemical resistance, temperature exposure, UV stability, and cost. We have extensive experience with both common and highly specialized polymers.</p>
                 <div className="columns-2 space-y-2">
                   {[
                     { name: 'ABS', desc: 'Good toughness & impact strength' },
@@ -242,7 +242,7 @@ export default function ServiceInjection() {
                     { name: 'ULTEM (PEI)', desc: 'High strength and flame retardant' },
                     { name: 'Glass-Filled Variants', desc: 'For increased stiffness & stability' },
                   ].map(mat => (
-                    <div key={mat.name} className="bg-white border rounded-md p-2 text-sm text-gray-700 break-inside-avoid-column">
+                    <div key={mat.name} className="bg-white border rounded-md p-2 text-sm text-illuminious-navy break-inside-avoid-column">
                       <span className="font-bold">{mat.name}:</span> {mat.desc}
                     </div>
                   ))}
@@ -250,8 +250,8 @@ export default function ServiceInjection() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h3 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">In-Mold & Post-Process Finishes</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg">We provide a complete range of surface finishes to achieve your desired cosmetic appearance, from textured surfaces created directly in the mold to a variety of post-processing applications.</p>
-                <ul className="space-y-4 text-gray-700 text-lg">
+                <p className="text-illuminious-navy mb-6 leading-relaxed text-lg">We provide a complete range of surface finishes to achieve your desired cosmetic appearance, from textured surfaces created directly in the mold to a variety of post-processing applications.</p>
+                <ul className="space-y-4 text-illuminious-navy text-lg">
                   <li className="flex items-start"><CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" /><span><strong>SPI Standard Finishes:</strong> From A-1 (mirror polish) to D-3 (dull matte), we can achieve any standard SPI surface finish directly from the mold.</span></li>
                   <li className="flex items-start"><CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" /><span><strong>VDI/Mold-Tech Textures:</strong> We can apply thousands of standard textures, from light grains to heavy leather patterns, via chemical etching of the mold cavity.</span></li>
                   <li className="flex items-start"><CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" /><span><strong>Painting, Printing & Coating:</strong> Multi-coat painting (including EMI/RFI shielding), pad printing for logos, silk screening for graphics, and specialized coatings like soft-touch (haptic) and UV-resistant clear coats.</span></li>
@@ -273,7 +273,7 @@ export default function ServiceInjection() {
               </AnimatedSection>
               <AnimatedSection>
                 <h2 className="text-4xl font-bold text-illuminious-navy mb-6 font-heading">Commitment to Quality</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     Quality is not just a final inspection; it's a philosophy embedded in our entire process. Our factories are ISO 9001:2015 certified, and we employ a multi-stage quality assurance protocol to guarantee that every part we ship meets or exceeds your specifications. Our quality management system (QMS) ensures traceability and accountability from raw material verification to final packaging.
                   </p>
@@ -287,31 +287,31 @@ export default function ServiceInjection() {
         </section>
 
         {/* Technical Specifications Section */}
-        <section id="specifications" className="py-24 bg-gray-50">
+        <section id="specifications" className="py-24 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 Our facilities are equipped to handle a wide range of project requirements with precision and reliability.
               </p>
             </AnimatedSection>
             <AnimatedSection>
               <div className="bg-white rounded-xl shadow-xl border overflow-hidden">
                 <table className="w-full text-left text-lg">
-                  <thead className="bg-gray-100">
+                  <thead className="bg-illuminious-light/50">
                     <tr>
                       <th className="p-6 font-bold text-illuminious-navy">Feature</th>
                       <th className="p-6 font-bold text-illuminious-navy">Specification</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    <tr className="hover:bg-gray-50 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Press Tonnage</td><td className="p-6 text-gray-600">50 to 1000 Tons Clamping Force</td></tr>
-                    <tr className="hover:bg-gray-50 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Shot Size</td><td className="p-6 text-gray-600">0.5g to 5,000g</td></tr>
-                    <tr className="hover:bg-gray-50 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Standard Tolerances</td><td className="p-6 text-gray-600">+/- 0.1mm (0.004 in), with tighter tolerances possible upon review</td></tr>
-                    <tr className="hover:bg-gray-50 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Tooling Lead Time</td><td className="p-6 text-gray-600">Rapid Tooling: 2-4 weeks | Production Tooling: 4-10 weeks</td></tr>
-                    <tr className="hover:bg-gray-50 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Tool Steel Types</td><td className="p-6 text-gray-600">P20, NAK80, H13, S136 (Hardened Stainless)</td></tr>
-                    <tr className="hover:bg-gray-50 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Quality Certifications</td><td className="p-6 text-gray-600">ISO 9001:2015, IATF 16949 (in progress), ISO 13485 (in progress)</td></tr>
-                    <tr className="hover:bg-gray-50 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Data Exchange</td><td className="p-6 text-gray-600">STEP, IGES, X_T, SLDPRT, DWG, DXF</td></tr>
+                    <tr className="hover:bg-illuminious-light/30 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Press Tonnage</td><td className="p-6 text-illuminious-sky">50 to 1000 Tons Clamping Force</td></tr>
+                    <tr className="hover:bg-illuminious-light/30 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Shot Size</td><td className="p-6 text-illuminious-sky">0.5g to 5,000g</td></tr>
+                    <tr className="hover:bg-illuminious-light/30 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Standard Tolerances</td><td className="p-6 text-illuminious-sky">+/- 0.1mm (0.004 in), with tighter tolerances possible upon review</td></tr>
+                    <tr className="hover:bg-illuminious-light/30 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Tooling Lead Time</td><td className="p-6 text-illuminious-sky">Rapid Tooling: 2-4 weeks | Production Tooling: 4-10 weeks</td></tr>
+                    <tr className="hover:bg-illuminious-light/30 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Tool Steel Types</td><td className="p-6 text-illuminious-sky">P20, NAK80, H13, S136 (Hardened Stainless)</td></tr>
+                    <tr className="hover:bg-illuminious-light/30 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Quality Certifications</td><td className="p-6 text-illuminious-sky">ISO 9001:2015, IATF 16949 (in progress), ISO 13485 (in progress)</td></tr>
+                    <tr className="hover:bg-illuminious-light/30 transition-colors duration-200"><td className="p-6 font-medium text-gray-800">Data Exchange</td><td className="p-6 text-illuminious-sky">STEP, IGES, X_T, SLDPRT, DWG, DXF</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -342,3 +342,4 @@ export default function ServiceInjection() {
     </>
   );
 }
+

@@ -142,7 +142,7 @@ export default function ServiceRapidPrototyping() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -158,7 +158,7 @@ export default function ServiceRapidPrototyping() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Validate Your Vision with Speed and Precision</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed">
                   <p>
                     In today's hyper-competitive market, the speed at which you can move from a CAD model to a physical, testable product is a decisive factor for success. Rapid prototyping is the critical engineering phase that breathes life into your design, allowing you to test form, fit, and function, gather essential user feedback, and uncover design flaws before committing to the significant expense of mass production tooling. It’s about making informed decisions quickly and iterating your way to a market-ready product.
                   </p>
@@ -180,11 +180,11 @@ export default function ServiceRapidPrototyping() {
         </section>
 
         {/* Technologies Section */}
-        <section id="technologies" className="py-20 bg-gray-50">
+        <section id="technologies" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Comprehensive Prototyping Technologies</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 We provide a complete suite of in-house and partner capabilities to build any part of your product. Our expert engineers will help you select the right technology and material for your specific application, ensuring your prototype meets its functional and aesthetic goals.
               </p>
             </AnimatedSection>
@@ -197,7 +197,7 @@ export default function ServiceRapidPrototyping() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{tech.title}</h3>
-                        <p className="text-sm text-gray-600">{tech.text}</p>
+                        <p className="text-sm text-illuminious-sky">{tech.text}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -211,7 +211,7 @@ export default function ServiceRapidPrototyping() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Transparent & Streamlined Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 Our six-step process is designed for maximum clarity, speed, and accountability. A US-based project manager is your single point of contact from start to finish.
               </p>
             </AnimatedSection>
@@ -224,13 +224,13 @@ export default function ServiceRapidPrototyping() {
                         <div className="hidden md:block w-1/2 px-8">
                             <AnimatedSection delay={index * 0.1}>
                                 <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>{step.name}</h3>
-                                <p className={`text-gray-600 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>{step.description}</p>
+                                <p className={`text-illuminious-sky ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>{step.description}</p>
                             </AnimatedSection>
                         </div>
                         <div className="block md:hidden w-full pl-24">
                              <AnimatedSection delay={index * 0.1}>
                                 <h3 className="text-xl font-bold mb-2 font-heading">{step.name}</h3>
-                                <p className="text-gray-600">{step.description}</p>
+                                <p className="text-illuminious-sky">{step.description}</p>
                             </AnimatedSection>
                         </div>
                         <div className="absolute left-12 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-lg z-10">
@@ -245,11 +245,11 @@ export default function ServiceRapidPrototyping() {
         </section>
 
         {/* Specifications Section */}
-        <section id="specifications" className="py-20 bg-gray-50">
+        <section id="specifications" className="py-20 bg-illuminious-light/30">
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         We operate with precision. Below are some of our core manufacturing capabilities and tolerances. Contact us if you have requirements beyond what is listed.
                     </p>
                 </AnimatedSection>
@@ -258,7 +258,7 @@ export default function ServiceRapidPrototyping() {
                         <AnimatedSection key={spec.category} delay={index * 0.1}>
                             <div className="bg-white p-6 rounded-lg shadow-md h-full">
                                 <h3 className="font-bold text-xl text-illuminious-navy mb-4 font-heading border-b pb-2">{spec.category}</h3>
-                                <ul className="space-y-2 text-gray-600 text-sm">
+                                <ul className="space-y-2 text-illuminious-sky text-sm">
                                     {spec.items.map(item => (
                                         <li key={item} className="flex items-start">
                                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -278,7 +278,7 @@ export default function ServiceRapidPrototyping() {
             <div className="container max-w-4xl mx-auto">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         Answers to common questions about our rapid prototyping services.
                     </p>
                 </AnimatedSection>
@@ -287,7 +287,7 @@ export default function ServiceRapidPrototyping() {
                         {faqs.map((faq, index) => (
                             <AccordionItem value={`item-${index + 1}`} key={index}>
                                 <AccordionTrigger className="text-left font-bold text-lg">{faq.q}</AccordionTrigger>
-                                <AccordionContent className="text-base text-gray-700 leading-relaxed">
+                                <AccordionContent className="text-base text-illuminious-navy leading-relaxed">
                                     {faq.a}
                                 </AccordionContent>
                             </AccordionItem>
@@ -320,3 +320,4 @@ export default function ServiceRapidPrototyping() {
     </>
   );
 }
+

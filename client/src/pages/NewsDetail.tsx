@@ -40,7 +40,7 @@ export default function NewsDetail() {
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-illuminious-navy mb-4">Article Not Found</h1>
-            <p className="text-muted-foreground mb-8">The news article you're looking for doesn't exist.</p>
+            <p className="text-illuminious-navy/70 mb-8">The news article you're looking for doesn't exist.</p>
             <Button asChild className="bg-illuminious-blue text-white rounded-full">
               <Link href="/news">Back to News</Link>
             </Button>
@@ -63,7 +63,7 @@ export default function NewsDetail() {
       {/* Breadcrumb */}
       <section className="pt-24 pb-2 bg-illuminious-light/30">
         <div className="container">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+          <nav className="flex items-center gap-2 text-sm text-illuminious-navy/70">
             <Link href="/" className="hover:text-illuminious-blue transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <Link href="/news" className="hover:text-illuminious-blue transition-colors">News</Link>
@@ -84,13 +84,13 @@ export default function NewsDetail() {
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-illuminious-navy mb-6 leading-tight">{news.title}</h1>
-            <p className="text-lg text-muted-foreground mb-6 max-w-3xl">{news.excerpt}</p>
-            <div className="flex flex-wrap items-center gap-6 text-muted-foreground mb-6">
+            <p className="text-lg text-illuminious-navy/70 mb-6 max-w-3xl">{news.excerpt}</p>
+            <div className="flex flex-wrap items-center gap-6 text-illuminious-navy/70 mb-6">
               <span className="flex items-center gap-2"><Calendar className="w-4 h-4" />{new Date(news.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
               <span className="flex items-center gap-2"><Clock className="w-4 h-4" />{news.readTime} min read</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-sm text-muted-foreground flex items-center gap-1"><Share2 className="w-4 h-4" />Share:</span>
+              <span className="text-sm text-illuminious-navy/70 flex items-center gap-1"><Share2 className="w-4 h-4" />Share:</span>
               <SocialShare url={shareUrl} title={news.title} />
             </div>
           </motion.div>
@@ -123,7 +123,7 @@ export default function NewsDetail() {
                     {newsItems.filter(item => item.slug !== slug).slice(0, 4).map((item) => (
                       <Link key={item.id} href={`/news/${item.slug}`} className="block group">
                         <p className="text-sm font-medium text-illuminious-navy group-hover:text-illuminious-blue transition-colors line-clamp-2">{item.title}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">{new Date(item.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+                        <p className="text-xs text-illuminious-navy/70 mt-0.5">{new Date(item.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
                       </Link>
                     ))}
                   </div>
@@ -145,7 +145,7 @@ export default function NewsDetail() {
       <section className="py-12 bg-illuminious-light/30">
         <div className="container">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <span className="text-muted-foreground flex items-center gap-2"><BookOpen className="w-4 h-4" />Found this news helpful? Share it:</span>
+            <span className="text-illuminious-navy/70 flex items-center gap-2"><BookOpen className="w-4 h-4" />Found this news helpful? Share it:</span>
             <SocialShare url={shareUrl} title={news.title} />
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function NewsDetail() {
                     <div className="p-4">
                       <span className="text-xs font-medium text-illuminious-blue">{item.category}</span>
                       <h3 className="text-lg font-semibold text-illuminious-navy mt-1 line-clamp-2 group-hover:text-illuminious-blue transition-colors">{item.title}</h3>
-                      <div className="flex items-center gap-3 mt-2 text-xs text-muted-foreground">
+                      <div className="flex items-center gap-3 mt-2 text-xs text-illuminious-navy/70">
                         <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{new Date(item.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
                         <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{item.readTime} min</span>
                       </div>
@@ -184,3 +184,4 @@ export default function NewsDetail() {
     </>
   );
 }
+

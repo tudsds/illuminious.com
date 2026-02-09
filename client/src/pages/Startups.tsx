@@ -161,7 +161,7 @@ export default function Startups() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl leading-relaxed"
+              className="text-lg md:text-xl text-white mb-10 max-w-3xl leading-relaxed"
             >
               Stop navigating the manufacturing maze alone. The Startup Bridge program provides the expertise, infrastructure, and transparent process to turn your brilliant prototype into a market-ready product — faster and with less risk.
             </motion.p>
@@ -394,3 +394,4 @@ export default function Startups() {
     </>
   );
 }
+

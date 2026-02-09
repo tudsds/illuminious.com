@@ -117,7 +117,7 @@ export default function IoTSpecialization() {
               <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
                 From Silicon to Cloud: Your Partner in IoT Manufacturing
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-illuminious-navy/70 mb-8">
                 The Internet of Things demands more than just standard electronics manufacturing. It requires deep, specialized expertise in wireless systems, power management, and global regulations. At Illuminious, we provide the end-to-end manufacturing services that transform your innovative IoT concepts into reliable, scalable, and secure connected products for the global market.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -154,7 +154,7 @@ export default function IoTSpecialization() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
               Core IoT Manufacturing Capabilities
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-illuminious-navy/70">
               Successfully manufacturing wireless devices requires a unique fusion of electronics assembly, RF engineering, and rigorous testing. Our vertically integrated capabilities are specifically tailored to address the complexities of IoT product development and mass production, ensuring quality, reliability, and performance.
             </p>
           </AnimatedSection>
@@ -167,7 +167,7 @@ export default function IoTSpecialization() {
                     <cap.icon className="w-6 h-6 text-illuminious-blue" />
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-2">{cap.title}</h3>
-                  <p className="text-muted-foreground text-sm flex-grow">{cap.description}</p>
+                  <p className="text-illuminious-navy/70 text-sm flex-grow">{cap.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -182,7 +182,7 @@ export default function IoTSpecialization() {
               <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
                 Mastery Across the Wireless Spectrum
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-illuminious-navy/70">
                 Your product's use case dictates its connectivity needs. We have hands-on, mass-production experience across the full spectrum of wireless protocols, from short-range personal area networks to long-range cellular technologies. We help you select and implement the optimal protocol for your application's specific requirements of bandwidth, range, power consumption, and topology.
               </p>
             </AnimatedSection>
@@ -192,8 +192,8 @@ export default function IoTSpecialization() {
               {protocols.map((protocol) => (
                 <div key={protocol.name} className="p-4 rounded-xl bg-white border border-illuminious-light/80 hover:shadow-md transition-shadow h-full flex flex-col">
                   <div className="font-bold text-illuminious-navy">{protocol.name}</div>
-                  <div className="text-xs text-muted-foreground mb-2">{protocol.versions}</div>
-                  <p className="text-sm text-muted-foreground flex-grow">{protocol.description}</p>
+                  <div className="text-xs text-illuminious-navy/70 mb-2">{protocol.versions}</div>
+                  <p className="text-sm text-illuminious-navy/70 flex-grow">{protocol.description}</p>
                 </div>
               ))}
             </div>
@@ -215,7 +215,7 @@ export default function IoTSpecialization() {
               <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-6">
                 Navigating Global Wireless Certification
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-illuminious-navy/70 mb-8">
                 Gaining market access for a wireless product means navigating a complex web of international regulations and certifications. A failure at this final stage can lead to costly delays and redesigns. Our experienced compliance team acts as your partner, guiding you through the entire process. We help with documentation, manage submissions to certified test labs, and troubleshoot any issues that arise, ensuring your product is compliant for your target markets from day one.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4">
@@ -224,7 +224,7 @@ export default function IoTSpecialization() {
                     <CheckCircle className="w-5 h-5 text-illuminious-blue flex-shrink-0" />
                     <div>
                       <span className="font-semibold text-illuminious-navy">{cert.name}</span>
-                      <span className="text-xs text-muted-foreground block">{cert.region}</span>
+                      <span className="text-xs text-illuminious-navy/70 block">{cert.region}</span>
                     </div>
                   </div>
                 ))}
@@ -240,7 +240,7 @@ export default function IoTSpecialization() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
               The Illuminious IoT Production Process
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-illuminious-navy/70">
               We have engineered our entire production process to mitigate the risks inherent in IoT manufacturing. From design for manufacturability (DFM) to specialized testing, we ensure a smooth transition from prototype to high-volume production.
             </p>
           </AnimatedSection>
@@ -253,7 +253,7 @@ export default function IoTSpecialization() {
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy">RF-Aware DFM/DFA</h3>
                 </div>
-                <p className="text-muted-foreground">Our Design for Manufacturability (DFM) and Assembly (DFA) process includes specific checks for IoT devices. We analyze PCB layouts for proper RF signal routing, shielding, and component placement to prevent signal degradation. We also ensure the mechanical design doesn't interfere with antenna performance, a common pitfall that can cripple a wireless product.</p>
+                <p className="text-illuminious-navy/70">Our Design for Manufacturability (DFM) and Assembly (DFA) process includes specific checks for IoT devices. We analyze PCB layouts for proper RF signal routing, shielding, and component placement to prevent signal degradation. We also ensure the mechanical design doesn't interfere with antenna performance, a common pitfall that can cripple a wireless product.</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
@@ -264,7 +264,7 @@ export default function IoTSpecialization() {
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy">Specialized Production Testing</h3>
                 </div>
-                <p className="text-muted-foreground">Standard functional tests aren't enough for IoT. Our production lines incorporate custom-built RF test fixtures. Every single device is tested for key wireless metrics like transmit power and receiver sensitivity. This 100% testing methodology ensures that every unit leaving our factory performs to specification, drastically reducing field failures and RMAs.</p>
+                <p className="text-illuminious-navy/70">Standard functional tests aren't enough for IoT. Our production lines incorporate custom-built RF test fixtures. Every single device is tested for key wireless metrics like transmit power and receiver sensitivity. This 100% testing methodology ensures that every unit leaving our factory performs to specification, drastically reducing field failures and RMAs.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -299,4 +299,5 @@ export default function IoTSpecialization() {
     </>
   );
 }
+
 

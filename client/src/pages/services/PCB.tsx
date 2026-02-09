@@ -115,7 +115,7 @@ export default function ServicePCB() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -131,7 +131,7 @@ export default function ServicePCB() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">More Than Just a Board Shop</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     The Printed Circuit Board (PCB) is the backbone of your electronic product. Its quality and reliability directly impact everything from performance to final product lifespan. Many companies rely on a fragmented supply chain, using one vendor for fabrication, another for assembly, and yet another for testing. This approach introduces risk, increases costs, and slows down your time to market.
                   </p>
@@ -150,11 +150,11 @@ export default function ServicePCB() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our PCB Fabrication Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A full spectrum of technologies to meet the demands of any product, from simple consumer devices to complex industrial and medical equipment.
               </p>
             </AnimatedSection>
@@ -166,7 +166,7 @@ export default function ServicePCB() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -179,7 +179,7 @@ export default function ServicePCB() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Fabrication Process</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A meticulously controlled, six-step process that transforms your digital design into a physical, high-reliability circuit board.
               </p>
             </AnimatedSection>
@@ -192,7 +192,7 @@ export default function ServicePCB() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold">
@@ -207,7 +207,7 @@ export default function ServicePCB() {
         </section>
 
         {/* Why Us Section */}
-        <section id="why-us" className="py-20 bg-gray-50">
+        <section id="why-us" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
@@ -217,7 +217,7 @@ export default function ServicePCB() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Illuminious Advantage</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0 mt-1" />
                     <div>
@@ -268,3 +268,4 @@ export default function ServicePCB() {
     </>
   );
 }
+

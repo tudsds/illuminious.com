@@ -153,7 +153,7 @@ export default function CapabilityQuality() {
               <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
                 A Foundation of Uncompromising Quality
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-illuminious-navy/70 mb-8">
                 At Illuminious, quality is not a final inspection gate—it is the bedrock of our entire manufacturing philosophy. We have built a comprehensive Quality Management System (QMS) that is woven into every process, from initial design review to final shipment, ensuring predictable, reliable, and superior outcomes for your products.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -190,7 +190,7 @@ export default function CapabilityQuality() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
               Globally Recognized Certifications
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-illuminious-navy/70">
               Our adherence to the world's most stringent quality standards is not optional; it's a core business requirement. These certifications are a testament to our robust processes and our capability to serve the most demanding industries, including medical, automotive, and aerospace.
             </p>
           </AnimatedSection>
@@ -206,7 +206,7 @@ export default function CapabilityQuality() {
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       cert.status === 'Certified' ? 'bg-green-100 text-green-700' :
                       cert.status === 'Ready' ? 'bg-blue-100 text-blue-700' :
-                      'bg-gray-100 text-gray-700'
+                      'bg-illuminious-light/50 text-illuminious-navy'
                     }`}>
                       {cert.status}
                     </span>
@@ -215,7 +215,7 @@ export default function CapabilityQuality() {
                     <h3 className="text-xl font-bold text-illuminious-navy mb-2">{cert.name}</h3>
                     <p className="text-sm text-illuminious-blue font-semibold mb-3">{cert.category}</p>
                   </div>
-                  <p className="text-muted-foreground text-sm flex-grow">{cert.description}</p>
+                  <p className="text-illuminious-navy/70 text-sm flex-grow">{cert.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -229,7 +229,7 @@ export default function CapabilityQuality() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
               Our End-to-End Quality Process
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-illuminious-navy/70">
               We employ a systematic, multi-stage approach to quality assurance. This closed-loop process ensures that quality is built-in, monitored, and continuously improved at every stage of the product lifecycle, from the initial concept to mass production and beyond.
             </p>
           </AnimatedSection>
@@ -242,7 +242,7 @@ export default function CapabilityQuality() {
                     <process.icon className="w-7 h-7 text-illuminious-blue" />
                   </div>
                   <h3 className="text-xl font-bold text-illuminious-navy mb-3">{process.title}</h3>
-                  <p className="text-muted-foreground">{process.description}</p>
+                  <p className="text-illuminious-navy/70">{process.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -257,7 +257,7 @@ export default function CapabilityQuality() {
               <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-6">
                 Advanced Testing & Validation Laboratory
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-illuminious-navy/70 mb-8">
                 Data, not opinion, drives our quality decisions. Our in-house testing laboratories in Shenzhen and Batam are equipped with state-of-the-art equipment to validate product performance, reliability, and compliance. We don't just build your product; we prove it works as designed.
               </p>
               <div className="space-y-4">
@@ -266,7 +266,7 @@ export default function CapabilityQuality() {
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-illuminious-navy">{capability.name}</h4>
-                      <p className="text-muted-foreground text-sm">{capability.description}</p>
+                      <p className="text-illuminious-navy/70 text-sm">{capability.description}</p>
                     </div>
                   </div>
                 ))}
@@ -282,7 +282,7 @@ export default function CapabilityQuality() {
                         {testingCapabilities.map((capability) => (
                             <div key={capability.name} className="p-4 rounded-lg bg-illuminious-light/40">
                                 <h4 className="font-semibold text-illuminious-navy">{capability.name}</h4>
-                                <p className="text-muted-foreground text-sm">{capability.description}</p>
+                                <p className="text-illuminious-navy/70 text-sm">{capability.description}</p>
                             </div>
                         ))}
                     </div>
@@ -327,7 +327,7 @@ export default function CapabilityQuality() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
               Partner with a Manufacturer You Can Trust
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-illuminious-navy/70 mb-8">
               Ready to bring your product to life with a partner who prioritizes quality above all else? Contact our team to discuss your project requirements, request our detailed quality manual, or schedule a remote or in-person factory audit.
             </p>
             <Button
@@ -349,3 +349,4 @@ export default function CapabilityQuality() {
     </>
   );
 }
+

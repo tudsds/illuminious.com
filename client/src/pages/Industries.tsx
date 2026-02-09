@@ -114,7 +114,7 @@ export default function Industries() {
             <h1 className="text-4xl md:text-5xl font-bold text-illuminious-navy mb-6 leading-tight">
               Precision Manufacturing for the World's Most Demanding Industries
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
+            <p className="text-xl text-illuminious-navy/70 mb-8 max-w-3xl">
               From life-saving medical devices to mission-critical automotive systems, we provide specialized, high-reliability manufacturing solutions. We understand the unique language, regulations, and quality demands of your industry, ensuring your product's success from prototype to global deployment.
             </p>
           </motion.div>
@@ -144,7 +144,7 @@ export default function Industries() {
                           {industry.title}
                         </h3>
                       </div>
-                      <p className="text-muted-foreground text-sm mb-5 flex-grow">
+                      <p className="text-illuminious-navy/70 text-sm mb-5 flex-grow">
                         {industry.description}
                       </p>
                       <div className="flex flex-wrap gap-2 mb-5">
@@ -176,7 +176,7 @@ export default function Industries() {
             <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
               A Foundation of Manufacturing Excellence
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-illuminious-navy/70">
               While we tailor our services for specific industries, every client benefits from our core operational strengths and unwavering commitment to quality. This foundational excellence is what allows us to adapt and excel across diverse markets.
             </p>
           </AnimatedSection>
@@ -196,7 +196,7 @@ export default function Industries() {
                     </div>
                   </div>
                   <h3 className="text-lg font-bold text-illuminious-navy mb-3">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  <p className="text-sm text-illuminious-navy/70">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -232,3 +232,4 @@ export default function Industries() {
     </>
   );
 }
+

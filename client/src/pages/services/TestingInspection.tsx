@@ -107,7 +107,7 @@ export default function ServiceTestingInspection() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -123,7 +123,7 @@ export default function ServiceTestingInspection() {
             <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-6 font-heading">Zero-Defect Manufacturing is Our Mission</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed text-lg">
                   <p>
                     At Illuminious, we operate on a fundamental principle: quality cannot be inspected into a product; it must be engineered and built-in from the very beginning. Our comprehensive testing and inspection strategy is the cornerstone of this philosophy. It's a meticulously designed system that monitors every critical stage of the manufacturing process, from the moment bare boards and components arrive at our facility to the final functional validation of the assembled product. This ensures that every unit we ship meets the most stringent standards of quality, reliability, and performance.
                   </p>
@@ -145,11 +145,11 @@ export default function ServiceTestingInspection() {
         </section>
 
         {/* Capabilities Section */}
-        <section id="capabilities" className="py-20 lg:py-28 bg-gray-50">
+        <section id="capabilities" className="py-20 lg:py-28 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Our Advanced Testing Capabilities</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 We have invested in a full spectrum of industry-leading testing and inspection equipment to ensure the integrity of your product at every level, from individual components to the final system.
               </p>
             </AnimatedSection>
@@ -161,7 +161,7 @@ export default function ServiceTestingInspection() {
                       <cap.icon className="w-7 h-7 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-xl text-illuminious-navy mb-3 font-heading">{cap.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{cap.text}</p>
+                    <p className="text-illuminious-sky leading-relaxed">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -174,7 +174,7 @@ export default function ServiceTestingInspection() {
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-20">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Our Inspection Process: A Multi-Layered Defense</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 We inspect for quality at every critical step of the assembly process. This creates a closed-loop system that prevents defects, provides valuable process data, and drives continuous improvement.
               </p>
             </AnimatedSection>
@@ -187,7 +187,7 @@ export default function ServiceTestingInspection() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-2xl font-bold mb-3 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 leading-relaxed ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky leading-relaxed ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-lg">
@@ -202,18 +202,18 @@ export default function ServiceTestingInspection() {
         </section>
 
         {/* Technical Specifications Section */}
-        <section id="specs" className="py-20 lg:py-28 bg-gray-50">
+        <section id="specs" className="py-20 lg:py-28 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 We pride ourselves on transparency and precision. Here are the technical details of our primary testing and inspection systems.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
               <div className="overflow-x-auto bg-white rounded-lg shadow-lg">
-                <table className="w-full text-left text-gray-700">
-                  <thead className="bg-gray-100 text-gray-800 uppercase text-sm">
+                <table className="w-full text-left text-illuminious-navy">
+                  <thead className="bg-illuminious-light/50 text-gray-800 uppercase text-sm">
                     <tr>
                       <th className="px-6 py-4 font-semibold">Test Method</th>
                       <th className="px-6 py-4 font-semibold">Key Equipment</th>
@@ -222,37 +222,37 @@ export default function ServiceTestingInspection() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    <tr className="hover:bg-gray-50">
+                    <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">3D AOI</td>
                       <td className="px-6 py-4">Koh Young Zenith, Mirtec MV-6 OMNI</td>
                       <td className="px-6 py-4">Inspects 01005 components, 0.3mm pitch; Solder volume accuracy &lt;10%</td>
                       <td className="px-6 py-4">Post-reflow solder joint and component placement inspection</td>
                     </tr>
-                    <tr className="hover:bg-gray-50">
+                    <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">3D SPI</td>
                       <td className="px-6 py-4">Koh Young KY8030-3</td>
                       <td className="px-6 py-4">Height accuracy: ±2µm; Volume repeatability: &lt;1%</td>
                       <td className="px-6 py-4">Solder paste deposition process control</td>
                     </tr>
-                    <tr className="hover:bg-gray-50">
+                    <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">3D AXI / CT</td>
                       <td className="px-6 py-4">Nordson DAGE Quadra 7, YXLON Cougar EVO</td>
                       <td className="px-6 py-4">Feature recognition down to 100nm; Void analysis &lt;5%</td>
                       <td className="px-6 py-4">BGA/QFN void/short analysis, PTH fill inspection, failure analysis</td>
                     </tr>
-                    <tr className="hover:bg-gray-50">
+                    <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">Flying Probe</td>
                       <td className="px-6 py-4">Takaya APT-1400F, SPEA 4060</td>
                       <td className="px-6 py-4">Positional accuracy: ±10µm; Can probe pads down to 150µm</td>
                       <td className="px-6 py-4">Prototypes, NPI, low-volume electrical test, DFT analysis</td>
                     </tr>
-                    <tr className="hover:bg-gray-50">
+                    <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">ICT</td>
                       <td className="px-6 py-4">Keysight i3070, Teradyne TestStation</td>
                       <td className="px-6 py-4">Measures R/L/C values, diode/transistor checks, opens/shorts</td>
                       <td className="px-6 py-4">High-volume production electrical test</td>
                     </tr>
-                    <tr className="hover:bg-gray-50">
+                    <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">Reliability</td>
                       <td className="px-6 py-4">ESPEC Thermal Chambers, Sentek Dynamics Shakers</td>
                       <td className="px-6 py-4">-70°C to +180°C temp range; Random &amp; sine vibration testing</td>
@@ -270,33 +270,33 @@ export default function ServiceTestingInspection() {
           <div className="container">
             <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-illuminious-sky">
                 Answers to common questions about our electronics testing and inspection processes.
               </p>
             </AnimatedSection>
             <div className="max-w-4xl mx-auto space-y-8">
               <AnimatedSection delay={0.1}>
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-sm">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-2">What is the difference between testing and inspection?</h3>
-                  <p className="text-gray-700 leading-relaxed">Inspection involves visually or automatically examining the board for physical defects (e.g., component placement, solder quality) using tools like AOI and AXI. Testing, on the other hand, involves electrically powering and operating the board to verify its function and performance using tools like ICT, Flying Probe, and FCT. A robust quality strategy requires both.</p>
+                  <p className="text-illuminious-navy leading-relaxed">Inspection involves visually or automatically examining the board for physical defects (e.g., component placement, solder quality) using tools like AOI and AXI. Testing, on the other hand, involves electrically powering and operating the board to verify its function and performance using tools like ICT, Flying Probe, and FCT. A robust quality strategy requires both.</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.2}>
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-sm">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-2">How do you decide between ICT and Flying Probe testing?</h3>
-                  <p className="text-gray-700 leading-relaxed">The decision is primarily based on production volume and product lifecycle stage. In-Circuit Test (ICT) is extremely fast, making it ideal for high-volume manufacturing, but requires a significant upfront investment in a custom fixture. Flying Probe is fixtureless and highly flexible, making it perfect for prototypes, NPI, and low-to-mid volume runs where the cost of an ICT fixture is not justifiable.</p>
+                  <p className="text-illuminious-navy leading-relaxed">The decision is primarily based on production volume and product lifecycle stage. In-Circuit Test (ICT) is extremely fast, making it ideal for high-volume manufacturing, but requires a significant upfront investment in a custom fixture. Flying Probe is fixtureless and highly flexible, making it perfect for prototypes, NPI, and low-to-mid volume runs where the cost of an ICT fixture is not justifiable.</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.3}>
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-sm">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-2">What are IPC standards and why are they important?</h3>
-                  <p className="text-gray-700 leading-relaxed">IPC is a global trade association that sets the standards for the electronics manufacturing industry. Standards like IPC-A-610 (Acceptability of Electronic Assemblies) and J-STD-001 (Requirements for Soldered Electrical and Electronic Assemblies) provide a common language and a clear set of criteria for what constitutes a quality product. Adhering to these standards, as we do, ensures consistency, reliability, and a high level of workmanship.</p>
+                  <p className="text-illuminious-navy leading-relaxed">IPC is a global trade association that sets the standards for the electronics manufacturing industry. Standards like IPC-A-610 (Acceptability of Electronic Assemblies) and J-STD-001 (Requirements for Soldered Electrical and Electronic Assemblies) provide a common language and a clear set of criteria for what constitutes a quality product. Adhering to these standards, as we do, ensures consistency, reliability, and a high level of workmanship.</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.4}>
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div className="bg-illuminious-light/30 p-6 rounded-lg shadow-sm">
                   <h3 className="font-bold text-lg text-illuminious-navy mb-2">Can you help with Design for Test (DFT) analysis?</h3>
-                  <p className="text-gray-700 leading-relaxed">Absolutely. We strongly encourage engaging with our engineering team early in the design process. We can provide a comprehensive DFT analysis, offering suggestions for adding test points, implementing JTAG boundary scan, and optimizing the layout for better test access. This collaboration significantly improves test coverage and reduces testing costs in production.</p>
+                  <p className="text-illuminious-navy leading-relaxed">Absolutely. We strongly encourage engaging with our engineering team early in the design process. We can provide a comprehensive DFT analysis, offering suggestions for adding test points, implementing JTAG boundary scan, and optimizing the layout for better test access. This collaboration significantly improves test coverage and reduces testing costs in production.</p>
                 </div>
               </AnimatedSection>
             </div>
@@ -338,3 +338,4 @@ function AnimatedSection({ children, className = "", delay = 0 }: { children: Re
     </motion.div>
   );
 }
+

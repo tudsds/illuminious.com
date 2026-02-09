@@ -142,7 +142,7 @@ export default function ServiceEMS() {
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-illuminious-blue transition-colors whitespace-nowrap"
+                className="px-4 py-3 text-sm font-medium text-illuminious-sky hover:text-illuminious-blue transition-colors whitespace-nowrap"
               >
                 {section.title}
               </a>
@@ -157,7 +157,7 @@ export default function ServiceEMS() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <AnimatedSection>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">Manufacturing Is More Than Just Assembly</h2>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-illuminious-navy leading-relaxed">
                   <p>
                     You've invested immense resources into designing an innovative electronic product. Now, the challenge shifts to manufacturing that product reliably, at scale, and to your exacting quality standards. Selecting the right Electronics Manufacturing Services (EMS) provider is not merely a procurement decision; it is one of the most critical strategic choices for your business. A true EMS partner goes beyond simply populating circuit boards; they become an integral extension of your team, safeguarding your intellectual property and brand reputation.
                   </p>
@@ -178,11 +178,11 @@ export default function ServiceEMS() {
           </div>
         </section>
 
-        <section id="capabilities" className="py-20 bg-gray-50">
+        <section id="capabilities" className="py-20 bg-illuminious-light/30">
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Core EMS Capabilities</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A full spectrum of vertically integrated services to take your product from design to global delivery.
               </p>
             </AnimatedSection>
@@ -194,7 +194,7 @@ export default function ServiceEMS() {
                       <cap.icon className="w-6 h-6 text-illuminious-blue" />
                     </div>
                     <h3 className="font-bold text-lg text-illuminious-navy mb-2 font-heading">{cap.title}</h3>
-                    <p className="text-sm text-gray-600 flex-grow">{cap.text}</p>
+                    <p className="text-sm text-illuminious-sky flex-grow">{cap.text}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -206,7 +206,7 @@ export default function ServiceEMS() {
           <div className="container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Our Engagement & Production Model</h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-illuminious-sky">
                 A transparent, structured, and collaborative process for a seamless manufacturing partnership.
               </p>
             </AnimatedSection>
@@ -219,7 +219,7 @@ export default function ServiceEMS() {
                       <div className="w-1/2 px-8">
                         <AnimatedSection delay={index * 0.1}>
                           <h3 className={`text-xl font-bold mb-2 font-heading ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.name}</h3>
-                          <p className={`text-gray-600 ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
+                          <p className={`text-illuminious-sky ${index % 2 === 0 ? "text-right" : "text-left"}`}>{step.description}</p>
                         </AnimatedSection>
                       </div>
                       <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-illuminious-blue text-white flex items-center justify-center font-bold text-lg">
@@ -233,54 +233,54 @@ export default function ServiceEMS() {
           </div>
         </section>
 
-        <section id="tech-specs" className="py-20 bg-gray-50">
+        <section id="tech-specs" className="py-20 bg-illuminious-light/30">
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Technical Specifications</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         A detailed look at our manufacturing tolerances, standards, and certifications.
                     </p>
                 </AnimatedSection>
                 <AnimatedSection delay={0.1}>
                     <div className="overflow-x-auto bg-white rounded-lg shadow-lg">
                         <table className="min-w-full divide-y divide-gray-200">
-                            <thead className="bg-gray-100">
+                            <thead className="bg-illuminious-light/50">
                                 <tr>
-                                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Capability</th>
-                                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Specification</th>
-                                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Notes</th>
+                                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-illuminious-sky uppercase tracking-wider">Capability</th>
+                                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-illuminious-sky uppercase tracking-wider">Specification</th>
+                                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-illuminious-sky uppercase tracking-wider">Notes</th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
                                 <tr>
                                     <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">SMT Component Size</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-700">01005 to 74x74mm</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-500">Fine-pitch BGA and QFP capabilities.</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-navy">01005 to 74x74mm</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-sky">Fine-pitch BGA and QFP capabilities.</td>
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Placement Accuracy</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-700">±25μm @ 3σ</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-500">High-precision placement for dense boards.</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-navy">±25μm @ 3σ</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-sky">High-precision placement for dense boards.</td>
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Board Dimensions</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-700">Up to 460 x 510mm</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-500">Support for large format PCBs.</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-navy">Up to 460 x 510mm</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-sky">Support for large format PCBs.</td>
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Inspection Systems</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-700">3D SPI, 3D AOI, 3D AXI (X-Ray)</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-500">Comprehensive inspection for defect detection.</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-navy">3D SPI, 3D AOI, 3D AXI (X-Ray)</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-sky">Comprehensive inspection for defect detection.</td>
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Workmanship Standards</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-700">IPC-A-610 Class 2 & Class 3</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-500">Adherence to industry-leading quality standards.</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-navy">IPC-A-610 Class 2 & Class 3</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-sky">Adherence to industry-leading quality standards.</td>
                                 </tr>
                                 <tr>
                                     <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Quality Certifications</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-700">ISO 9001, ISO 13485, AS9100D</td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-gray-500">Certified for general, medical, and aerospace.</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-navy">ISO 9001, ISO 13485, AS9100D</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-illuminious-sky">Certified for general, medical, and aerospace.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -299,7 +299,7 @@ export default function ServiceEMS() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2 className="text-3xl font-bold text-illuminious-navy mb-6 font-heading">The Illuminious Difference</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed">
+                <div className="space-y-6 text-illuminious-navy leading-relaxed">
                   <div className="flex items-start gap-4">
                     <CheckCircle className="w-8 h-8 text-illuminious-blue flex-shrink-0 mt-1" />
                     <div>
@@ -327,11 +327,11 @@ export default function ServiceEMS() {
           </div>
         </section>
 
-        <section id="faq" className="py-20 bg-gray-50">
+        <section id="faq" className="py-20 bg-illuminious-light/30">
             <div className="container">
                 <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-illuminious-navy mb-4 font-heading">Frequently Asked Questions</h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-illuminious-sky">
                         Answers to common questions about our electronics manufacturing services.
                     </p>
                 </AnimatedSection>
@@ -341,7 +341,7 @@ export default function ServiceEMS() {
                             <AnimatedSection key={index} delay={index * 0.1}>
                                 <div className="bg-white p-6 rounded-lg shadow-md">
                                     <h4 className="font-bold text-lg text-illuminious-navy mb-2">{faq.q}</h4>
-                                    <p className="text-gray-700 leading-relaxed">{faq.a}</p>
+                                    <p className="text-illuminious-navy leading-relaxed">{faq.a}</p>
                                 </div>
                             </AnimatedSection>
                         ))}
@@ -372,3 +372,4 @@ export default function ServiceEMS() {
     </>
   );
 }
+
