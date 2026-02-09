@@ -22,7 +22,7 @@ const capabilities = [
   { 
     icon: Cpu, 
     title: "Advanced Component Placement", 
-    text: "Our Fuji NXT III and Panasonic NPM-D3 lines achieve placement of ultra-fine 0.35mm pitch BGAs and components down to 01005 (0.4mm x 0.2mm). We guarantee a placement accuracy of ±25μm, critical for dense, high-performance boards."
+    text: "Our Fuji and Panasonic high-speed lines achieve placement of ultra-fine 0.35mm pitch BGAs and components down to 01005 (0.4mm x 0.2mm). We guarantee a placement accuracy of ±25μm, critical for dense, high-performance boards."
   },
   { 
     icon: Layers, 
@@ -64,11 +64,11 @@ const capabilities = [
 const processSteps = [
   { name: "Step 1: DFM & Material Preparation", description: "Every project begins with a detailed Design for Manufacturability (DFM) analysis to optimize your layout for high-yield assembly. Simultaneously, all components undergo baking and inspection, and solder paste is conditioned to the precise viscosity required.", delay: 0 },
   { name: "Step 2: Solder Paste Printing", description: "A high-precision DEK stencil printer applies a perfect layer of solder paste to the PCB pads. The stencil aperture and squeegee pressure are calibrated for your specific board, ensuring optimal paste deposition for every component type.", delay: 0.1 },
-  { name: "Step 3: Solder Paste Inspection (SPI)", description: "Immediately after printing, a 3D SPI system (Koh Young KY8030-3) scans the entire board, measuring the volume, height, and alignment of every solder deposit. This critical step catches over 70% of potential defects before placement begins.", delay: 0.2 },
-  { name: "Step 4: High-Speed Component Placement", description: "The board moves into our Fuji NXT III and Panasonic NPM-D3 pick-and-place machines. Vision-guided placement heads accurately place up to 100,000 components per hour, from large ICs to the smallest 01005 passives.", delay: 0.3 },
+  { name: "Step 3: Solder Paste Inspection (SPI)", description: "Immediately after printing, a 3D SPI system (Koh Young 3D SPI) scans the entire board, measuring the volume, height, and alignment of every solder deposit. This critical step catches over 70% of potential defects before placement begins.", delay: 0.2 },
+  { name: "Step 4: High-Speed Component Placement", description: "The board moves into our Fuji and Panasonic pick-and-place machines. Vision-guided placement heads accurately place up to 100,000 components per hour, from large ICs to the smallest 01005 passives.", delay: 0.3 },
   { name: "Step 5: Pre-Reflow Visual Inspection", description: "A manual or automated inspection checkpoint verifies component placement and polarity before the board enters the reflow oven. This allows for easy correction of any placement errors, preventing complex rework later.", delay: 0.4 },
   { name: "Step 6: Reflow Soldering", description: "Boards travel through our 13-zone Heller reflow ovens. The thermal profile is meticulously customized for the board's mass and component sensitivity, ensuring a complete and robust solder joint formation for every connection without thermal stress.", delay: 0.5 },
-  { name: "Step 7: Automated Optical Inspection (AOI)", description: "Post-reflow, a 3D AOI machine (Koh Young Zenith 2) inspects every solder joint for defects like bridges, insufficient solder, and component shift. The 3D measurement provides unparalleled accuracy compared to older 2D systems.", delay: 0.6 },
+  { name: "Step 7: Automated Optical Inspection (AOI)", description: "Post-reflow, a 3D AOI machine (Koh Young 3D AOI) inspects every solder joint for defects like bridges, insufficient solder, and component shift. The 3D measurement provides unparalleled accuracy compared to older 2D systems.", delay: 0.6 },
   { name: "Step 8: X-Ray Inspection (AXI)", description: "For BGAs, QFNs, and other leadless packages, our in-line Nordson DAGE AXI systems inspect for hidden defects. This non-destructive analysis is crucial for verifying solder joint integrity, detecting voids, and ensuring there are no shorts under the component.", delay: 0.7 },
 ];
 

@@ -224,19 +224,19 @@ export default function ServiceTestingInspection() {
                   <tbody className="divide-y divide-gray-200">
                     <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">3D AOI</td>
-                      <td className="px-6 py-4">Koh Young Zenith, Mirtec MV-6 OMNI</td>
+                      <td className="px-6 py-4">Koh Young, Mirtec</td>
                       <td className="px-6 py-4">Inspects 01005 components, 0.3mm pitch; Solder volume accuracy &lt;10%</td>
                       <td className="px-6 py-4">Post-reflow solder joint and component placement inspection</td>
                     </tr>
                     <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">3D SPI</td>
-                      <td className="px-6 py-4">Koh Young KY8030-3</td>
+                      <td className="px-6 py-4">Koh Young 3D SPI</td>
                       <td className="px-6 py-4">Height accuracy: ±2µm; Volume repeatability: &lt;1%</td>
                       <td className="px-6 py-4">Solder paste deposition process control</td>
                     </tr>
                     <tr className="hover:bg-illuminious-light/30">
                       <td className="px-6 py-4 font-medium">3D AXI / CT</td>
-                      <td className="px-6 py-4">Nordson DAGE Quadra 7, YXLON Cougar EVO</td>
+                      <td className="px-6 py-4">Nordson DAGE, YXLON</td>
                       <td className="px-6 py-4">Feature recognition down to 100nm; Void analysis &lt;5%</td>
                       <td className="px-6 py-4">BGA/QFN void/short analysis, PTH fill inspection, failure analysis</td>
                     </tr>

@@ -16,9 +16,9 @@ const factoryAreas = [
     image: "/images/DEPLOYED_backup-smt-line-panoramic-21.jpg",
     icon: Cpu,
     features: [
-      "State-of-the-Art Siemens® SIPLACE SX Lines: Capable of placing over 150,000 components per hour with extreme accuracy, down to 01005 package sizes, ensuring we can handle the most dense and complex designs.",
-      "DEK® Horizon Screen Printers with 3D SPI: We apply solder paste with unparalleled precision, verified by 100% 3D Solder Paste Inspection (SPI) to eliminate defects before components are even placed.",
-      "Heller® 1913 MKIII Reflow Ovens: Our 13-zone nitrogen-capable ovens create the perfect thermal profile for every unique PCB assembly, maximizing solder joint integrity and long-term product reliability.",
+      "State-of-the-Art Siemens® High-Speed SMT Lines: Capable of placing over 150,000 components per hour with extreme accuracy, down to 01005 package sizes, ensuring we can handle the most dense and complex designs.",
+      "DEK® Screen Printers with 3D SPI: We apply solder paste with unparalleled precision, verified by 100% 3D Solder Paste Inspection (SPI) to eliminate defects before components are even placed.",
+      "Heller® Reflow Ovens: Our 13-zone nitrogen-capable ovens create the perfect thermal profile for every unique PCB assembly, maximizing solder joint integrity and long-term product reliability.",
       "Full Component Traceability: Every reel of components is scanned and tracked, providing a complete history for every single board we produce, a critical requirement for medical and automotive clients.",
     ],
   },
@@ -28,7 +28,7 @@ const factoryAreas = [
     image: "/images/DEPLOYED_placeholder-engineer-testing-pcb.jpg",
     icon: Microscope,
     features: [
-      "3D Automated Optical & X-Ray Inspection (AOI/AXI): We use Koh Young® 3D AOI and Nordson DAGE® Quadra 7 X-Ray systems to inspect every solder joint, including hidden connections on complex packages like BGAs and QFNs.",
+      "3D Automated Optical & X-Ray Inspection (AOI/AXI): We use Koh Young® 3D AOI and Nordson DAGE® X-Ray systems to inspect every solder joint, including hidden connections on complex packages like BGAs and QFNs.",
       "In-Circuit & Functional Testers (ICT/FCT): Custom-built test jigs with Keysight® and National Instruments® hardware verify that every circuit path is correct and the product functions exactly as you designed it.",
       "Environmental & Reliability Chambers: We simulate years of use in days, subjecting products to extreme temperatures, humidity, vibration, and drop tests to identify potential field failures before they happen.",
       "Certifications & Compliance: Our processes are certified to ISO 9001, ISO 13485 (Medical Devices), and IATF 16949 (Automotive), ensuring we meet the strictest quality standards of any industry.",
@@ -114,8 +114,8 @@ export default function FactoryTour() {
       <section className="relative pt-48 pb-32 bg-gray-900 text-white">
         <div className="absolute inset-0">
           <img
-            src="/images/DEPLOYED_placeholder-smt-production-line.jpg"
-            alt="An expansive, clean, and modern factory floor with multiple production lines"
+            src="/images/DEPLOYED_team-factory-tour-hero.jpg"
+            alt="Illuminious manufacturing team on the factory floor"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent" />
