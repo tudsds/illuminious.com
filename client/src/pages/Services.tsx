@@ -194,7 +194,7 @@ const phases = [
     title: "Market Delivery",
     location: "USA",
     flag: "US" as const,
-    color: "bg-green-500",
+    color: "bg-illuminious-sky",
     description: "Domestic warehousing, B2B/D2C fulfillment, and support.",
   },
 ];
@@ -241,7 +241,7 @@ export default function Services() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-illuminious-navy mb-6">
               Integrated Services for the Complete Product Lifecycle
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-illuminious-navy/70 mb-8">
               We provide a seamless, end-to-end manufacturing ecosystem designed to de-risk your supply chain and accelerate your time to market. Our unique four-phase approach guides your product from initial design validation in the US to scalable, tariff-free mass production in Asia.
             </p>
           </motion.div>
@@ -277,7 +277,7 @@ export default function Services() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-illuminious-navy mb-4">
               Our Core Service Portfolio
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-illuminious-navy/70">
               Each service is a critical building block in our integrated manufacturing system. They are designed to work together seamlessly, giving you the flexibility to engage us at any stage of your product's lifecycle and scale efficiently.
             </p>
           </AnimatedSection>
@@ -296,17 +296,17 @@ export default function Services() {
                           <h3 className="text-xl font-bold text-illuminious-navy group-hover:text-illuminious-blue transition-colors">
                             {service.title}
                           </h3>
-                          <p className="text-sm text-muted-foreground">{service.subtitle}</p>
+                          <p className="text-sm text-illuminious-sky/70">{service.subtitle}</p>
                         </div>
                       </div>
                       
-                      <p className="text-muted-foreground leading-relaxed mb-5">
+                      <p className="text-illuminious-navy/70 leading-relaxed mb-5">
                         {service.description}
                       </p>
                       
                       <ul className="space-y-2 mb-4">
                         {service.features.map((feature) => (
-                          <li key={feature} className="flex items-center gap-3 text-sm text-gray-700">
+                          <li key={feature} className="flex items-center gap-3 text-sm text-illuminious-navy">
                             <CheckCircle className="w-4 h-4 text-illuminious-blue flex-shrink-0" />
                             <span>{feature}</span>
                           </li>
@@ -314,12 +314,12 @@ export default function Services() {
                       </ul>
                     </div>
 
-                    <div className="bg-gray-50/50 group-hover:bg-illuminious-light/40 transition-colors mt-auto p-4 flex justify-between items-center border-t border-illuminious-light">
+                    <div className="bg-illuminious-light/30 group-hover:bg-illuminious-light/50 transition-colors mt-auto p-4 flex justify-between items-center border-t border-illuminious-light">
                        <div className="flex items-center gap-2">
-                        <span className="text-xs px-2 py-1 rounded-full bg-gray-200 text-illuminious-navy font-medium">
+                        <span className="text-xs px-2 py-1 rounded-full bg-illuminious-blue/20 text-illuminious-navy font-medium">
                           {service.phase}
                         </span>
-                        <span className="text-xs text-muted-foreground font-medium inline-flex items-center gap-1">
+                        <span className="text-xs text-illuminious-navy/70 font-medium inline-flex items-center gap-1">
                           {service.locationFlags && service.locationFlags.length > 0 && service.locationFlags.map((code: "US" | "CN" | "ID" | "HK", i: number) => (
                             <FlagIcon key={i} code={code} className="w-4 h-3 inline-block" />
                           ))}
