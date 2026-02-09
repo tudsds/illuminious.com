@@ -10,6 +10,7 @@ import { trpc } from "@/lib/trpc";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
   const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function FloatingContact() {
   });
   const [location, navigate] = useLocation();
   const autoOpenTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const autoMinimizeTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const isStartupsPage = location === "/startups";
   const isContactPage = location === "/contact";
@@ -54,7 +56,7 @@ export default function FloatingContact() {
     },
   });
 
-  // Auto-open logic: open after 5 seconds or on scroll
+  // Auto-open logic: open after 5 seconds, show for 2 seconds, then minimize
   useEffect(() => {
     if (isContactPage || isAdminPage || isThankYouPage || hasAutoOpened) return;
 
@@ -62,6 +64,7 @@ export default function FloatingContact() {
     const hasSeenPopup = sessionStorage.getItem("floatingContactSeen");
     if (hasSeenPopup) {
       setHasAutoOpened(true);
+      setIsMinimized(true);
       return;
     }
 
@@ -72,39 +75,21 @@ export default function FloatingContact() {
         setHasAutoOpened(true);
         sessionStorage.setItem("floatingContactSeen", "true");
 
-        // Auto-collapse after 5 seconds if user doesn't interact
-        setTimeout(() => {
+        // Auto-minimize after 2 seconds
+        autoMinimizeTimerRef.current = setTimeout(() => {
           setIsOpen(false);
-        }, 5000);
+          setIsMinimized(true);
+        }, 2000);
       }
     }, 5000);
-
-    // Open on scroll
-    const handleScroll = () => {
-      if (!hasAutoOpened && window.scrollY > 300) {
-        if (autoOpenTimerRef.current) {
-          clearTimeout(autoOpenTimerRef.current);
-        }
-        setIsOpen(true);
-        setHasAutoOpened(true);
-        sessionStorage.setItem("floatingContactSeen", "true");
-
-        // Auto-collapse after 5 seconds
-        setTimeout(() => {
-          setIsOpen(false);
-        }, 5000);
-
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
 
     return () => {
       if (autoOpenTimerRef.current) {
         clearTimeout(autoOpenTimerRef.current);
       }
-      window.removeEventListener("scroll", handleScroll);
+      if (autoMinimizeTimerRef.current) {
+        clearTimeout(autoMinimizeTimerRef.current);
+      }
     };
   }, [hasAutoOpened, isContactPage, isAdminPage, isThankYouPage]);
 
@@ -151,12 +136,17 @@ export default function FloatingContact() {
       <AnimatePresence>
         {!isOpen && (
           <motion.button
-            initial={{ scale: 0, opacity: 0 }}
+            initial={isMinimized ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              setIsOpen(true);
+              if (autoMinimizeTimerRef.current) {
+                clearTimeout(autoMinimizeTimerRef.current);
+              }
+            }}
             className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-2xl transition-colors ${isStartupsPage
                 ? "bg-cyber-cyan text-cyber-black hover:bg-cyber-cyan/90 shadow-cyber-cyan/30"
                 : "bg-illuminious-blue text-white hover:bg-illuminious-navy shadow-illuminious-blue/30"
@@ -184,7 +174,7 @@ export default function FloatingContact() {
             <motion.div
               initial={{ opacity: 0, y: 100, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 100, scale: 0.9 }}
+              exit={{ opacity: 0, y: 50, scale: 0.8, x: 50 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className={`fixed bottom-6 right-6 z-50 w-[calc(100vw-3rem)] max-w-md rounded-2xl shadow-2xl overflow-hidden ${isStartupsPage
                   ? "bg-cyber-black border border-cyber-purple/50"
