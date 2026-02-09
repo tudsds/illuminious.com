@@ -145,7 +145,7 @@ export default function ThankYou() {
             <Link href="/">
               <Button
                 size="lg"
-                className="bg-illuminious-blue hover:bg-illuminious-navy"
+                className="px-8 rounded-full bg-illuminious-blue hover:bg-illuminious-navy"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Back to Home
@@ -154,7 +154,7 @@ export default function ThankYou() {
             <Link href="/services">
               <Button size="lg" variant="outline">
                 Explore Services
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="px-8 rounded-full w-4 h-4 ml-2" />
               </Button>
             </Link>
           </motion.div>

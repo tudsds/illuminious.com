@@ -174,7 +174,7 @@ export default function IndustryMedical() {
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img src="/images/DEPLOYED_ai-smart-glasses.jpg" alt="A modern, handheld medical diagnostic device being used by a clinician" className="w-full h-full object-cover" />
+                  <img src="/images/DEPLOYED_service-packaging-medical.jpg" alt="A modern, handheld medical diagnostic device being used by a clinician" className="w-full h-full object-cover" />
                 </div>
               </AnimatedSection>
             </div>

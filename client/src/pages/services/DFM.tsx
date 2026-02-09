@@ -318,7 +318,7 @@ export default function ServiceDFM() {
               <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
                 Let our engineers become an extension of your team. Partner with us to ensure your product is ready for scalable, cost-effective, and high-quality manufacturing. Submit your design for a complimentary initial review.
               </p>
-              <Button size="lg" asChild className="bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold text-lg px-10 py-7">
+              <Button size="lg" asChild className="rounded-full bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold text-lg px-10 py-7">
                 <Link href="/contact">
                   Request a DFM Consultation <ArrowRight className="ml-2" />
                 </Link>

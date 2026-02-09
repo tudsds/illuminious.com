@@ -42,7 +42,7 @@ const coreCapabilities = [
     title: "SMT & PCB Assembly",
     description: "8 fully automated SMT lines with 01005 capability, 3D AOI, and X-ray inspection. From prototype to 100K+ boards per month.",
     href: "/services/smt-assembly",
-    image: "/images/DEPLOYED_backup-smt-line-ai-glasses-assembly-02.jpg",
+    image: "/images/DEPLOYED_smt-reflow-speaker-pcb-home.jpg",
   },
   {
     icon: Microscope,
@@ -218,7 +218,7 @@ export default function Home() {
             fetchPriority="high"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/80 via-illuminious-navy/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/90 via-illuminious-navy/70 to-illuminious-navy/40" />
         </div>
 
         <div className="absolute inset-0 opacity-10">
@@ -519,7 +519,7 @@ export default function Home() {
           <AnimatedSection delay={0.4} className="mt-12 text-center">
             <Button
               asChild
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
+              className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8"
             >
               <Link href="/factory-tour">
                 Tour Our Facilities

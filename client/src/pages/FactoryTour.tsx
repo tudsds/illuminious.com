@@ -13,7 +13,7 @@ const factoryAreas = [
   {
     name: "The Heart of Precision: SMT Production Floor",
     description: "Welcome to the nerve center of our operations. Our Surface-Mount Technology (SMT) floor is where millions of microscopic components are precisely placed and soldered onto printed circuit boards (PCBs). This highly automated environment is designed for speed, accuracy, and repeatability, forming the foundation of every electronic device we manufacture. We handle everything from high-mix, low-volume runs for prototypes to millions of units for mass production, all with the same level of engineering rigor.",
-    image: "/images/DEPLOYED_backup-smt-line-panoramic-21.jpg",
+    image: "/images/DEPLOYED_smt-nozzle-change-factory-tour.jpg",
     icon: Cpu,
     features: [
       "State-of-the-Art Siemens® High-Speed SMT Lines: Capable of placing over 150,000 components per hour with extreme accuracy, down to 01005 package sizes, ensuring we can handle the most dense and complex designs.",
@@ -152,7 +152,7 @@ export default function FactoryTour() {
           <div className="space-y-28">
             {factoryAreas.map((area, index) => (
               <AnimatedSection key={area.name}>
-                <div className={`grid md:grid-cols-2 gap-x-12 gap-y-8 items-center`}>
+                <div className={`grid md:grid-cols-2 gap-x-12 gap-y-8 items-start`}>
                   <div className={`${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
                     <div className="flex items-center gap-4 mb-4">
                       <area.icon className="w-10 h-10 text-illuminious-blue" />

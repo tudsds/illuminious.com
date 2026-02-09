@@ -282,7 +282,7 @@ export default function ServiceSupplyChain() {
               <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
                 Let our experts handle the complexities of sourcing, procurement, and logistics, so you can focus on what you do best. Contact us today for a free supply chain analysis.
               </p>
-              <Button asChild size="lg" className="bg-white text-illuminious-blue hover:bg-gray-200 transition-colors">
+              <Button asChild size="lg" className="px-8 rounded-full bg-white text-illuminious-blue hover:bg-gray-200 transition-colors">
                 <Link to="/contact">
                   Contact Us <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>

@@ -10,8 +10,8 @@ import { trpc } from "@/lib/trpc";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [hasAutoOpened, setHasAutoOpened] = useState(false);
+  const [isPulsing, setIsPulsing] = useState(false);
+  const [hasAutoAnimated, setHasAutoAnimated] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -20,8 +20,8 @@ export default function FloatingContact() {
     message: "",
   });
   const [location, navigate] = useLocation();
-  const autoOpenTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const autoMinimizeTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const autoAnimateTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const autoShrinkTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const isStartupsPage = location === "/startups";
   const isContactPage = location === "/contact";
@@ -56,42 +56,68 @@ export default function FloatingContact() {
     },
   });
 
-  // Auto-open logic: open after 5 seconds, show for 2 seconds, then minimize
+  // Auto-animate logic: pulse after 5 seconds, show for 3 seconds, then shrink
   useEffect(() => {
-    if (isContactPage || isAdminPage || isThankYouPage || hasAutoOpened) return;
+    if (isContactPage || isAdminPage || isThankYouPage || hasAutoAnimated) return;
 
-    // Check if user has already seen the popup in this session
-    const hasSeenPopup = sessionStorage.getItem("floatingContactSeen");
-    if (hasSeenPopup) {
-      setHasAutoOpened(true);
-      setIsMinimized(true);
+    // Check if user has already seen the animation in this session
+    const hasSeenAnimation = sessionStorage.getItem("floatingContactAnimated");
+    if (hasSeenAnimation) {
+      setHasAutoAnimated(true);
       return;
     }
 
-    // Auto-open after 5 seconds
-    autoOpenTimerRef.current = setTimeout(() => {
-      if (!hasAutoOpened) {
-        setIsOpen(true);
-        setHasAutoOpened(true);
-        sessionStorage.setItem("floatingContactSeen", "true");
+    // Auto-pulse after 5 seconds
+    autoAnimateTimerRef.current = setTimeout(() => {
+      if (!hasAutoAnimated) {
+        setIsPulsing(true);
+        setHasAutoAnimated(true);
+        sessionStorage.setItem("floatingContactAnimated", "true");
 
-        // Auto-minimize after 2 seconds
-        autoMinimizeTimerRef.current = setTimeout(() => {
-          setIsOpen(false);
-          setIsMinimized(true);
-        }, 2000);
+        // Auto-shrink after 3 seconds
+        autoShrinkTimerRef.current = setTimeout(() => {
+          setIsPulsing(false);
+        }, 3000);
       }
     }, 5000);
 
     return () => {
-      if (autoOpenTimerRef.current) {
-        clearTimeout(autoOpenTimerRef.current);
+      if (autoAnimateTimerRef.current) {
+        clearTimeout(autoAnimateTimerRef.current);
       }
-      if (autoMinimizeTimerRef.current) {
-        clearTimeout(autoMinimizeTimerRef.current);
+      if (autoShrinkTimerRef.current) {
+        clearTimeout(autoShrinkTimerRef.current);
       }
     };
-  }, [hasAutoOpened, isContactPage, isAdminPage, isThankYouPage]);
+  }, [hasAutoAnimated, isContactPage, isAdminPage, isThankYouPage]);
+
+  // Listen for user interactions during pulse to shrink immediately
+  useEffect(() => {
+    if (!isPulsing) return;
+
+    const handleInteraction = () => {
+      setIsPulsing(false);
+      if (autoShrinkTimerRef.current) {
+        clearTimeout(autoShrinkTimerRef.current);
+      }
+    };
+
+    // Listen for clicks outside the button and scroll events
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('[data-floating-contact-button]')) {
+        handleInteraction();
+      }
+    };
+
+    window.addEventListener('click', handleClickOutside);
+    window.addEventListener('scroll', handleInteraction);
+
+    return () => {
+      window.removeEventListener('click', handleClickOutside);
+      window.removeEventListener('scroll', handleInteraction);
+    };
+  }, [isPulsing]);
 
   // Don't show on contact, admin, or thank you pages
   if (isContactPage || isAdminPage || isThankYouPage) return null;
@@ -136,21 +162,34 @@ export default function FloatingContact() {
       <AnimatePresence>
         {!isOpen && (
           <motion.button
-            initial={isMinimized ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            data-floating-contact-button
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ 
+              scale: isPulsing ? 1.3 : 1, 
+              opacity: 1 
+            }}
             exit={{ scale: 0, opacity: 0 }}
-            whileHover={{ scale: 1.1 }}
+            transition={{
+              scale: { 
+                type: "spring", 
+                stiffness: 260, 
+                damping: 20 
+              },
+              opacity: { duration: 0.2 }
+            }}
+            whileHover={{ scale: isPulsing ? 1.35 : 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               setIsOpen(true);
-              if (autoMinimizeTimerRef.current) {
-                clearTimeout(autoMinimizeTimerRef.current);
+              setIsPulsing(false);
+              if (autoShrinkTimerRef.current) {
+                clearTimeout(autoShrinkTimerRef.current);
               }
             }}
             className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-2xl transition-colors ${isStartupsPage
                 ? "bg-cyber-cyan text-cyber-black hover:bg-cyber-cyan/90 shadow-cyber-cyan/30"
                 : "bg-illuminious-blue text-white hover:bg-illuminious-navy shadow-illuminious-blue/30"
-              }`}
+              } ${isPulsing ? 'ring-4 ring-offset-2 ' + (isStartupsPage ? 'ring-cyber-cyan/50 ring-offset-cyber-black' : 'ring-illuminious-blue/50 ring-offset-white') : ''}`}
           >
             <MessageCircle className="w-6 h-6" />
           </motion.button>

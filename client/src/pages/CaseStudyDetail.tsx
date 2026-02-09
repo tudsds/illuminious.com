@@ -178,7 +178,7 @@ export default function CaseStudyDetail() {
                 <div className="bg-illuminious-navy rounded-xl p-5 text-white">
                   <h4 className="font-semibold text-sm mb-2">Have a Similar Project?</h4>
                   <p className="text-xs text-white/75 mb-3">Let our engineering team help you achieve similar results.</p>
-                  <Button asChild size="sm" className="w-full bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full text-xs">
+                  <Button asChild size="sm" className="w-full bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full text-xs">
                     <Link href="/contact">Get a Free Quote</Link>
                   </Button>
                 </div>
@@ -231,7 +231,7 @@ export default function CaseStudyDetail() {
           <AnimatedSection className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Achieve Similar Results?</h2>
             <p className="text-lg text-illuminious-light/80 mb-8">Let's discuss how we can help your project succeed with our end-to-end manufacturing capabilities.</p>
-            <Button asChild size="lg" className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8">
+            <Button asChild size="lg" className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8">
               <Link href="/contact">Start Your Project<ArrowRight className="w-5 h-5 ml-2" /></Link>
             </Button>
           </AnimatedSection>

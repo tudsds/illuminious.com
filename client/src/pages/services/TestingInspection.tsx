@@ -311,7 +311,7 @@ export default function ServiceTestingInspection() {
               <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
                 Let our team of testing experts develop a comprehensive quality assurance strategy for your next project. Contact us today to discuss your requirements and get a detailed quote.
               </p>
-              <Button asChild size="lg" className="bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold">
+              <Button asChild size="lg" className="px-8 rounded-full bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold">
                 <Link to="/contact">Request a Quote <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </AnimatedSection>

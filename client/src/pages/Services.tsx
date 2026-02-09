@@ -477,7 +477,7 @@ export default function Services() {
               <Button
                 asChild
                 size="lg"
-                className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8 shadow-lg"
+                className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8 shadow-lg"
               >
                 <Link href="/contact">
                   Request a Quote

@@ -131,7 +131,7 @@ export default function NewsDetail() {
                 <div className="bg-illuminious-navy rounded-xl p-5 text-white">
                   <h4 className="font-semibold text-sm mb-2">Stay Updated</h4>
                   <p className="text-xs text-white/75 mb-3">Get the latest news and updates from Illuminious.</p>
-                  <Button asChild size="sm" className="w-full bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full text-xs">
+                  <Button asChild size="sm" className="w-full bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full text-xs">
                     <Link href="/contact">Contact Us</Link>
                   </Button>
                 </div>

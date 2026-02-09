@@ -283,7 +283,7 @@ export default function IoTSpecialization() {
             <Button
               asChild
               size="lg"
-              className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
+              className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8"
             >
               <Link href="/contact">
                 Schedule a Technical Consultation

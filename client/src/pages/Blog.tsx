@@ -783,7 +783,7 @@ export default function Blog() {
                 placeholder="Enter your email"
                 className="flex-1 rounded-full border-2 border-white/50 bg-transparent text-white placeholder:text-white/80 focus:border-white focus:ring-2 focus:ring-white/30"
               />
-              <Button className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-6">
+              <Button className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-6">
                 Subscribe
               </Button>
             </div>

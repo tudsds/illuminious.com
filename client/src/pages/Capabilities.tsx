@@ -363,7 +363,7 @@ export default function Capabilities() {
               Whether you need a rapid prototype, a pilot production run, or full-scale mass production, our capabilities are ready to support your project. Contact our engineering team to discuss your requirements and receive a detailed manufacturing proposal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8">
+              <Button asChild size="lg" className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8">
                 <Link href="/contact">
                   Get a Manufacturing Quote
                   <ArrowRight className="w-5 h-5 ml-2" />

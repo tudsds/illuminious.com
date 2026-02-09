@@ -388,7 +388,7 @@ export default function ServiceBoxBuild() {
               <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
                 Let us handle the complexities of system integration so you can focus on innovation. Contact our engineering team today to discuss your project and get a detailed quote.
               </p>
-              <Button size="lg" asChild className="bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold text-lg">
+              <Button size="lg" asChild className="px-8 rounded-full bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold text-lg">
                 <Link href="/contact">
                   Request a Quote <ArrowRight className="ml-2" />
                 </Link>

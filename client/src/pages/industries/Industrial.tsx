@@ -281,7 +281,7 @@ export default function IndustryIndustrial() {
               <p className="text-lg text-white/80 mb-8">
                 Ready to build industrial electronics that are as tough and reliable as your brand? Contact our engineering team today to discuss your project. Let's build something that lasts.
               </p>
-              <Button asChild size="lg" className="bg-white text-illuminious-blue hover:bg-gray-200">
+              <Button asChild size="lg" className="px-8 rounded-full bg-white text-illuminious-blue hover:bg-gray-200">
                 <Link href="/contact">
                   Request a Consultation <ArrowRight className="ml-2" />
                 </Link>

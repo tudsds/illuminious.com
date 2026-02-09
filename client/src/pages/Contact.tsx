@@ -309,7 +309,7 @@ export default function Contact() {
                       type="submit"
                       disabled={isSubmitting}
                       size="lg"
-                      className="w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full"
+                      className="px-8 w-full bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full"
                     >
                       {isSubmitting ? (
                         <>

@@ -312,7 +312,7 @@ export default function ServiceODM() {
               <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
                 Let's discuss your vision. Partner with a manufacturer that has the design, engineering, and production expertise to turn your concept into a reality. Schedule a consultation with our engineering team today.
               </p>
-              <Button size="lg" asChild className="bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold text-lg">
+              <Button size="lg" asChild className="px-8 rounded-full bg-illuminious-blue hover:bg-illuminious-blue/90 text-white font-bold text-lg">
                 <Link to="/contact">
                   Schedule a Consultation <ArrowRight className="ml-2" />
                 </Link>

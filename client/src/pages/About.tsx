@@ -278,7 +278,7 @@ export default function About() {
             </div>
             <AnimatedSection delay={0.3} className="mt-12 text-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8">
+                <Button asChild className="bg-illuminious-blue text-white hover:bg-illuminious-sky rounded-full px-8">
                   <Link href="/services">
                     Explore All Services
                     <ArrowRight className="w-5 h-5 ml-2" />
