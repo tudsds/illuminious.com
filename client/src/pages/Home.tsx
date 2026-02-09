@@ -31,9 +31,9 @@ import FlagIcon from "@/components/FlagIcon";
 
 const stats = [
   { value: "8", label: "SMT Production Lines" },
-  { value: "50M+", label: "Monthly Placements" },
+  { value: "50M+", label: "Yearly Placements" },
   { value: "99.7%", label: "First-Pass Yield" },
-  { value: "15+", label: "Years Manufacturing" },
+  { value: "20+", label: "Years Manufacturing" },
 ];
 
 const coreCapabilities = [
