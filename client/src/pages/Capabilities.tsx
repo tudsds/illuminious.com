@@ -15,6 +15,7 @@ import {
   Settings,
   Layers,
   Truck,
+  Download,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -81,11 +82,11 @@ const certifications = [
 ];
 
 const equipment = [
-  { category: "SMT Lines", items: ["Fuji NXT III (8 lines)", "Panasonic NPM-D3", "Yamaha YSM40R", "Mycronic MY300 (Prototype)"] },
-  { category: "Solder Paste & Reflow", items: ["DEK Horizon 03iX Printers", "Heller 1913 MKIII (13-Zone)", "BTU Pyramax 125 (10-Zone)", "Selective Soldering Systems"] },
-  { category: "Inspection Systems", items: ["Koh Young Zenith 2 (3D AOI)", "Koh Young KY8030-3 (3D SPI)", "Nordson DAGE Quadra 7 (X-Ray)", "Keyence VHX-7000 Microscopes"] },
+  { category: "SMT Lines", items: ["Fuji Pick-and-Place (8 lines)", "Panasonic High-Speed Mounters", "Yamaha Pick-and-Place", "Mycronic Prototype Line"] },
+  { category: "Solder Paste & Reflow", items: ["DEK Screen Printers", "Heller Reflow Ovens (13-Zone)", "BTU Reflow Ovens (10-Zone)", "Selective Soldering Systems"] },
+  { category: "Inspection Systems", items: ["Koh Young 3D AOI", "Koh Young 3D SPI", "Nordson DAGE X-Ray", "Keyence Digital Microscopes"] },
   { category: "Testing Equipment", items: ["Keysight Flying Probe Testers", "Custom ICT Fixtures", "National Instruments PXI Systems", "Environmental Test Chambers"] },
-  { category: "Injection Molding", items: ["Haitian Jupiter III (80-3000T)", "Fanuc ROBOSHOT (Electric)", "Sodick Wire EDM", "Makino CNC Milling"] },
+  { category: "Injection Molding", items: ["Haitian Injection Presses (80-3000T)", "Fanuc Electric Injection Presses", "Sodick Wire EDM", "Makino CNC Milling"] },
   { category: "Packaging & Logistics", items: ["Automated Labeling Systems", "ESD-Safe Packaging Lines", "Barcode/QR Traceability", "Climate-Controlled Storage"] },
 ];
 
@@ -301,6 +302,52 @@ export default function Capabilities() {
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate Downloads */}
+      <section className="py-16 bg-illuminious-light/30">
+        <div className="container">
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-illuminious-navy mb-4 font-heading">
+              Download Our Certifications
+            </h2>
+            <p className="text-lg text-illuminious-sky">
+              Access our official certification documents. Click to download.
+            </p>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <AnimatedSection delay={0.1}>
+              <a
+                href="/certificates/ISO-Certificate.pdf"
+                download="Illuminious-ISO-Certificate.pdf"
+                className="group flex items-center gap-4 p-6 rounded-2xl border border-illuminious-light bg-white hover:shadow-lg hover:border-illuminious-blue transition-all"
+              >
+                <div className="w-14 h-14 rounded-xl bg-illuminious-blue/10 flex items-center justify-center flex-shrink-0 group-hover:bg-illuminious-blue transition-colors">
+                  <Download className="w-7 h-7 text-illuminious-blue group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-illuminious-navy text-lg">ISO Certificate</h3>
+                  <p className="text-sm text-illuminious-sky">ISO 9001:2015 Quality Management System</p>
+                </div>
+              </a>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+              <a
+                href="/certificates/SMETA-Audit-Report.pdf"
+                download="Illuminious-SMETA-Audit-Report.pdf"
+                className="group flex items-center gap-4 p-6 rounded-2xl border border-illuminious-light bg-white hover:shadow-lg hover:border-illuminious-blue transition-all"
+              >
+                <div className="w-14 h-14 rounded-xl bg-illuminious-blue/10 flex items-center justify-center flex-shrink-0 group-hover:bg-illuminious-blue transition-colors">
+                  <Download className="w-7 h-7 text-illuminious-blue group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-illuminious-navy text-lg">SMETA Audit Report</h3>
+                  <p className="text-sm text-illuminious-sky">Sedex Members Ethical Trade Audit</p>
+                </div>
+              </a>
+            </AnimatedSection>
           </div>
         </div>
       </section>

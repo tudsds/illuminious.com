@@ -116,6 +116,11 @@ const manufacturingProcess = [
     desc: "Our engineers review your Gerber files, BOM, and mechanical drawings. We identify manufacturability risks and optimize for yield before cutting a single stencil.",
     icon: Settings,
     color: "illuminious-blue",
+    links: [
+      { label: "DFM Analysis", href: "/services/dfm" },
+      { label: "NPI Engineering", href: "/services/npi-engineering" },
+      { label: "ODM Solutions", href: "/services/odm" },
+    ],
   },
   {
     step: "02",
@@ -123,6 +128,11 @@ const manufacturingProcess = [
     desc: "Rapid prototype assembly in our Shenzhen facility. First articles in 72 hours. We iterate with you until the golden sample is approved.",
     icon: Lightbulb,
     color: "illuminious-sky",
+    links: [
+      { label: "Rapid Prototyping", href: "/services/rapid-prototyping" },
+      { label: "NPI Engineering", href: "/services/npi-engineering" },
+      { label: "PCB Assembly", href: "/services/pcb-assembly" },
+    ],
   },
   {
     step: "03",
@@ -130,6 +140,11 @@ const manufacturingProcess = [
     desc: "Small-batch production run to validate the manufacturing process. Full test coverage, yield analysis, and process documentation.",
     icon: Microscope,
     color: "illuminious-blue",
+    links: [
+      { label: "Testing & Inspection", href: "/services/testing-inspection" },
+      { label: "SMT Assembly", href: "/services/smt-assembly" },
+      { label: "Quality Assurance", href: "/capabilities/quality" },
+    ],
   },
   {
     step: "04",
@@ -137,6 +152,13 @@ const manufacturingProcess = [
     desc: "Scale to volume in Shenzhen or transfer to Batam for tariff optimization. Same process, same quality, same traceability.",
     icon: Factory,
     color: "illuminious-navy",
+    links: [
+      { label: "EMS", href: "/services/ems" },
+      { label: "OEM Manufacturing", href: "/services/oem" },
+      { label: "ODM Solutions", href: "/services/odm" },
+      { label: "Injection Molding", href: "/services/injection-molding" },
+      { label: "Box Build", href: "/services/box-build" },
+    ],
   },
   {
     step: "05",
@@ -144,6 +166,10 @@ const manufacturingProcess = [
     desc: "US warehousing, kitting, and direct-to-customer shipping. We handle the last mile so you can focus on your business.",
     icon: Truck,
     color: "illuminious-blue",
+    links: [
+      { label: "Supply Chain", href: "/services/supply-chain" },
+      { label: "US Fulfillment", href: "/services/us-fulfillment" },
+    ],
   },
 ];
 
@@ -185,15 +211,14 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/DEPLOYED_smt-placement-wearable-pcb.jpg"
-            alt="SMT Pick and Place Machine Assembling Wearable PCB"
+            src="/images/DEPLOYED_smt-lines-overview-hero.jpg"
+            alt="SMT Production Lines Overview"
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-[#0d1b2a]/75" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b2a]/90 via-[#0d1b2a]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/80 via-illuminious-navy/50 to-transparent" />
         </div>
 
         <div className="absolute inset-0 opacity-10">
@@ -353,17 +378,41 @@ export default function Home() {
           </div>
 
           <AnimatedSection delay={0.4} className="mt-12 text-center">
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-illuminious-navy text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
-            >
-              <Link href="/services">
-                View All Manufacturing Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-illuminious-navy text-illuminious-navy hover:bg-illuminious-light rounded-full px-8"
+              >
+                <Link href="/services">
+                  View All Manufacturing Services
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-blue hover:text-white rounded-full px-8"
+              >
+                <Link href="/capabilities">
+                  Capabilities & Equipment
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-blue hover:text-white rounded-full px-8"
+              >
+                <Link href="/capabilities/quality">
+                  Quality & Certifications
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </Button>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -411,7 +460,19 @@ export default function Home() {
                       <span className="text-xs font-bold text-illuminious-blue uppercase tracking-wider">Step {phase.step}</span>
                     </div>
                     <h3 className="text-xl font-bold text-illuminious-navy mb-2 font-heading">{phase.title}</h3>
-                    <p className="text-illuminious-sky leading-relaxed">{phase.desc}</p>
+                    <p className="text-illuminious-sky leading-relaxed mb-3">{phase.desc}</p>
+                    {phase.links && phase.links.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {phase.links.map((link) => (
+                          <Link key={link.href} href={link.href}>
+                            <span className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full bg-illuminious-blue/10 text-illuminious-blue hover:bg-illuminious-blue hover:text-white transition-colors cursor-pointer">
+                              {link.label}
+                              <ChevronRight className="w-3 h-3" />
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </AnimatedSection>

@@ -50,12 +50,12 @@ const locations = [
 ];
 
 const capabilities = [
-  { icon: Cpu, name: "SMT Assembly", desc: "8 fully automated SMT lines with Yamaha pick-and-place machines capable of placing components as small as 01005 (0.4mm × 0.2mm). Our lines achieve placement rates exceeding 50,000 components per hour with positional accuracy of ±25μm." },
-  { icon: Layers, name: "PCB Assembly", desc: "Complete printed circuit board assembly services including single-sided, double-sided, and mixed-technology boards. We handle everything from simple 2-layer consumer boards to complex 16+ layer HDI assemblies for medical and aerospace applications." },
-  { icon: Settings, name: "Through-Hole Assembly", desc: "Both manual and automated through-hole insertion for connectors, transformers, electrolytic capacitors, and other components that require mechanical strength beyond what surface mount technology can provide." },
-  { icon: Microscope, name: "Testing & Inspection", desc: "Comprehensive testing capabilities including 3D automated optical inspection (AOI), X-ray inspection for BGA and hidden solder joints, in-circuit testing (ICT), flying probe testing, and custom functional test fixture development." },
-  { icon: Box, name: "Box Build Assembly", desc: "Full system integration from bare PCBA to finished, packaged product. This includes mechanical assembly, cable harness installation, firmware flashing, labeling, functional testing, and retail-ready packaging." },
-  { icon: Factory, name: "Injection Molding", desc: "In-house plastic injection molding for custom enclosures, light guides, buttons, and structural components. Our molding department operates presses ranging from 80 to 3,000 tons, supporting both prototype tooling and production molds." },
+  { icon: Cpu, name: "SMT Assembly", desc: "8 fully automated SMT lines with Yamaha pick-and-place machines capable of placing components as small as 01005 (0.4mm × 0.2mm). Our lines achieve placement rates exceeding 50,000 components per hour with positional accuracy of ±25μm.", href: "/services/smt-assembly" },
+  { icon: Layers, name: "PCB Assembly", desc: "Complete printed circuit board assembly services including single-sided, double-sided, and mixed-technology boards. We handle everything from simple 2-layer consumer boards to complex 16+ layer HDI assemblies for medical and aerospace applications.", href: "/services/pcb-assembly" },
+  { icon: Settings, name: "Through-Hole Assembly", desc: "Both manual and automated through-hole insertion for connectors, transformers, electrolytic capacitors, and other components that require mechanical strength beyond what surface mount technology can provide.", href: "/services/through-hole" },
+  { icon: Microscope, name: "Testing & Inspection", desc: "Comprehensive testing capabilities including 3D automated optical inspection (AOI), X-ray inspection for BGA and hidden solder joints, in-circuit testing (ICT), flying probe testing, and custom functional test fixture development.", href: "/services/testing-inspection" },
+  { icon: Box, name: "Box Build Assembly", desc: "Full system integration from bare PCBA to finished, packaged product. This includes mechanical assembly, cable harness installation, firmware flashing, labeling, functional testing, and retail-ready packaging.", href: "/services/box-build" },
+  { icon: Factory, name: "Injection Molding", desc: "In-house plastic injection molding for custom enclosures, light guides, buttons, and structural components. Our molding department operates presses ranging from 80 to 3,000 tons, supporting both prototype tooling and production molds.", href: "/services/injection-molding" },
 ];
 
 const values = [
@@ -75,7 +75,7 @@ const certifications = [
 ];
 
 const differentiators = [
-  { title: "US-Managed, Factory-Direct", desc: "Unlike trading companies or sourcing agents, we own and operate our manufacturing facilities. Your contract is with a US entity, governed by US law, with full IP protection. But your products are built in our own factories — not subcontracted to unknown third parties." },
+  { title: "US-Managed, Factory-Direct", desc: "We own and operate our manufacturing facilities. Your contract is with a US entity, governed by US law, with full IP protection. Your products are built in our own factories with full traceability and quality control at every step." },
   { title: "Dual-Factory Flexibility", desc: "Our unique dual-factory model gives you strategic flexibility. Use our Shenzhen facility for rapid NPI and complex prototyping, then seamlessly transfer to our Batam FTZ facility for tariff-optimized volume production. Same equipment, same processes, same quality system — your choice of location." },
   { title: "Vertically Integrated Operations", desc: "SMT assembly, through-hole soldering, testing, injection molding, box build, and fulfillment — all under one roof. This vertical integration eliminates the coordination overhead, quality risks, and timeline delays that come from managing multiple vendors." },
   { title: "Startup-Friendly Manufacturing", desc: "We understand that hardware startups have different needs than Fortune 500 companies. That's why we offer no minimum order quantities, dedicated NPI engineering support, and startup-friendly pricing structures. Our Startups Program provides a fast-track path from prototype to mass production." },
@@ -119,8 +119,8 @@ export default function About() {
       <section className="relative pt-48 pb-32 bg-illuminious-navy text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/DEPLOYED_about-factory-equipment.jpg"
-            alt="Illuminious manufacturing facility with engineers and production lines"
+            src="/images/DEPLOYED_abstract-circuit-board-blue-hero.jpg"
+            alt="Abstract circuit board design representing electronics manufacturing"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-illuminious-navy via-illuminious-navy/80 to-transparent" />
@@ -133,7 +133,7 @@ export default function About() {
           <div className="max-w-3xl mt-8">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <h1 className="text-4xl md:text-6xl font-bold mt-2 mb-6 font-heading">
-                We Are Manufacturers, Not Middlemen
+                Your Dedicated Manufacturing Partner
               </h1>
               <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
                 Illuminious is a vertically integrated electronics contract manufacturer with US headquarters in Palo Alto and our own production facilities in Shenzhen and Batam. We build electronic products — from bare PCB to boxed, tested, and shipped — in factories we own and operate.
@@ -263,21 +263,40 @@ export default function About() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {capabilities.map((cap, index) => (
                 <AnimatedSection key={cap.name} delay={index * 0.05}>
-                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-illuminious-sky/50 transition-colors h-full">
-                    <cap.icon className="w-8 h-8 text-illuminious-sky mb-4" />
-                    <h3 className="text-lg font-bold text-white mb-2 font-heading">{cap.name}</h3>
-                    <p className="text-sm text-white leading-relaxed">{cap.desc}</p>
-                  </div>
+                  <Link href={cap.href}>
+                    <div className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-illuminious-sky/50 transition-colors h-full cursor-pointer">
+                      <cap.icon className="w-8 h-8 text-illuminious-sky mb-4" />
+                      <h3 className="text-lg font-bold text-white mb-2 font-heading">{cap.name}</h3>
+                      <p className="text-sm text-white leading-relaxed mb-3">{cap.desc}</p>
+                      <span className="inline-flex items-center text-illuminious-sky text-sm font-medium group-hover:gap-2 transition-all">
+                        Learn More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </Link>
                 </AnimatedSection>
               ))}
             </div>
             <AnimatedSection delay={0.3} className="mt-12 text-center">
-              <Button asChild className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8">
-                <Link href="/services">
-                  Explore All Services
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild className="bg-illuminious-sky text-illuminious-navy hover:bg-illuminious-light rounded-full px-8">
+                  <Link href="/services">
+                    Explore All Services
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="text-white border-white/30 hover:bg-white/10 rounded-full px-8">
+                  <Link href="/capabilities">
+                    View Equipment & Capabilities
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="text-white border-white/30 hover:bg-white/10 rounded-full px-8">
+                  <Link href="/capabilities/quality">
+                    Quality & Certifications
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+              </div>
             </AnimatedSection>
           </div>
         </section>

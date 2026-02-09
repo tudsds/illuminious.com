@@ -30,7 +30,7 @@ const capabilities = [
   {
     icon: Wrench,
     title: "Automated Assembly & Robotics",
-    text: "We leverage state-of-the-art automation to achieve the precision and repeatability essential for automotive electronics. Our lines feature Fuji NXT III SMT machines for high-speed placement of components down to 01005, 3D Automated Optical Inspection (AOI) from Koh Young, and 3D Solder Paste Inspection (SPI) to eliminate defects before they occur. Robotic arms handle delicate assembly tasks, ensuring consistent quality and throughput."
+    text: "We leverage state-of-the-art automation to achieve the precision and repeatability essential for automotive electronics. Our lines feature Fuji SMT machines for high-speed placement of components down to 01005, 3D Automated Optical Inspection (AOI) from Koh Young, and 3D Solder Paste Inspection (SPI) to eliminate defects before they occur. Robotic arms handle delicate assembly tasks, ensuring consistent quality and throughput."
   },
   {
     icon: ShieldCheck,

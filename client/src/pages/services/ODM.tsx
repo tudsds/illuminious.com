@@ -254,7 +254,7 @@ export default function ServiceODM() {
                   <h3 className="font-bold text-lg text-illuminious-navy mb-3 font-heading">Quality & Manufacturing</h3>
                   <ul className="space-y-2 text-sm text-illuminious-sky list-disc list-inside">
                     <li>Factory Certifications: ISO 9001, ISO 13485, IATF 16949</li>
-                    <li>SMT Lines: Fuji NXT III, 01005 component size</li>
+                    <li>SMT Lines: Fuji SMT Lines, 01005 component size</li>
                     <li>Inspection: 3D AOI, 3D SPI, X-Ray Inspection</li>
                     <li>Testing: ICT, Functional Circuit Testing (FCT)</li>
                     <li>Traceability: Full BOM and serial number tracking</li>
