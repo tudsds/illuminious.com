@@ -207,6 +207,12 @@
 
   <!-- Blog Post Detail Pages -->
   <url>
+    <loc>https://illuminious.com/blog/china-plus-two-manufacturing-strategy-2026</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://illuminious.com/blog/sustainable-manufacturing-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

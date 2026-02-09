@@ -13,6 +13,91 @@ import { useState } from "react";
 // Export blog posts for use in BlogDetail
 export const blogPosts = [
   {
+    id: 9,
+    slug: "china-plus-two-manufacturing-strategy-2026",
+    title: "2026 Hardware Agility: Mastering the 'China Plus Two' Manufacturing Model",
+    excerpt: "Discover how the hybrid US-Shenzhen-Indonesia strategy is helping hardware startups scale faster while mitigating geopolitical risks and tariff pressures in 2026.",
+    content: `<div class="lead-text">
+  <p><strong>In 2026, the hardware landscape is no longer defined by where you build, but how agile your supply chain can be.</strong> As global trade policies shift and the demand for 'AI-at-the-edge' hardware explodes, the traditional single-source manufacturing model is being replaced by a more resilient, three-node strategy: the 'China Plus Two' model. For US-based startups, this hybrid approach—leveraging Silicon Valley management, Shenzhen's engineering speed, and Southeast Asia's production scale—has become the ultimate competitive advantage.</p>
+</div>
+
+<div class="feature-grid">
+  <div class="feature-item">
+    <h4>🇺🇸 1. US Management</h4>
+    <p>Headquartered in Palo Alto, our team provides <strong>IP protection under US law</strong> and real-time engineering support for your design phase.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🇨🇳 2. Shenzhen Speed</h4>
+    <p>Our Shenzhen NPI center accelerates prototyping and DFM reviews, turning concepts into <strong>Golden Samples</strong> in as little as 72 hours.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🇮🇩 3. Indonesia Scale</h4>
+    <p>By moving mass production to Indonesia, we offer a <strong>tariff-optimized safe harbor</strong> with high-volume assembly and injection molding capabilities.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🚢 4. Global Logistics</h4>
+    <p>Our integrated supply chain ensures seamless transition between nodes, minimizing lead times and maximizing inventory turnover.</p>
+  </div>
+</div>
+
+<div class="highlight-box">
+  <h4>💡 The Tariff Safe Harbor</h4>
+  <p>Why Indonesia? In 2026, Indonesia has emerged as the premier manufacturing alternative for US hardware brands. By utilizing Indonesia's free trade zones, our partners can:</p>
+  <ul class="check-list">
+    <li><strong>Mitigate Section 301 tariffs</strong> on US imports.</li>
+    <li><strong>Diversify production risk</strong> away from single-country dependence.</li>
+    <li><strong>Scale sustainably</strong> with local labor and material ecosystems.</li>
+  </ul>
+</div>
+
+<h2>🔍 The Rapid NPI Journey</h2>
+
+<div class="process-steps">
+  <div class="process-step">
+    <h4>1. Design & DFM (US-Node)</h4>
+    <p>Our California engineers review your CAD files to ensure manufacturability and cost-efficiency before a single chip is ordered.</p>
+  </div>
+  <div class="process-step">
+    <h4>2. Rapid Prototyping (SZ-Node)</h4>
+    <p>Fast-track SMT and PCBA in Shenzhen to validate your hardware. We solve technical hurdles in real-time where the component ecosystem is deepest.</p>
+  </div>
+  <div class="process-step">
+    <h4>3. Production Transfer (ID-Node)</h4>
+    <p>Once validated, we transfer the 'Golden Sample' and SOPs to our Indonesia facility for seamless high-volume assembly.</p>
+  </div>
+</div>
+
+<div class="benefits-grid">
+  <div class="benefit">
+    <h5>🛡️ IP Security</h5>
+    <p>US-managed contracts and strict internal silos protect your most sensitive designs.</p>
+  </div>
+  <div class="benefit">
+    <h5>⚡ Speed-to-Market</h5>
+    <p>Reduce launch timelines by 40% through parallel-track engineering and sourcing.</p>
+  </div>
+  <div class="benefit">
+    <h5>📉 Cost Optimization</h5>
+    <p>Lower labor costs and optimized duties translate directly to your bottom line.</p>
+  </div>
+  <div class="benefit">
+    <h5>🌍 ESG Compliance</h5>
+    <p>Our Indonesia facility meets 2026 international standards for sustainable manufacturing.</p>
+  </div>
+</div>
+
+<div class="conclusion-box">
+  <h3>The Future is Responsible</h3>
+  <p>Building the next generation of AI hardware requires more than just technical skill—it requires an unwavering commitment to the planet. At Illuminious, we are proud to be the partner that helps you achieve both.</p>
+  <p><strong>Ready to build a sustainable product? <a href="/contact">Speak with our NPI experts today.</a></strong></p>
+</div>`,
+    publishedAt: new Date("2026-02-08"),
+    readTime: 12,
+    authorName: "Illuminious Team",
+    featuredImage: "/images/blog-img-1.jpg",
+    category: "Supply Chain",
+  },
+  {
     id: 1,
     slug: "sustainable-manufacturing-2026",
     title: "Sustainable Manufacturing: Building Eco-Friendly Electronics in 2026",
