@@ -13,6 +13,61 @@ import { useState } from "react";
 // Export blog posts for use in BlogDetail
 export const blogPosts = [
   {
+    id: 8,
+    slug: "illuminious-2026-sustainable-vision",
+    title: "Sustainable Manufacturing: Illuminious's 2026 Vision for Eco-Friendly Electronics",
+    excerpt: "As global regulations tighten, Illuminious leads the charge in 2026 by integrating circular economy principles and AI-driven energy optimization into high-volume electronics manufacturing.",
+    content: `<div class="lead-text">
+  <p><strong>Sustainability is no longer a choice—it's the new standard for electronics manufacturing.</strong> In 2026, Illuminious is redefining what it means to build high-performance hardware while minimizing environmental impact. From material sourcing to factory floor optimization, we are implementing a holistic approach to green manufacturing.</p>
+</div>
+
+<div class="feature-grid">
+  <div class="feature-item">
+    <h4>🌍 1. Regulatory Compliance</h4>
+    <p>Staying ahead of global mandates like the EU Green Deal ensures our partners' products remain compliant in all major markets.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🤖 2. AI Energy Optimization</h4>
+    <p>Our smart factories use real-time data to reduce energy consumption by up to <strong>30%</strong> during peak production periods.</p>
+  </div>
+  <div class="feature-item">
+    <h4>♻️ 3. Circular Economy</h4>
+    <p>We prioritize DFM (Design for Manufacturing) strategies that include end-of-life recyclability and modular component reuse.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🤝 4. Ethical Sourcing</h4>
+    <p>Complete supply chain transparency ensures that every mineral and component is sourced responsibly and ethically.</p>
+  </div>
+</div>
+
+<div class="highlight-box">
+  <h4>📊 Measuring Our 2026 Impact</h4>
+  <p>We believe in radical transparency. Our current metrics show:</p>
+  <ul>
+    <li>Carbon footprint reduction across all facility nodes.</li>
+    <li>Zero-waste-to-landfill initiatives in Indonesia assembly lines.</li>
+    <li>95% renewable energy transition for our corporate hubs.</li>
+  </ul>
+</div>
+
+<ul class="check-list">
+  <li><strong>Lead-free soldering:</strong> 100% compliance across all PCBA lines.</li>
+  <li><strong>Bio-based enclosures:</strong> Testing new sustainable materials for consumer electronics.</li>
+  <li><strong>Water recycling:</strong> Closed-loop systems implemented in high-volume production.</li>
+</ul>
+
+<div class="conclusion-box">
+  <h3>The Future is Responsible</h3>
+  <p>Building the next generation of AI hardware requires more than just technical skill—it requires an unwavering commitment to the planet. At Illuminious, we are proud to be the partner that helps you achieve both.</p>
+  <p><strong>Ready to build a sustainable product? Contact our engineering team today.</strong></p>
+</div>`,
+    publishedAt: new Date("2026-02-08"),
+    readTime: 10,
+    authorName: "Illuminious Team",
+    featuredImage: "/images/blog-sustainable-manufacturing-2026-v2.jpg",
+    category: "Industry Insights",
+  },
+  {
     id: 1,
     slug: "sustainable-manufacturing-2026",
     title: "Sustainable Manufacturing: Building Eco-Friendly Electronics in 2026",
