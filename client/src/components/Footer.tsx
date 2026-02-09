@@ -83,7 +83,7 @@ export default function Footer() {
                 illuminious
               </span>
             </Link>
-            <p className="text-sm leading-relaxed mb-5 text-gray-300">
+            <p className="text-sm leading-relaxed mb-5 text-white">
               A US-headquartered electronics manufacturer with production facilities in Shenzhen and Batam. We provide end-to-end manufacturing from PCB assembly to finished product, serving startups and enterprises worldwide.
             </p>
 
@@ -91,7 +91,7 @@ export default function Footer() {
             <div className="mb-5">
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="w-4 h-4 text-illuminious-sky" />
-                <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Certifications</span>
+                <span className="text-xs font-semibold text-illuminious-sky uppercase tracking-wider">Certifications</span>
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {certifications.map((cert) => (
@@ -117,8 +117,8 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors ${
                   isStartupsPage
-                    ? "bg-cyber-purple/20 text-gray-300 hover:bg-cyber-purple/40 hover:text-white"
-                    : "bg-illuminious-blue/20 text-gray-300 hover:bg-illuminious-blue/40 hover:text-white"
+                    ? "bg-cyber-purple/20 text-white hover:bg-cyber-purple/40 hover:text-cyber-cyan"
+                    : "bg-illuminious-blue/20 text-white hover:bg-illuminious-blue/40 hover:text-illuminious-sky"
                 }`}
               >
                 <Linkedin className="w-4 h-4" />
@@ -129,8 +129,8 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={`p-2 rounded-full transition-colors ${
                   isStartupsPage
-                    ? "bg-cyber-purple/20 text-gray-300 hover:bg-cyber-purple/40 hover:text-white"
-                    : "bg-illuminious-blue/20 text-gray-300 hover:bg-illuminious-blue/40 hover:text-white"
+                    ? "bg-cyber-purple/20 text-white hover:bg-cyber-purple/40 hover:text-cyber-cyan"
+                    : "bg-illuminious-blue/20 text-white hover:bg-illuminious-blue/40 hover:text-illuminious-sky"
                 }`}
               >
                 <Twitter className="w-4 h-4" />
@@ -150,7 +150,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-illuminious-sky hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -171,7 +171,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-illuminious-sky hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -189,7 +189,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-illuminious-sky hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -215,7 +215,7 @@ export default function Footer() {
                     <FlagIcon code={office.flag} className="w-5 h-3.5" />
                     <span className="text-sm font-medium text-white">{office.location}</span>
                   </div>
-                  <p className="text-xs text-gray-400">{office.city}</p>
+                  <p className="text-xs text-illuminious-sky">{office.city}</p>
                   <p className={`text-[10px] font-medium ${
                     isStartupsPage ? "text-cyber-cyan/70" : "text-illuminious-sky/70"
                   }`}>
@@ -232,7 +232,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 mt-0.5 text-gray-400" />
+                <Mail className="w-4 h-4 mt-0.5 text-illuminious-sky" />
                 <a
                   href="mailto:info@illuminious.com"
                   onClick={() => {
@@ -243,18 +243,18 @@ export default function Footer() {
                       });
                     }
                   }}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                  className="text-sm text-illuminious-sky hover:text-white transition-colors"
                 >
                   info@illuminious.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 mt-0.5 text-gray-400" />
-                <span className="text-sm text-gray-400">+1 424-626-3312</span>
+                <Phone className="w-4 h-4 mt-0.5 text-illuminious-sky" />
+                <span className="text-sm text-illuminious-sky">+1 424-626-3312</span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400" />
-                <span className="text-sm text-gray-400">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-illuminious-sky" />
+                <span className="text-sm text-illuminious-sky">
                   Palo Alto, CA, United States
                 </span>
               </li>
@@ -269,25 +269,25 @@ export default function Footer() {
           }`}
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-illuminious-sky">
               © {new Date().getFullYear()} Illuminious LLC. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link
                 href="/privacy"
-                className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                className="text-xs text-illuminious-sky hover:text-white transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                className="text-xs text-illuminious-sky hover:text-white transition-colors"
               >
                 Terms of Service
               </Link>
               <Link
                 href="/sitemap.xml"
-                className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                className="text-xs text-illuminious-sky hover:text-white transition-colors"
               >
                 Sitemap
               </Link>
