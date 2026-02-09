@@ -10,8 +10,7 @@ import { trpc } from "@/lib/trpc";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPulsing, setIsPulsing] = useState(false);
-  const [hasAutoAnimated, setHasAutoAnimated] = useState(false);
+  const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -20,8 +19,8 @@ export default function FloatingContact() {
     message: "",
   });
   const [location, navigate] = useLocation();
-  const autoAnimateTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const autoShrinkTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const autoOpenTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const autoCloseTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const isStartupsPage = location === "/startups";
   const isContactPage = location === "/contact";
@@ -56,56 +55,58 @@ export default function FloatingContact() {
     },
   });
 
-  // Auto-animate logic: pulse after 5 seconds, show for 3 seconds, then shrink
+  // Auto-open logic: open panel after 5 seconds, show for 3 seconds, then close
   useEffect(() => {
-    if (isContactPage || isAdminPage || isThankYouPage || hasAutoAnimated) return;
+    if (isContactPage || isAdminPage || isThankYouPage || hasAutoOpened) return;
 
-    // Check if user has already seen the animation in this session
-    const hasSeenAnimation = sessionStorage.getItem("floatingContactAnimated");
-    if (hasSeenAnimation) {
-      setHasAutoAnimated(true);
+    // Check if user has already seen the popup in this session
+    const hasSeenPopup = sessionStorage.getItem("floatingContactSeen");
+    if (hasSeenPopup) {
+      setHasAutoOpened(true);
       return;
     }
 
-    // Auto-pulse after 5 seconds
-    autoAnimateTimerRef.current = setTimeout(() => {
-      if (!hasAutoAnimated) {
-        setIsPulsing(true);
-        setHasAutoAnimated(true);
-        sessionStorage.setItem("floatingContactAnimated", "true");
+    // Auto-open after 5 seconds
+    autoOpenTimerRef.current = setTimeout(() => {
+      if (!hasAutoOpened) {
+        setIsOpen(true);
+        setHasAutoOpened(true);
+        sessionStorage.setItem("floatingContactSeen", "true");
 
-        // Auto-shrink after 3 seconds
-        autoShrinkTimerRef.current = setTimeout(() => {
-          setIsPulsing(false);
+        // Auto-close after 3 seconds
+        autoCloseTimerRef.current = setTimeout(() => {
+          setIsOpen(false);
         }, 3000);
       }
     }, 5000);
 
     return () => {
-      if (autoAnimateTimerRef.current) {
-        clearTimeout(autoAnimateTimerRef.current);
+      if (autoOpenTimerRef.current) {
+        clearTimeout(autoOpenTimerRef.current);
       }
-      if (autoShrinkTimerRef.current) {
-        clearTimeout(autoShrinkTimerRef.current);
+      if (autoCloseTimerRef.current) {
+        clearTimeout(autoCloseTimerRef.current);
       }
     };
-  }, [hasAutoAnimated, isContactPage, isAdminPage, isThankYouPage]);
+  }, [hasAutoOpened, isContactPage, isAdminPage, isThankYouPage]);
 
-  // Listen for user interactions during pulse to shrink immediately
+  // Listen for user interactions during auto-open to close immediately
   useEffect(() => {
-    if (!isPulsing) return;
+    if (!isOpen || !hasAutoOpened || isSubmitting) return;
 
     const handleInteraction = () => {
-      setIsPulsing(false);
-      if (autoShrinkTimerRef.current) {
-        clearTimeout(autoShrinkTimerRef.current);
+      // Only auto-close if the panel was auto-opened and timer is still active
+      if (autoCloseTimerRef.current) {
+        setIsOpen(false);
+        clearTimeout(autoCloseTimerRef.current);
+        autoCloseTimerRef.current = null;
       }
     };
 
-    // Listen for clicks outside the button and scroll events
+    // Listen for clicks outside the panel and scroll events
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (!target.closest('[data-floating-contact-button]')) {
+      if (!target.closest('[data-floating-contact-panel]')) {
         handleInteraction();
       }
     };
@@ -117,7 +118,7 @@ export default function FloatingContact() {
       window.removeEventListener('click', handleClickOutside);
       window.removeEventListener('scroll', handleInteraction);
     };
-  }, [isPulsing]);
+  }, [isOpen, hasAutoOpened, isSubmitting]);
 
   // Don't show on contact, admin, or thank you pages
   if (isContactPage || isAdminPage || isThankYouPage) return null;
@@ -156,40 +157,41 @@ export default function FloatingContact() {
     }
   };
 
+  const handleManualClose = () => {
+    setIsOpen(false);
+    if (autoCloseTimerRef.current) {
+      clearTimeout(autoCloseTimerRef.current);
+      autoCloseTimerRef.current = null;
+    }
+  };
+
   return (
     <>
       {/* Floating Button */}
       <AnimatePresence>
         {!isOpen && (
           <motion.button
-            data-floating-contact-button
             initial={{ scale: 0, opacity: 0 }}
-            animate={{ 
-              scale: isPulsing ? 1.3 : 1, 
-              opacity: 1 
-            }}
+            animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             transition={{
-              scale: { 
-                type: "spring", 
-                stiffness: 260, 
-                damping: 20 
-              },
-              opacity: { duration: 0.2 }
+              type: "spring",
+              stiffness: 260,
+              damping: 20
             }}
-            whileHover={{ scale: isPulsing ? 1.35 : 1.1 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               setIsOpen(true);
-              setIsPulsing(false);
-              if (autoShrinkTimerRef.current) {
-                clearTimeout(autoShrinkTimerRef.current);
+              if (autoCloseTimerRef.current) {
+                clearTimeout(autoCloseTimerRef.current);
+                autoCloseTimerRef.current = null;
               }
             }}
             className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-2xl transition-colors ${isStartupsPage
                 ? "bg-cyber-cyan text-cyber-black hover:bg-cyber-cyan/90 shadow-cyber-cyan/30"
                 : "bg-illuminious-blue text-white hover:bg-illuminious-navy shadow-illuminious-blue/30"
-              } ${isPulsing ? 'ring-4 ring-offset-2 ' + (isStartupsPage ? 'ring-cyber-cyan/50 ring-offset-cyber-black' : 'ring-illuminious-blue/50 ring-offset-white') : ''}`}
+              }`}
           >
             <MessageCircle className="w-6 h-6" />
           </motion.button>
@@ -205,12 +207,13 @@ export default function FloatingContact() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
+              onClick={handleManualClose}
               className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 lg:hidden"
             />
 
             {/* Form Panel */}
             <motion.div
+              data-floating-contact-panel
               initial={{ opacity: 0, y: 100, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 50, scale: 0.8, x: 50 }}
@@ -242,7 +245,7 @@ export default function FloatingContact() {
                   </p>
                 </div>
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleManualClose}
                   className={`p-2 rounded-full transition-colors ${isStartupsPage
                       ? "text-cyber-cyan hover:bg-cyber-purple/30"
                       : "text-white/80 hover:text-white hover:bg-white/10"
