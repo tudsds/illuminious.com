@@ -218,7 +218,7 @@ export default function Home() {
             fetchPriority="high"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-illuminious-navy/90 via-illuminious-navy/70 to-illuminious-navy/40" />
+          <div className="absolute inset-0 bg-[#132843]/60" />
         </div>
 
         <div className="absolute inset-0 opacity-10">
