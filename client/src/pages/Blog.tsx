@@ -13,6 +13,136 @@ import { useState } from "react";
 // Export blog posts for use in BlogDetail
 export const blogPosts = [
   {
+    id: 10,
+    slug: "ai-hardware-supply-chain-agility-2026",
+    title: "AI Hardware Supply Chain Agility: Navigating the 2026 Manufacturing Landscape",
+    excerpt: "Discover how AI hardware startups are building resilient supply chains with China Plus Two strategies, rapid prototyping, and agile manufacturing partnerships.",
+    content: `<div class="lead-text">
+  <p><strong>The AI hardware revolution is here—and it's moving faster than ever.</strong> From AI-powered glasses and companion devices to smart wearables and voice assistants, 2026 is witnessing an unprecedented surge in intelligent hardware demand. But with great opportunity comes great complexity: supply chain disruptions, geopolitical tensions, and the need for lightning-fast time-to-market are reshaping how hardware gets built.</p>
+</div>
+
+<h2>🚀 The AI Hardware Boom: Opportunities and Challenges</h2>
+
+<p>The global AI hardware market is projected to exceed <strong>$150 billion by 2026</strong>, driven by consumer demand for intelligent devices that seamlessly integrate into daily life. Startups and established brands alike are racing to capture market share—but success requires more than innovative product design.</p>
+
+<p>The real competitive advantage lies in <strong>supply chain agility</strong>: the ability to pivot quickly when components become scarce, scale production up or down based on demand, and navigate complex international manufacturing landscapes without missing a beat.</p>
+
+<h2>🌏 The China Plus Two Strategy: Building Resilience</h2>
+
+<p>For decades, China has been the undisputed hub of electronics manufacturing. But smart companies are no longer putting all their eggs in one basket. The <strong>"China Plus Two" strategy</strong>—maintaining primary manufacturing relationships in China while diversifying to at least two additional regions—has become the gold standard for supply chain resilience.</p>
+
+<div class="feature-grid">
+  <div class="feature-item">
+    <h4>🇨🇳 China: Scale & Expertise</h4>
+    <p>Unmatched component ecosystem and mature manufacturing infrastructure for <strong>high-volume production</strong>.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🇮🇩 Indonesia: Cost & Growth</h4>
+    <p>Strategic ASEAN location with competitive labor costs and <strong>rapidly improving tech infrastructure</strong>.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🇲🇽 Mexico: Proximity</h4>
+    <p>Nearshoring advantage for North American markets with <strong>reduced shipping times and tariffs</strong>.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🇻🇳 Vietnam: Agility</h4>
+    <p>Emerging electronics hub with <strong>government incentives</strong> and growing skilled workforce.</p>
+  </div>
+</div>
+
+<h2>⚡ Rapid Prototyping: From Concept to Reality in Weeks</h2>
+
+<p>In the AI hardware race, speed is everything. Traditional manufacturing cycles that once took 6-12 months are now compressed to mere weeks. <strong>Agile manufacturing partners</strong> who can deliver functional prototypes in 2-3 weeks and ramp to production in 30-45 days have become invaluable assets.</p>
+
+<div class="highlight-box">
+  <h4>📊 The New Speed Standard</h4>
+  <p>Leading AI hardware companies are achieving remarkable velocity:</p>
+  <ul>
+    <li><strong>2-3 weeks:</strong> Functional prototype delivery</li>
+    <li><strong>30-45 days:</strong> Production-ready samples</li>
+    <li><strong>60-90 days:</strong> Mass production launch</li>
+    <li><strong>Real-time:</strong> Quality monitoring and adjustments</li>
+  </ul>
+</div>
+
+<h2>🔧 Key Components Driving AI Hardware Innovation</h2>
+
+<p>AI devices demand specialized components that push the boundaries of miniaturization and performance:</p>
+
+<ul class="check-list">
+  <li><strong>Edge AI Processors:</strong> Low-power NPUs (Neural Processing Units) capable of on-device inference</li>
+  <li><strong>Advanced Sensors:</strong> Multi-modal sensors combining vision, audio, and environmental data</li>
+  <li><strong>High-Density Batteries:</strong> Compact power solutions supporting extended operation</li>
+  <li><strong>Miniaturized PCBs:</strong> High-layer-count boards with embedded components</li>
+  <li><strong>Premium Enclosures:</strong> Materials balancing aesthetics, durability, and RF transparency</li>
+</ul>
+
+<h2>💡 Choosing the Right Manufacturing Partner</h2>
+
+<p>Not all manufacturers are equipped to handle the unique challenges of AI hardware. When evaluating partners, prioritize:</p>
+
+<div class="evaluation-criteria">
+  <div class="criterion">
+    <span class="badge">Technical Capability</span>
+    <p><strong>Experience with complex PCBA</strong> and miniaturization. Look for manufacturers with dedicated AI hardware portfolios.</p>
+  </div>
+  <div class="criterion">
+    <span class="badge">Geographic Flexibility</span>
+    <p><strong>Multi-region production capability</strong> that supports China Plus Two strategies without quality compromise.</p>
+  </div>
+  <div class="criterion">
+    <span class="badge">Speed & Responsiveness</span>
+    <p><strong>Rapid prototyping programs</strong> with dedicated engineering support and clear communication channels.</p>
+  </div>
+  <div class="criterion">
+    <span class="badge">Quality Systems</span>
+    <p><strong>ISO 9001 and IPC-A-610 compliance</strong> with robust testing protocols for reliability-critical devices.</p>
+  </div>
+</div>
+
+<h2>🎯 The Illuminious Advantage</h2>
+
+<p>At Illuminious, we've built our manufacturing network specifically for the AI hardware revolution. Our <strong>dual-footprint strategy</strong> combines China's component ecosystem with Indonesia's agile production capabilities, giving our clients the best of both worlds: scale when needed, flexibility always.</p>
+
+<div class="benefits-grid">
+  <div class="benefit">
+    <h5>🌐 Dual-Footprint</h5>
+    <p>China + Indonesia manufacturing for optimal resilience</p>
+  </div>
+  <div class="benefit">
+    <h5>⚡ 14-Day Prototypes</h5>
+    <p>Rapid iteration to accelerate your time-to-market</p>
+  </div>
+  <div class="benefit">
+    <h5>🔬 AI Specialization</h5>
+    <p>Deep expertise in edge AI device manufacturing</p>
+  </div>
+  <div class="benefit">
+    <h5>📊 Real-Time Visibility</h5>
+    <p>Live production monitoring and quality tracking</p>
+  </div>
+  <div class="benefit">
+    <h5>🛡️ IP Protection</h5>
+    <p>Strict security protocols and NDA enforcement</p>
+  </div>
+  <div class="benefit">
+    <h5>🤝 Dedicated Support</h5>
+    <p>US-based account management with 24/7 engineering</p>
+  </div>
+</div>
+
+<div class="conclusion-box">
+  <h3>Looking Ahead</h3>
+  <p>The AI hardware market will only accelerate. Companies that master supply chain agility—embracing multi-region strategies, rapid prototyping, and agile manufacturing partnerships—will capture the lion's share of this explosive growth.</p>
+  <p><strong>The question isn't whether you need a resilient supply chain. It's whether your manufacturing partner can deliver one.</strong></p>
+</div>`,
+    publishedAt: new Date("2026-02-10"),
+    readTime: 10,
+    authorName: "Illuminious Team",
+    featuredImage: "/images/blog-ai-hardware-supply-chain.jpg",
+    category: "Industry Insights",
+  },
+  {
     id: 9,
     slug: "china-plus-two-manufacturing-strategy-2026",
     title: "2026 Hardware Agility: Mastering the 'China Plus Two' Manufacturing Model",
