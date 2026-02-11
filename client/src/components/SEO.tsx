@@ -42,6 +42,15 @@ export default function SEO({
       meta.setAttribute("content", content);
     };
 
+    // Update Canonical URL
+    let linkCanonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!linkCanonical) {
+      linkCanonical = document.createElement("link");
+      linkCanonical.setAttribute("rel", "canonical");
+      document.head.appendChild(linkCanonical);
+    }
+    linkCanonical.setAttribute("href", fullUrl);
+
     // Basic meta tags
     updateMeta("description", description);
     if (keywords) {
