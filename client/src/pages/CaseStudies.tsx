@@ -21,7 +21,7 @@ export const caseStudies = [
     title: "Scaling a Silicon Valley AI Wearable: From Prototype to 50,000 Units in 6 Months",
     industry: "AI Hardware / Wearables",
     challenge: "A Palo Alto-based startup faced a critical bottleneck: their AI-powered fitness necklace went viral on social media, but their local prototype shop couldn't scale. They needed 50,000 units delivered in 6 months while avoiding the 25% Section 301 tariffs on Chinese imports.",
-    solution: "Illuminious deployed the 'China Plus Two' playbook. We transitioned their DFM-ready design to our Shenzhen NPI center for 72-hour prototyping, then rapidly transferred the validated process to our Batam, Indonesia facility for high-volume, tariff-optimized production.",
+    solution: "Illuminious deployed the 'U.S. Plus Two' playbook—US-managed engineering with multi-region manufacturing execution. We transitioned their DFM-ready design to our Shenzhen NPI center for 72-hour prototyping, then rapidly transferred the validated process to our Batam, Indonesia facility for high-volume, tariff-optimized production.",
     results: [
       { metric: "Time to Market", value: "10 Weeks", description: "From design handover to mass production launch" },
       { metric: "Tariff Savings", value: "25%", description: "Direct savings via Indonesia-to-US shipping" },

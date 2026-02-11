@@ -31,7 +31,7 @@ export const newsItems = [
 
 <div class="quote-box">
   <blockquote>
-    <p>"Our Indonesia facility is a cornerstone of our 'China Plus Two' strategy. This expansion allows our US and European partners to scale their AI hardware innovations rapidly while benefiting from significant tariff optimizations and a robust local supply chain."</p>
+    <p>"Our Indonesia facility is a cornerstone of our 'U.S. Plus Two' strategy—US-based management combined with global manufacturing reach including China. This expansion allows our US and European partners to scale their AI hardware innovations rapidly while benefiting from significant tariff optimizations and a robust local supply chain."</p>
   </blockquote>
   <cite>— Angela Lee, COO at Illuminious</cite>
 </div>

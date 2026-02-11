@@ -16,7 +16,7 @@ export const blogPosts = [
     id: 10,
     slug: "ai-hardware-supply-chain-agility-2026",
     title: "AI Hardware Supply Chain Agility: Navigating the 2026 Manufacturing Landscape",
-    excerpt: "Discover how AI hardware startups are building resilient supply chains with China Plus Two strategies, rapid prototyping, and agile manufacturing partnerships.",
+    excerpt: "Discover how AI hardware startups are building resilient supply chains with U.S. Plus Two strategies, rapid prototyping, and agile manufacturing partnerships.",
     content: `<div class="lead-text">
   <p><strong>The AI hardware revolution is here—and it's moving faster than ever.</strong> From AI-powered glasses and companion devices to smart wearables and voice assistants, 2026 is witnessing an unprecedented surge in intelligent hardware demand. But with great opportunity comes great complexity: supply chain disruptions, geopolitical tensions, and the need for lightning-fast time-to-market are reshaping how hardware gets built.</p>
 </div>
@@ -27,9 +27,9 @@ export const blogPosts = [
 
 <p>The real competitive advantage lies in <strong>supply chain agility</strong>: the ability to pivot quickly when components become scarce, scale production up or down based on demand, and navigate complex international manufacturing landscapes without missing a beat.</p>
 
-<h2>🌏 The China Plus Two Strategy: Building Resilience</h2>
+<h2>🌏 The U.S. Plus Two Strategy: Building Resilience</h2>
 
-<p>For decades, China has been the undisputed hub of electronics manufacturing. But smart companies are no longer putting all their eggs in one basket. The <strong>"China Plus Two" strategy</strong>—maintaining primary manufacturing relationships in China while diversifying to at least two additional regions—has become the gold standard for supply chain resilience.</p>
+<p>For decades, China has been the undisputed hub of electronics manufacturing. But smart companies are no longer putting all their eggs in one basket. The <strong>"U.S. Plus Two" strategy</strong>—US-based management with manufacturing relationships spanning China and at least two additional regions—has become the gold standard for supply chain resilience.</p>
 
 <div class="feature-grid">
   <div class="feature-item">
@@ -88,7 +88,7 @@ export const blogPosts = [
   </div>
   <div class="criterion">
     <span class="badge">Geographic Flexibility</span>
-    <p><strong>Multi-region production capability</strong> that supports China Plus Two strategies without quality compromise.</p>
+    <p><strong>Multi-region production capability</strong> that supports U.S. Plus Two strategies without quality compromise.</p>
   </div>
   <div class="criterion">
     <span class="badge">Speed & Responsiveness</span>
@@ -145,10 +145,10 @@ export const blogPosts = [
   {
     id: 9,
     slug: "china-plus-two-manufacturing-strategy-2026",
-    title: "2026 Hardware Agility: Mastering the 'China Plus Two' Manufacturing Model",
+    title: "2026 Hardware Agility: Mastering the 'U.S. Plus Two' Manufacturing Model",
     excerpt: "Discover how the hybrid US-Shenzhen-Indonesia strategy is helping hardware startups scale faster while mitigating geopolitical risks and tariff pressures in 2026.",
     content: `<div class="lead-text">
-  <p><strong>In 2026, the hardware landscape is no longer defined by where you build, but how agile your supply chain can be.</strong> As global trade policies shift and the demand for 'AI-at-the-edge' hardware explodes, the traditional single-source manufacturing model is being replaced by a more resilient, three-node strategy: the 'China Plus Two' model. For US-based startups, this hybrid approach—leveraging Silicon Valley management, Shenzhen's engineering speed, and Southeast Asia's production scale—has become the ultimate competitive advantage.</p>
+  <p><strong>In 2026, the hardware landscape is no longer defined by where you build, but how agile your supply chain can be.</strong> As global trade policies shift and the demand for 'AI-at-the-edge' hardware explodes, the traditional single-source manufacturing model is being replaced by a more resilient, three-node strategy: the 'U.S. Plus Two' model—US-managed with global manufacturing reach. For US-based startups, this hybrid approach—leveraging Silicon Valley management, Shenzhen's engineering speed, and Southeast Asia's production scale—has become the ultimate competitive advantage.</p>
 </div>
 
 <div class="feature-grid">

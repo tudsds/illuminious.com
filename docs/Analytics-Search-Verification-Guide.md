@@ -66,6 +66,46 @@ This guide explains how to check the current status of your website analytics an
 
 ---
 
+## 4. Advanced: Debugging Triggers & Lead Sources
+
+### How to Check specific Tag Triggers in GTM
+If you want to know *why* a tag fired (or didn't fire):
+
+1.  **Open GTM Preview Mode** (see Section 2).
+2.  **Perform the action** on your site (e.g., submit a form).
+3.  **Go to the Tag Assistant tab**.
+4.  **Look at the left sidebar (Summary):** You will see a list of events like `Page View`, `Click`, `contact_form_submit`.
+5.  **Click on the specific event** you want to investigate (e.g., click on `contact_form_submit`).
+6.  **Examine "Tags Fired":**
+    *   Click on a tag card (e.g., "GA4 Event - Form Submit").
+    *   Scroll down to **"Firing Triggers"**.
+    *   You will see green checks ✅ if the conditions met, or red Xs ❌ if they failed.
+7.  **Examine "Tags Not Fired":**
+    *   Click on a tag that *should* have fired but didn't.
+    *   Scroll to "Firing Triggers" to see which specific condition failed (e.g., "Page URL does not contain /thank-you").
+
+### How to Figure Out the Source of a Specific Lead
+To know if a specific person (e.g., "john@example.com") came from Google Ads, SEO, or LinkedIn:
+
+#### A. Aggregate Data (GA4 Reports) - *Good for general trends*
+1.  Go to **GA4** > **Reports** > **Acquisition** > **Traffic acquisition**.
+2.  Look for "Organic Search" vs. "Paid Search".
+3.  This tells you *how many* leads came from each source, but not *who* they are.
+
+#### B. Specific Lead Tracking (Requires Code Update) - *The "Right" Way*
+*Currently, your form sends the name, email, and message. To track the exact source of a specific lead:*
+1.  **We need to add hidden fields** to your contact forms (`utm_source`, `utm_medium`, `utm_campaign`).
+2.  When a user lands on your site from an ad (e.g., `illuminious.com?utm_source=google&utm_medium=cpc`), we capture those values.
+3.  When they submit the form, these values are sent along with their email.
+4.  **Result:** You receive an email saying:
+    *   **Name:** John Doe
+    *   **Source:** Google Ads
+    *   **Campaign:** Winter_Promo
+
+*(Note: If you want this implemented, let me know and I can add the hidden fields to your forms.)*
+
+---
+
 ## Summary of Identifiers
 - **GA4 Measurement ID:** `G-8903WGE2L3`
 - **GTM Container ID:** `GTM-TV3WNHSZ`
