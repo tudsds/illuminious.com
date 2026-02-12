@@ -95,6 +95,8 @@ export default function Industries() {
         description="Specialized, high-reliability contract manufacturing solutions for medical, automotive, industrial, consumer electronics, IoT, and AI hardware industries."
         keywords="medical device manufacturing, automotive electronics, industrial automation, IoT hardware, AI accelerators, contract manufacturing"
         url="/industries"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Industries", url: "/industries"}]}
       />
       <Header />
       
@@ -204,7 +206,32 @@ export default function Industries() {
         </div>
       </section>
 
-      <section className="py-20 bg-illuminious-navy">
+      
+      {/* Related Resources */}
+      <section className="py-12 bg-illuminious-light/30">
+        <div className="container text-center">
+          <h3 className="text-xl font-bold text-illuminious-navy mb-6 font-heading">Explore More</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/case-studies">Case Studies</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/industries">Industries</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/blog">Blog</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/about">About Us</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/startups">Startups Program</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+<section className="py-20 bg-illuminious-navy">
         <div className="container">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

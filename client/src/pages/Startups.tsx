@@ -78,6 +78,8 @@ export default function Startups() {
         description="The Startup Bridge by Illuminious and Future Factory gives ambitious hardware startups direct factory access with no MOQ, dedicated engineering support, and a fast-track path from prototype to mass production."
         keywords="hardware startup manufacturing, electronics contract manufacturer, prototype to mass production, new product introduction, NPI process, DFM for startups, flexible MOQ manufacturing, startup manufacturing partner, future factory"
         url="/startups"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Startups Bridge Program", url: "/startups"}]}
       />
       <Header />
 

@@ -347,6 +347,8 @@ export default function Services() {
         description="Discover our full suite of electronics manufacturing services, from NPI, rapid prototyping, and PCB assembly to box build, injection molding, and global supply chain management. We turn your concept into a market-ready product."
         keywords="electronics manufacturing services, NPI services, PCB assembly, box build, injection molding, supply chain management, contract manufacturing, EMS, OEM, ODM"
         url="/services"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Services", url: "/services"}]}
       />
       <Header />
       
@@ -460,6 +462,30 @@ export default function Services() {
                 </Link>
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-12 bg-illuminious-light/30">
+        <div className="container text-center">
+          <h3 className="text-xl font-bold text-illuminious-navy mb-6 font-heading">Explore More</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/case-studies">Case Studies</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/industries">Industries We Serve</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/blog">Manufacturing Blog</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/capabilities">Our Capabilities</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/startups">Startups Program</Link>
+            </Button>
           </div>
         </div>
       </section>

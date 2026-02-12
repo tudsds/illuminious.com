@@ -739,6 +739,8 @@ export default function Blog() {
         description="Expert insights on electronics manufacturing, supply chain optimization, DFM best practices, and hardware startup guides from the Illuminious team."
         keywords="electronics manufacturing blog, hardware startup guide, supply chain insights, DFM best practices"
         url="/blog"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Blog", url: "/blog"}]}
       />
       <Header />
 

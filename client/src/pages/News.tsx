@@ -849,6 +849,8 @@ export default function News() {
         description="Stay updated with the latest news from Illuminious. Company announcements, partnerships, certifications, and industry insights."
         keywords="illuminious news, company news, electronics manufacturing news, supply chain updates"
         url="/news"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "News", url: "/news"}]}
       />
       <Header />
 

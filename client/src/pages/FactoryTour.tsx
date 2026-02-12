@@ -107,6 +107,8 @@ export default function FactoryTour() {
         description="Explore every corner of our state-of-the-art electronics manufacturing facility. See our SMT lines, testing labs, injection molding, clean rooms, and box build assembly areas in detail."
         keywords="factory tour, electronics factory, manufacturing plant, SMT line, PCBA factory, injection molding, box build, testing lab, clean room, contract manufacturing"
         url="/factory-tour"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Factory Tour", url: "/factory-tour"}]}
       />
       <Header />
 

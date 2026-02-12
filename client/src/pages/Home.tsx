@@ -551,6 +551,46 @@ export default function Home() {
                 </Link>
               </AnimatedSection>
             ))}
+           </div>
+          <AnimatedSection className="text-center mt-8">
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-8">
+              <Link href="/industries">
+                View All Industries
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Case Studies & Blog Cross-Links */}
+      <section className="py-16 bg-illuminious-light/30">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            <AnimatedSection>
+              <div className="bg-white rounded-xl p-8 shadow-sm border border-illuminious-light h-full">
+                <h3 className="text-2xl font-bold text-illuminious-navy mb-3 font-heading">Manufacturing Success Stories</h3>
+                <p className="text-illuminious-sky mb-6">See how we've helped hardware companies scale from prototype to millions of units.</p>
+                <Button asChild className="bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full">
+                  <Link href="/case-studies">
+                    View Case Studies
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <div className="bg-white rounded-xl p-8 shadow-sm border border-illuminious-light h-full">
+                <h3 className="text-2xl font-bold text-illuminious-navy mb-3 font-heading">Manufacturing Insights</h3>
+                <p className="text-illuminious-sky mb-6">Expert articles on DFM, supply chain strategy, and electronics manufacturing best practices.</p>
+                <Button asChild className="bg-illuminious-blue text-white hover:bg-illuminious-navy rounded-full">
+                  <Link href="/blog">
+                    Read Our Blog
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

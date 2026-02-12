@@ -112,6 +112,8 @@ export default function About() {
         description="Illuminious is a vertically integrated electronics manufacturer with US headquarters in Palo Alto and own factories in Shenzhen and Batam FTZ. ISO 9001, ISO 13485, IATF 16949 certified."
         keywords="about illuminious, electronics manufacturer, contract manufacturing, manufacturing facilities, Shenzhen factory, Batam FTZ, US managed manufacturer"
         url="/about"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "About", url: "/about"}]}
       />
       <Header />
 
@@ -415,6 +417,32 @@ export default function About() {
                 </AnimatedSection>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Explore More */}
+        <section className="py-12 bg-illuminious-light/30">
+          <div className="container">
+            <AnimatedSection className="text-center">
+              <h3 className="text-xl font-bold text-illuminious-navy mb-6 font-heading">Explore More</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+                  <Link href="/case-studies">Case Studies</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+                  <Link href="/blog">Blog</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+                  <Link href="/startups">Startups Program</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+                  <Link href="/industries">Industries We Serve</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+                  <Link href="/news">Latest News</Link>
+                </Button>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 

@@ -593,6 +593,8 @@ export default function CaseStudies() {
         description="See how companies across industries have achieved success with Illuminious manufacturing services. Real results from consumer IoT, medical devices, industrial, and automotive."
         keywords="case studies, customer success, manufacturing success stories, electronics manufacturing"
         url="/case-studies"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Case Studies", url: "/case-studies"}]}
       />
       <Header />
       
@@ -697,6 +699,30 @@ export default function CaseStudies() {
         </div>
       </section>
 
+
+      {/* Related Resources */}
+      <section className="py-12 bg-illuminious-light/30">
+        <div className="container text-center">
+          <h3 className="text-xl font-bold text-illuminious-navy mb-6 font-heading">Explore More</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/services">Our Services</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/industries">Industries</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/about">About Us</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/blog">Blog</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-illuminious-blue text-illuminious-blue hover:bg-illuminious-light rounded-full px-6">
+              <Link href="/startups">Startups Program</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
       {/* CTA */}
       <section className="py-20 bg-illuminious-navy">
         <div className="container">

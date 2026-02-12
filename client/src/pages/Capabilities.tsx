@@ -122,6 +122,8 @@ export default function Capabilities() {
         description="Explore Illuminious manufacturing capabilities: ISO 9001/13485/IATF 16949 certified, 8 SMT lines, injection molding, IoT specialization, rapid prototyping, and box build assembly."
         keywords="manufacturing capabilities, ISO 9001, ISO 13485, IATF 16949, IoT manufacturing, SMT assembly, rapid prototyping, injection molding, box build"
         url="/capabilities"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Capabilities", url: "/capabilities"}]}
       />
       <Header />
 

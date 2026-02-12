@@ -276,7 +276,89 @@
       "publisher": {
         "@type": "Organization",
         "name": "Illuminious LLC"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://illuminious.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
+    }
+    </script>
+
+  <!-- Structured Data for FAQ (Common Manufacturing Questions) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What electronics manufacturing services does Illuminious offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Illuminious offers comprehensive electronics manufacturing services including PCB assembly (PCBA), SMT assembly, through-hole assembly, box build assembly, injection molding, NPI engineering, rapid prototyping, DFM analysis, supply chain management, and US fulfillment. We serve as an EMS, OEM, and ODM partner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are Illuminious manufacturing facilities located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Illuminious has US headquarters in Palo Alto, California, with own manufacturing facilities in Shenzhen, China and Batam Free Trade Zone, Indonesia. We also have a US warehouse and fulfillment center for domestic distribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What certifications does Illuminious hold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Illuminious holds ISO 9001 (Quality Management), ISO 13485 (Medical Devices), ISO 14001 (Environmental Management), and IATF 16949 (Automotive) certifications. Our facilities meet FDA, FCC, CE, and UL compliance requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum order quantity (MOQ) for PCB assembly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Illuminious supports low-volume prototyping runs starting from as few as 10 units, all the way to high-volume mass production of millions of units. Our flexible manufacturing capabilities accommodate startups and enterprises alike."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to go from prototype to mass production?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typical timelines range from 2-4 weeks for rapid prototyping, 4-8 weeks for NPI and pilot runs, and 8-12 weeks for full mass production ramp-up. Our NPI engineering team works closely with clients to accelerate time-to-market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Illuminious work with hardware startups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Illuminious has a dedicated Startups Bridge Program designed specifically for hardware startups. We provide end-to-end support from DFM review and prototyping through to mass production, with flexible MOQs and dedicated NPI engineering support."
+          }
+        }
+      ]
+    }
+    </script>
+
+  <!-- Structured Data for SiteNavigationElement -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SiteNavigationElement",
+      "name": "Main Navigation",
+      "hasPart": [
+        {"@type": "SiteNavigationElement", "name": "Services", "url": "https://illuminious.com/services"},
+        {"@type": "SiteNavigationElement", "name": "Industries", "url": "https://illuminious.com/industries"},
+        {"@type": "SiteNavigationElement", "name": "Capabilities", "url": "https://illuminious.com/capabilities"},
+        {"@type": "SiteNavigationElement", "name": "Case Studies", "url": "https://illuminious.com/case-studies"},
+        {"@type": "SiteNavigationElement", "name": "About", "url": "https://illuminious.com/about"},
+        {"@type": "SiteNavigationElement", "name": "Blog", "url": "https://illuminious.com/blog"},
+        {"@type": "SiteNavigationElement", "name": "News", "url": "https://illuminious.com/news"},
+        {"@type": "SiteNavigationElement", "name": "Contact", "url": "https://illuminious.com/contact"}
+      ]
     }
     </script>
 </head>

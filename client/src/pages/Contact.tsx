@@ -178,6 +178,8 @@ export default function Contact() {
         description="Get in touch with Illuminious for your electronics manufacturing needs. Request a quote, schedule a consultation, or learn more about our services."
         keywords="contact illuminious, electronics manufacturing quote, supply chain consultation"
         url="/contact"
+      
+        breadcrumbs={[{name: "Home", url: "/"}, {name: "Contact", url: "/contact"}]}
       />
       <Header />
 
