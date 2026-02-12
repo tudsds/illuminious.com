@@ -11,6 +11,65 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const newsItems = [
 {
+    id: 6,
+    slug: "illuminious-indonesia-facility-iso-9001-certification",
+    title: "Illuminious Achieves ISO 9001:2015 Certification for Indonesia Manufacturing Hub",
+    excerpt: "Illuminious is proud to announce that its Batam, Indonesia manufacturing facility has officially achieved ISO 9001:2015 certification, reinforcing our commitment to global quality standards.",
+    content: `<div class="lead-text">
+  <p><strong>Batam, Indonesia — Illuminious LLC is proud to announce that its state-of-the-art manufacturing facility in the Batam Free Trade Zone has achieved ISO 9001:2015 certification.</strong> This internationally recognized milestone validates our rigorous Quality Management System (QMS) and our dedication to delivering defect-free AI hardware at scale.</p>
+</div>
+
+<div class="highlight-box">
+  <h4>📋 Certification Highlights</h4>
+  <ul class="check-list">
+    <li><strong>Standard:</strong> ISO 9001:2015 (Quality Management Systems)</li>
+    <li><strong>Location:</strong> Batam, Indonesia Manufacturing Hub</li>
+    <li><strong>Scope:</strong> PCBA assembly, final box build, and full-system testing</li>
+    <li><strong>Impact:</strong> Unified quality standards across all Illuminious global sites</li>
+  </ul>
+</div>
+
+<h2>Commitment to Excellence 🛡️</h2>
+
+<p>The ISO 9001:2015 certification is the gold standard for quality management. For our partners—ranging from stealth AI startups to global technology leaders—this certification provides an additional layer of assurance that their intellectual property and hardware products are handled with the highest degree of precision.</p>
+
+<div class="feature-grid">
+  <div class="feature-item">
+    <h4>⚙️ Process Consistency</h4>
+    <p>Standardized workflows across <strong>all shifts and production lines</strong>, ensuring every unit meets the exact same specifications.</p>
+  </div>
+  <div class="feature-item">
+    <h4>📉 Continuous Improvement</h4>
+    <p>Data-driven feedback loops that <strong>identify and mitigate potential defects</strong> before they impact the final assembly.</p>
+  </div>
+  <div class="feature-item">
+    <h4>🤝 Customer Satisfaction</h4>
+    <p>A structured approach to <strong>feedback and performance tracking</strong>, aligning our operations with client success metrics.</p>
+  </div>
+  <div class="feature-item">
+    <h4>📦 Supply Chain Integrity</h4>
+    <p>Rigorous <strong>vendor qualification and incoming material inspection</strong> protocols to ensure component reliability.</p>
+  </div>
+</div>
+
+<div class="quote-box">
+  <blockquote>
+    <p>"Achieving ISO 9001 certification in Indonesia within our first year of full operation is a testament to the hard work of our Batam team. It ensures that whether we are manufacturing in China or Indonesia, our clients receive the same world-class reliability and technical precision."</p>
+  </blockquote>
+  <cite>— Angela Lee, COO at Illuminious</cite>
+</div>
+
+<div class="conclusion-box">
+  <h3>Ready for Scale</h3>
+  <p>As we continue to expand our "U.S. Plus Two" manufacturing model, quality remains our North Star. <strong>Contact us today</strong> to learn more about our certified manufacturing capabilities and how we can support your next product launch.</p>
+</div>`,
+    publishedAt: new Date("2026-02-11"),
+    readTime: 4,
+    authorName: "Illuminious Team",
+    featuredImage: "/images/news-indonesia-iso-9001.jpg",
+    category: "Company News",
+  },
+{
     id: 3,
     slug: "illuminious-expands-indonesia-ai-wearable-lines",
     title: "Illuminious Expands High-Tech Production Lines in Indonesia to Support Global AI Wearable Surge",
