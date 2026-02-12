@@ -16,6 +16,86 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const caseStudies = [
 {
+    id: "aurasense-ai-wearable-scaling",
+    slug: "aurasense-ai-wearable-scaling",
+    title: "Scaling AI Wearables: How AuraSense AI Hit 50,000 Units in 4 Months",
+    industry: "Consumer Electronics / AI Wearables",
+    challenge: "AuraSense AI needed to reduce unit costs from $140 to under $100 while scaling from prototype to 50,000 units for a global launch. Their sensor complexity required ISO-certified quality that smaller prototype shops couldn't guarantee.",
+    solution: "We utilized our 'U.S. Plus Two' model, performing rapid NPI in Shenzhen for speed and transitioning mass production to Batam for cost optimization and tariff advantages.",
+    results: [
+      { metric: "Unit Cost Reduction", value: "35%", description: "Reduced manufacturing overhead and optimized supply chain" },
+      { metric: "Time to Market", value: "14 Weeks", description: "From golden sample to 50,000 units delivered" },
+      { metric: "First-Pass Yield", value: "99.7%", description: "Automated testing ensured near-zero defect rates" }
+    ],
+    testimonial: "Illuminious solved our biggest nightmare: how to go from a high-cost prototype to a profitable, high-volume product.",
+    image: "/images/case-study-aurasense-scaling.jpg",
+    tags: ["AI Hardware", "Wearables", "Scale-Up", "Batam Manufacturing"],
+    fullContent: `<div class="lead-text">
+  <p><strong>The Challenge:</strong> AuraSense AI, a Silicon Valley startup, developed a breakthrough heart-rate monitoring ring but hit a 'scaling wall.' Local US-based prototyping was costing them $140 per unit, far exceeding their target retail price point. To survive their Series A launch, they needed to scale to 50,000 units in under 4 months while maintaining medical-grade quality standards.</p>
+</div>
+
+<div class="highlight-box">
+  <h4>💡 The Solution</h4>
+  <p>Illuminious deployed our <strong>China Plus Two Strategy</strong> to provide both speed and scale. Key elements included:</p>
+  <ul class="check-list">
+    <li><strong>Rapid NPI (Shenzhen):</strong> Completed 3 design iterations and DFM optimization in just 14 days.</li>
+    <li><strong>Scale Production (Batam):</strong> Transitioned mass production to our Indonesia hub to leverage lower costs and 0% US tariffs.</li>
+    <li><strong>Custom Test Jigs:</strong> Engineered automated optical and electrical test stations to validate sensitive biometric sensors at scale.</li>
+  </ul>
+</div>
+
+<h2>📊 Measurable Results</h2>
+
+<div class="results-grid">
+  <div class="result-card">
+    <div class="result-value">$91</div>
+    <div class="result-label">Target Unit Cost</div>
+    <p>A 35% reduction from initial prototype costs through optimized sourcing and Batam manufacturing.</p>
+  </div>
+  <div class="result-card">
+    <div class="result-value">14</div>
+    <div class="result-label">Weeks to Launch</div>
+    <p>Accelerated the production timeline by 50% compared to traditional Tier-1 contract manufacturers.</p>
+  </div>
+  <div class="result-card">
+    <div class="result-value">99.7%</div>
+    <div class="result-label">First-Pass Yield</div>
+    <p>Consistent, high-quality output using automated testing protocols in our ISO 13485-certified lines.</p>
+  </div>
+</div>
+
+<h2>🔍 How We Did It</h2>
+
+<div class="process-steps">
+  <div class="step">
+    <h4>1. DFM & Component Optimization (Week 1-2)</h4>
+    <p>Our Shenzhen engineering team identified 4 component alternatives that reduced BOM cost by 18% without affecting sensor accuracy. <strong>Achieved DFM-ready status in 10 days.</strong></p>
+  </div>
+  <div class="step">
+    <h4>2. Tooling & Batch Testing (Week 3-6)</h4>
+    <p>Tooling was manufactured in Shenzhen and shipped to Batam. We ran a 500-unit pilot batch to validate the automated testing jigs and assembly SOPs.</p>
+  </div>
+  <div class="step">
+    <h4>3. Mass Production Ramp (Week 7-14)</h4>
+    <p>Production scaled from 5,000 units per week to 15,000 units per week. Our Batam team managed 24/7 shifts to meet the critical launch date.</p>
+  </div>
+</div>
+
+<div class="testimonial-box">
+  <blockquote>
+    <p>"Illuminious solved our biggest nightmare: how to go from a high-cost prototype to a profitable, high-volume product. Their presence in both Shenzhen and Indonesia gave us the speed we needed and the cost structure to actually compete in the global market."</p>
+  </blockquote>
+  <div class="testimonial-author">
+    <strong>Sarah Chen</strong>, CTO at AuraSense AI
+  </div>
+</div>
+
+<div class="conclusion-box">
+  <h3>Ready to Scale Your AI Hardware?</h3>
+  <p>Don't let high manufacturing costs or slow lead times kill your launch. Illuminious specializes in helping startups bridge the gap between prototype and mass production. <strong>Contact us today for a free DFM review.</strong></p>
+</div>`
+  },
+{
     id: "ai-wearable-rapid-scale",
     slug: "scaling-silicon-valley-ai-wearable-necklace",
     title: "Scaling a Silicon Valley AI Wearable: From Prototype to 50,000 Units in 6 Months",
